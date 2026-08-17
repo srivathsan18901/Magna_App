@@ -53,6 +53,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.Transparent;
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
@@ -104,7 +105,7 @@
             panel3.Controls.Add(PrinterName_CB);
             panel3.Controls.Add(label4);
             panel3.Controls.Add(label5);
-            panel3.Location = new Point(1240, 310);
+            panel3.Location = new Point(449, 284);
             panel3.Name = "panel3";
             panel3.Size = new Size(270, 275);
             panel3.TabIndex = 12;
