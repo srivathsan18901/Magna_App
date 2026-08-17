@@ -12,7 +12,7 @@ namespace Magna_TestApplication
             InitializeComponent();
 
             InitializePrinter();
-            InitializePrinterStatusTimer();
+            //InitializePrinterStatusTimer();
         }
 
         private void InitializePrinter()
@@ -23,21 +23,21 @@ namespace Magna_TestApplication
                     9100);
         }
 
-        private void InitializePrinterStatusTimer()
-        {
-            _printerStatusTimer = new System.Windows.Forms.Timer();
+        //private void InitializePrinterStatusTimer()
+        //{
+        //    _printerStatusTimer = new System.Windows.Forms.Timer();
 
-            _printerStatusTimer.Interval = 1000;
+        //    _printerStatusTimer.Interval = 5000;
 
-            _printerStatusTimer.Tick += PrinterStatusTimer_Tick;
+        //    _printerStatusTimer.Tick += PrinterStatusTimer_Tick;
 
-            _printerStatusTimer.Start();
-        }
+        //    _printerStatusTimer.Start();
+        //}
 
-        private void PrinterStatusTimer_Tick(object sender, EventArgs e)
-        {
-            UpdatePrinterStatus();
-        }
+        //private void PrinterStatusTimer_Tick(object sender, EventArgs e)
+        //{
+        //    UpdatePrinterStatus();
+        //}
 
         private string CreateTestLabel()
         {
@@ -75,27 +75,27 @@ namespace Magna_TestApplication
             }
         }
 
-        private void UpdatePrinterStatus()
-        {
-            bool result = _printerService.CheckPrinter();
+        //private void UpdatePrinterStatus()
+        //{
+        //    bool result = _printerService.CheckPrinter();
 
-            if (result)
-            {
-                ConnectionStatus_LBL.Text = "Connected";
-                ConnectionStatus_LBL.ForeColor = Color.Green;
+        //    if (result)
+        //    {
+        //        ConnectionStatus_LBL.Text = "Connected";
+        //        ConnectionStatus_LBL.ForeColor = Color.Green;
 
-                PrinterStatus_LBL.Text = "Ready";
-                PrinterStatus_LBL.ForeColor = Color.Green;
-            }
-            else
-            {
-                ConnectionStatus_LBL.Text = "Disconnected";
-                ConnectionStatus_LBL.ForeColor = Color.Red;
+        //        PrinterStatus_LBL.Text = "Ready";
+        //        PrinterStatus_LBL.ForeColor = Color.Green;
+        //    }
+        //    else
+        //    {
+        //        ConnectionStatus_LBL.Text = "Disconnected";
+        //        ConnectionStatus_LBL.ForeColor = Color.Red;
 
-                PrinterStatus_LBL.Text = "Not Ready";
-                PrinterStatus_LBL.ForeColor = Color.Red;
-            }
-        }
+        //        PrinterStatus_LBL.Text = "Not Ready";
+        //        PrinterStatus_LBL.ForeColor = Color.Red;
+        //    }
+        //}
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {

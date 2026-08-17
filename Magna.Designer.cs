@@ -30,42 +30,73 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Magna));
             panel1 = new Panel();
+            button1 = new Button();
+            PRINT_STS = new Label();
+            PLC_LBL = new Label();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            panel3 = new Panel();
-            PrintButton = new Button();
-            LabelText_TB = new TextBox();
-            label1 = new Label();
-            PrinterStatus_LBL = new Label();
+            FT_DGV = new DataGridView();
             label2 = new Label();
-            ConnectionStatus_LBL = new Label();
-            label3 = new Label();
-            PrinterName_CB = new ComboBox();
-            label4 = new Label();
-            label5 = new Label();
+            label1 = new Label();
+            TET_DGV = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)FT_DGV).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)TET_DGV).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(PRINT_STS);
+            panel1.Controls.Add(PLC_LBL);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1555, 98);
+            panel1.Size = new Size(1612, 98);
             panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(1368, 31);
+            button1.Name = "button1";
+            button1.Size = new Size(122, 31);
+            button1.TabIndex = 4;
+            button1.Text = "Export as Excel";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // PRINT_STS
+            // 
+            PRINT_STS.AutoSize = true;
+            PRINT_STS.Location = new Point(212, 62);
+            PRINT_STS.Name = "PRINT_STS";
+            PRINT_STS.Size = new Size(77, 15);
+            PRINT_STS.TabIndex = 3;
+            PRINT_STS.Text = "Printer Status";
+            // 
+            // PLC_LBL
+            // 
+            PLC_LBL.AutoSize = true;
+            PLC_LBL.Location = new Point(212, 31);
+            PLC_LBL.Name = "PLC_LBL";
+            PLC_LBL.Size = new Size(63, 15);
+            PLC_LBL.TabIndex = 2;
+            PLC_LBL.Text = "PLC Status";
             // 
             // pictureBox2
             // 
+            pictureBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1439, 22);
+            pictureBox2.Location = new Point(1496, 22);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(106, 55);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -84,121 +115,61 @@
             // 
             // panel2
             // 
+            panel2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(panel3);
-            panel2.Location = new Point(0, 104);
+            panel2.Controls.Add(FT_DGV);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(TET_DGV);
+            panel2.Location = new Point(0, 108);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1555, 676);
+            panel2.Size = new Size(1612, 676);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
-            // panel3
+            // FT_DGV
             // 
-            panel3.BackColor = Color.Gainsboro;
-            panel3.Controls.Add(PrintButton);
-            panel3.Controls.Add(LabelText_TB);
-            panel3.Controls.Add(label1);
-            panel3.Controls.Add(PrinterStatus_LBL);
-            panel3.Controls.Add(label2);
-            panel3.Controls.Add(ConnectionStatus_LBL);
-            panel3.Controls.Add(label3);
-            panel3.Controls.Add(PrinterName_CB);
-            panel3.Controls.Add(label4);
-            panel3.Controls.Add(label5);
-            panel3.Location = new Point(449, 284);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(270, 275);
-            panel3.TabIndex = 12;
-            // 
-            // PrintButton
-            // 
-            PrintButton.Location = new Point(182, 225);
-            PrintButton.Name = "PrintButton";
-            PrintButton.Size = new Size(69, 32);
-            PrintButton.TabIndex = 2;
-            PrintButton.Text = "Print";
-            PrintButton.UseVisualStyleBackColor = true;
-            PrintButton.Click += PrintButton_Click;
-            // 
-            // LabelText_TB
-            // 
-            LabelText_TB.BorderStyle = BorderStyle.FixedSingle;
-            LabelText_TB.Location = new Point(130, 180);
-            LabelText_TB.Name = "LabelText_TB";
-            LabelText_TB.Size = new Size(121, 23);
-            LabelText_TB.TabIndex = 11;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(72, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(105, 17);
-            label1.TabIndex = 3;
-            label1.Text = "TSC TE210 TEST ";
-            // 
-            // PrinterStatus_LBL
-            // 
-            PrinterStatus_LBL.AutoSize = true;
-            PrinterStatus_LBL.Location = new Point(101, 143);
-            PrinterStatus_LBL.Name = "PrinterStatus_LBL";
-            PrinterStatus_LBL.Size = new Size(98, 15);
-            PrinterStatus_LBL.TabIndex = 10;
-            PrinterStatus_LBL.Text = "PrinterStatus_LBL";
+            FT_DGV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            FT_DGV.BackgroundColor = SystemColors.Control;
+            FT_DGV.BorderStyle = BorderStyle.Fixed3D;
+            FT_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            FT_DGV.Location = new Point(12, 29);
+            FT_DGV.Name = "FT_DGV";
+            FT_DGV.Size = new Size(1590, 303);
+            FT_DGV.TabIndex = 4;
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Location = new Point(20, 75);
+            label2.Font = new Font("Segoe UI", 10F);
+            label2.Location = new Point(12, 335);
             label2.Name = "label2";
-            label2.Size = new Size(48, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Printer :";
+            label2.Size = new Size(167, 19);
+            label2.TabIndex = 3;
+            label2.Text = "Travel and Endurance Test";
             // 
-            // ConnectionStatus_LBL
+            // label1
             // 
-            ConnectionStatus_LBL.AutoSize = true;
-            ConnectionStatus_LBL.Location = new Point(101, 111);
-            ConnectionStatus_LBL.Name = "ConnectionStatus_LBL";
-            ConnectionStatus_LBL.Size = new Size(125, 15);
-            ConnectionStatus_LBL.TabIndex = 9;
-            ConnectionStatus_LBL.Text = "ConnectionStatus_LBL";
+            label1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.Location = new Point(12, 7);
+            label1.Name = "label1";
+            label1.Size = new Size(100, 19);
+            label1.TabIndex = 2;
+            label1.Text = "Functional Test";
             // 
-            // label3
+            // TET_DGV
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(20, 111);
-            label3.Name = "label3";
-            label3.Size = new Size(75, 15);
-            label3.TabIndex = 5;
-            label3.Text = "Connection :";
-            // 
-            // PrinterName_CB
-            // 
-            PrinterName_CB.FormattingEnabled = true;
-            PrinterName_CB.Location = new Point(130, 67);
-            PrinterName_CB.Name = "PrinterName_CB";
-            PrinterName_CB.Size = new Size(121, 23);
-            PrinterName_CB.TabIndex = 8;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(20, 183);
-            label4.Name = "label4";
-            label4.Size = new Size(65, 15);
-            label4.TabIndex = 6;
-            label4.Text = "Label Text :";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(20, 143);
-            label5.Name = "label5";
-            label5.Size = new Size(48, 15);
-            label5.TabIndex = 7;
-            label5.Text = "Printer :";
+            TET_DGV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TET_DGV.BackgroundColor = SystemColors.Control;
+            TET_DGV.BorderStyle = BorderStyle.Fixed3D;
+            TET_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            TET_DGV.Location = new Point(12, 357);
+            TET_DGV.Name = "TET_DGV";
+            TET_DGV.Size = new Size(1590, 313);
+            TET_DGV.TabIndex = 1;
             // 
             // Magna
             // 
@@ -206,18 +177,21 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1557, 782);
+            ClientSize = new Size(1614, 790);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Magna";
             Text = "Magna";
+            WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)FT_DGV).EndInit();
+            ((System.ComponentModel.ISupportInitialize)TET_DGV).EndInit();
             ResumeLayout(false);
         }
 
@@ -227,16 +201,12 @@
         private PictureBox pictureBox1;
         private Panel panel2;
         private PictureBox pictureBox2;
-        private Button PrintButton;
-        private Label label1;
         private Label label2;
-        private TextBox LabelText_TB;
-        private Label PrinterStatus_LBL;
-        private Label ConnectionStatus_LBL;
-        private ComboBox PrinterName_CB;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Panel panel3;
+        private Label label1;
+        private DataGridView TET_DGV;
+        private DataGridView FT_DGV;
+        private Label PLC_LBL;
+        private Label PRINT_STS;
+        private Button button1;
     }
 }
