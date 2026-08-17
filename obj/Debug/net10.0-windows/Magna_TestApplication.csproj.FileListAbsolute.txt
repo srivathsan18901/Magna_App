@@ -33,3 +33,6 @@ D:\Srivathsan\Dev\Magna_Application\Magna_App\obj\Debug\net10.0-windows\refint\M
 D:\Srivathsan\Dev\Magna_Application\Magna_App\obj\Debug\net10.0-windows\Magna_TestApplication.pdb
 D:\Srivathsan\Dev\Magna_Application\Magna_App\obj\Debug\net10.0-windows\Magna_TestApplication.genruntimeconfig.cache
 D:\Srivathsan\Dev\Magna_Application\Magna_App\obj\Debug\net10.0-windows\ref\Magna_TestApplication.dll
+D:\Srivathsan\Dev\Magna_Application\Magna_App\bin\Debug\net10.0-windows\QRCoder.dll
+D:\Srivathsan\Dev\Magna_Application\Magna_App\obj\Debug\net10.0-windows\Magna_TestApplication.csproj.AssemblyReference.cache
+D:\Srivathsan\Dev\Magna_Application\Magna_App\obj\Debug\net10.0-windows\Magna_Te.BF7C1C58.Up2Date

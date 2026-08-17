@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "albkaAqb/AA=",
+  "dgSpecHash": "+xEXwEWeEuo=",
   "success": true,
   "projectFilePath": "D:\\Srivathsan\\Dev\\Magna_Application\\Magna_App\\Magna_TestApplication.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Srivathsan Ganesan\\.nuget\\packages\\qrcoder\\1.8.0\\qrcoder.1.8.0.nupkg.sha512"
+  ],
   "logs": []
 }

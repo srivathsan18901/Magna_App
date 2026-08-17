@@ -1,4 +1,6 @@
+using Magna_TestApplication.Models;
 using Magna_TestApplication.services;
+using System.ComponentModel;
 
 namespace Magna_TestApplication
 {
@@ -7,99 +9,184 @@ namespace Magna_TestApplication
         private TscPrinterService _printerService;
         private System.Windows.Forms.Timer _printerStatusTimer;
 
+        // QR services
+        private QrCodeService _qrCodeService;
+        private QrDataService _qrDataService;
+
+        // Sample data timer
+        private System.Windows.Forms.Timer _sampleDataTimer;
+
+        // Functional Test log collection
+        private BindingList<FunctionalTestLog> _ftLogs;
+
+        private int _sampleSerialNumber = 0;
+        private Random _random = new Random();
+
         public Magna()
         {
             InitializeComponent();
 
-            InitializePrinter();
-            //InitializePrinterStatusTimer();
+            //_printerService = new TscPrinterService();
+
+            _qrCodeService = new QrCodeService();
+            _qrDataService = new QrDataService();
+
+            _ftLogs =
+                new BindingList<FunctionalTestLog>();
+
+            SetupFunctionalTestGrid();
+
+            SetupSampleTimer();
         }
 
-        private void InitializePrinter()
+        private void SetupSampleTimer()
         {
-            _printerService =
-                new TscPrinterService(
-                    "192.168.1.105",
-                    9100);
+            _sampleDataTimer =
+                new System.Windows.Forms.Timer();
+
+            _sampleDataTimer.Interval = 10000; // 10 seconds
+
+            _sampleDataTimer.Tick +=
+                SampleDataTimer_Tick;
+
+            _sampleDataTimer.Start();
         }
 
-        //private void InitializePrinterStatusTimer()
-        //{
-        //    _printerStatusTimer = new System.Windows.Forms.Timer();
-
-        //    _printerStatusTimer.Interval = 5000;
-
-        //    _printerStatusTimer.Tick += PrinterStatusTimer_Tick;
-
-        //    _printerStatusTimer.Start();
-        //}
-
-        //private void PrinterStatusTimer_Tick(object sender, EventArgs e)
-        //{
-        //    UpdatePrinterStatus();
-        //}
-
-        private string CreateTestLabel()
+        private void SampleDataTimer_Tick(
+    object sender,
+    EventArgs e)
         {
-            return
-                "SIZE 100 mm,50 mm\r\n" +
-                "GAP 3 mm,0 mm\r\n" +
-                "DIRECTION 1\r\n" +
-                "CLS\r\n" +
-                "TEXT 50,50,\"0\",0,2,2,\"MAGNA TEST\"\r\n" +
-                "TEXT 50,100,\"0\",0,1,1,\"123456789\"\r\n" +
-                "PRINT 1,1\r\n";
-        }
+            try
+            {
+                DateTime now = DateTime.Now;
 
-        private void PrintButton_Click(object sender, EventArgs e)
-        {
-            string tspl = CreateTestLabel();
+                _sampleSerialNumber++;
 
-            bool result = _printerService.PrintLabel(tspl);
+                string shift =
+                    GetSampleShift();
 
-            if (result)
+                string variant =
+                    GetSampleVariant();
+
+                string result =
+                    GetSampleResult();
+
+                int quantity = _sampleSerialNumber;
+
+                var log =
+                    new FunctionalTestLog
+                    {
+                        SNo = _sampleSerialNumber,
+                        LoggedAt = now,
+                        Shift = shift,
+                        Variant = variant,
+                        Result = result
+                    };
+
+                // Add to DGV
+                _ftLogs.Insert(0, log);
+
+                // Display quantity
+                QTY_LBL.Text =
+                    quantity.ToString();
+
+                // Generate QR
+                string qrData =
+                    _qrDataService.GenerateQrData(
+                        now,
+                        shift,
+                        variant,
+                        quantity);
+
+                // Display QR
+                DisplayQr(qrData);
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(
-                    "Label printed successfully.",
-                    "TSC Printer",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show(
-                    "Printing failed.",
-                    "TSC Printer",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                    "Sample Data Error : " +
+                    ex.Message);
             }
         }
 
-        //private void UpdatePrinterStatus()
-        //{
-        //    bool result = _printerService.CheckPrinter();
-
-        //    if (result)
-        //    {
-        //        ConnectionStatus_LBL.Text = "Connected";
-        //        ConnectionStatus_LBL.ForeColor = Color.Green;
-
-        //        PrinterStatus_LBL.Text = "Ready";
-        //        PrinterStatus_LBL.ForeColor = Color.Green;
-        //    }
-        //    else
-        //    {
-        //        ConnectionStatus_LBL.Text = "Disconnected";
-        //        ConnectionStatus_LBL.ForeColor = Color.Red;
-
-        //        PrinterStatus_LBL.Text = "Not Ready";
-        //        PrinterStatus_LBL.ForeColor = Color.Red;
-        //    }
-        //}
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private string GetSampleShift()
         {
+            string[] shifts =
+            {
+        "A",
+        "B",
+        "C"
+    };
 
+            return shifts[
+                _random.Next(shifts.Length)];
+        }
+
+        private string GetSampleVariant()
+        {
+            string[] variants =
+            {
+        "01",
+        "02",
+        "03",
+        "04"
+    };
+
+            return variants[
+                _random.Next(variants.Length)];
+        }
+
+        private string GetSampleResult()
+        {
+            return _random.Next(0, 2) == 0
+                ? "PASS"
+                : "FAIL";
+        }
+
+        private void DisplayQr(string qrData)
+        {
+            // Show QR data as text
+            QR_LBL.Text = qrData;
+
+            // Generate QR image
+            Bitmap qrImage =
+                _qrCodeService.GenerateQr(qrData);
+
+            // Dispose previous image
+            if (QR_PB.Image != null)
+            {
+                QR_PB.Image.Dispose();
+                QR_PB.Image = null;
+            }
+
+            // Display QR
+            QR_PB.SizeMode =
+                PictureBoxSizeMode.Zoom;
+
+            QR_PB.Image = qrImage;
+        }
+
+        private void SetupFunctionalTestGrid()
+        {
+            FT_DGV.AutoGenerateColumns = false;
+            FT_DGV.AllowUserToAddRows = false;
+            FT_DGV.ReadOnly = true;
+
+            FT_DGV.RowHeadersVisible = false;
+
+            FT_DGV.SelectionMode =
+                DataGridViewSelectionMode.FullRowSelect;
+
+            FT_DGV.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.Fill;
+
+            FT_DGV.DataSource = _ftLogs;
+        }
+
+        private void panel2_Paint(
+            object sender,
+            PaintEventArgs e)
+        {
         }
     }
 }
