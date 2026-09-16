@@ -34,7 +34,7 @@ namespace Magna_TestApplication.services
             return variants[_random.Next(variants.Length)];
         }
 
-        private string GetSampleResult()
+        public string GetSampleResult()
         {
             return _random.Next(0, 2) == 0 ? "PASS" : "FAIL";
         }

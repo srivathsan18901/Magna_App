@@ -7,36 +7,35 @@ namespace Magna_TestApplication
     public partial class Magna : Form
     {
         private TscPrinterService _printerService;
-        private System.Windows.Forms.Timer _printerStatusTimer;
-
-        // QR services
         private QrCodeService _qrCodeService;
         private QrDataService _qrDataService;
-
-        // Sample data service (NEW)
         private SampleDataService _sampleDataService;
 
-        // Sample data timer
+        // NEW: QR Decoder Service
+        private QrDecoderService _qrDecoderService;
+
         private System.Windows.Forms.Timer _sampleDataTimer;
 
-        // Functional Test log collection
+        // Functional Test collection
         private BindingList<FunctionalTestLog> _ftLogs;
+
+        // NEW: Travel and Endurance collection
+        private BindingList<TravelAndEnduranceLog> _teLogs;
 
         public Magna()
         {
             InitializeComponent();
 
-            //_printerService = new TscPrinterService();
-
             _qrCodeService = new QrCodeService();
             _qrDataService = new QrDataService();
-
-            // Initialize the new service (NEW)
             _sampleDataService = new SampleDataService();
+            _qrDecoderService = new QrDecoderService(); // Initialize decoder
 
             _ftLogs = new BindingList<FunctionalTestLog>();
+            _teLogs = new BindingList<TravelAndEnduranceLog>(); // Initialize TE logs
 
             SetupFunctionalTestGrid();
+            SetupTravelEnduranceGrid(); // Setup new grid
             SetupSampleTimer();
         }
 
@@ -52,47 +51,70 @@ namespace Magna_TestApplication
         {
             try
             {
-                // 1. Get the generated log from the service (NEW)
-                FunctionalTestLog log = _sampleDataService.GenerateNextLog();
+                // 1. Generate Functional Test Log
+                FunctionalTestLog ftLog = _sampleDataService.GenerateNextLog();
 
-                // 2. Add to DGV
-                _ftLogs.Insert(0, log);
+                // 2. Add to Functional Test Grid
+                _ftLogs.Insert(0, ftLog);
+                QTY_LBL.Text = ftLog.SNo.ToString();
 
-                // 3. Display quantity (using SNo as the running quantity/serial)
-                QTY_LBL.Text = log.SNo.ToString();
-
-                // 4. Generate QR
+                // 3. Generate QR for Functional Test
                 string qrData = _qrDataService.GenerateQrData(
-                    log.LoggedAt,
-                    log.Shift,
-                    log.Variant,
-                    log.SNo); // Passing SNo as the quantity parameter
+                    ftLog.LoggedAt, ftLog.Shift, ftLog.Variant, ftLog.SNo);
 
-                // 5. Display QR
                 DisplayQr(qrData);
+
+                // 4. PROCESS TRAVEL AND ENDURANCE TEST
+                // This uses the QR data generated above. 
+                // It does NOT affect the Functional Test log.
+                ProcessTravelAndEnduranceTest(qrData);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Sample Data Error : " + ex.Message);
+                MessageBox.Show("Error : " + ex.Message);
             }
+        }
+
+        private void ProcessTravelAndEnduranceTest(string qrData)
+        {
+            // Decode the QR data to get the info
+            var decoded = _qrDecoderService.DecodeQrData(qrData);
+
+            // Simulate reading Travel and Endurance results (e.g., from a PLC or user input)
+            string travelResult = _sampleDataService.GetSampleResult();
+            string enduranceResult = _sampleDataService.GetSampleResult();
+
+            // Create ONE combined log
+            var teLog = new TravelAndEnduranceLog
+            {
+                SNo = _teLogs.Count + 1, // Independent serial number for TE logs
+                LoggedAt = decoded.dateTime, // Use time from QR
+                Shift = decoded.shift,
+                Variant = decoded.variant,
+                SerialNumber = decoded.serialNumber,
+                TravelResult = travelResult,
+                EnduranceResult = enduranceResult
+            };
+
+            // Add to Travel and Endurance Grid
+            _teLogs.Insert(0, teLog);
+
+            // Update TE Quantity Label (if you have one)
+            // TE_QTY_LBL.Text = teLog.SNo.ToString();
         }
 
         private void DisplayQr(string qrData)
         {
-            // Show QR data as text
             QR_LBL.Text = qrData;
 
-            // Generate QR image
             Bitmap qrImage = _qrCodeService.GenerateQr(qrData);
 
-            // Dispose previous image
             if (QR_PB.Image != null)
             {
                 QR_PB.Image.Dispose();
                 QR_PB.Image = null;
             }
 
-            // Display QR
             QR_PB.SizeMode = PictureBoxSizeMode.Zoom;
             QR_PB.Image = qrImage;
         }
@@ -108,12 +130,22 @@ namespace Magna_TestApplication
             FT_DGV.DataSource = _ftLogs;
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e) { }
-
-        private void textBox1_TextChanged(object sender, EventArgs e) { }
-
-        private void label3_Click(object sender, EventArgs e) { }
+        // NEW: Setup for Travel and Endurance Grid
+        private void SetupTravelEnduranceGrid()
+        {
+            // Assuming you have a DataGridView named TE_DGV
+            TET_DGV.AutoGenerateColumns = false;
+            TET_DGV.AllowUserToAddRows = false;
+            TET_DGV.ReadOnly = true;
+            TET_DGV.RowHeadersVisible = false;
+            TET_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            TET_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            TET_DGV.DataSource = _teLogs;
+        }
 
         private void ExportBTN_Click(object sender, EventArgs e) { }
+        private void panel2_Paint(object sender, PaintEventArgs e) { }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
+        private void label3_Click(object sender, EventArgs e) { }
     }
 }

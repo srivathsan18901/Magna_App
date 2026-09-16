@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Magna));
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             panel1 = new Panel();
             QR_LBL = new Label();
             QR_PB = new PictureBox();
@@ -54,27 +54,12 @@
             FT_Result = new DataGridViewTextBoxColumn();
             label2 = new Label();
             label1 = new Label();
-            TET_DGV = new DataGridView();
-            TE_SNo = new DataGridViewTextBoxColumn();
-            TE_Date = new DataGridViewTextBoxColumn();
-            TE_Time = new DataGridViewTextBoxColumn();
-            TE_Shift = new DataGridViewTextBoxColumn();
-            TE_Variant = new DataGridViewTextBoxColumn();
-            TE_Result = new DataGridViewTextBoxColumn();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             panel3 = new Panel();
             tabPage2 = new TabPage();
             tabPage3 = new TabPage();
             panel4 = new Panel();
-            groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
-            Shift = new Label();
-            textBox2 = new TextBox();
-            Varient = new Label();
-            textBox3 = new TextBox();
-            Result = new Label();
-            button2 = new Button();
             groupBox2 = new GroupBox();
             button3 = new Button();
             textBox4 = new TextBox();
@@ -83,20 +68,35 @@
             label4 = new Label();
             textBox6 = new TextBox();
             label5 = new Label();
+            groupBox1 = new GroupBox();
+            button2 = new Button();
+            textBox3 = new TextBox();
+            Result = new Label();
+            textBox2 = new TextBox();
+            Varient = new Label();
+            textBox1 = new TextBox();
+            Shift = new Label();
+            TET_DGV = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)QR_PB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)FT_DGV).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)TET_DGV).BeginInit();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
             panel4.SuspendLayout();
-            groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)TET_DGV).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -190,12 +190,12 @@
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(TET_DGV);
             panel2.Controls.Add(QTY_LBL);
             panel2.Controls.Add(ExportBTN);
             panel2.Controls.Add(FT_DGV);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(label1);
-            panel2.Controls.Add(TET_DGV);
             panel2.Location = new Point(8, 15);
             panel2.Name = "panel2";
             panel2.Size = new Size(1583, 707);
@@ -219,36 +219,36 @@
             FT_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             FT_DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             FT_DGV.BackgroundColor = SystemColors.Control;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = Color.White;
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = SystemColors.InfoText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            FT_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = SystemColors.InfoText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            FT_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             FT_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             FT_DGV.Columns.AddRange(new DataGridViewColumn[] { FT_SNo, FT_Date, FT_Time, FT_Shift, FT_Variant, FT_Result });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.White;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            FT_DGV.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            FT_DGV.DefaultCellStyle = dataGridViewCellStyle5;
             FT_DGV.Location = new Point(12, 59);
             FT_DGV.MultiSelect = false;
             FT_DGV.Name = "FT_DGV";
             FT_DGV.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            FT_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            FT_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             FT_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             FT_DGV.Size = new Size(1561, 303);
             FT_DGV.TabIndex = 4;
@@ -316,83 +316,6 @@
             label1.Size = new Size(102, 17);
             label1.TabIndex = 2;
             label1.Text = "Functional Test";
-            // 
-            // TET_DGV
-            // 
-            TET_DGV.AllowUserToAddRows = false;
-            TET_DGV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TET_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            TET_DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            TET_DGV.BackgroundColor = SystemColors.Control;
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle10.BackColor = Color.LightBlue;
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = SystemColors.WindowFrame;
-            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
-            TET_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            TET_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            TET_DGV.Columns.AddRange(new DataGridViewColumn[] { TE_SNo, TE_Date, TE_Time, TE_Shift, TE_Variant, TE_Result });
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.Transparent;
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
-            TET_DGV.DefaultCellStyle = dataGridViewCellStyle11;
-            TET_DGV.Location = new Point(12, 392);
-            TET_DGV.MultiSelect = false;
-            TET_DGV.Name = "TET_DGV";
-            TET_DGV.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            TET_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            TET_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            TET_DGV.Size = new Size(1561, 304);
-            TET_DGV.TabIndex = 1;
-            // 
-            // TE_SNo
-            // 
-            TE_SNo.HeaderText = "S.no";
-            TE_SNo.Name = "TE_SNo";
-            TE_SNo.ReadOnly = true;
-            // 
-            // TE_Date
-            // 
-            TE_Date.HeaderText = "Date";
-            TE_Date.Name = "TE_Date";
-            TE_Date.ReadOnly = true;
-            // 
-            // TE_Time
-            // 
-            TE_Time.HeaderText = "Time";
-            TE_Time.Name = "TE_Time";
-            TE_Time.ReadOnly = true;
-            // 
-            // TE_Shift
-            // 
-            TE_Shift.HeaderText = "Shift";
-            TE_Shift.Name = "TE_Shift";
-            TE_Shift.ReadOnly = true;
-            // 
-            // TE_Variant
-            // 
-            TE_Variant.HeaderText = "Variant";
-            TE_Variant.Name = "TE_Variant";
-            TE_Variant.ReadOnly = true;
-            // 
-            // TE_Result
-            // 
-            TE_Result.HeaderText = "Result";
-            TE_Result.Name = "TE_Result";
-            TE_Result.ReadOnly = true;
             // 
             // tabControl1
             // 
@@ -465,82 +388,6 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(1585, 728);
             panel4.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            groupBox1.BackColor = Color.LightGray;
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(Result);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(Varient);
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(Shift);
-            groupBox1.Location = new Point(25, 20);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(333, 295);
-            groupBox1.TabIndex = 2;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Functional Test";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(186, 68);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 25);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // Shift
-            // 
-            Shift.AutoSize = true;
-            Shift.Location = new Point(33, 71);
-            Shift.Name = "Shift";
-            Shift.Size = new Size(37, 17);
-            Shift.TabIndex = 1;
-            Shift.Text = "Shift";
-            Shift.Click += label3_Click;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(186, 118);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 25);
-            textBox2.TabIndex = 2;
-            // 
-            // Varient
-            // 
-            Varient.AutoSize = true;
-            Varient.Location = new Point(33, 121);
-            Varient.Name = "Varient";
-            Varient.Size = new Size(52, 17);
-            Varient.TabIndex = 3;
-            Varient.Text = "Varient";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(186, 164);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 25);
-            textBox3.TabIndex = 4;
-            // 
-            // Result
-            // 
-            Result.AutoSize = true;
-            Result.Location = new Point(33, 167);
-            Result.Name = "Result";
-            Result.Size = new Size(46, 17);
-            Result.TabIndex = 5;
-            Result.Text = "Result";
-            // 
-            // button2
-            // 
-            button2.Location = new Point(211, 230);
-            button2.Name = "button2";
-            button2.Size = new Size(84, 31);
-            button2.TabIndex = 6;
-            button2.Text = "Enter";
-            button2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -616,6 +463,165 @@
             label5.TabIndex = 1;
             label5.Text = "Shift";
             // 
+            // groupBox1
+            // 
+            groupBox1.BackColor = Color.LightGray;
+            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(Result);
+            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(Varient);
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(Shift);
+            groupBox1.Location = new Point(25, 20);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(333, 295);
+            groupBox1.TabIndex = 2;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Functional Test";
+            // 
+            // button2
+            // 
+            button2.Location = new Point(211, 230);
+            button2.Name = "button2";
+            button2.Size = new Size(84, 31);
+            button2.TabIndex = 6;
+            button2.Text = "Enter";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(186, 164);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(100, 25);
+            textBox3.TabIndex = 4;
+            // 
+            // Result
+            // 
+            Result.AutoSize = true;
+            Result.Location = new Point(33, 167);
+            Result.Name = "Result";
+            Result.Size = new Size(46, 17);
+            Result.TabIndex = 5;
+            Result.Text = "Result";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(186, 118);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 25);
+            textBox2.TabIndex = 2;
+            // 
+            // Varient
+            // 
+            Varient.AutoSize = true;
+            Varient.Location = new Point(33, 121);
+            Varient.Name = "Varient";
+            Varient.Size = new Size(52, 17);
+            Varient.TabIndex = 3;
+            Varient.Text = "Varient";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(186, 68);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 25);
+            textBox1.TabIndex = 0;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // Shift
+            // 
+            Shift.AutoSize = true;
+            Shift.Location = new Point(33, 71);
+            Shift.Name = "Shift";
+            Shift.Size = new Size(37, 17);
+            Shift.TabIndex = 1;
+            Shift.Text = "Shift";
+            Shift.Click += label3_Click;
+            // 
+            // TET_DGV
+            // 
+            TET_DGV.AllowUserToAddRows = false;
+            TET_DGV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TET_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            TET_DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            TET_DGV.BackgroundColor = SystemColors.Control;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = SystemColors.InfoText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            TET_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            TET_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            TET_DGV.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6 });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            TET_DGV.DefaultCellStyle = dataGridViewCellStyle2;
+            TET_DGV.Location = new Point(12, 387);
+            TET_DGV.MultiSelect = false;
+            TET_DGV.Name = "TET_DGV";
+            TET_DGV.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            TET_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            TET_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            TET_DGV.Size = new Size(1561, 303);
+            TET_DGV.TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.DataPropertyName = "SNo";
+            dataGridViewTextBoxColumn1.HeaderText = "S.no";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.DataPropertyName = "Date";
+            dataGridViewTextBoxColumn2.HeaderText = "Date";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.DataPropertyName = "Time";
+            dataGridViewTextBoxColumn3.HeaderText = "Time";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.DataPropertyName = "Shift";
+            dataGridViewTextBoxColumn4.HeaderText = "Shift";
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewTextBoxColumn5.DataPropertyName = "Variant";
+            dataGridViewTextBoxColumn5.HeaderText = "Variant";
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.DataPropertyName = "Result";
+            dataGridViewTextBoxColumn6.HeaderText = "Result";
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
             // Magna
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -637,16 +643,16 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)FT_DGV).EndInit();
-            ((System.ComponentModel.ISupportInitialize)TET_DGV).EndInit();
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage2.ResumeLayout(false);
             tabPage3.ResumeLayout(false);
             panel4.ResumeLayout(false);
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)TET_DGV).EndInit();
             ResumeLayout(false);
         }
 
@@ -658,18 +664,11 @@
         private PictureBox pictureBox2;
         private Label label2;
         private Label label1;
-        private DataGridView TET_DGV;
         private DataGridView FT_DGV;
         private Label PLC_LBL;
         private Label PRINT_STS;
         private Button ExportBTN;
         private Label QTY_LBL;
-        private DataGridViewTextBoxColumn TE_SNo;
-        private DataGridViewTextBoxColumn TE_Date;
-        private DataGridViewTextBoxColumn TE_Time;
-        private DataGridViewTextBoxColumn TE_Shift;
-        private DataGridViewTextBoxColumn TE_Variant;
-        private DataGridViewTextBoxColumn TE_Result;
         private PictureBox QR_PB;
         private DataGridViewTextBoxColumn FT_SNo;
         private DataGridViewTextBoxColumn FT_Date;
@@ -700,5 +699,12 @@
         private TextBox textBox6;
         private Label label5;
         private Button button2;
+        private DataGridView TET_DGV;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }
