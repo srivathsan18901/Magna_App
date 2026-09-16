@@ -1,0 +1,17 @@
+D:\Srivathsan\Dev\Magna_TestApplication\bin\Debug\net10.0-windows\Magna_TestApplication.exe
+D:\Srivathsan\Dev\Magna_TestApplication\bin\Debug\net10.0-windows\Magna_TestApplication.deps.json
+D:\Srivathsan\Dev\Magna_TestApplication\bin\Debug\net10.0-windows\Magna_TestApplication.runtimeconfig.json
+D:\Srivathsan\Dev\Magna_TestApplication\bin\Debug\net10.0-windows\Magna_TestApplication.dll
+D:\Srivathsan\Dev\Magna_TestApplication\bin\Debug\net10.0-windows\Magna_TestApplication.pdb
+D:\Srivathsan\Dev\Magna_TestApplication\obj\Debug\net10.0-windows\Magna_TestApplication.Magna.resources
+D:\Srivathsan\Dev\Magna_TestApplication\obj\Debug\net10.0-windows\Magna_TestApplication.csproj.GenerateResource.cache
+D:\Srivathsan\Dev\Magna_TestApplication\obj\Debug\net10.0-windows\Magna_TestApplication.GeneratedMSBuildEditorConfig.editorconfig
+D:\Srivathsan\Dev\Magna_TestApplication\obj\Debug\net10.0-windows\Magna_TestApplication.AssemblyInfoInputs.cache
+D:\Srivathsan\Dev\Magna_TestApplication\obj\Debug\net10.0-windows\Magna_TestApplication.AssemblyInfo.cs
+D:\Srivathsan\Dev\Magna_TestApplication\obj\Debug\net10.0-windows\Magna_TestApplication.csproj.CoreCompileInputs.cache
+D:\Srivathsan\Dev\Magna_TestApplication\obj\Debug\net10.0-windows\Magna_TestApplication.dll
+D:\Srivathsan\Dev\Magna_TestApplication\obj\Debug\net10.0-windows\refint\Magna_TestApplication.dll
+D:\Srivathsan\Dev\Magna_TestApplication\obj\Debug\net10.0-windows\Magna_TestApplication.pdb
+D:\Srivathsan\Dev\Magna_TestApplication\obj\Debug\net10.0-windows\Magna_TestApplication.genruntimeconfig.cache
+D:\Srivathsan\Dev\Magna_TestApplication\obj\Debug\net10.0-windows\ref\Magna_TestApplication.dll
+D:\Srivathsan\Dev\Magna_TestApplication\obj\Debug\net10.0-windows\Magna_TestApplication.Properties.Resources.resources
