@@ -13,14 +13,14 @@ namespace Magna_TestApplication
         private QrCodeService _qrCodeService;
         private QrDataService _qrDataService;
 
+        // Sample data service (NEW)
+        private SampleDataService _sampleDataService;
+
         // Sample data timer
         private System.Windows.Forms.Timer _sampleDataTimer;
 
         // Functional Test log collection
         private BindingList<FunctionalTestLog> _ftLogs;
-
-        private int _sampleSerialNumber = 0;
-        private Random _random = new Random();
 
         public Magna()
         {
@@ -31,116 +31,50 @@ namespace Magna_TestApplication
             _qrCodeService = new QrCodeService();
             _qrDataService = new QrDataService();
 
-            _ftLogs =
-                new BindingList<FunctionalTestLog>();
+            // Initialize the new service (NEW)
+            _sampleDataService = new SampleDataService();
+
+            _ftLogs = new BindingList<FunctionalTestLog>();
 
             SetupFunctionalTestGrid();
-
             SetupSampleTimer();
         }
 
         private void SetupSampleTimer()
         {
-            _sampleDataTimer =
-                new System.Windows.Forms.Timer();
-
+            _sampleDataTimer = new System.Windows.Forms.Timer();
             _sampleDataTimer.Interval = 10000; // 10 seconds
-
-            _sampleDataTimer.Tick +=
-                SampleDataTimer_Tick;
-
+            _sampleDataTimer.Tick += SampleDataTimer_Tick;
             _sampleDataTimer.Start();
         }
 
-        private void SampleDataTimer_Tick(
-    object sender,
-    EventArgs e)
+        private void SampleDataTimer_Tick(object sender, EventArgs e)
         {
             try
             {
-                DateTime now = DateTime.Now;
+                // 1. Get the generated log from the service (NEW)
+                FunctionalTestLog log = _sampleDataService.GenerateNextLog();
 
-                _sampleSerialNumber++;
-
-                string shift =
-                    GetSampleShift();
-
-                string variant =
-                    GetSampleVariant();
-
-                string result =
-                    GetSampleResult();
-
-                int quantity = _sampleSerialNumber;
-
-                var log =
-                    new FunctionalTestLog
-                    {
-                        SNo = _sampleSerialNumber,
-                        LoggedAt = now,
-                        Shift = shift,
-                        Variant = variant,
-                        Result = result
-                    };
-
-                // Add to DGV
+                // 2. Add to DGV
                 _ftLogs.Insert(0, log);
 
-                // Display quantity
-                QTY_LBL.Text =
-                    quantity.ToString();
+                // 3. Display quantity (using SNo as the running quantity/serial)
+                QTY_LBL.Text = log.SNo.ToString();
 
-                // Generate QR
-                string qrData =
-                    _qrDataService.GenerateQrData(
-                        now,
-                        shift,
-                        variant,
-                        quantity);
+                // 4. Generate QR
+                string qrData = _qrDataService.GenerateQrData(
+                    log.LoggedAt,
+                    log.Shift,
+                    log.Variant,
+                    log.SNo); // Passing SNo as the quantity parameter
 
-                // Display QR
+                // 5. Display QR
                 DisplayQr(qrData);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(
-                    "Sample Data Error : " +
-                    ex.Message);
+                MessageBox.Show("Sample Data Error : " + ex.Message);
             }
-        }
-
-        private string GetSampleShift()
-        {
-            string[] shifts =
-            {
-        "A",
-        "B",
-        "C"
-    };
-
-            return shifts[
-                _random.Next(shifts.Length)];
-        }
-
-        private string GetSampleVariant()
-        {
-            string[] variants =
-            {
-        "01",
-        "02",
-        "03",
-        "04"
-    };
-
-            return variants[
-                _random.Next(variants.Length)];
-        }
-
-        private string GetSampleResult()
-        {
-            return _random.Next(0, 2) == 0
-                ? "PASS"
-                : "FAIL";
         }
 
         private void DisplayQr(string qrData)
@@ -149,8 +83,7 @@ namespace Magna_TestApplication
             QR_LBL.Text = qrData;
 
             // Generate QR image
-            Bitmap qrImage =
-                _qrCodeService.GenerateQr(qrData);
+            Bitmap qrImage = _qrCodeService.GenerateQr(qrData);
 
             // Dispose previous image
             if (QR_PB.Image != null)
@@ -160,9 +93,7 @@ namespace Magna_TestApplication
             }
 
             // Display QR
-            QR_PB.SizeMode =
-                PictureBoxSizeMode.Zoom;
-
+            QR_PB.SizeMode = PictureBoxSizeMode.Zoom;
             QR_PB.Image = qrImage;
         }
 
@@ -171,22 +102,18 @@ namespace Magna_TestApplication
             FT_DGV.AutoGenerateColumns = false;
             FT_DGV.AllowUserToAddRows = false;
             FT_DGV.ReadOnly = true;
-
             FT_DGV.RowHeadersVisible = false;
-
-            FT_DGV.SelectionMode =
-                DataGridViewSelectionMode.FullRowSelect;
-
-            FT_DGV.AutoSizeColumnsMode =
-                DataGridViewAutoSizeColumnsMode.Fill;
-
+            FT_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            FT_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             FT_DGV.DataSource = _ftLogs;
         }
 
-        private void panel2_Paint(
-            object sender,
-            PaintEventArgs e)
-        {
-        }
+        private void panel2_Paint(object sender, PaintEventArgs e) { }
+
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
+
+        private void label3_Click(object sender, EventArgs e) { }
+
+        private void ExportBTN_Click(object sender, EventArgs e) { }
     }
 }
