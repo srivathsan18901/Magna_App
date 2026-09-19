@@ -51,6 +51,18 @@
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            inside_lock_effort = new DataGridViewTextBoxColumn();
+            inside_lock_travel = new DataGridViewTextBoxColumn();
+            inside_unlock_effort = new DataGridViewTextBoxColumn();
+            inside_unlock_travel = new DataGridViewTextBoxColumn();
+            inside_release_effort = new DataGridViewTextBoxColumn();
+            inside_release_pretravel = new DataGridViewTextBoxColumn();
+            inside_release_releasetravel = new DataGridViewTextBoxColumn();
+            inside_release_full_travel = new DataGridViewTextBoxColumn();
+            outside_release_effort = new DataGridViewTextBoxColumn();
+            outside_release_pretravel = new DataGridViewTextBoxColumn();
+            outside_release_release_travel = new DataGridViewTextBoxColumn();
+            outside_release_full_travel = new DataGridViewTextBoxColumn();
             QTY_LBL = new Label();
             FT_DGV = new DataGridView();
             label2 = new Label();
@@ -380,7 +392,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             TET_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             TET_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            TET_DGV.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6 });
+            TET_DGV.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, inside_lock_effort, inside_lock_travel, inside_unlock_effort, inside_unlock_travel, inside_release_effort, inside_release_pretravel, inside_release_releasetravel, inside_release_full_travel, outside_release_effort, outside_release_pretravel, outside_release_release_travel, outside_release_full_travel });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
@@ -447,6 +459,78 @@
             dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
+            // inside_lock_effort
+            // 
+            inside_lock_effort.HeaderText = "Inside Lock Effort";
+            inside_lock_effort.Name = "inside_lock_effort";
+            inside_lock_effort.ReadOnly = true;
+            // 
+            // inside_lock_travel
+            // 
+            inside_lock_travel.HeaderText = "Inside Lock Travel";
+            inside_lock_travel.Name = "inside_lock_travel";
+            inside_lock_travel.ReadOnly = true;
+            // 
+            // inside_unlock_effort
+            // 
+            inside_unlock_effort.HeaderText = "Inside Unlock Effort";
+            inside_unlock_effort.Name = "inside_unlock_effort";
+            inside_unlock_effort.ReadOnly = true;
+            // 
+            // inside_unlock_travel
+            // 
+            inside_unlock_travel.HeaderText = "Inside Unlock Travel";
+            inside_unlock_travel.Name = "inside_unlock_travel";
+            inside_unlock_travel.ReadOnly = true;
+            // 
+            // inside_release_effort
+            // 
+            inside_release_effort.HeaderText = "Inside Release Effort";
+            inside_release_effort.Name = "inside_release_effort";
+            inside_release_effort.ReadOnly = true;
+            // 
+            // inside_release_pretravel
+            // 
+            inside_release_pretravel.HeaderText = "Inside Release Pre-Travel";
+            inside_release_pretravel.Name = "inside_release_pretravel";
+            inside_release_pretravel.ReadOnly = true;
+            // 
+            // inside_release_releasetravel
+            // 
+            inside_release_releasetravel.HeaderText = "Inside Release Release Travel";
+            inside_release_releasetravel.Name = "inside_release_releasetravel";
+            inside_release_releasetravel.ReadOnly = true;
+            // 
+            // inside_release_full_travel
+            // 
+            inside_release_full_travel.HeaderText = "Inside Release Full Travel";
+            inside_release_full_travel.Name = "inside_release_full_travel";
+            inside_release_full_travel.ReadOnly = true;
+            // 
+            // outside_release_effort
+            // 
+            outside_release_effort.HeaderText = "Outside Release Effort";
+            outside_release_effort.Name = "outside_release_effort";
+            outside_release_effort.ReadOnly = true;
+            // 
+            // outside_release_pretravel
+            // 
+            outside_release_pretravel.HeaderText = "Outside Release Pre-Travel";
+            outside_release_pretravel.Name = "outside_release_pretravel";
+            outside_release_pretravel.ReadOnly = true;
+            // 
+            // outside_release_release_travel
+            // 
+            outside_release_release_travel.HeaderText = "Outside Release - Release Travel";
+            outside_release_release_travel.Name = "outside_release_release_travel";
+            outside_release_release_travel.ReadOnly = true;
+            // 
+            // outside_release_full_travel
+            // 
+            outside_release_full_travel.HeaderText = "Outside Release Full Travel";
+            outside_release_full_travel.Name = "outside_release_full_travel";
+            outside_release_full_travel.ReadOnly = true;
+            // 
             // QTY_LBL
             // 
             QTY_LBL.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -460,8 +544,8 @@
             // FT_DGV
             // 
             FT_DGV.AllowUserToAddRows = false;
+            FT_DGV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             FT_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            FT_DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             FT_DGV.BackgroundColor = SystemColors.Control;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle4.BackColor = Color.White;
@@ -496,6 +580,7 @@
             FT_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             FT_DGV.Size = new Size(1561, 303);
             FT_DGV.TabIndex = 4;
+            FT_DGV.CellContentClick += FT_DGV_CellContentClick;
             // 
             // label2
             // 
@@ -1918,10 +2003,13 @@
             // 
             // FT_SNo
             // 
+            FT_SNo.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             FT_SNo.DataPropertyName = "SNo";
+            FT_SNo.Frozen = true;
             FT_SNo.HeaderText = "S.no";
             FT_SNo.Name = "FT_SNo";
             FT_SNo.ReadOnly = true;
+            FT_SNo.Width = 66;
             // 
             // FT_Date
             // 
@@ -1933,6 +2021,7 @@
             // FT_Time
             // 
             FT_Time.DataPropertyName = "Time";
+            FT_Time.FillWeight = 71.12056F;
             FT_Time.HeaderText = "Time";
             FT_Time.Name = "FT_Time";
             FT_Time.ReadOnly = true;
@@ -1940,6 +2029,7 @@
             // FT_Shift
             // 
             FT_Shift.DataPropertyName = "Shift";
+            FT_Shift.FillWeight = 71.12056F;
             FT_Shift.HeaderText = "Shift";
             FT_Shift.Name = "FT_Shift";
             FT_Shift.ReadOnly = true;
@@ -1947,6 +2037,7 @@
             // FT_Variant
             // 
             FT_Variant.DataPropertyName = "Variant";
+            FT_Variant.FillWeight = 71.12056F;
             FT_Variant.HeaderText = "Variant";
             FT_Variant.Name = "FT_Variant";
             FT_Variant.ReadOnly = true;
@@ -1954,108 +2045,126 @@
             // FT_Result
             // 
             FT_Result.DataPropertyName = "Result";
+            FT_Result.FillWeight = 71.12056F;
             FT_Result.HeaderText = "Result";
             FT_Result.Name = "FT_Result";
             FT_Result.ReadOnly = true;
             // 
             // seal_load
             // 
+            seal_load.FillWeight = 71.12056F;
             seal_load.HeaderText = "Seal Load";
             seal_load.Name = "seal_load";
             seal_load.ReadOnly = true;
             // 
             // power_lock_current
             // 
+            power_lock_current.FillWeight = 71.12056F;
             power_lock_current.HeaderText = "Power Lock Current";
             power_lock_current.Name = "power_lock_current";
             power_lock_current.ReadOnly = true;
             // 
             // power_unlock_current
             // 
+            power_unlock_current.FillWeight = 71.12056F;
             power_unlock_current.HeaderText = "Power Unlock Current";
             power_unlock_current.Name = "power_unlock_current";
             power_unlock_current.ReadOnly = true;
             // 
             // key_lock_effort
             // 
+            key_lock_effort.FillWeight = 71.12056F;
             key_lock_effort.HeaderText = "Key Lock Effort";
             key_lock_effort.Name = "key_lock_effort";
             key_lock_effort.ReadOnly = true;
             // 
             // key_lock_pretravel
             // 
+            key_lock_pretravel.FillWeight = 71.12056F;
             key_lock_pretravel.HeaderText = "Key Lock Pre-Travel";
             key_lock_pretravel.Name = "key_lock_pretravel";
             key_lock_pretravel.ReadOnly = true;
             // 
             // key_lock_locktravel
             // 
+            key_lock_locktravel.FillWeight = 71.12056F;
             key_lock_locktravel.HeaderText = "Key Lock - Lock Travel";
             key_lock_locktravel.Name = "key_lock_locktravel";
             key_lock_locktravel.ReadOnly = true;
             // 
             // key_lock_full_travel
             // 
+            key_lock_full_travel.FillWeight = 71.12056F;
             key_lock_full_travel.HeaderText = "Key Lock Full Travel";
             key_lock_full_travel.Name = "key_lock_full_travel";
             key_lock_full_travel.ReadOnly = true;
             // 
             // key_unlock_effort
             // 
+            key_unlock_effort.FillWeight = 71.12056F;
             key_unlock_effort.HeaderText = "Key Unlock Effort";
             key_unlock_effort.Name = "key_unlock_effort";
             key_unlock_effort.ReadOnly = true;
             // 
             // key_unlock_pretravel
             // 
+            key_unlock_pretravel.FillWeight = 71.12056F;
             key_unlock_pretravel.HeaderText = "Key Unlock Pre-Travel";
             key_unlock_pretravel.Name = "key_unlock_pretravel";
             key_unlock_pretravel.ReadOnly = true;
             // 
             // key_unlock_locktravel
             // 
+            key_unlock_locktravel.FillWeight = 71.12056F;
             key_unlock_locktravel.HeaderText = "Key Unlock Lock Travel";
             key_unlock_locktravel.Name = "key_unlock_locktravel";
             key_unlock_locktravel.ReadOnly = true;
             // 
             // key_unlock_full_travel
             // 
+            key_unlock_full_travel.FillWeight = 71.12056F;
             key_unlock_full_travel.HeaderText = "Key Unlock Full Travel";
             key_unlock_full_travel.Name = "key_unlock_full_travel";
             key_unlock_full_travel.ReadOnly = true;
             // 
             // child_lock_effort
             // 
+            child_lock_effort.FillWeight = 71.12056F;
             child_lock_effort.HeaderText = "Child Lock Effort";
             child_lock_effort.Name = "child_lock_effort";
             child_lock_effort.ReadOnly = true;
             // 
             // child_lock_travel
             // 
+            child_lock_travel.FillWeight = 71.12056F;
             child_lock_travel.HeaderText = "Child Lock Travel";
             child_lock_travel.Name = "child_lock_travel";
             child_lock_travel.ReadOnly = true;
             // 
             // child_unlock_effort
             // 
+            child_unlock_effort.FillWeight = 71.12056F;
             child_unlock_effort.HeaderText = "Child Unlock Effort";
             child_unlock_effort.Name = "child_unlock_effort";
             child_unlock_effort.ReadOnly = true;
             // 
             // child_unlock_travel
             // 
+            child_unlock_travel.FillWeight = 71.12056F;
             child_unlock_travel.HeaderText = "Child Unlock Travel";
             child_unlock_travel.Name = "child_unlock_travel";
             child_unlock_travel.ReadOnly = true;
             // 
             // emg_lock_torque
             // 
+            emg_lock_torque.FillWeight = 71.12056F;
             emg_lock_torque.HeaderText = "Emg Lock Torque";
             emg_lock_torque.Name = "emg_lock_torque";
             emg_lock_torque.ReadOnly = true;
             // 
             // emg_lock_angle
             // 
+            emg_lock_angle.FillWeight = 71.12056F;
             emg_lock_angle.HeaderText = "Emg Lock Angle";
             emg_lock_angle.Name = "emg_lock_angle";
             emg_lock_angle.ReadOnly = true;
@@ -2150,12 +2259,6 @@
         private Label label5;
         private Button button2;
         private DataGridView TET_DGV;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private Panel panel3;
         private Panel panel6;
         private Panel panel5;
@@ -2292,6 +2395,24 @@
         private TextBox textBox93;
         private TextBox textBox95;
         private TextBox textBox94;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private DataGridViewTextBoxColumn inside_lock_effort;
+        private DataGridViewTextBoxColumn inside_lock_travel;
+        private DataGridViewTextBoxColumn inside_unlock_effort;
+        private DataGridViewTextBoxColumn inside_unlock_travel;
+        private DataGridViewTextBoxColumn inside_release_effort;
+        private DataGridViewTextBoxColumn inside_release_pretravel;
+        private DataGridViewTextBoxColumn inside_release_releasetravel;
+        private DataGridViewTextBoxColumn inside_release_full_travel;
+        private DataGridViewTextBoxColumn outside_release_effort;
+        private DataGridViewTextBoxColumn outside_release_pretravel;
+        private DataGridViewTextBoxColumn outside_release_release_travel;
+        private DataGridViewTextBoxColumn outside_release_full_travel;
         private DataGridViewTextBoxColumn FT_SNo;
         private DataGridViewTextBoxColumn FT_Date;
         private DataGridViewTextBoxColumn FT_Time;
