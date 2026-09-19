@@ -381,7 +381,8 @@
             // ExportBTN
             // 
             ExportBTN.Anchor = AnchorStyles.Right;
-            ExportBTN.FlatStyle = FlatStyle.Flat;
+            ExportBTN.BackColor = Color.Transparent;
+            ExportBTN.FlatStyle = FlatStyle.Popup;
             ExportBTN.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ExportBTN.ForeColor = Color.Black;
             ExportBTN.Location = new Point(1479, 110);
@@ -389,7 +390,7 @@
             ExportBTN.Size = new Size(122, 31);
             ExportBTN.TabIndex = 4;
             ExportBTN.Text = "Export as Excel";
-            ExportBTN.UseVisualStyleBackColor = true;
+            ExportBTN.UseVisualStyleBackColor = false;
             ExportBTN.Click += ExportBTN_Click;
             // 
             // panel2
@@ -699,7 +700,7 @@
             TET_DGV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             TET_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             TET_DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            TET_DGV.BackgroundColor = SystemColors.Control;
+            TET_DGV.BackgroundColor = Color.LightSkyBlue;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
@@ -853,7 +854,7 @@
             FT_DGV.AllowUserToAddRows = false;
             FT_DGV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             FT_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            FT_DGV.BackgroundColor = SystemColors.Control;
+            FT_DGV.BackgroundColor = Color.LightSkyBlue;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle4.BackColor = Color.White;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
@@ -1083,6 +1084,7 @@
             // 
             QTY_LBL.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             QTY_LBL.AutoSize = true;
+            QTY_LBL.BackColor = Color.Transparent;
             QTY_LBL.Location = new Point(1406, 118);
             QTY_LBL.Name = "QTY_LBL";
             QTY_LBL.Size = new Size(53, 15);
