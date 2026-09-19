@@ -16,10 +16,12 @@ namespace Magna_TestApplication
 
         private System.Windows.Forms.Timer _sampleDataTimer;
 
-        // Functional Test collection
-        private BindingList<FunctionalTestLog> _ftLogs;
+        // Master data (never filtered)
+        private List<FunctionalTestLog> _ftLogsMaster = new();
+        private List<TravelAndEnduranceLog> _teLogsMaster = new();
 
-        // NEW: Travel and Endurance collection
+        // Bound data (filtered view shown in grid)
+        private BindingList<FunctionalTestLog> _ftLogs;
         private BindingList<TravelAndEnduranceLog> _teLogs;
 
         public Magna()
@@ -32,11 +34,33 @@ namespace Magna_TestApplication
             _qrDecoderService = new QrDecoderService(); // Initialize decoder
 
             _ftLogs = new BindingList<FunctionalTestLog>();
-            _teLogs = new BindingList<TravelAndEnduranceLog>(); // Initialize TE logs
+            _teLogs = new BindingList<TravelAndEnduranceLog>();
+
+            // Populate filter dropdowns
+            InitFilterCombos(FT_CMB_VARIANT, new[] { "01", "02", "03", "04" });
+            InitFilterCombos(FT_CMB_SHIFT, new[] { "A", "B", "C" });
+            InitFilterCombos(FT_CMB_RESULT, new[] { "PASS", "FAIL" });
+
+            InitFilterCombos(TE_CMB_VARIANT, new[] { "01", "02", "03", "04" });
+            InitFilterCombos(TE_CMB_SHIFT, new[] { "A", "B", "C" });
+            InitFilterCombos(TE_CMB_RESULT, new[] { "PASS", "FAIL" });
+
+            // Default date range = last 30 days
+            FT_DTP_FROM.Value = TE_DTP_FROM.Value = DateTime.Today.AddDays(-30);
+            FT_DTP_TO.Value = TE_DTP_TO.Value = DateTime.Today;
 
             SetupFunctionalTestGrid();
-            SetupTravelEnduranceGrid(); // Setup new grid
+            SetupTravelEnduranceGrid();
             SetupSampleTimer();
+        }
+
+        private void InitFilterCombos(ComboBox cmb, string[] values)
+        {
+            cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb.Items.Clear();
+            cmb.Items.Add("(All)");
+            cmb.Items.AddRange(values);
+            cmb.SelectedIndex = 0;
         }
 
         private void SetupSampleTimer()
@@ -54,20 +78,21 @@ namespace Magna_TestApplication
                 // 1. Generate Functional Test Log
                 FunctionalTestLog ftLog = _sampleDataService.GenerateNextLog();
 
-                // 2. Add to Functional Test Grid
-                _ftLogs.Insert(0, ftLog);
+                // 2. Add to MASTER list
+                _ftLogsMaster.Insert(0, ftLog);
                 QTY_LBL.Text = ftLog.SNo.ToString();
 
-                // 3. Generate QR for Functional Test
+                // 3. Generate QR
                 string qrData = _qrDataService.GenerateQrData(
                     ftLog.LoggedAt, ftLog.Shift, ftLog.Variant, ftLog.SNo);
-
                 DisplayQr(qrData);
 
-                // 4. PROCESS TRAVEL AND ENDURANCE TEST
-                // This uses the QR data generated above. 
-                // It does NOT affect the Functional Test log.
+                // 4. Travel & Endurance
                 ProcessTravelAndEnduranceTest(qrData);
+
+                // 5. Re-apply filters (so grids stay up-to-date)
+                ApplyFunctionalTestFilter();
+                ApplyTravelEnduranceFilter();
             }
             catch (Exception ex)
             {
@@ -77,18 +102,15 @@ namespace Magna_TestApplication
 
         private void ProcessTravelAndEnduranceTest(string qrData)
         {
-            // Decode the QR data to get the info
             var decoded = _qrDecoderService.DecodeQrData(qrData);
 
-            // Simulate reading Travel and Endurance results (e.g., from a PLC or user input)
             string travelResult = _sampleDataService.GetSampleResult();
             string enduranceResult = _sampleDataService.GetSampleResult();
 
-            // Create ONE combined log
             var teLog = new TravelAndEnduranceLog
             {
-                SNo = _teLogs.Count + 1, // Independent serial number for TE logs
-                LoggedAt = decoded.dateTime, // Use time from QR
+                SNo = _teLogsMaster.Count + 1,
+                LoggedAt = decoded.dateTime,
                 Shift = decoded.shift,
                 Variant = decoded.variant,
                 SerialNumber = decoded.serialNumber,
@@ -96,11 +118,103 @@ namespace Magna_TestApplication
                 EnduranceResult = enduranceResult
             };
 
-            // Add to Travel and Endurance Grid
-            _teLogs.Insert(0, teLog);
+            _teLogsMaster.Insert(0, teLog);
+        }
 
-            // Update TE Quantity Label (if you have one)
-            // TE_QTY_LBL.Text = teLog.SNo.ToString();
+        // ---------------------------------------------------------------
+        // FUNCTIONAL TEST FILTER
+        // ---------------------------------------------------------------
+        private void ApplyFunctionalTestFilter()
+        {
+            DateTime fromDate = FT_DTP_FROM.Value.Date;
+            DateTime toDate = FT_DTP_TO.Value.Date.AddDays(1).AddSeconds(-1); // inclusive end of day
+
+            string timeFilter = FT_TXT_TIME.Text.Trim();          // e.g. "12:55"
+            string variantFilter = FT_CMB_VARIANT.Text;
+            string shiftFilter = FT_CMB_SHIFT.Text;
+            string resultFilter = FT_CMB_RESULT.Text;
+
+            IEnumerable<FunctionalTestLog> query = _ftLogsMaster;
+
+            // Date range
+            query = query.Where(x => x.LoggedAt >= fromDate && x.LoggedAt <= toDate);
+
+            // Time (matches HH:mm prefix)
+            if (!string.IsNullOrWhiteSpace(timeFilter))
+                query = query.Where(x => x.Time.StartsWith(timeFilter));
+
+            // Variant
+            if (!string.IsNullOrWhiteSpace(variantFilter) && variantFilter != "(All)")
+                query = query.Where(x => x.Variant == variantFilter);
+
+            // Shift
+            if (!string.IsNullOrWhiteSpace(shiftFilter) && shiftFilter != "(All)")
+                query = query.Where(x => x.Shift == shiftFilter);
+
+            // Result
+            if (!string.IsNullOrWhiteSpace(resultFilter) && resultFilter != "(All)")
+                query = query.Where(x => x.Result == resultFilter);
+
+            // Rebinding: replace contents of bound BindingList
+            _ftLogs = new BindingList<FunctionalTestLog>(query.ToList());
+            FT_DGV.DataSource = _ftLogs;
+        }
+
+        // ---------------------------------------------------------------
+        // TRAVEL & ENDURANCE FILTER
+        // ---------------------------------------------------------------
+        private void ApplyTravelEnduranceFilter()
+        {
+            DateTime fromDate = TE_DTP_FROM.Value.Date;
+            DateTime toDate = TE_DTP_TO.Value.Date.AddDays(1).AddSeconds(-1);
+
+            string timeFilter = TE_TXT_TIME.Text.Trim();
+            string variantFilter = TE_CMB_VARIANT.Text;
+            string shiftFilter = TE_CMB_SHIFT.Text;
+            string resultFilter = TE_CMB_RESULT.Text;
+
+            IEnumerable<TravelAndEnduranceLog> query = _teLogsMaster;
+
+            query = query.Where(x => x.LoggedAt >= fromDate && x.LoggedAt <= toDate);
+
+            if (!string.IsNullOrWhiteSpace(timeFilter))
+                query = query.Where(x => x.Time.StartsWith(timeFilter));
+
+            if (!string.IsNullOrWhiteSpace(variantFilter) && variantFilter != "(All)")
+                query = query.Where(x => x.Variant == variantFilter);
+
+            if (!string.IsNullOrWhiteSpace(shiftFilter) && shiftFilter != "(All)")
+                query = query.Where(x => x.Shift == shiftFilter);
+
+            if (!string.IsNullOrWhiteSpace(resultFilter) && resultFilter != "(All)")
+                query = query.Where(x => x.Result == resultFilter);
+
+            _teLogs = new BindingList<TravelAndEnduranceLog>(query.ToList());
+            TET_DGV.DataSource = _teLogs;
+        }
+
+        private void FT_BTN_FILTER_Click_1(object sender, EventArgs e) => ApplyFunctionalTestFilter();
+        private void FT_BTN_CLEAR_Click_1(object sender, EventArgs e)
+        {
+            FT_DTP_FROM.Value = DateTime.Today.AddDays(-30);
+            FT_DTP_TO.Value = DateTime.Today;
+            FT_TXT_TIME.Text = "";
+            FT_CMB_VARIANT.SelectedIndex = 0;
+            FT_CMB_SHIFT.SelectedIndex = 0;
+            FT_CMB_RESULT.SelectedIndex = 0;
+            ApplyFunctionalTestFilter();
+        }
+
+        private void TE_BTN_FILTER_Click_1(object sender, EventArgs e) => ApplyTravelEnduranceFilter();
+        private void TE_BTN_CLEAR_Click_1(object sender, EventArgs e)
+        {
+            TE_DTP_FROM.Value = DateTime.Today.AddDays(-30);
+            TE_DTP_TO.Value = DateTime.Today;
+            TE_TXT_TIME.Text = "";
+            TE_CMB_VARIANT.SelectedIndex = 0;
+            TE_CMB_SHIFT.SelectedIndex = 0;
+            TE_CMB_RESULT.SelectedIndex = 0;
+            ApplyTravelEnduranceFilter();
         }
 
         private void DisplayQr(string qrData)
@@ -130,10 +244,8 @@ namespace Magna_TestApplication
             FT_DGV.DataSource = _ftLogs;
         }
 
-        // NEW: Setup for Travel and Endurance Grid
         private void SetupTravelEnduranceGrid()
         {
-            // Assuming you have a DataGridView named TE_DGV
             TET_DGV.AutoGenerateColumns = false;
             TET_DGV.AllowUserToAddRows = false;
             TET_DGV.ReadOnly = true;
@@ -152,5 +264,7 @@ namespace Magna_TestApplication
         {
 
         }
+
+
     }
 }

@@ -8,13 +8,15 @@
         public string Date => LoggedAt.ToString("dd-MM-yyyy");
         public string Time => LoggedAt.ToString("HH:mm:ss");
 
-        // These will be populated by decoding the Functional Test QR
         public string Shift { get; set; } = "";
         public string Variant { get; set; } = "";
-        public string SerialNumber { get; set; } = ""; // Parsed from quantityCode
+        public string SerialNumber { get; set; } = "";
 
-        // Specific to Travel & Endurance
         public string TravelResult { get; set; } = "";
         public string EnduranceResult { get; set; } = "";
+
+        // NEW: overall result (both must PASS for PASS)
+        public string Result =>
+            (TravelResult == "PASS" && EnduranceResult == "PASS") ? "PASS" : "FAIL";
     }
 }
