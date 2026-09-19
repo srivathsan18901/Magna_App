@@ -499,7 +499,7 @@
             // label47
             // 
             label47.AutoSize = true;
-            label47.Location = new Point(15, 15);
+            label47.Location = new Point(7, 15);
             label47.Name = "label47";
             label47.Size = new Size(40, 17);
             label47.TabIndex = 13;
@@ -507,7 +507,7 @@
             // 
             // TE_DTP_FROM
             // 
-            TE_DTP_FROM.Location = new Point(57, 11);
+            TE_DTP_FROM.Location = new Point(49, 11);
             TE_DTP_FROM.Name = "TE_DTP_FROM";
             TE_DTP_FROM.Size = new Size(172, 25);
             TE_DTP_FROM.TabIndex = 7;
@@ -642,7 +642,7 @@
             // From
             // 
             From.AutoSize = true;
-            From.Location = new Point(15, 15);
+            From.Location = new Point(7, 15);
             From.Name = "From";
             From.Size = new Size(40, 17);
             From.TabIndex = 13;
@@ -650,7 +650,7 @@
             // 
             // FT_DTP_FROM
             // 
-            FT_DTP_FROM.Location = new Point(57, 11);
+            FT_DTP_FROM.Location = new Point(49, 11);
             FT_DTP_FROM.Name = "FT_DTP_FROM";
             FT_DTP_FROM.Size = new Size(172, 25);
             FT_DTP_FROM.TabIndex = 7;
