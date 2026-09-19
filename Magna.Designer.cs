@@ -53,18 +53,13 @@
             dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             QTY_LBL = new Label();
             FT_DGV = new DataGridView();
-            FT_SNo = new DataGridViewTextBoxColumn();
-            FT_Date = new DataGridViewTextBoxColumn();
-            FT_Time = new DataGridViewTextBoxColumn();
-            FT_Shift = new DataGridViewTextBoxColumn();
-            FT_Variant = new DataGridViewTextBoxColumn();
-            FT_Result = new DataGridViewTextBoxColumn();
             label2 = new Label();
             label1 = new Label();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             panel3 = new Panel();
             panel6 = new Panel();
+            textBox95 = new TextBox();
             groupBox9 = new GroupBox();
             textBox82 = new TextBox();
             label40 = new Label();
@@ -121,6 +116,7 @@
             label35 = new Label();
             label7 = new Label();
             panel5 = new Panel();
+            textBox94 = new TextBox();
             textBox9 = new TextBox();
             textBox8 = new TextBox();
             textBox7 = new TextBox();
@@ -216,8 +212,29 @@
             Varient = new Label();
             textBox1 = new TextBox();
             Shift = new Label();
-            textBox94 = new TextBox();
-            textBox95 = new TextBox();
+            FT_SNo = new DataGridViewTextBoxColumn();
+            FT_Date = new DataGridViewTextBoxColumn();
+            FT_Time = new DataGridViewTextBoxColumn();
+            FT_Shift = new DataGridViewTextBoxColumn();
+            FT_Variant = new DataGridViewTextBoxColumn();
+            FT_Result = new DataGridViewTextBoxColumn();
+            seal_load = new DataGridViewTextBoxColumn();
+            power_lock_current = new DataGridViewTextBoxColumn();
+            power_unlock_current = new DataGridViewTextBoxColumn();
+            key_lock_effort = new DataGridViewTextBoxColumn();
+            key_lock_pretravel = new DataGridViewTextBoxColumn();
+            key_lock_locktravel = new DataGridViewTextBoxColumn();
+            key_lock_full_travel = new DataGridViewTextBoxColumn();
+            key_unlock_effort = new DataGridViewTextBoxColumn();
+            key_unlock_pretravel = new DataGridViewTextBoxColumn();
+            key_unlock_locktravel = new DataGridViewTextBoxColumn();
+            key_unlock_full_travel = new DataGridViewTextBoxColumn();
+            child_lock_effort = new DataGridViewTextBoxColumn();
+            child_lock_travel = new DataGridViewTextBoxColumn();
+            child_unlock_effort = new DataGridViewTextBoxColumn();
+            child_unlock_travel = new DataGridViewTextBoxColumn();
+            emg_lock_torque = new DataGridViewTextBoxColumn();
+            emg_lock_angle = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)QR_PB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -323,7 +340,7 @@
             ExportBTN.FlatStyle = FlatStyle.Flat;
             ExportBTN.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ExportBTN.ForeColor = Color.Black;
-            ExportBTN.Location = new Point(1451, 17);
+            ExportBTN.Location = new Point(1451, 66);
             ExportBTN.Name = "ExportBTN";
             ExportBTN.Size = new Size(122, 31);
             ExportBTN.TabIndex = 4;
@@ -343,7 +360,7 @@
             panel2.Controls.Add(label1);
             panel2.Location = new Point(8, 15);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1583, 707);
+            panel2.Size = new Size(1583, 805);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
             // 
@@ -372,7 +389,7 @@
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             TET_DGV.DefaultCellStyle = dataGridViewCellStyle2;
-            TET_DGV.Location = new Point(12, 387);
+            TET_DGV.Location = new Point(12, 497);
             TET_DGV.MultiSelect = false;
             TET_DGV.Name = "TET_DGV";
             TET_DGV.ReadOnly = true;
@@ -434,7 +451,7 @@
             // 
             QTY_LBL.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             QTY_LBL.AutoSize = true;
-            QTY_LBL.Location = new Point(1520, 366);
+            QTY_LBL.Location = new Point(1511, 414);
             QTY_LBL.Name = "QTY_LBL";
             QTY_LBL.Size = new Size(62, 17);
             QTY_LBL.TabIndex = 5;
@@ -443,7 +460,6 @@
             // FT_DGV
             // 
             FT_DGV.AllowUserToAddRows = false;
-            FT_DGV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             FT_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             FT_DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             FT_DGV.BackgroundColor = SystemColors.Control;
@@ -456,7 +472,7 @@
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             FT_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             FT_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            FT_DGV.Columns.AddRange(new DataGridViewColumn[] { FT_SNo, FT_Date, FT_Time, FT_Shift, FT_Variant, FT_Result });
+            FT_DGV.Columns.AddRange(new DataGridViewColumn[] { FT_SNo, FT_Date, FT_Time, FT_Shift, FT_Variant, FT_Result, seal_load, power_lock_current, power_unlock_current, key_lock_effort, key_lock_pretravel, key_lock_locktravel, key_lock_full_travel, key_unlock_effort, key_unlock_pretravel, key_unlock_locktravel, key_unlock_full_travel, child_lock_effort, child_lock_travel, child_unlock_effort, child_unlock_travel, emg_lock_torque, emg_lock_angle });
             dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = Color.White;
             dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
@@ -465,7 +481,7 @@
             dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
             FT_DGV.DefaultCellStyle = dataGridViewCellStyle5;
-            FT_DGV.Location = new Point(12, 59);
+            FT_DGV.Location = new Point(17, 103);
             FT_DGV.MultiSelect = false;
             FT_DGV.Name = "FT_DGV";
             FT_DGV.ReadOnly = true;
@@ -481,54 +497,12 @@
             FT_DGV.Size = new Size(1561, 303);
             FT_DGV.TabIndex = 4;
             // 
-            // FT_SNo
-            // 
-            FT_SNo.DataPropertyName = "SNo";
-            FT_SNo.HeaderText = "S.no";
-            FT_SNo.Name = "FT_SNo";
-            FT_SNo.ReadOnly = true;
-            // 
-            // FT_Date
-            // 
-            FT_Date.DataPropertyName = "Date";
-            FT_Date.HeaderText = "Date";
-            FT_Date.Name = "FT_Date";
-            FT_Date.ReadOnly = true;
-            // 
-            // FT_Time
-            // 
-            FT_Time.DataPropertyName = "Time";
-            FT_Time.HeaderText = "Time";
-            FT_Time.Name = "FT_Time";
-            FT_Time.ReadOnly = true;
-            // 
-            // FT_Shift
-            // 
-            FT_Shift.DataPropertyName = "Shift";
-            FT_Shift.HeaderText = "Shift";
-            FT_Shift.Name = "FT_Shift";
-            FT_Shift.ReadOnly = true;
-            // 
-            // FT_Variant
-            // 
-            FT_Variant.DataPropertyName = "Variant";
-            FT_Variant.HeaderText = "Variant";
-            FT_Variant.Name = "FT_Variant";
-            FT_Variant.ReadOnly = true;
-            // 
-            // FT_Result
-            // 
-            FT_Result.DataPropertyName = "Result";
-            FT_Result.HeaderText = "Result";
-            FT_Result.Name = "FT_Result";
-            FT_Result.ReadOnly = true;
-            // 
             // label2
             // 
             label2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label2.Location = new Point(12, 367);
+            label2.Location = new Point(12, 477);
             label2.Name = "label2";
             label2.Size = new Size(169, 17);
             label2.TabIndex = 3;
@@ -539,7 +513,7 @@
             label1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label1.Location = new Point(12, 29);
+            label1.Location = new Point(12, 78);
             label1.Name = "label1";
             label1.Size = new Size(102, 17);
             label1.TabIndex = 2;
@@ -597,6 +571,14 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(792, 782);
             panel6.TabIndex = 1;
+            // 
+            // textBox95
+            // 
+            textBox95.BorderStyle = BorderStyle.FixedSingle;
+            textBox95.Location = new Point(436, 21);
+            textBox95.Name = "textBox95";
+            textBox95.Size = new Size(100, 25);
+            textBox95.TabIndex = 16;
             // 
             // groupBox9
             // 
@@ -1090,6 +1072,14 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(774, 782);
             panel5.TabIndex = 0;
+            // 
+            // textBox94
+            // 
+            textBox94.BorderStyle = BorderStyle.FixedSingle;
+            textBox94.Location = new Point(397, 21);
+            textBox94.Name = "textBox94";
+            textBox94.Size = new Size(100, 25);
+            textBox94.TabIndex = 15;
             // 
             // textBox9
             // 
@@ -1926,21 +1916,149 @@
             Shift.Text = "Shift";
             Shift.Click += label3_Click;
             // 
-            // textBox94
+            // FT_SNo
             // 
-            textBox94.BorderStyle = BorderStyle.FixedSingle;
-            textBox94.Location = new Point(397, 21);
-            textBox94.Name = "textBox94";
-            textBox94.Size = new Size(100, 25);
-            textBox94.TabIndex = 15;
+            FT_SNo.DataPropertyName = "SNo";
+            FT_SNo.HeaderText = "S.no";
+            FT_SNo.Name = "FT_SNo";
+            FT_SNo.ReadOnly = true;
             // 
-            // textBox95
+            // FT_Date
             // 
-            textBox95.BorderStyle = BorderStyle.FixedSingle;
-            textBox95.Location = new Point(436, 21);
-            textBox95.Name = "textBox95";
-            textBox95.Size = new Size(100, 25);
-            textBox95.TabIndex = 16;
+            FT_Date.DataPropertyName = "Date";
+            FT_Date.HeaderText = "Date";
+            FT_Date.Name = "FT_Date";
+            FT_Date.ReadOnly = true;
+            // 
+            // FT_Time
+            // 
+            FT_Time.DataPropertyName = "Time";
+            FT_Time.HeaderText = "Time";
+            FT_Time.Name = "FT_Time";
+            FT_Time.ReadOnly = true;
+            // 
+            // FT_Shift
+            // 
+            FT_Shift.DataPropertyName = "Shift";
+            FT_Shift.HeaderText = "Shift";
+            FT_Shift.Name = "FT_Shift";
+            FT_Shift.ReadOnly = true;
+            // 
+            // FT_Variant
+            // 
+            FT_Variant.DataPropertyName = "Variant";
+            FT_Variant.HeaderText = "Variant";
+            FT_Variant.Name = "FT_Variant";
+            FT_Variant.ReadOnly = true;
+            // 
+            // FT_Result
+            // 
+            FT_Result.DataPropertyName = "Result";
+            FT_Result.HeaderText = "Result";
+            FT_Result.Name = "FT_Result";
+            FT_Result.ReadOnly = true;
+            // 
+            // seal_load
+            // 
+            seal_load.HeaderText = "Seal Load";
+            seal_load.Name = "seal_load";
+            seal_load.ReadOnly = true;
+            // 
+            // power_lock_current
+            // 
+            power_lock_current.HeaderText = "Power Lock Current";
+            power_lock_current.Name = "power_lock_current";
+            power_lock_current.ReadOnly = true;
+            // 
+            // power_unlock_current
+            // 
+            power_unlock_current.HeaderText = "Power Unlock Current";
+            power_unlock_current.Name = "power_unlock_current";
+            power_unlock_current.ReadOnly = true;
+            // 
+            // key_lock_effort
+            // 
+            key_lock_effort.HeaderText = "Key Lock Effort";
+            key_lock_effort.Name = "key_lock_effort";
+            key_lock_effort.ReadOnly = true;
+            // 
+            // key_lock_pretravel
+            // 
+            key_lock_pretravel.HeaderText = "Key Lock Pre-Travel";
+            key_lock_pretravel.Name = "key_lock_pretravel";
+            key_lock_pretravel.ReadOnly = true;
+            // 
+            // key_lock_locktravel
+            // 
+            key_lock_locktravel.HeaderText = "Key Lock - Lock Travel";
+            key_lock_locktravel.Name = "key_lock_locktravel";
+            key_lock_locktravel.ReadOnly = true;
+            // 
+            // key_lock_full_travel
+            // 
+            key_lock_full_travel.HeaderText = "Key Lock Full Travel";
+            key_lock_full_travel.Name = "key_lock_full_travel";
+            key_lock_full_travel.ReadOnly = true;
+            // 
+            // key_unlock_effort
+            // 
+            key_unlock_effort.HeaderText = "Key Unlock Effort";
+            key_unlock_effort.Name = "key_unlock_effort";
+            key_unlock_effort.ReadOnly = true;
+            // 
+            // key_unlock_pretravel
+            // 
+            key_unlock_pretravel.HeaderText = "Key Unlock Pre-Travel";
+            key_unlock_pretravel.Name = "key_unlock_pretravel";
+            key_unlock_pretravel.ReadOnly = true;
+            // 
+            // key_unlock_locktravel
+            // 
+            key_unlock_locktravel.HeaderText = "Key Unlock Lock Travel";
+            key_unlock_locktravel.Name = "key_unlock_locktravel";
+            key_unlock_locktravel.ReadOnly = true;
+            // 
+            // key_unlock_full_travel
+            // 
+            key_unlock_full_travel.HeaderText = "Key Unlock Full Travel";
+            key_unlock_full_travel.Name = "key_unlock_full_travel";
+            key_unlock_full_travel.ReadOnly = true;
+            // 
+            // child_lock_effort
+            // 
+            child_lock_effort.HeaderText = "Child Lock Effort";
+            child_lock_effort.Name = "child_lock_effort";
+            child_lock_effort.ReadOnly = true;
+            // 
+            // child_lock_travel
+            // 
+            child_lock_travel.HeaderText = "Child Lock Travel";
+            child_lock_travel.Name = "child_lock_travel";
+            child_lock_travel.ReadOnly = true;
+            // 
+            // child_unlock_effort
+            // 
+            child_unlock_effort.HeaderText = "Child Unlock Effort";
+            child_unlock_effort.Name = "child_unlock_effort";
+            child_unlock_effort.ReadOnly = true;
+            // 
+            // child_unlock_travel
+            // 
+            child_unlock_travel.HeaderText = "Child Unlock Travel";
+            child_unlock_travel.Name = "child_unlock_travel";
+            child_unlock_travel.ReadOnly = true;
+            // 
+            // emg_lock_torque
+            // 
+            emg_lock_torque.HeaderText = "Emg Lock Torque";
+            emg_lock_torque.Name = "emg_lock_torque";
+            emg_lock_torque.ReadOnly = true;
+            // 
+            // emg_lock_angle
+            // 
+            emg_lock_angle.HeaderText = "Emg Lock Angle";
+            emg_lock_angle.Name = "emg_lock_angle";
+            emg_lock_angle.ReadOnly = true;
             // 
             // Magna
             // 
@@ -2009,12 +2127,6 @@
         private Button ExportBTN;
         private Label QTY_LBL;
         private PictureBox QR_PB;
-        private DataGridViewTextBoxColumn FT_SNo;
-        private DataGridViewTextBoxColumn FT_Date;
-        private DataGridViewTextBoxColumn FT_Time;
-        private DataGridViewTextBoxColumn FT_Shift;
-        private DataGridViewTextBoxColumn FT_Variant;
-        private DataGridViewTextBoxColumn FT_Result;
         private Label QR_LBL;
         private TabControl tabControl1;
         private TabPage tabPage1;
@@ -2180,5 +2292,28 @@
         private TextBox textBox93;
         private TextBox textBox95;
         private TextBox textBox94;
+        private DataGridViewTextBoxColumn FT_SNo;
+        private DataGridViewTextBoxColumn FT_Date;
+        private DataGridViewTextBoxColumn FT_Time;
+        private DataGridViewTextBoxColumn FT_Shift;
+        private DataGridViewTextBoxColumn FT_Variant;
+        private DataGridViewTextBoxColumn FT_Result;
+        private DataGridViewTextBoxColumn seal_load;
+        private DataGridViewTextBoxColumn power_lock_current;
+        private DataGridViewTextBoxColumn power_unlock_current;
+        private DataGridViewTextBoxColumn key_lock_effort;
+        private DataGridViewTextBoxColumn key_lock_pretravel;
+        private DataGridViewTextBoxColumn key_lock_locktravel;
+        private DataGridViewTextBoxColumn key_lock_full_travel;
+        private DataGridViewTextBoxColumn key_unlock_effort;
+        private DataGridViewTextBoxColumn key_unlock_pretravel;
+        private DataGridViewTextBoxColumn key_unlock_locktravel;
+        private DataGridViewTextBoxColumn key_unlock_full_travel;
+        private DataGridViewTextBoxColumn child_lock_effort;
+        private DataGridViewTextBoxColumn child_lock_travel;
+        private DataGridViewTextBoxColumn child_unlock_effort;
+        private DataGridViewTextBoxColumn child_unlock_travel;
+        private DataGridViewTextBoxColumn emg_lock_torque;
+        private DataGridViewTextBoxColumn emg_lock_angle;
     }
 }
