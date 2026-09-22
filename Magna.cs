@@ -44,15 +44,6 @@ namespace Magna_TestApplication
             PLC_IP.Text = "192.168.1.10";
             PLC_Port.Text = "5000";
 
-            // Populate filter dropdowns
-            InitFilterCombos(FT_CMB_VARIANT, new[] { "01", "02", "03", "04" });
-            InitFilterCombos(FT_CMB_SHIFT, new[] { "A", "B", "C" });
-            InitFilterCombos(FT_CMB_RESULT, new[] { "PASS", "FAIL" });
-
-            InitFilterCombos(TE_CMB_VARIANT, new[] { "01", "02", "03", "04" });
-            InitFilterCombos(TE_CMB_SHIFT, new[] { "A", "B", "C" });
-            InitFilterCombos(TE_CMB_RESULT, new[] { "PASS", "FAIL" });
-
             // Default date range = last 30 days
             FT_DTP_FROM.Value = TE_DTP_FROM.Value = DateTime.Today.AddDays(-30);
             FT_DTP_TO.Value = TE_DTP_TO.Value = DateTime.Today;
@@ -244,7 +235,7 @@ namespace Magna_TestApplication
             DateTime fromDate = FT_DTP_FROM.Value.Date;
             DateTime toDate = FT_DTP_TO.Value.Date.AddDays(1).AddSeconds(-1); // inclusive end of day
 
-            string timeFilter = FT_TXT_TIME.Text.Trim();          // e.g. "12:55"
+            string timeFilter = FT_TXT_TIME.Text.Trim();
             string variantFilter = FT_CMB_VARIANT.Text;
             string shiftFilter = FT_CMB_SHIFT.Text;
             string resultFilter = FT_CMB_RESULT.Text;
@@ -376,6 +367,11 @@ namespace Magna_TestApplication
         private void label3_Click(object sender, EventArgs e) { }
 
         private void FT_DGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
         }

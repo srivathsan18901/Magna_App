@@ -128,119 +128,119 @@
             panel6 = new Panel();
             textBox95 = new TextBox();
             groupBox9 = new GroupBox();
-            textBox82 = new TextBox();
+            txtOutsideReleaseFullTravelActual = new TextBox();
             label40 = new Label();
-            textBox83 = new TextBox();
+            txtOutsideReleaseFullTravelMax = new TextBox();
             label41 = new Label();
-            textBox84 = new TextBox();
+            txtOutsideReleaseFullTravelMin = new TextBox();
             label42 = new Label();
-            textBox85 = new TextBox();
-            textBox86 = new TextBox();
+            txtOutsideReleaseReleaseTravelActual = new TextBox();
+            txtOutsideReleaseReleaseTravelMax = new TextBox();
             label43 = new Label();
-            textBox87 = new TextBox();
-            textBox88 = new TextBox();
-            textBox89 = new TextBox();
-            textBox90 = new TextBox();
-            textBox91 = new TextBox();
-            textBox92 = new TextBox();
-            textBox93 = new TextBox();
+            txtOutsideReleaseReleaseTravelMin = new TextBox();
+            txtOutsideReleaseEffortMin = new TextBox();
+            txtOutsideReleasePreTravelActual = new TextBox();
+            txtOutsideReleaseEffortMax = new TextBox();
+            txtOutsideReleasePreTravelMax = new TextBox();
+            txtOutsideReleaseEffortActual = new TextBox();
+            txtOutsideReleasePreTravelMin = new TextBox();
             groupBox8 = new GroupBox();
-            textBox70 = new TextBox();
+            txtInsideReleaseFullTravelActual = new TextBox();
             label36 = new Label();
-            textBox71 = new TextBox();
+            txtInsideReleaseFullTravelMax = new TextBox();
             label37 = new Label();
-            textBox72 = new TextBox();
+            txtInsideReleaseFullTravelMin = new TextBox();
             label38 = new Label();
-            textBox73 = new TextBox();
-            textBox74 = new TextBox();
+            txtInsideReleaseReleaseTravelActual = new TextBox();
+            txtInsideReleaseReleaseTravelMax = new TextBox();
             label39 = new Label();
-            textBox75 = new TextBox();
-            textBox76 = new TextBox();
-            textBox77 = new TextBox();
-            textBox78 = new TextBox();
-            textBox79 = new TextBox();
-            textBox80 = new TextBox();
-            textBox81 = new TextBox();
+            txtInsideReleaseReleaseTravelMin = new TextBox();
+            txtInsideReleaseEffortMin = new TextBox();
+            txtInsideReleasePreTravelActual = new TextBox();
+            txtInsideReleaseEffortMax = new TextBox();
+            txtInsideReleasePreTravelMax = new TextBox();
+            txtInsideReleaseEffortActual = new TextBox();
+            txtInsideReleasePreTravelMin = new TextBox();
             label33 = new Label();
             groupBox7 = new GroupBox();
-            textBox58 = new TextBox();
+            txtInsideUnlockTravelActual = new TextBox();
             label29 = new Label();
-            textBox59 = new TextBox();
+            txtInsideUnlockTravelMax = new TextBox();
             label30 = new Label();
-            textBox60 = new TextBox();
+            txtInsideUnlockTravelMin = new TextBox();
             label31 = new Label();
-            textBox61 = new TextBox();
-            textBox62 = new TextBox();
+            txtInsideUnlockEffortActual = new TextBox();
+            txtInsideUnlockEffortMax = new TextBox();
             label32 = new Label();
-            textBox63 = new TextBox();
-            textBox64 = new TextBox();
-            textBox65 = new TextBox();
-            textBox66 = new TextBox();
-            textBox67 = new TextBox();
-            textBox68 = new TextBox();
-            textBox69 = new TextBox();
+            txtInsideUnlockEffortMin = new TextBox();
+            txtInsideLockEffortMin = new TextBox();
+            txtInsideLockTravelActual = new TextBox();
+            txtInsideLockEffortMax = new TextBox();
+            txtInsideLockTravelMax = new TextBox();
+            txtInsideLockEffortActual = new TextBox();
+            txtInsideLockTravelMin = new TextBox();
             label34 = new Label();
             label35 = new Label();
             label7 = new Label();
             panel5 = new Panel();
             textBox94 = new TextBox();
-            textBox9 = new TextBox();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
+            txtSealLoadActual = new TextBox();
+            txtSealLoadMax = new TextBox();
+            txtSealLoadMin = new TextBox();
             label28 = new Label();
             label27 = new Label();
             label26 = new Label();
             groupBox6 = new GroupBox();
-            textBox52 = new TextBox();
-            textBox53 = new TextBox();
+            txtEmgLockAngleActual = new TextBox();
+            txtEmgLockAngleMax = new TextBox();
             label24 = new Label();
-            textBox54 = new TextBox();
+            txtEmgLockAngleMin = new TextBox();
             label25 = new Label();
-            textBox55 = new TextBox();
-            textBox57 = new TextBox();
-            textBox56 = new TextBox();
+            txtEmgLockTorqueActual = new TextBox();
+            txtEmgLockTorqueMin = new TextBox();
+            txtEmgLockTorqueMax = new TextBox();
             groupBox5 = new GroupBox();
-            textBox40 = new TextBox();
+            txtChildUnlockTravelActual = new TextBox();
             label23 = new Label();
-            textBox41 = new TextBox();
+            txtChildUnlockTravelMax = new TextBox();
             label20 = new Label();
-            textBox42 = new TextBox();
+            txtChildUnlockTravelMin = new TextBox();
             label22 = new Label();
-            textBox43 = new TextBox();
-            textBox44 = new TextBox();
+            txtChildUnlockEffortActual = new TextBox();
+            txtChildUnlockEffortMax = new TextBox();
             label21 = new Label();
-            textBox45 = new TextBox();
-            textBox51 = new TextBox();
-            textBox46 = new TextBox();
-            textBox50 = new TextBox();
-            textBox47 = new TextBox();
-            textBox49 = new TextBox();
-            textBox48 = new TextBox();
+            txtChildUnlockEffortMin = new TextBox();
+            txtChildLockEffortMin = new TextBox();
+            txtChildLockTravelActual = new TextBox();
+            txtChildLockEffortMax = new TextBox();
+            txtChildLockTravelMax = new TextBox();
+            txtChildLockEffortActual = new TextBox();
+            txtChildLockTravelMin = new TextBox();
             groupBox4 = new GroupBox();
-            textBox34 = new TextBox();
-            textBox35 = new TextBox();
-            textBox36 = new TextBox();
-            textBox37 = new TextBox();
-            textBox38 = new TextBox();
-            textBox39 = new TextBox();
-            textBox28 = new TextBox();
-            textBox29 = new TextBox();
-            textBox30 = new TextBox();
-            textBox31 = new TextBox();
+            txtKeyUnlockFullTravelActual = new TextBox();
+            txtKeyUnlockFullTravelMax = new TextBox();
+            txtKeyUnlockFullTravelMin = new TextBox();
+            txtKeyUnlockLockTravelActual = new TextBox();
+            txtKeyUnlockLockTravelMax = new TextBox();
+            txtKeyUnlockLockTravelMin = new TextBox();
+            txtKeyUnlockPreTravelActual = new TextBox();
+            txtKeyUnlockPreTravelMax = new TextBox();
+            txtKeyUnlockPreTravelMin = new TextBox();
+            txtKeyUnlockEffortActual = new TextBox();
             textBox32 = new TextBox();
-            textBox33 = new TextBox();
-            textBox22 = new TextBox();
-            textBox23 = new TextBox();
-            textBox24 = new TextBox();
-            textBox25 = new TextBox();
-            textBox26 = new TextBox();
-            textBox27 = new TextBox();
-            textBox16 = new TextBox();
-            textBox17 = new TextBox();
-            textBox18 = new TextBox();
-            textBox19 = new TextBox();
-            textBox20 = new TextBox();
-            textBox21 = new TextBox();
+            txtKeyUnlockEffortMin = new TextBox();
+            txtKeyLockFullTravelActual = new TextBox();
+            txtKeyLockFullTravelMax = new TextBox();
+            txtKeyLockFullTravelMin = new TextBox();
+            txtKeyLockLockTravelActual = new TextBox();
+            txtKeyLockLockTravelMax = new TextBox();
+            txtKeyLockLockTravelMin = new TextBox();
+            txtKeyLockPreTravelActual = new TextBox();
+            txtKeyLockPreTravelMax = new TextBox();
+            txtKeyLockPreTravelMin = new TextBox();
+            txtKeyLockEffortActual = new TextBox();
+            txtKeyLockEffortMax = new TextBox();
+            txtKeyLockEffortMin = new TextBox();
             label19 = new Label();
             label18 = new Label();
             label17 = new Label();
@@ -250,13 +250,13 @@
             label12 = new Label();
             label13 = new Label();
             groupBox3 = new GroupBox();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
-            textBox10 = new TextBox();
+            txtPowerUnlockActual = new TextBox();
+            txtPowerUnlockMax = new TextBox();
+            txtPowerUnlockMin = new TextBox();
+            txtPowerLockActual = new TextBox();
             label11 = new Label();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
+            txtPowerLockMax = new TextBox();
+            txtPowerLockMin = new TextBox();
             label10 = new Label();
             label9 = new Label();
             label6 = new Label();
@@ -326,6 +326,7 @@
             // 
             // PLC_Port
             // 
+            PLC_Port.BackColor = Color.White;
             PLC_Port.BorderStyle = BorderStyle.FixedSingle;
             PLC_Port.Location = new Point(323, 29);
             PLC_Port.Name = "PLC_Port";
@@ -335,6 +336,7 @@
             // 
             // PLC_IP
             // 
+            PLC_IP.BackColor = Color.White;
             PLC_IP.BorderStyle = BorderStyle.FixedSingle;
             PLC_IP.Location = new Point(186, 29);
             PLC_IP.Name = "PLC_IP";
@@ -1165,6 +1167,7 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(792, 782);
             panel6.TabIndex = 1;
+            panel6.Paint += panel6_Paint;
             // 
             // textBox95
             // 
@@ -1176,22 +1179,22 @@
             // 
             // groupBox9
             // 
-            groupBox9.Controls.Add(textBox82);
+            groupBox9.Controls.Add(txtOutsideReleaseFullTravelActual);
             groupBox9.Controls.Add(label40);
-            groupBox9.Controls.Add(textBox83);
+            groupBox9.Controls.Add(txtOutsideReleaseFullTravelMax);
             groupBox9.Controls.Add(label41);
-            groupBox9.Controls.Add(textBox84);
+            groupBox9.Controls.Add(txtOutsideReleaseFullTravelMin);
             groupBox9.Controls.Add(label42);
-            groupBox9.Controls.Add(textBox85);
-            groupBox9.Controls.Add(textBox86);
+            groupBox9.Controls.Add(txtOutsideReleaseReleaseTravelActual);
+            groupBox9.Controls.Add(txtOutsideReleaseReleaseTravelMax);
             groupBox9.Controls.Add(label43);
-            groupBox9.Controls.Add(textBox87);
-            groupBox9.Controls.Add(textBox88);
-            groupBox9.Controls.Add(textBox89);
-            groupBox9.Controls.Add(textBox90);
-            groupBox9.Controls.Add(textBox91);
-            groupBox9.Controls.Add(textBox92);
-            groupBox9.Controls.Add(textBox93);
+            groupBox9.Controls.Add(txtOutsideReleaseReleaseTravelMin);
+            groupBox9.Controls.Add(txtOutsideReleaseEffortMin);
+            groupBox9.Controls.Add(txtOutsideReleasePreTravelActual);
+            groupBox9.Controls.Add(txtOutsideReleaseEffortMax);
+            groupBox9.Controls.Add(txtOutsideReleasePreTravelMax);
+            groupBox9.Controls.Add(txtOutsideReleaseEffortActual);
+            groupBox9.Controls.Add(txtOutsideReleasePreTravelMin);
             groupBox9.Location = new Point(16, 429);
             groupBox9.Name = "groupBox9";
             groupBox9.Size = new Size(716, 140);
@@ -1199,12 +1202,13 @@
             groupBox9.TabStop = false;
             groupBox9.Text = "Outside Release";
             // 
-            // textBox82
+            // txtOutsideReleaseFullTravelActual
             // 
-            textBox82.Location = new Point(566, 110);
-            textBox82.Name = "textBox82";
-            textBox82.Size = new Size(100, 25);
-            textBox82.TabIndex = 56;
+            txtOutsideReleaseFullTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtOutsideReleaseFullTravelActual.Location = new Point(566, 110);
+            txtOutsideReleaseFullTravelActual.Name = "txtOutsideReleaseFullTravelActual";
+            txtOutsideReleaseFullTravelActual.Size = new Size(100, 25);
+            txtOutsideReleaseFullTravelActual.TabIndex = 56;
             // 
             // label40
             // 
@@ -1215,12 +1219,13 @@
             label40.TabIndex = 11;
             label40.Text = "Outside release - Full travel (MM)";
             // 
-            // textBox83
+            // txtOutsideReleaseFullTravelMax
             // 
-            textBox83.Location = new Point(440, 110);
-            textBox83.Name = "textBox83";
-            textBox83.Size = new Size(100, 25);
-            textBox83.TabIndex = 55;
+            txtOutsideReleaseFullTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtOutsideReleaseFullTravelMax.Location = new Point(440, 110);
+            txtOutsideReleaseFullTravelMax.Name = "txtOutsideReleaseFullTravelMax";
+            txtOutsideReleaseFullTravelMax.Size = new Size(100, 25);
+            txtOutsideReleaseFullTravelMax.TabIndex = 55;
             // 
             // label41
             // 
@@ -1231,12 +1236,13 @@
             label41.TabIndex = 10;
             label41.Text = "Outside release - Pre travel (MM)";
             // 
-            // textBox84
+            // txtOutsideReleaseFullTravelMin
             // 
-            textBox84.Location = new Point(308, 110);
-            textBox84.Name = "textBox84";
-            textBox84.Size = new Size(100, 25);
-            textBox84.TabIndex = 54;
+            txtOutsideReleaseFullTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtOutsideReleaseFullTravelMin.Location = new Point(308, 110);
+            txtOutsideReleaseFullTravelMin.Name = "txtOutsideReleaseFullTravelMin";
+            txtOutsideReleaseFullTravelMin.Size = new Size(100, 25);
+            txtOutsideReleaseFullTravelMin.TabIndex = 54;
             // 
             // label42
             // 
@@ -1247,19 +1253,21 @@
             label42.TabIndex = 8;
             label42.Text = "Outside release - Release travel (MM)";
             // 
-            // textBox85
+            // txtOutsideReleaseReleaseTravelActual
             // 
-            textBox85.Location = new Point(566, 79);
-            textBox85.Name = "textBox85";
-            textBox85.Size = new Size(100, 25);
-            textBox85.TabIndex = 53;
+            txtOutsideReleaseReleaseTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtOutsideReleaseReleaseTravelActual.Location = new Point(566, 79);
+            txtOutsideReleaseReleaseTravelActual.Name = "txtOutsideReleaseReleaseTravelActual";
+            txtOutsideReleaseReleaseTravelActual.Size = new Size(100, 25);
+            txtOutsideReleaseReleaseTravelActual.TabIndex = 53;
             // 
-            // textBox86
+            // txtOutsideReleaseReleaseTravelMax
             // 
-            textBox86.Location = new Point(440, 79);
-            textBox86.Name = "textBox86";
-            textBox86.Size = new Size(100, 25);
-            textBox86.TabIndex = 52;
+            txtOutsideReleaseReleaseTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtOutsideReleaseReleaseTravelMax.Location = new Point(440, 79);
+            txtOutsideReleaseReleaseTravelMax.Name = "txtOutsideReleaseReleaseTravelMax";
+            txtOutsideReleaseReleaseTravelMax.Size = new Size(100, 25);
+            txtOutsideReleaseReleaseTravelMax.TabIndex = 52;
             // 
             // label43
             // 
@@ -1270,73 +1278,80 @@
             label43.TabIndex = 6;
             label43.Text = "Outside release - Effort (N)";
             // 
-            // textBox87
+            // txtOutsideReleaseReleaseTravelMin
             // 
-            textBox87.Location = new Point(308, 79);
-            textBox87.Name = "textBox87";
-            textBox87.Size = new Size(100, 25);
-            textBox87.TabIndex = 51;
+            txtOutsideReleaseReleaseTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtOutsideReleaseReleaseTravelMin.Location = new Point(308, 79);
+            txtOutsideReleaseReleaseTravelMin.Name = "txtOutsideReleaseReleaseTravelMin";
+            txtOutsideReleaseReleaseTravelMin.Size = new Size(100, 25);
+            txtOutsideReleaseReleaseTravelMin.TabIndex = 51;
             // 
-            // textBox88
+            // txtOutsideReleaseEffortMin
             // 
-            textBox88.Location = new Point(308, 16);
-            textBox88.Name = "textBox88";
-            textBox88.Size = new Size(100, 25);
-            textBox88.TabIndex = 45;
+            txtOutsideReleaseEffortMin.BorderStyle = BorderStyle.FixedSingle;
+            txtOutsideReleaseEffortMin.Location = new Point(308, 16);
+            txtOutsideReleaseEffortMin.Name = "txtOutsideReleaseEffortMin";
+            txtOutsideReleaseEffortMin.Size = new Size(100, 25);
+            txtOutsideReleaseEffortMin.TabIndex = 45;
             // 
-            // textBox89
+            // txtOutsideReleasePreTravelActual
             // 
-            textBox89.Location = new Point(566, 47);
-            textBox89.Name = "textBox89";
-            textBox89.Size = new Size(100, 25);
-            textBox89.TabIndex = 50;
+            txtOutsideReleasePreTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtOutsideReleasePreTravelActual.Location = new Point(566, 47);
+            txtOutsideReleasePreTravelActual.Name = "txtOutsideReleasePreTravelActual";
+            txtOutsideReleasePreTravelActual.Size = new Size(100, 25);
+            txtOutsideReleasePreTravelActual.TabIndex = 50;
             // 
-            // textBox90
+            // txtOutsideReleaseEffortMax
             // 
-            textBox90.Location = new Point(440, 16);
-            textBox90.Name = "textBox90";
-            textBox90.Size = new Size(100, 25);
-            textBox90.TabIndex = 46;
+            txtOutsideReleaseEffortMax.BorderStyle = BorderStyle.FixedSingle;
+            txtOutsideReleaseEffortMax.Location = new Point(440, 16);
+            txtOutsideReleaseEffortMax.Name = "txtOutsideReleaseEffortMax";
+            txtOutsideReleaseEffortMax.Size = new Size(100, 25);
+            txtOutsideReleaseEffortMax.TabIndex = 46;
             // 
-            // textBox91
+            // txtOutsideReleasePreTravelMax
             // 
-            textBox91.Location = new Point(440, 47);
-            textBox91.Name = "textBox91";
-            textBox91.Size = new Size(100, 25);
-            textBox91.TabIndex = 49;
+            txtOutsideReleasePreTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtOutsideReleasePreTravelMax.Location = new Point(440, 47);
+            txtOutsideReleasePreTravelMax.Name = "txtOutsideReleasePreTravelMax";
+            txtOutsideReleasePreTravelMax.Size = new Size(100, 25);
+            txtOutsideReleasePreTravelMax.TabIndex = 49;
             // 
-            // textBox92
+            // txtOutsideReleaseEffortActual
             // 
-            textBox92.Location = new Point(566, 16);
-            textBox92.Name = "textBox92";
-            textBox92.Size = new Size(100, 25);
-            textBox92.TabIndex = 47;
+            txtOutsideReleaseEffortActual.BorderStyle = BorderStyle.FixedSingle;
+            txtOutsideReleaseEffortActual.Location = new Point(566, 16);
+            txtOutsideReleaseEffortActual.Name = "txtOutsideReleaseEffortActual";
+            txtOutsideReleaseEffortActual.Size = new Size(100, 25);
+            txtOutsideReleaseEffortActual.TabIndex = 47;
             // 
-            // textBox93
+            // txtOutsideReleasePreTravelMin
             // 
-            textBox93.Location = new Point(308, 47);
-            textBox93.Name = "textBox93";
-            textBox93.Size = new Size(100, 25);
-            textBox93.TabIndex = 48;
+            txtOutsideReleasePreTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtOutsideReleasePreTravelMin.Location = new Point(308, 47);
+            txtOutsideReleasePreTravelMin.Name = "txtOutsideReleasePreTravelMin";
+            txtOutsideReleasePreTravelMin.Size = new Size(100, 25);
+            txtOutsideReleasePreTravelMin.TabIndex = 48;
             // 
             // groupBox8
             // 
-            groupBox8.Controls.Add(textBox70);
+            groupBox8.Controls.Add(txtInsideReleaseFullTravelActual);
             groupBox8.Controls.Add(label36);
-            groupBox8.Controls.Add(textBox71);
+            groupBox8.Controls.Add(txtInsideReleaseFullTravelMax);
             groupBox8.Controls.Add(label37);
-            groupBox8.Controls.Add(textBox72);
+            groupBox8.Controls.Add(txtInsideReleaseFullTravelMin);
             groupBox8.Controls.Add(label38);
-            groupBox8.Controls.Add(textBox73);
-            groupBox8.Controls.Add(textBox74);
+            groupBox8.Controls.Add(txtInsideReleaseReleaseTravelActual);
+            groupBox8.Controls.Add(txtInsideReleaseReleaseTravelMax);
             groupBox8.Controls.Add(label39);
-            groupBox8.Controls.Add(textBox75);
-            groupBox8.Controls.Add(textBox76);
-            groupBox8.Controls.Add(textBox77);
-            groupBox8.Controls.Add(textBox78);
-            groupBox8.Controls.Add(textBox79);
-            groupBox8.Controls.Add(textBox80);
-            groupBox8.Controls.Add(textBox81);
+            groupBox8.Controls.Add(txtInsideReleaseReleaseTravelMin);
+            groupBox8.Controls.Add(txtInsideReleaseEffortMin);
+            groupBox8.Controls.Add(txtInsideReleasePreTravelActual);
+            groupBox8.Controls.Add(txtInsideReleaseEffortMax);
+            groupBox8.Controls.Add(txtInsideReleasePreTravelMax);
+            groupBox8.Controls.Add(txtInsideReleaseEffortActual);
+            groupBox8.Controls.Add(txtInsideReleasePreTravelMin);
             groupBox8.Location = new Point(16, 265);
             groupBox8.Name = "groupBox8";
             groupBox8.Size = new Size(716, 140);
@@ -1344,12 +1359,13 @@
             groupBox8.TabStop = false;
             groupBox8.Text = "Inside Release";
             // 
-            // textBox70
+            // txtInsideReleaseFullTravelActual
             // 
-            textBox70.Location = new Point(566, 110);
-            textBox70.Name = "textBox70";
-            textBox70.Size = new Size(100, 25);
-            textBox70.TabIndex = 56;
+            txtInsideReleaseFullTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideReleaseFullTravelActual.Location = new Point(566, 110);
+            txtInsideReleaseFullTravelActual.Name = "txtInsideReleaseFullTravelActual";
+            txtInsideReleaseFullTravelActual.Size = new Size(100, 25);
+            txtInsideReleaseFullTravelActual.TabIndex = 56;
             // 
             // label36
             // 
@@ -1360,12 +1376,13 @@
             label36.TabIndex = 11;
             label36.Text = "Inside release - Full travel (MM)";
             // 
-            // textBox71
+            // txtInsideReleaseFullTravelMax
             // 
-            textBox71.Location = new Point(440, 110);
-            textBox71.Name = "textBox71";
-            textBox71.Size = new Size(100, 25);
-            textBox71.TabIndex = 55;
+            txtInsideReleaseFullTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideReleaseFullTravelMax.Location = new Point(440, 110);
+            txtInsideReleaseFullTravelMax.Name = "txtInsideReleaseFullTravelMax";
+            txtInsideReleaseFullTravelMax.Size = new Size(100, 25);
+            txtInsideReleaseFullTravelMax.TabIndex = 55;
             // 
             // label37
             // 
@@ -1376,12 +1393,13 @@
             label37.TabIndex = 10;
             label37.Text = "Inside release - Pre travel (MM)";
             // 
-            // textBox72
+            // txtInsideReleaseFullTravelMin
             // 
-            textBox72.Location = new Point(308, 110);
-            textBox72.Name = "textBox72";
-            textBox72.Size = new Size(100, 25);
-            textBox72.TabIndex = 54;
+            txtInsideReleaseFullTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideReleaseFullTravelMin.Location = new Point(308, 110);
+            txtInsideReleaseFullTravelMin.Name = "txtInsideReleaseFullTravelMin";
+            txtInsideReleaseFullTravelMin.Size = new Size(100, 25);
+            txtInsideReleaseFullTravelMin.TabIndex = 54;
             // 
             // label38
             // 
@@ -1392,19 +1410,21 @@
             label38.TabIndex = 8;
             label38.Text = "Inside release - Release travel (MM)";
             // 
-            // textBox73
+            // txtInsideReleaseReleaseTravelActual
             // 
-            textBox73.Location = new Point(566, 79);
-            textBox73.Name = "textBox73";
-            textBox73.Size = new Size(100, 25);
-            textBox73.TabIndex = 53;
+            txtInsideReleaseReleaseTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideReleaseReleaseTravelActual.Location = new Point(566, 79);
+            txtInsideReleaseReleaseTravelActual.Name = "txtInsideReleaseReleaseTravelActual";
+            txtInsideReleaseReleaseTravelActual.Size = new Size(100, 25);
+            txtInsideReleaseReleaseTravelActual.TabIndex = 53;
             // 
-            // textBox74
+            // txtInsideReleaseReleaseTravelMax
             // 
-            textBox74.Location = new Point(440, 79);
-            textBox74.Name = "textBox74";
-            textBox74.Size = new Size(100, 25);
-            textBox74.TabIndex = 52;
+            txtInsideReleaseReleaseTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideReleaseReleaseTravelMax.Location = new Point(440, 79);
+            txtInsideReleaseReleaseTravelMax.Name = "txtInsideReleaseReleaseTravelMax";
+            txtInsideReleaseReleaseTravelMax.Size = new Size(100, 25);
+            txtInsideReleaseReleaseTravelMax.TabIndex = 52;
             // 
             // label39
             // 
@@ -1415,54 +1435,61 @@
             label39.TabIndex = 6;
             label39.Text = "Inside release - Effort (N)";
             // 
-            // textBox75
+            // txtInsideReleaseReleaseTravelMin
             // 
-            textBox75.Location = new Point(308, 79);
-            textBox75.Name = "textBox75";
-            textBox75.Size = new Size(100, 25);
-            textBox75.TabIndex = 51;
+            txtInsideReleaseReleaseTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideReleaseReleaseTravelMin.Location = new Point(308, 79);
+            txtInsideReleaseReleaseTravelMin.Name = "txtInsideReleaseReleaseTravelMin";
+            txtInsideReleaseReleaseTravelMin.Size = new Size(100, 25);
+            txtInsideReleaseReleaseTravelMin.TabIndex = 51;
             // 
-            // textBox76
+            // txtInsideReleaseEffortMin
             // 
-            textBox76.Location = new Point(308, 16);
-            textBox76.Name = "textBox76";
-            textBox76.Size = new Size(100, 25);
-            textBox76.TabIndex = 45;
+            txtInsideReleaseEffortMin.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideReleaseEffortMin.Location = new Point(308, 16);
+            txtInsideReleaseEffortMin.Name = "txtInsideReleaseEffortMin";
+            txtInsideReleaseEffortMin.Size = new Size(100, 25);
+            txtInsideReleaseEffortMin.TabIndex = 45;
             // 
-            // textBox77
+            // txtInsideReleasePreTravelActual
             // 
-            textBox77.Location = new Point(566, 47);
-            textBox77.Name = "textBox77";
-            textBox77.Size = new Size(100, 25);
-            textBox77.TabIndex = 50;
+            txtInsideReleasePreTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideReleasePreTravelActual.Location = new Point(566, 47);
+            txtInsideReleasePreTravelActual.Name = "txtInsideReleasePreTravelActual";
+            txtInsideReleasePreTravelActual.Size = new Size(100, 25);
+            txtInsideReleasePreTravelActual.TabIndex = 50;
             // 
-            // textBox78
+            // txtInsideReleaseEffortMax
             // 
-            textBox78.Location = new Point(440, 16);
-            textBox78.Name = "textBox78";
-            textBox78.Size = new Size(100, 25);
-            textBox78.TabIndex = 46;
+            txtInsideReleaseEffortMax.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideReleaseEffortMax.Location = new Point(440, 16);
+            txtInsideReleaseEffortMax.Name = "txtInsideReleaseEffortMax";
+            txtInsideReleaseEffortMax.Size = new Size(100, 25);
+            txtInsideReleaseEffortMax.TabIndex = 46;
             // 
-            // textBox79
+            // txtInsideReleasePreTravelMax
             // 
-            textBox79.Location = new Point(440, 47);
-            textBox79.Name = "textBox79";
-            textBox79.Size = new Size(100, 25);
-            textBox79.TabIndex = 49;
+            txtInsideReleasePreTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideReleasePreTravelMax.Location = new Point(440, 47);
+            txtInsideReleasePreTravelMax.Name = "txtInsideReleasePreTravelMax";
+            txtInsideReleasePreTravelMax.Size = new Size(100, 25);
+            txtInsideReleasePreTravelMax.TabIndex = 49;
             // 
-            // textBox80
+            // txtInsideReleaseEffortActual
             // 
-            textBox80.Location = new Point(566, 16);
-            textBox80.Name = "textBox80";
-            textBox80.Size = new Size(100, 25);
-            textBox80.TabIndex = 47;
+            txtInsideReleaseEffortActual.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideReleaseEffortActual.Location = new Point(566, 16);
+            txtInsideReleaseEffortActual.Name = "txtInsideReleaseEffortActual";
+            txtInsideReleaseEffortActual.Size = new Size(100, 25);
+            txtInsideReleaseEffortActual.TabIndex = 47;
             // 
-            // textBox81
+            // txtInsideReleasePreTravelMin
             // 
-            textBox81.Location = new Point(308, 47);
-            textBox81.Name = "textBox81";
-            textBox81.Size = new Size(100, 25);
-            textBox81.TabIndex = 48;
+            txtInsideReleasePreTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideReleasePreTravelMin.Location = new Point(308, 47);
+            txtInsideReleasePreTravelMin.Name = "txtInsideReleasePreTravelMin";
+            txtInsideReleasePreTravelMin.Size = new Size(100, 25);
+            txtInsideReleasePreTravelMin.TabIndex = 48;
             // 
             // label33
             // 
@@ -1475,22 +1502,22 @@
             // 
             // groupBox7
             // 
-            groupBox7.Controls.Add(textBox58);
+            groupBox7.Controls.Add(txtInsideUnlockTravelActual);
             groupBox7.Controls.Add(label29);
-            groupBox7.Controls.Add(textBox59);
+            groupBox7.Controls.Add(txtInsideUnlockTravelMax);
             groupBox7.Controls.Add(label30);
-            groupBox7.Controls.Add(textBox60);
+            groupBox7.Controls.Add(txtInsideUnlockTravelMin);
             groupBox7.Controls.Add(label31);
-            groupBox7.Controls.Add(textBox61);
-            groupBox7.Controls.Add(textBox62);
+            groupBox7.Controls.Add(txtInsideUnlockEffortActual);
+            groupBox7.Controls.Add(txtInsideUnlockEffortMax);
             groupBox7.Controls.Add(label32);
-            groupBox7.Controls.Add(textBox63);
-            groupBox7.Controls.Add(textBox64);
-            groupBox7.Controls.Add(textBox65);
-            groupBox7.Controls.Add(textBox66);
-            groupBox7.Controls.Add(textBox67);
-            groupBox7.Controls.Add(textBox68);
-            groupBox7.Controls.Add(textBox69);
+            groupBox7.Controls.Add(txtInsideUnlockEffortMin);
+            groupBox7.Controls.Add(txtInsideLockEffortMin);
+            groupBox7.Controls.Add(txtInsideLockTravelActual);
+            groupBox7.Controls.Add(txtInsideLockEffortMax);
+            groupBox7.Controls.Add(txtInsideLockTravelMax);
+            groupBox7.Controls.Add(txtInsideLockEffortActual);
+            groupBox7.Controls.Add(txtInsideLockTravelMin);
             groupBox7.Location = new Point(16, 106);
             groupBox7.Name = "groupBox7";
             groupBox7.Size = new Size(716, 140);
@@ -1498,12 +1525,13 @@
             groupBox7.TabStop = false;
             groupBox7.Text = "Inside Lock";
             // 
-            // textBox58
+            // txtInsideUnlockTravelActual
             // 
-            textBox58.Location = new Point(566, 110);
-            textBox58.Name = "textBox58";
-            textBox58.Size = new Size(100, 25);
-            textBox58.TabIndex = 56;
+            txtInsideUnlockTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideUnlockTravelActual.Location = new Point(566, 110);
+            txtInsideUnlockTravelActual.Name = "txtInsideUnlockTravelActual";
+            txtInsideUnlockTravelActual.Size = new Size(100, 25);
+            txtInsideUnlockTravelActual.TabIndex = 56;
             // 
             // label29
             // 
@@ -1514,12 +1542,13 @@
             label29.TabIndex = 11;
             label29.Text = "Inside Unlock - Travel (MM)";
             // 
-            // textBox59
+            // txtInsideUnlockTravelMax
             // 
-            textBox59.Location = new Point(440, 110);
-            textBox59.Name = "textBox59";
-            textBox59.Size = new Size(100, 25);
-            textBox59.TabIndex = 55;
+            txtInsideUnlockTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideUnlockTravelMax.Location = new Point(440, 110);
+            txtInsideUnlockTravelMax.Name = "txtInsideUnlockTravelMax";
+            txtInsideUnlockTravelMax.Size = new Size(100, 25);
+            txtInsideUnlockTravelMax.TabIndex = 55;
             // 
             // label30
             // 
@@ -1530,12 +1559,13 @@
             label30.TabIndex = 10;
             label30.Text = "Inside Lock - Travel (MM)";
             // 
-            // textBox60
+            // txtInsideUnlockTravelMin
             // 
-            textBox60.Location = new Point(308, 110);
-            textBox60.Name = "textBox60";
-            textBox60.Size = new Size(100, 25);
-            textBox60.TabIndex = 54;
+            txtInsideUnlockTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideUnlockTravelMin.Location = new Point(308, 110);
+            txtInsideUnlockTravelMin.Name = "txtInsideUnlockTravelMin";
+            txtInsideUnlockTravelMin.Size = new Size(100, 25);
+            txtInsideUnlockTravelMin.TabIndex = 54;
             // 
             // label31
             // 
@@ -1546,19 +1576,21 @@
             label31.TabIndex = 8;
             label31.Text = "Inside Unlock - Effort (N)";
             // 
-            // textBox61
+            // txtInsideUnlockEffortActual
             // 
-            textBox61.Location = new Point(566, 79);
-            textBox61.Name = "textBox61";
-            textBox61.Size = new Size(100, 25);
-            textBox61.TabIndex = 53;
+            txtInsideUnlockEffortActual.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideUnlockEffortActual.Location = new Point(566, 79);
+            txtInsideUnlockEffortActual.Name = "txtInsideUnlockEffortActual";
+            txtInsideUnlockEffortActual.Size = new Size(100, 25);
+            txtInsideUnlockEffortActual.TabIndex = 53;
             // 
-            // textBox62
+            // txtInsideUnlockEffortMax
             // 
-            textBox62.Location = new Point(440, 79);
-            textBox62.Name = "textBox62";
-            textBox62.Size = new Size(100, 25);
-            textBox62.TabIndex = 52;
+            txtInsideUnlockEffortMax.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideUnlockEffortMax.Location = new Point(440, 79);
+            txtInsideUnlockEffortMax.Name = "txtInsideUnlockEffortMax";
+            txtInsideUnlockEffortMax.Size = new Size(100, 25);
+            txtInsideUnlockEffortMax.TabIndex = 52;
             // 
             // label32
             // 
@@ -1569,54 +1601,61 @@
             label32.TabIndex = 6;
             label32.Text = "Inside Lock - Effort (N)";
             // 
-            // textBox63
+            // txtInsideUnlockEffortMin
             // 
-            textBox63.Location = new Point(308, 79);
-            textBox63.Name = "textBox63";
-            textBox63.Size = new Size(100, 25);
-            textBox63.TabIndex = 51;
+            txtInsideUnlockEffortMin.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideUnlockEffortMin.Location = new Point(308, 79);
+            txtInsideUnlockEffortMin.Name = "txtInsideUnlockEffortMin";
+            txtInsideUnlockEffortMin.Size = new Size(100, 25);
+            txtInsideUnlockEffortMin.TabIndex = 51;
             // 
-            // textBox64
+            // txtInsideLockEffortMin
             // 
-            textBox64.Location = new Point(308, 16);
-            textBox64.Name = "textBox64";
-            textBox64.Size = new Size(100, 25);
-            textBox64.TabIndex = 45;
+            txtInsideLockEffortMin.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideLockEffortMin.Location = new Point(308, 16);
+            txtInsideLockEffortMin.Name = "txtInsideLockEffortMin";
+            txtInsideLockEffortMin.Size = new Size(100, 25);
+            txtInsideLockEffortMin.TabIndex = 45;
             // 
-            // textBox65
+            // txtInsideLockTravelActual
             // 
-            textBox65.Location = new Point(566, 47);
-            textBox65.Name = "textBox65";
-            textBox65.Size = new Size(100, 25);
-            textBox65.TabIndex = 50;
+            txtInsideLockTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideLockTravelActual.Location = new Point(566, 47);
+            txtInsideLockTravelActual.Name = "txtInsideLockTravelActual";
+            txtInsideLockTravelActual.Size = new Size(100, 25);
+            txtInsideLockTravelActual.TabIndex = 50;
             // 
-            // textBox66
+            // txtInsideLockEffortMax
             // 
-            textBox66.Location = new Point(440, 16);
-            textBox66.Name = "textBox66";
-            textBox66.Size = new Size(100, 25);
-            textBox66.TabIndex = 46;
+            txtInsideLockEffortMax.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideLockEffortMax.Location = new Point(440, 16);
+            txtInsideLockEffortMax.Name = "txtInsideLockEffortMax";
+            txtInsideLockEffortMax.Size = new Size(100, 25);
+            txtInsideLockEffortMax.TabIndex = 46;
             // 
-            // textBox67
+            // txtInsideLockTravelMax
             // 
-            textBox67.Location = new Point(440, 47);
-            textBox67.Name = "textBox67";
-            textBox67.Size = new Size(100, 25);
-            textBox67.TabIndex = 49;
+            txtInsideLockTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideLockTravelMax.Location = new Point(440, 47);
+            txtInsideLockTravelMax.Name = "txtInsideLockTravelMax";
+            txtInsideLockTravelMax.Size = new Size(100, 25);
+            txtInsideLockTravelMax.TabIndex = 49;
             // 
-            // textBox68
+            // txtInsideLockEffortActual
             // 
-            textBox68.Location = new Point(566, 16);
-            textBox68.Name = "textBox68";
-            textBox68.Size = new Size(100, 25);
-            textBox68.TabIndex = 47;
+            txtInsideLockEffortActual.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideLockEffortActual.Location = new Point(566, 16);
+            txtInsideLockEffortActual.Name = "txtInsideLockEffortActual";
+            txtInsideLockEffortActual.Size = new Size(100, 25);
+            txtInsideLockEffortActual.TabIndex = 47;
             // 
-            // textBox69
+            // txtInsideLockTravelMin
             // 
-            textBox69.Location = new Point(308, 47);
-            textBox69.Name = "textBox69";
-            textBox69.Size = new Size(100, 25);
-            textBox69.TabIndex = 48;
+            txtInsideLockTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtInsideLockTravelMin.Location = new Point(308, 47);
+            txtInsideLockTravelMin.Name = "txtInsideLockTravelMin";
+            txtInsideLockTravelMin.Size = new Size(100, 25);
+            txtInsideLockTravelMin.TabIndex = 48;
             // 
             // label34
             // 
@@ -1650,9 +1689,9 @@
             // 
             panel5.Anchor = AnchorStyles.None;
             panel5.Controls.Add(textBox94);
-            panel5.Controls.Add(textBox9);
-            panel5.Controls.Add(textBox8);
-            panel5.Controls.Add(textBox7);
+            panel5.Controls.Add(txtSealLoadActual);
+            panel5.Controls.Add(txtSealLoadMax);
+            panel5.Controls.Add(txtSealLoadMin);
             panel5.Controls.Add(label28);
             panel5.Controls.Add(label27);
             panel5.Controls.Add(label26);
@@ -1675,26 +1714,29 @@
             textBox94.Size = new Size(100, 25);
             textBox94.TabIndex = 15;
             // 
-            // textBox9
+            // txtSealLoadActual
             // 
-            textBox9.Location = new Point(588, 111);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(100, 25);
-            textBox9.TabIndex = 14;
+            txtSealLoadActual.BorderStyle = BorderStyle.FixedSingle;
+            txtSealLoadActual.Location = new Point(588, 111);
+            txtSealLoadActual.Name = "txtSealLoadActual";
+            txtSealLoadActual.Size = new Size(100, 25);
+            txtSealLoadActual.TabIndex = 14;
             // 
-            // textBox8
+            // txtSealLoadMax
             // 
-            textBox8.Location = new Point(462, 111);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(100, 25);
-            textBox8.TabIndex = 13;
+            txtSealLoadMax.BorderStyle = BorderStyle.FixedSingle;
+            txtSealLoadMax.Location = new Point(462, 111);
+            txtSealLoadMax.Name = "txtSealLoadMax";
+            txtSealLoadMax.Size = new Size(100, 25);
+            txtSealLoadMax.TabIndex = 13;
             // 
-            // textBox7
+            // txtSealLoadMin
             // 
-            textBox7.Location = new Point(330, 111);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(100, 25);
-            textBox7.TabIndex = 12;
+            txtSealLoadMin.BorderStyle = BorderStyle.FixedSingle;
+            txtSealLoadMin.Location = new Point(330, 111);
+            txtSealLoadMin.Name = "txtSealLoadMin";
+            txtSealLoadMin.Size = new Size(100, 25);
+            txtSealLoadMin.TabIndex = 12;
             // 
             // label28
             // 
@@ -1725,14 +1767,14 @@
             // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(textBox52);
-            groupBox6.Controls.Add(textBox53);
+            groupBox6.Controls.Add(txtEmgLockAngleActual);
+            groupBox6.Controls.Add(txtEmgLockAngleMax);
             groupBox6.Controls.Add(label24);
-            groupBox6.Controls.Add(textBox54);
+            groupBox6.Controls.Add(txtEmgLockAngleMin);
             groupBox6.Controls.Add(label25);
-            groupBox6.Controls.Add(textBox55);
-            groupBox6.Controls.Add(textBox57);
-            groupBox6.Controls.Add(textBox56);
+            groupBox6.Controls.Add(txtEmgLockTorqueActual);
+            groupBox6.Controls.Add(txtEmgLockTorqueMin);
+            groupBox6.Controls.Add(txtEmgLockTorqueMax);
             groupBox6.Location = new Point(22, 679);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(716, 100);
@@ -1740,19 +1782,21 @@
             groupBox6.TabStop = false;
             groupBox6.Text = "Emergency Lock";
             // 
-            // textBox52
+            // txtEmgLockAngleActual
             // 
-            textBox52.Location = new Point(566, 55);
-            textBox52.Name = "textBox52";
-            textBox52.Size = new Size(100, 25);
-            textBox52.TabIndex = 26;
+            txtEmgLockAngleActual.BorderStyle = BorderStyle.FixedSingle;
+            txtEmgLockAngleActual.Location = new Point(566, 55);
+            txtEmgLockAngleActual.Name = "txtEmgLockAngleActual";
+            txtEmgLockAngleActual.Size = new Size(100, 25);
+            txtEmgLockAngleActual.TabIndex = 26;
             // 
-            // textBox53
+            // txtEmgLockAngleMax
             // 
-            textBox53.Location = new Point(440, 55);
-            textBox53.Name = "textBox53";
-            textBox53.Size = new Size(100, 25);
-            textBox53.TabIndex = 25;
+            txtEmgLockAngleMax.BorderStyle = BorderStyle.FixedSingle;
+            txtEmgLockAngleMax.Location = new Point(440, 55);
+            txtEmgLockAngleMax.Name = "txtEmgLockAngleMax";
+            txtEmgLockAngleMax.Size = new Size(100, 25);
+            txtEmgLockAngleMax.TabIndex = 25;
             // 
             // label24
             // 
@@ -1763,12 +1807,13 @@
             label24.TabIndex = 7;
             label24.Text = "EMG Lock - Angle (Deg)";
             // 
-            // textBox54
+            // txtEmgLockAngleMin
             // 
-            textBox54.Location = new Point(308, 55);
-            textBox54.Name = "textBox54";
-            textBox54.Size = new Size(100, 25);
-            textBox54.TabIndex = 24;
+            txtEmgLockAngleMin.BorderStyle = BorderStyle.FixedSingle;
+            txtEmgLockAngleMin.Location = new Point(308, 55);
+            txtEmgLockAngleMin.Name = "txtEmgLockAngleMin";
+            txtEmgLockAngleMin.Size = new Size(100, 25);
+            txtEmgLockAngleMin.TabIndex = 24;
             // 
             // label25
             // 
@@ -1779,45 +1824,48 @@
             label25.TabIndex = 6;
             label25.Text = "EMG Lock - Torque (Nm)";
             // 
-            // textBox55
+            // txtEmgLockTorqueActual
             // 
-            textBox55.Location = new Point(566, 24);
-            textBox55.Name = "textBox55";
-            textBox55.Size = new Size(100, 25);
-            textBox55.TabIndex = 23;
+            txtEmgLockTorqueActual.BorderStyle = BorderStyle.FixedSingle;
+            txtEmgLockTorqueActual.Location = new Point(566, 24);
+            txtEmgLockTorqueActual.Name = "txtEmgLockTorqueActual";
+            txtEmgLockTorqueActual.Size = new Size(100, 25);
+            txtEmgLockTorqueActual.TabIndex = 23;
             // 
-            // textBox57
+            // txtEmgLockTorqueMin
             // 
-            textBox57.Location = new Point(308, 24);
-            textBox57.Name = "textBox57";
-            textBox57.Size = new Size(100, 25);
-            textBox57.TabIndex = 21;
+            txtEmgLockTorqueMin.BorderStyle = BorderStyle.FixedSingle;
+            txtEmgLockTorqueMin.Location = new Point(308, 24);
+            txtEmgLockTorqueMin.Name = "txtEmgLockTorqueMin";
+            txtEmgLockTorqueMin.Size = new Size(100, 25);
+            txtEmgLockTorqueMin.TabIndex = 21;
             // 
-            // textBox56
+            // txtEmgLockTorqueMax
             // 
-            textBox56.Location = new Point(440, 24);
-            textBox56.Name = "textBox56";
-            textBox56.Size = new Size(100, 25);
-            textBox56.TabIndex = 22;
+            txtEmgLockTorqueMax.BorderStyle = BorderStyle.FixedSingle;
+            txtEmgLockTorqueMax.Location = new Point(440, 24);
+            txtEmgLockTorqueMax.Name = "txtEmgLockTorqueMax";
+            txtEmgLockTorqueMax.Size = new Size(100, 25);
+            txtEmgLockTorqueMax.TabIndex = 22;
             // 
             // groupBox5
             // 
-            groupBox5.Controls.Add(textBox40);
+            groupBox5.Controls.Add(txtChildUnlockTravelActual);
             groupBox5.Controls.Add(label23);
-            groupBox5.Controls.Add(textBox41);
+            groupBox5.Controls.Add(txtChildUnlockTravelMax);
             groupBox5.Controls.Add(label20);
-            groupBox5.Controls.Add(textBox42);
+            groupBox5.Controls.Add(txtChildUnlockTravelMin);
             groupBox5.Controls.Add(label22);
-            groupBox5.Controls.Add(textBox43);
-            groupBox5.Controls.Add(textBox44);
+            groupBox5.Controls.Add(txtChildUnlockEffortActual);
+            groupBox5.Controls.Add(txtChildUnlockEffortMax);
             groupBox5.Controls.Add(label21);
-            groupBox5.Controls.Add(textBox45);
-            groupBox5.Controls.Add(textBox51);
-            groupBox5.Controls.Add(textBox46);
-            groupBox5.Controls.Add(textBox50);
-            groupBox5.Controls.Add(textBox47);
-            groupBox5.Controls.Add(textBox49);
-            groupBox5.Controls.Add(textBox48);
+            groupBox5.Controls.Add(txtChildUnlockEffortMin);
+            groupBox5.Controls.Add(txtChildLockEffortMin);
+            groupBox5.Controls.Add(txtChildLockTravelActual);
+            groupBox5.Controls.Add(txtChildLockEffortMax);
+            groupBox5.Controls.Add(txtChildLockTravelMax);
+            groupBox5.Controls.Add(txtChildLockEffortActual);
+            groupBox5.Controls.Add(txtChildLockTravelMin);
             groupBox5.Location = new Point(22, 533);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(716, 140);
@@ -1825,12 +1873,13 @@
             groupBox5.TabStop = false;
             groupBox5.Text = "Child Lock";
             // 
-            // textBox40
+            // txtChildUnlockTravelActual
             // 
-            textBox40.Location = new Point(566, 110);
-            textBox40.Name = "textBox40";
-            textBox40.Size = new Size(100, 25);
-            textBox40.TabIndex = 56;
+            txtChildUnlockTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtChildUnlockTravelActual.Location = new Point(566, 110);
+            txtChildUnlockTravelActual.Name = "txtChildUnlockTravelActual";
+            txtChildUnlockTravelActual.Size = new Size(100, 25);
+            txtChildUnlockTravelActual.TabIndex = 56;
             // 
             // label23
             // 
@@ -1841,12 +1890,13 @@
             label23.TabIndex = 11;
             label23.Text = "Child Unlock - Travel (MM)";
             // 
-            // textBox41
+            // txtChildUnlockTravelMax
             // 
-            textBox41.Location = new Point(440, 110);
-            textBox41.Name = "textBox41";
-            textBox41.Size = new Size(100, 25);
-            textBox41.TabIndex = 55;
+            txtChildUnlockTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtChildUnlockTravelMax.Location = new Point(440, 110);
+            txtChildUnlockTravelMax.Name = "txtChildUnlockTravelMax";
+            txtChildUnlockTravelMax.Size = new Size(100, 25);
+            txtChildUnlockTravelMax.TabIndex = 55;
             // 
             // label20
             // 
@@ -1857,12 +1907,13 @@
             label20.TabIndex = 10;
             label20.Text = "Child Lock - Travel (MM)";
             // 
-            // textBox42
+            // txtChildUnlockTravelMin
             // 
-            textBox42.Location = new Point(308, 110);
-            textBox42.Name = "textBox42";
-            textBox42.Size = new Size(100, 25);
-            textBox42.TabIndex = 54;
+            txtChildUnlockTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtChildUnlockTravelMin.Location = new Point(308, 110);
+            txtChildUnlockTravelMin.Name = "txtChildUnlockTravelMin";
+            txtChildUnlockTravelMin.Size = new Size(100, 25);
+            txtChildUnlockTravelMin.TabIndex = 54;
             // 
             // label22
             // 
@@ -1873,19 +1924,21 @@
             label22.TabIndex = 8;
             label22.Text = "Child Unlock - Effort (N)";
             // 
-            // textBox43
+            // txtChildUnlockEffortActual
             // 
-            textBox43.Location = new Point(566, 79);
-            textBox43.Name = "textBox43";
-            textBox43.Size = new Size(100, 25);
-            textBox43.TabIndex = 53;
+            txtChildUnlockEffortActual.BorderStyle = BorderStyle.FixedSingle;
+            txtChildUnlockEffortActual.Location = new Point(566, 79);
+            txtChildUnlockEffortActual.Name = "txtChildUnlockEffortActual";
+            txtChildUnlockEffortActual.Size = new Size(100, 25);
+            txtChildUnlockEffortActual.TabIndex = 53;
             // 
-            // textBox44
+            // txtChildUnlockEffortMax
             // 
-            textBox44.Location = new Point(440, 79);
-            textBox44.Name = "textBox44";
-            textBox44.Size = new Size(100, 25);
-            textBox44.TabIndex = 52;
+            txtChildUnlockEffortMax.BorderStyle = BorderStyle.FixedSingle;
+            txtChildUnlockEffortMax.Location = new Point(440, 79);
+            txtChildUnlockEffortMax.Name = "txtChildUnlockEffortMax";
+            txtChildUnlockEffortMax.Size = new Size(100, 25);
+            txtChildUnlockEffortMax.TabIndex = 52;
             // 
             // label21
             // 
@@ -1896,81 +1949,88 @@
             label21.TabIndex = 6;
             label21.Text = "Child Lock - Effort (N)";
             // 
-            // textBox45
+            // txtChildUnlockEffortMin
             // 
-            textBox45.Location = new Point(308, 79);
-            textBox45.Name = "textBox45";
-            textBox45.Size = new Size(100, 25);
-            textBox45.TabIndex = 51;
+            txtChildUnlockEffortMin.BorderStyle = BorderStyle.FixedSingle;
+            txtChildUnlockEffortMin.Location = new Point(308, 79);
+            txtChildUnlockEffortMin.Name = "txtChildUnlockEffortMin";
+            txtChildUnlockEffortMin.Size = new Size(100, 25);
+            txtChildUnlockEffortMin.TabIndex = 51;
             // 
-            // textBox51
+            // txtChildLockEffortMin
             // 
-            textBox51.Location = new Point(308, 16);
-            textBox51.Name = "textBox51";
-            textBox51.Size = new Size(100, 25);
-            textBox51.TabIndex = 45;
+            txtChildLockEffortMin.BorderStyle = BorderStyle.FixedSingle;
+            txtChildLockEffortMin.Location = new Point(308, 16);
+            txtChildLockEffortMin.Name = "txtChildLockEffortMin";
+            txtChildLockEffortMin.Size = new Size(100, 25);
+            txtChildLockEffortMin.TabIndex = 45;
             // 
-            // textBox46
+            // txtChildLockTravelActual
             // 
-            textBox46.Location = new Point(566, 47);
-            textBox46.Name = "textBox46";
-            textBox46.Size = new Size(100, 25);
-            textBox46.TabIndex = 50;
+            txtChildLockTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtChildLockTravelActual.Location = new Point(566, 47);
+            txtChildLockTravelActual.Name = "txtChildLockTravelActual";
+            txtChildLockTravelActual.Size = new Size(100, 25);
+            txtChildLockTravelActual.TabIndex = 50;
             // 
-            // textBox50
+            // txtChildLockEffortMax
             // 
-            textBox50.Location = new Point(440, 16);
-            textBox50.Name = "textBox50";
-            textBox50.Size = new Size(100, 25);
-            textBox50.TabIndex = 46;
+            txtChildLockEffortMax.BorderStyle = BorderStyle.FixedSingle;
+            txtChildLockEffortMax.Location = new Point(440, 16);
+            txtChildLockEffortMax.Name = "txtChildLockEffortMax";
+            txtChildLockEffortMax.Size = new Size(100, 25);
+            txtChildLockEffortMax.TabIndex = 46;
             // 
-            // textBox47
+            // txtChildLockTravelMax
             // 
-            textBox47.Location = new Point(440, 47);
-            textBox47.Name = "textBox47";
-            textBox47.Size = new Size(100, 25);
-            textBox47.TabIndex = 49;
+            txtChildLockTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtChildLockTravelMax.Location = new Point(440, 47);
+            txtChildLockTravelMax.Name = "txtChildLockTravelMax";
+            txtChildLockTravelMax.Size = new Size(100, 25);
+            txtChildLockTravelMax.TabIndex = 49;
             // 
-            // textBox49
+            // txtChildLockEffortActual
             // 
-            textBox49.Location = new Point(566, 16);
-            textBox49.Name = "textBox49";
-            textBox49.Size = new Size(100, 25);
-            textBox49.TabIndex = 47;
+            txtChildLockEffortActual.BorderStyle = BorderStyle.FixedSingle;
+            txtChildLockEffortActual.Location = new Point(566, 16);
+            txtChildLockEffortActual.Name = "txtChildLockEffortActual";
+            txtChildLockEffortActual.Size = new Size(100, 25);
+            txtChildLockEffortActual.TabIndex = 47;
             // 
-            // textBox48
+            // txtChildLockTravelMin
             // 
-            textBox48.Location = new Point(308, 47);
-            textBox48.Name = "textBox48";
-            textBox48.Size = new Size(100, 25);
-            textBox48.TabIndex = 48;
+            txtChildLockTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtChildLockTravelMin.Location = new Point(308, 47);
+            txtChildLockTravelMin.Name = "txtChildLockTravelMin";
+            txtChildLockTravelMin.Size = new Size(100, 25);
+            txtChildLockTravelMin.TabIndex = 48;
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(textBox34);
-            groupBox4.Controls.Add(textBox35);
-            groupBox4.Controls.Add(textBox36);
-            groupBox4.Controls.Add(textBox37);
-            groupBox4.Controls.Add(textBox38);
-            groupBox4.Controls.Add(textBox39);
-            groupBox4.Controls.Add(textBox28);
-            groupBox4.Controls.Add(textBox29);
-            groupBox4.Controls.Add(textBox30);
-            groupBox4.Controls.Add(textBox31);
+            groupBox4.Controls.Add(txtKeyUnlockFullTravelActual);
+            groupBox4.Controls.Add(txtKeyUnlockFullTravelMax);
+            groupBox4.Controls.Add(txtKeyUnlockFullTravelMin);
+            groupBox4.Controls.Add(txtKeyUnlockLockTravelActual);
+            groupBox4.Controls.Add(txtKeyUnlockLockTravelMax);
+            groupBox4.Controls.Add(txtKeyUnlockLockTravelMin);
+            groupBox4.Controls.Add(txtKeyUnlockPreTravelActual);
+            groupBox4.Controls.Add(txtKeyUnlockPreTravelMax);
+            groupBox4.Controls.Add(txtKeyUnlockPreTravelMin);
+            groupBox4.Controls.Add(txtKeyUnlockEffortActual);
             groupBox4.Controls.Add(textBox32);
-            groupBox4.Controls.Add(textBox33);
-            groupBox4.Controls.Add(textBox22);
-            groupBox4.Controls.Add(textBox23);
-            groupBox4.Controls.Add(textBox24);
-            groupBox4.Controls.Add(textBox25);
-            groupBox4.Controls.Add(textBox26);
-            groupBox4.Controls.Add(textBox27);
-            groupBox4.Controls.Add(textBox16);
-            groupBox4.Controls.Add(textBox17);
-            groupBox4.Controls.Add(textBox18);
-            groupBox4.Controls.Add(textBox19);
-            groupBox4.Controls.Add(textBox20);
-            groupBox4.Controls.Add(textBox21);
+            groupBox4.Controls.Add(txtKeyUnlockEffortMin);
+            groupBox4.Controls.Add(txtKeyLockFullTravelActual);
+            groupBox4.Controls.Add(txtKeyLockFullTravelMax);
+            groupBox4.Controls.Add(txtKeyLockFullTravelMin);
+            groupBox4.Controls.Add(txtKeyLockLockTravelActual);
+            groupBox4.Controls.Add(txtKeyLockLockTravelMax);
+            groupBox4.Controls.Add(txtKeyLockLockTravelMin);
+            groupBox4.Controls.Add(txtKeyLockPreTravelActual);
+            groupBox4.Controls.Add(txtKeyLockPreTravelMax);
+            groupBox4.Controls.Add(txtKeyLockPreTravelMin);
+            groupBox4.Controls.Add(txtKeyLockEffortActual);
+            groupBox4.Controls.Add(txtKeyLockEffortMax);
+            groupBox4.Controls.Add(txtKeyLockEffortMin);
             groupBox4.Controls.Add(label19);
             groupBox4.Controls.Add(label18);
             groupBox4.Controls.Add(label17);
@@ -1986,173 +2046,197 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Key Lock";
             // 
-            // textBox34
+            // txtKeyUnlockFullTravelActual
             // 
-            textBox34.Location = new Point(566, 231);
-            textBox34.Name = "textBox34";
-            textBox34.Size = new Size(100, 25);
-            textBox34.TabIndex = 44;
+            txtKeyUnlockFullTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyUnlockFullTravelActual.Location = new Point(566, 231);
+            txtKeyUnlockFullTravelActual.Name = "txtKeyUnlockFullTravelActual";
+            txtKeyUnlockFullTravelActual.Size = new Size(100, 25);
+            txtKeyUnlockFullTravelActual.TabIndex = 44;
             // 
-            // textBox35
+            // txtKeyUnlockFullTravelMax
             // 
-            textBox35.Location = new Point(440, 231);
-            textBox35.Name = "textBox35";
-            textBox35.Size = new Size(100, 25);
-            textBox35.TabIndex = 43;
+            txtKeyUnlockFullTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyUnlockFullTravelMax.Location = new Point(440, 231);
+            txtKeyUnlockFullTravelMax.Name = "txtKeyUnlockFullTravelMax";
+            txtKeyUnlockFullTravelMax.Size = new Size(100, 25);
+            txtKeyUnlockFullTravelMax.TabIndex = 43;
             // 
-            // textBox36
+            // txtKeyUnlockFullTravelMin
             // 
-            textBox36.Location = new Point(308, 231);
-            textBox36.Name = "textBox36";
-            textBox36.Size = new Size(100, 25);
-            textBox36.TabIndex = 42;
+            txtKeyUnlockFullTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyUnlockFullTravelMin.Location = new Point(308, 231);
+            txtKeyUnlockFullTravelMin.Name = "txtKeyUnlockFullTravelMin";
+            txtKeyUnlockFullTravelMin.Size = new Size(100, 25);
+            txtKeyUnlockFullTravelMin.TabIndex = 42;
             // 
-            // textBox37
+            // txtKeyUnlockLockTravelActual
             // 
-            textBox37.Location = new Point(566, 200);
-            textBox37.Name = "textBox37";
-            textBox37.Size = new Size(100, 25);
-            textBox37.TabIndex = 41;
+            txtKeyUnlockLockTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyUnlockLockTravelActual.Location = new Point(566, 202);
+            txtKeyUnlockLockTravelActual.Name = "txtKeyUnlockLockTravelActual";
+            txtKeyUnlockLockTravelActual.Size = new Size(100, 25);
+            txtKeyUnlockLockTravelActual.TabIndex = 41;
             // 
-            // textBox38
+            // txtKeyUnlockLockTravelMax
             // 
-            textBox38.Location = new Point(440, 200);
-            textBox38.Name = "textBox38";
-            textBox38.Size = new Size(100, 25);
-            textBox38.TabIndex = 40;
+            txtKeyUnlockLockTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyUnlockLockTravelMax.Location = new Point(440, 202);
+            txtKeyUnlockLockTravelMax.Name = "txtKeyUnlockLockTravelMax";
+            txtKeyUnlockLockTravelMax.Size = new Size(100, 25);
+            txtKeyUnlockLockTravelMax.TabIndex = 40;
             // 
-            // textBox39
+            // txtKeyUnlockLockTravelMin
             // 
-            textBox39.Location = new Point(308, 200);
-            textBox39.Name = "textBox39";
-            textBox39.Size = new Size(100, 25);
-            textBox39.TabIndex = 39;
+            txtKeyUnlockLockTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyUnlockLockTravelMin.Location = new Point(308, 202);
+            txtKeyUnlockLockTravelMin.Name = "txtKeyUnlockLockTravelMin";
+            txtKeyUnlockLockTravelMin.Size = new Size(100, 25);
+            txtKeyUnlockLockTravelMin.TabIndex = 39;
             // 
-            // textBox28
+            // txtKeyUnlockPreTravelActual
             // 
-            textBox28.Location = new Point(566, 173);
-            textBox28.Name = "textBox28";
-            textBox28.Size = new Size(100, 25);
-            textBox28.TabIndex = 38;
+            txtKeyUnlockPreTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyUnlockPreTravelActual.Location = new Point(566, 173);
+            txtKeyUnlockPreTravelActual.Name = "txtKeyUnlockPreTravelActual";
+            txtKeyUnlockPreTravelActual.Size = new Size(100, 25);
+            txtKeyUnlockPreTravelActual.TabIndex = 38;
             // 
-            // textBox29
+            // txtKeyUnlockPreTravelMax
             // 
-            textBox29.Location = new Point(440, 173);
-            textBox29.Name = "textBox29";
-            textBox29.Size = new Size(100, 25);
-            textBox29.TabIndex = 37;
+            txtKeyUnlockPreTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyUnlockPreTravelMax.Location = new Point(440, 173);
+            txtKeyUnlockPreTravelMax.Name = "txtKeyUnlockPreTravelMax";
+            txtKeyUnlockPreTravelMax.Size = new Size(100, 25);
+            txtKeyUnlockPreTravelMax.TabIndex = 37;
             // 
-            // textBox30
+            // txtKeyUnlockPreTravelMin
             // 
-            textBox30.Location = new Point(308, 173);
-            textBox30.Name = "textBox30";
-            textBox30.Size = new Size(100, 25);
-            textBox30.TabIndex = 36;
+            txtKeyUnlockPreTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyUnlockPreTravelMin.Location = new Point(308, 173);
+            txtKeyUnlockPreTravelMin.Name = "txtKeyUnlockPreTravelMin";
+            txtKeyUnlockPreTravelMin.Size = new Size(100, 25);
+            txtKeyUnlockPreTravelMin.TabIndex = 36;
             // 
-            // textBox31
+            // txtKeyUnlockEffortActual
             // 
-            textBox31.Location = new Point(566, 142);
-            textBox31.Name = "textBox31";
-            textBox31.Size = new Size(100, 25);
-            textBox31.TabIndex = 35;
+            txtKeyUnlockEffortActual.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyUnlockEffortActual.Location = new Point(566, 142);
+            txtKeyUnlockEffortActual.Name = "txtKeyUnlockEffortActual";
+            txtKeyUnlockEffortActual.Size = new Size(100, 25);
+            txtKeyUnlockEffortActual.TabIndex = 35;
             // 
             // textBox32
             // 
+            textBox32.BorderStyle = BorderStyle.FixedSingle;
             textBox32.Location = new Point(440, 142);
             textBox32.Name = "textBox32";
             textBox32.Size = new Size(100, 25);
             textBox32.TabIndex = 34;
             // 
-            // textBox33
+            // txtKeyUnlockEffortMin
             // 
-            textBox33.Location = new Point(308, 142);
-            textBox33.Name = "textBox33";
-            textBox33.Size = new Size(100, 25);
-            textBox33.TabIndex = 33;
+            txtKeyUnlockEffortMin.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyUnlockEffortMin.Location = new Point(308, 142);
+            txtKeyUnlockEffortMin.Name = "txtKeyUnlockEffortMin";
+            txtKeyUnlockEffortMin.Size = new Size(100, 25);
+            txtKeyUnlockEffortMin.TabIndex = 33;
             // 
-            // textBox22
+            // txtKeyLockFullTravelActual
             // 
-            textBox22.Location = new Point(566, 112);
-            textBox22.Name = "textBox22";
-            textBox22.Size = new Size(100, 25);
-            textBox22.TabIndex = 32;
+            txtKeyLockFullTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyLockFullTravelActual.Location = new Point(566, 112);
+            txtKeyLockFullTravelActual.Name = "txtKeyLockFullTravelActual";
+            txtKeyLockFullTravelActual.Size = new Size(100, 25);
+            txtKeyLockFullTravelActual.TabIndex = 32;
             // 
-            // textBox23
+            // txtKeyLockFullTravelMax
             // 
-            textBox23.Location = new Point(440, 112);
-            textBox23.Name = "textBox23";
-            textBox23.Size = new Size(100, 25);
-            textBox23.TabIndex = 31;
+            txtKeyLockFullTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyLockFullTravelMax.Location = new Point(440, 112);
+            txtKeyLockFullTravelMax.Name = "txtKeyLockFullTravelMax";
+            txtKeyLockFullTravelMax.Size = new Size(100, 25);
+            txtKeyLockFullTravelMax.TabIndex = 31;
             // 
-            // textBox24
+            // txtKeyLockFullTravelMin
             // 
-            textBox24.Location = new Point(308, 112);
-            textBox24.Name = "textBox24";
-            textBox24.Size = new Size(100, 25);
-            textBox24.TabIndex = 30;
+            txtKeyLockFullTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyLockFullTravelMin.Location = new Point(308, 112);
+            txtKeyLockFullTravelMin.Name = "txtKeyLockFullTravelMin";
+            txtKeyLockFullTravelMin.Size = new Size(100, 25);
+            txtKeyLockFullTravelMin.TabIndex = 30;
             // 
-            // textBox25
+            // txtKeyLockLockTravelActual
             // 
-            textBox25.Location = new Point(566, 81);
-            textBox25.Name = "textBox25";
-            textBox25.Size = new Size(100, 25);
-            textBox25.TabIndex = 29;
+            txtKeyLockLockTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyLockLockTravelActual.Location = new Point(566, 81);
+            txtKeyLockLockTravelActual.Name = "txtKeyLockLockTravelActual";
+            txtKeyLockLockTravelActual.Size = new Size(100, 25);
+            txtKeyLockLockTravelActual.TabIndex = 29;
             // 
-            // textBox26
+            // txtKeyLockLockTravelMax
             // 
-            textBox26.Location = new Point(440, 81);
-            textBox26.Name = "textBox26";
-            textBox26.Size = new Size(100, 25);
-            textBox26.TabIndex = 28;
+            txtKeyLockLockTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyLockLockTravelMax.Location = new Point(440, 81);
+            txtKeyLockLockTravelMax.Name = "txtKeyLockLockTravelMax";
+            txtKeyLockLockTravelMax.Size = new Size(100, 25);
+            txtKeyLockLockTravelMax.TabIndex = 28;
             // 
-            // textBox27
+            // txtKeyLockLockTravelMin
             // 
-            textBox27.Location = new Point(308, 81);
-            textBox27.Name = "textBox27";
-            textBox27.Size = new Size(100, 25);
-            textBox27.TabIndex = 27;
+            txtKeyLockLockTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyLockLockTravelMin.Location = new Point(308, 81);
+            txtKeyLockLockTravelMin.Name = "txtKeyLockLockTravelMin";
+            txtKeyLockLockTravelMin.Size = new Size(100, 25);
+            txtKeyLockLockTravelMin.TabIndex = 27;
             // 
-            // textBox16
+            // txtKeyLockPreTravelActual
             // 
-            textBox16.Location = new Point(566, 49);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(100, 25);
-            textBox16.TabIndex = 26;
+            txtKeyLockPreTravelActual.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyLockPreTravelActual.Location = new Point(566, 49);
+            txtKeyLockPreTravelActual.Name = "txtKeyLockPreTravelActual";
+            txtKeyLockPreTravelActual.Size = new Size(100, 25);
+            txtKeyLockPreTravelActual.TabIndex = 26;
             // 
-            // textBox17
+            // txtKeyLockPreTravelMax
             // 
-            textBox17.Location = new Point(440, 49);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(100, 25);
-            textBox17.TabIndex = 25;
+            txtKeyLockPreTravelMax.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyLockPreTravelMax.Location = new Point(440, 49);
+            txtKeyLockPreTravelMax.Name = "txtKeyLockPreTravelMax";
+            txtKeyLockPreTravelMax.Size = new Size(100, 25);
+            txtKeyLockPreTravelMax.TabIndex = 25;
             // 
-            // textBox18
+            // txtKeyLockPreTravelMin
             // 
-            textBox18.Location = new Point(308, 49);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(100, 25);
-            textBox18.TabIndex = 24;
+            txtKeyLockPreTravelMin.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyLockPreTravelMin.Location = new Point(308, 49);
+            txtKeyLockPreTravelMin.Name = "txtKeyLockPreTravelMin";
+            txtKeyLockPreTravelMin.Size = new Size(100, 25);
+            txtKeyLockPreTravelMin.TabIndex = 24;
             // 
-            // textBox19
+            // txtKeyLockEffortActual
             // 
-            textBox19.Location = new Point(566, 18);
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(100, 25);
-            textBox19.TabIndex = 23;
+            txtKeyLockEffortActual.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyLockEffortActual.Location = new Point(566, 18);
+            txtKeyLockEffortActual.Name = "txtKeyLockEffortActual";
+            txtKeyLockEffortActual.Size = new Size(100, 25);
+            txtKeyLockEffortActual.TabIndex = 23;
             // 
-            // textBox20
+            // txtKeyLockEffortMax
             // 
-            textBox20.Location = new Point(440, 18);
-            textBox20.Name = "textBox20";
-            textBox20.Size = new Size(100, 25);
-            textBox20.TabIndex = 22;
+            txtKeyLockEffortMax.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyLockEffortMax.Location = new Point(440, 18);
+            txtKeyLockEffortMax.Name = "txtKeyLockEffortMax";
+            txtKeyLockEffortMax.Size = new Size(100, 25);
+            txtKeyLockEffortMax.TabIndex = 22;
             // 
-            // textBox21
+            // txtKeyLockEffortMin
             // 
-            textBox21.Location = new Point(308, 18);
-            textBox21.Name = "textBox21";
-            textBox21.Size = new Size(100, 25);
-            textBox21.TabIndex = 21;
+            txtKeyLockEffortMin.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyLockEffortMin.Location = new Point(308, 18);
+            txtKeyLockEffortMin.Name = "txtKeyLockEffortMin";
+            txtKeyLockEffortMin.Size = new Size(100, 25);
+            txtKeyLockEffortMin.TabIndex = 21;
             // 
             // label19
             // 
@@ -2166,7 +2250,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(20, 201);
+            label18.Location = new Point(20, 203);
             label18.Name = "label18";
             label18.Size = new Size(194, 17);
             label18.TabIndex = 12;
@@ -2228,13 +2312,13 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(textBox13);
-            groupBox3.Controls.Add(textBox14);
-            groupBox3.Controls.Add(textBox15);
-            groupBox3.Controls.Add(textBox10);
+            groupBox3.Controls.Add(txtPowerUnlockActual);
+            groupBox3.Controls.Add(txtPowerUnlockMax);
+            groupBox3.Controls.Add(txtPowerUnlockMin);
+            groupBox3.Controls.Add(txtPowerLockActual);
             groupBox3.Controls.Add(label11);
-            groupBox3.Controls.Add(textBox11);
-            groupBox3.Controls.Add(textBox12);
+            groupBox3.Controls.Add(txtPowerLockMax);
+            groupBox3.Controls.Add(txtPowerLockMin);
             groupBox3.Controls.Add(label10);
             groupBox3.Location = new Point(22, 148);
             groupBox3.Name = "groupBox3";
@@ -2243,33 +2327,37 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Motor Current";
             // 
-            // textBox13
+            // txtPowerUnlockActual
             // 
-            textBox13.Location = new Point(566, 54);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(100, 25);
-            textBox13.TabIndex = 20;
+            txtPowerUnlockActual.BorderStyle = BorderStyle.FixedSingle;
+            txtPowerUnlockActual.Location = new Point(566, 54);
+            txtPowerUnlockActual.Name = "txtPowerUnlockActual";
+            txtPowerUnlockActual.Size = new Size(100, 25);
+            txtPowerUnlockActual.TabIndex = 20;
             // 
-            // textBox14
+            // txtPowerUnlockMax
             // 
-            textBox14.Location = new Point(440, 54);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(100, 25);
-            textBox14.TabIndex = 19;
+            txtPowerUnlockMax.BorderStyle = BorderStyle.FixedSingle;
+            txtPowerUnlockMax.Location = new Point(440, 54);
+            txtPowerUnlockMax.Name = "txtPowerUnlockMax";
+            txtPowerUnlockMax.Size = new Size(100, 25);
+            txtPowerUnlockMax.TabIndex = 19;
             // 
-            // textBox15
+            // txtPowerUnlockMin
             // 
-            textBox15.Location = new Point(308, 54);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(100, 25);
-            textBox15.TabIndex = 18;
+            txtPowerUnlockMin.BorderStyle = BorderStyle.FixedSingle;
+            txtPowerUnlockMin.Location = new Point(308, 54);
+            txtPowerUnlockMin.Name = "txtPowerUnlockMin";
+            txtPowerUnlockMin.Size = new Size(100, 25);
+            txtPowerUnlockMin.TabIndex = 18;
             // 
-            // textBox10
+            // txtPowerLockActual
             // 
-            textBox10.Location = new Point(566, 23);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(100, 25);
-            textBox10.TabIndex = 17;
+            txtPowerLockActual.BorderStyle = BorderStyle.FixedSingle;
+            txtPowerLockActual.Location = new Point(566, 23);
+            txtPowerLockActual.Name = "txtPowerLockActual";
+            txtPowerLockActual.Size = new Size(100, 25);
+            txtPowerLockActual.TabIndex = 17;
             // 
             // label11
             // 
@@ -2280,19 +2368,21 @@
             label11.TabIndex = 7;
             label11.Text = "Power Unlock Current (Amph)";
             // 
-            // textBox11
+            // txtPowerLockMax
             // 
-            textBox11.Location = new Point(440, 23);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(100, 25);
-            textBox11.TabIndex = 16;
+            txtPowerLockMax.BorderStyle = BorderStyle.FixedSingle;
+            txtPowerLockMax.Location = new Point(440, 23);
+            txtPowerLockMax.Name = "txtPowerLockMax";
+            txtPowerLockMax.Size = new Size(100, 25);
+            txtPowerLockMax.TabIndex = 16;
             // 
-            // textBox12
+            // txtPowerLockMin
             // 
-            textBox12.Location = new Point(308, 23);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(100, 25);
-            textBox12.TabIndex = 15;
+            txtPowerLockMin.BorderStyle = BorderStyle.FixedSingle;
+            txtPowerLockMin.Location = new Point(308, 23);
+            txtPowerLockMin.Name = "txtPowerLockMin";
+            txtPowerLockMin.Size = new Size(100, 25);
+            txtPowerLockMin.TabIndex = 15;
             // 
             // label10
             // 
@@ -2633,114 +2723,114 @@
         private Label label25;
         private Label label20;
         private Label label23;
-        private TextBox textBox9;
-        private TextBox textBox8;
-        private TextBox textBox7;
+        private TextBox txtSealLoadActual;
+        private TextBox txtSealLoadMax;
+        private TextBox txtSealLoadMin;
         private Label label28;
         private Label label27;
         private Label label26;
-        private TextBox textBox13;
-        private TextBox textBox14;
-        private TextBox textBox15;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
-        private TextBox textBox52;
-        private TextBox textBox53;
-        private TextBox textBox54;
-        private TextBox textBox55;
-        private TextBox textBox57;
-        private TextBox textBox56;
-        private TextBox textBox40;
-        private TextBox textBox41;
-        private TextBox textBox42;
-        private TextBox textBox43;
-        private TextBox textBox44;
-        private TextBox textBox45;
-        private TextBox textBox51;
-        private TextBox textBox46;
-        private TextBox textBox50;
-        private TextBox textBox47;
-        private TextBox textBox49;
-        private TextBox textBox48;
-        private TextBox textBox34;
-        private TextBox textBox35;
-        private TextBox textBox36;
-        private TextBox textBox37;
-        private TextBox textBox38;
-        private TextBox textBox39;
-        private TextBox textBox28;
-        private TextBox textBox29;
-        private TextBox textBox30;
-        private TextBox textBox31;
+        private TextBox txtPowerUnlockActual;
+        private TextBox txtPowerUnlockMax;
+        private TextBox txtPowerUnlockMin;
+        private TextBox txtPowerLockActual;
+        private TextBox txtPowerLockMax;
+        private TextBox txtPowerLockMin;
+        private TextBox txtEmgLockAngleActual;
+        private TextBox txtEmgLockAngleMax;
+        private TextBox txtEmgLockAngleMin;
+        private TextBox txtEmgLockTorqueActual;
+        private TextBox txtEmgLockTorqueMin;
+        private TextBox txtEmgLockTorqueMax;
+        private TextBox txtChildUnlockTravelActual;
+        private TextBox txtChildUnlockTravelMax;
+        private TextBox txtChildUnlockTravelMin;
+        private TextBox txtChildUnlockEffortActual;
+        private TextBox txtChildUnlockEffortMax;
+        private TextBox txtChildUnlockEffortMin;
+        private TextBox txtChildLockEffortMin;
+        private TextBox txtChildLockTravelActual;
+        private TextBox txtChildLockEffortMax;
+        private TextBox txtChildLockTravelMax;
+        private TextBox txtChildLockEffortActual;
+        private TextBox txtChildLockTravelMin;
+        private TextBox txtKeyUnlockFullTravelActual;
+        private TextBox txtKeyUnlockFullTravelMax;
+        private TextBox txtKeyUnlockFullTravelMin;
+        private TextBox txtKeyUnlockLockTravelActual;
+        private TextBox txtKeyUnlockLockTravelMax;
+        private TextBox txtKeyUnlockLockTravelMin;
+        private TextBox txtKeyUnlockPreTravelActual;
+        private TextBox txtKeyUnlockPreTravelMax;
+        private TextBox txtKeyUnlockPreTravelMin;
+        private TextBox txtKeyUnlockEffortActual;
         private TextBox textBox32;
-        private TextBox textBox33;
-        private TextBox textBox22;
-        private TextBox textBox23;
-        private TextBox textBox24;
-        private TextBox textBox25;
-        private TextBox textBox26;
-        private TextBox textBox27;
-        private TextBox textBox16;
-        private TextBox textBox17;
-        private TextBox textBox18;
-        private TextBox textBox19;
-        private TextBox textBox20;
-        private TextBox textBox21;
+        private TextBox txtKeyUnlockEffortMin;
+        private TextBox txtKeyLockFullTravelActual;
+        private TextBox txtKeyLockFullTravelMax;
+        private TextBox txtKeyLockFullTravelMin;
+        private TextBox txtKeyLockLockTravelActual;
+        private TextBox txtKeyLockLockTravelMax;
+        private TextBox txtKeyLockLockTravelMin;
+        private TextBox txtKeyLockPreTravelActual;
+        private TextBox txtKeyLockPreTravelMax;
+        private TextBox txtKeyLockPreTravelMin;
+        private TextBox txtKeyLockEffortActual;
+        private TextBox txtKeyLockEffortMax;
+        private TextBox txtKeyLockEffortMin;
         private GroupBox groupBox8;
-        private TextBox textBox70;
+        private TextBox txtInsideReleaseFullTravelActual;
         private Label label36;
-        private TextBox textBox71;
+        private TextBox txtInsideReleaseFullTravelMax;
         private Label label37;
-        private TextBox textBox72;
+        private TextBox txtInsideReleaseFullTravelMin;
         private Label label38;
-        private TextBox textBox73;
-        private TextBox textBox74;
+        private TextBox txtInsideReleaseReleaseTravelActual;
+        private TextBox txtInsideReleaseReleaseTravelMax;
         private Label label39;
-        private TextBox textBox75;
-        private TextBox textBox76;
-        private TextBox textBox77;
-        private TextBox textBox78;
-        private TextBox textBox79;
-        private TextBox textBox80;
-        private TextBox textBox81;
+        private TextBox txtInsideReleaseReleaseTravelMin;
+        private TextBox txtInsideReleaseEffortMin;
+        private TextBox txtInsideReleasePreTravelActual;
+        private TextBox txtInsideReleaseEffortMax;
+        private TextBox txtInsideReleasePreTravelMax;
+        private TextBox txtInsideReleaseEffortActual;
+        private TextBox txtInsideReleasePreTravelMin;
         private Label label33;
         private GroupBox groupBox7;
-        private TextBox textBox58;
+        private TextBox txtInsideUnlockTravelActual;
         private Label label29;
-        private TextBox textBox59;
+        private TextBox txtInsideUnlockTravelMax;
         private Label label30;
-        private TextBox textBox60;
+        private TextBox txtInsideUnlockTravelMin;
         private Label label31;
-        private TextBox textBox61;
-        private TextBox textBox62;
+        private TextBox txtInsideUnlockEffortActual;
+        private TextBox txtInsideUnlockEffortMax;
         private Label label32;
-        private TextBox textBox63;
-        private TextBox textBox64;
-        private TextBox textBox65;
-        private TextBox textBox66;
-        private TextBox textBox67;
-        private TextBox textBox68;
-        private TextBox textBox69;
+        private TextBox txtInsideUnlockEffortMin;
+        private TextBox txtInsideLockEffortMin;
+        private TextBox txtInsideLockTravelActual;
+        private TextBox txtInsideLockEffortMax;
+        private TextBox txtInsideLockTravelMax;
+        private TextBox txtInsideLockEffortActual;
+        private TextBox txtInsideLockTravelMin;
         private Label label34;
         private Label label35;
         private GroupBox groupBox9;
-        private TextBox textBox82;
+        private TextBox txtOutsideReleaseFullTravelActual;
         private Label label40;
-        private TextBox textBox83;
+        private TextBox txtOutsideReleaseFullTravelMax;
         private Label label41;
-        private TextBox textBox84;
+        private TextBox txtOutsideReleaseFullTravelMin;
         private Label label42;
-        private TextBox textBox85;
-        private TextBox textBox86;
+        private TextBox txtOutsideReleaseReleaseTravelActual;
+        private TextBox txtOutsideReleaseReleaseTravelMax;
         private Label label43;
-        private TextBox textBox87;
-        private TextBox textBox88;
-        private TextBox textBox89;
-        private TextBox textBox90;
-        private TextBox textBox91;
-        private TextBox textBox92;
-        private TextBox textBox93;
+        private TextBox txtOutsideReleaseReleaseTravelMin;
+        private TextBox txtOutsideReleaseEffortMin;
+        private TextBox txtOutsideReleasePreTravelActual;
+        private TextBox txtOutsideReleaseEffortMax;
+        private TextBox txtOutsideReleasePreTravelMax;
+        private TextBox txtOutsideReleaseEffortActual;
+        private TextBox txtOutsideReleasePreTravelMin;
         private TextBox textBox95;
         private TextBox textBox94;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
