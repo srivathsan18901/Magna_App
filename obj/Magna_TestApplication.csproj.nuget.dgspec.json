@@ -53,6 +53,10 @@
           "framework": "net10.0-windows7.0",
           "targetAlias": "net10.0-windows",
           "dependencies": {
+            "HslCommunication": {
+              "target": "Package",
+              "version": "[13.0.0, )"
+            },
             "QRCoder": {
               "target": "Package",
               "version": "[1.8.0, )"

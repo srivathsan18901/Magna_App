@@ -7,6 +7,8 @@ namespace Magna_TestApplication
     public partial class Magna : Form
     {
         private TscPrinterService _printerService;
+
+        private PlcService _plcService;
         private QrCodeService _qrCodeService;
         private QrDataService _qrDataService;
         private SampleDataService _sampleDataService;
@@ -14,7 +16,8 @@ namespace Magna_TestApplication
         // NEW: QR Decoder Service
         private QrDecoderService _qrDecoderService;
 
-        private System.Windows.Forms.Timer _sampleDataTimer;
+        private System.Threading.Timer _plcCheckTimer;
+        private bool _isCheckingPlc = false; // Prevents overlapping checks
 
         // Master data (never filtered)
         private List<FunctionalTestLog> _ftLogsMaster = new();
@@ -28,6 +31,7 @@ namespace Magna_TestApplication
         {
             InitializeComponent();
 
+            _plcService = new PlcService();
             _qrCodeService = new QrCodeService();
             _qrDataService = new QrDataService();
             _sampleDataService = new SampleDataService();
@@ -35,6 +39,10 @@ namespace Magna_TestApplication
 
             _ftLogs = new BindingList<FunctionalTestLog>();
             _teLogs = new BindingList<TravelAndEnduranceLog>();
+
+            // Set default IP and Port (Do NOT connect here)
+            PLC_IP.Text = "192.168.1.10";
+            PLC_Port.Text = "5000";
 
             // Populate filter dropdowns
             InitFilterCombos(FT_CMB_VARIANT, new[] { "01", "02", "03", "04" });
@@ -49,9 +57,116 @@ namespace Magna_TestApplication
             FT_DTP_FROM.Value = TE_DTP_FROM.Value = DateTime.Today.AddDays(-30);
             FT_DTP_TO.Value = TE_DTP_TO.Value = DateTime.Today;
 
-            SetupFunctionalTestGrid();
-            SetupTravelEnduranceGrid();
-            SetupSampleTimer();
+            //SetupFunctionalTestGrid();
+            //SetupTravelEnduranceGrid();
+
+            this.Load += Magna_Load;
+            this.FormClosing += Magna_FormClosing;
+        }
+
+        private void Magna_Load(object sender, EventArgs e)
+        {
+            // Perform initial connection on the UI thread (safe here, form is ready)
+            // But to prevent hang on startup, let's do it in the background too.
+            Task.Run(() => ConnectToPlc());
+
+            // Start the background timer for PLC status updates
+            // DueTime = 3000ms (wait 3 seconds before first check)
+            // Period = 3000ms (check every 3 seconds)
+            _plcCheckTimer = new System.Threading.Timer(PlcCheckTimerCallback, null, 3000, 3000);
+        }
+
+        private void Magna_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _plcCheckTimer?.Dispose();
+            _plcService?.Disconnect();
+        }
+
+        private void PlcCheckTimerCallback(object state)
+        {
+            // Prevent overlapping checks if the previous one is still running
+            if (_isCheckingPlc) return;
+            _isCheckingPlc = true;
+
+            try
+            {
+                UpdatePlcStatus();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("PLC Timer Error: " + ex.Message);
+            }
+            finally
+            {
+                _isCheckingPlc = false;
+            }
+        }
+
+        private void ConnectToPlc()
+        {
+            string ip = PLC_IP.Text.Trim();
+            string portText = PLC_Port.Text.Trim();
+
+            if (string.IsNullOrEmpty(ip) || string.IsNullOrEmpty(portText))
+            {
+                UpdatePlcLabel("PLC Status: Invalid IP/Port", Color.Red);
+                return;
+            }
+
+            if (!int.TryParse(portText, out int port))
+            {
+                UpdatePlcLabel("PLC Status: Invalid Port", Color.Red);
+                return;
+            }
+
+            UpdatePlcLabel("PLC Status: Connecting...", Color.Orange);
+
+            // This call blocks the background thread, NOT the UI
+            bool success = _plcService.Connect(ip, port);
+
+            if (success)
+            {
+                UpdatePlcLabel("PLC Status: Connected", Color.Green);
+            }
+            else
+            {
+                UpdatePlcLabel("PLC Status: Connection Failed", Color.Red);
+            }
+        }
+
+        private void UpdatePlcLabel(string text, Color color)
+        {
+            if (this.IsDisposed) return;
+
+            // Use Invoke to marshal the call to the UI thread
+            this.Invoke(new Action(() =>
+            {
+                PLC_LBL.Text = text;
+                PLC_LBL.ForeColor = color;
+            }));
+        }
+
+        private void UpdatePlcStatus()
+        {
+            // If we are not connected, try to reconnect
+            if (!_plcService.IsConnected)
+            {
+                ConnectToPlc();
+                return;
+            }
+
+            // If we are connected, do a quick read to verify it's still alive
+            string testRead = _plcService.ReadValue("D0");
+
+            if (testRead.StartsWith("ERR"))
+            {
+                UpdatePlcLabel("PLC Status: Connection Lost", Color.Red);
+                _plcService.Disconnect();
+            }
+            else
+            {
+                UpdatePlcLabel("PLC Status: Connected", Color.Green);
+            }
         }
 
         private void InitFilterCombos(ComboBox cmb, string[] values)
@@ -63,36 +178,36 @@ namespace Magna_TestApplication
             cmb.SelectedIndex = 0;
         }
 
-        private void SetupSampleTimer()
-        {
-            _sampleDataTimer = new System.Windows.Forms.Timer();
-            _sampleDataTimer.Interval = 10000; // 10 seconds
-            _sampleDataTimer.Tick += SampleDataTimer_Tick;
-            _sampleDataTimer.Start();
-        }
+
 
         private void SampleDataTimer_Tick(object sender, EventArgs e)
         {
             try
             {
-                // 1. Generate Functional Test Log
-                FunctionalTestLog ftLog = _sampleDataService.GenerateNextLog();
+                // This will now try to reconnect if disconnected.
+                // If the PLC is unreachable, it will block for 3 seconds.
+                // Consider moving this to a background thread if the UI still feels laggy.
+                UpdatePlcStatus();
 
-                // 2. Add to MASTER list
-                _ftLogsMaster.Insert(0, ftLog);
-                QTY_LBL.Text = ftLog.SNo.ToString();
+                // --- SAMPLE DATA GENERATION IS NOW COMMENTED OUT AS REQUESTED ---
+                //// 1. Generate Functional Test Log
+                //FunctionalTestLog ftLog = _sampleDataService.GenerateNextLog();
 
-                // 3. Generate QR
-                string qrData = _qrDataService.GenerateQrData(
-                    ftLog.LoggedAt, ftLog.Shift, ftLog.Variant, ftLog.SNo);
-                DisplayQr(qrData);
+                //// 2. Add to MASTER list
+                //_ftLogsMaster.Insert(0, ftLog);
+                //QTY_LBL.Text = ftLog.SNo.ToString();
 
-                // 4. Travel & Endurance
-                ProcessTravelAndEnduranceTest(qrData);
+                //// 3. Generate QR
+                //string qrData = _qrDataService.GenerateQrData(
+                //    ftLog.LoggedAt, ftLog.Shift, ftLog.Variant, ftLog.SNo);
+                //DisplayQr(qrData);
 
-                // 5. Re-apply filters (so grids stay up-to-date)
-                ApplyFunctionalTestFilter();
-                ApplyTravelEnduranceFilter();
+                //// 4. Travel & Endurance
+                //ProcessTravelAndEnduranceTest(qrData);
+
+                //// 5. Re-apply filters (so grids stay up-to-date)
+                //ApplyFunctionalTestFilter();
+                //ApplyTravelEnduranceFilter();
             }
             catch (Exception ex)
             {
@@ -264,7 +379,5 @@ namespace Magna_TestApplication
         {
 
         }
-
-
     }
 }

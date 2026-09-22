@@ -1,10 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "j5WTbuLxvGM=",
+  "dgSpecHash": "mzXC9goaCYQ=",
   "success": true,
   "projectFilePath": "D:\\Srivathsan\\Dev\\Magna_Application\\Magna_App\\Magna_TestApplication.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Srivathsan Ganesan\\.nuget\\packages\\qrcoder\\1.8.0\\qrcoder.1.8.0.nupkg.sha512"
+    "C:\\Users\\Srivathsan Ganesan\\.nuget\\packages\\hslcommunication\\13.0.0\\hslcommunication.13.0.0.nupkg.sha512",
+    "C:\\Users\\Srivathsan Ganesan\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Srivathsan Ganesan\\.nuget\\packages\\qrcoder\\1.8.0\\qrcoder.1.8.0.nupkg.sha512",
+    "C:\\Users\\Srivathsan Ganesan\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\6.0.0\\runtime.linux-arm.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\Srivathsan Ganesan\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\6.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\Srivathsan Ganesan\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\6.0.0\\runtime.linux-x64.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\Srivathsan Ganesan\\.nuget\\packages\\runtime.native.system.io.ports\\6.0.0\\runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\Srivathsan Ganesan\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\6.0.0\\runtime.osx-arm64.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\Srivathsan Ganesan\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\6.0.0\\runtime.osx-x64.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\Srivathsan Ganesan\\.nuget\\packages\\system.io.ports\\6.0.0\\system.io.ports.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
