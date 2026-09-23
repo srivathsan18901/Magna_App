@@ -66,6 +66,7 @@ namespace Magna_TestApplication
 
         private void Magna_Load(object sender, EventArgs e)
         {
+            TestAndShowDbStatus();
             // 1. Load Mappings from DB
             try
             {
@@ -85,6 +86,29 @@ namespace Magna_TestApplication
 
             // 3. Start the PLC Data Sync Timer (every 1 second for live feel)
             _plcDataTimer = new System.Threading.Timer(PlcDataTimerCallback, null, 2000, 1000);
+        }
+
+        private void TestAndShowDbStatus()
+        {
+            var result = _dbService.TestDatabaseConnection();
+
+            // Update the DB_LBL safely (since this might be called from a background thread in the future)
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new Action(() => UpdateDbLabel(result.Success, result.Message)));
+            }
+            else
+            {
+                UpdateDbLabel(result.Success, result.Message);
+            }
+        }
+
+        private void UpdateDbLabel(bool success, string message)
+        {
+            if (DB_Lbl == null) return; // Safety check
+
+            DB_Lbl.Text = message;
+            DB_Lbl.ForeColor = success ? Color.Green : Color.Red;
         }
 
         // --- NEW: Background Worker for reading PLC and updating UI ---

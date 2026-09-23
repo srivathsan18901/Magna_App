@@ -279,6 +279,7 @@
             Varient = new Label();
             textBox1 = new TextBox();
             Shift = new Label();
+            DB_Lbl = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)QR_PB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -311,6 +312,7 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(DB_Lbl);
             panel1.Controls.Add(PLC_Port);
             panel1.Controls.Add(PLC_IP);
             panel1.Controls.Add(QR_LBL);
@@ -377,7 +379,7 @@
             // PRINT_STS
             // 
             PRINT_STS.AutoSize = true;
-            PRINT_STS.Location = new Point(186, 62);
+            PRINT_STS.Location = new Point(389, 62);
             PRINT_STS.Name = "PRINT_STS";
             PRINT_STS.Size = new Size(77, 15);
             PRINT_STS.TabIndex = 3;
@@ -2600,6 +2602,15 @@
             Shift.Text = "Shift";
             Shift.Click += label3_Click;
             // 
+            // DB_Lbl
+            // 
+            DB_Lbl.AutoSize = true;
+            DB_Lbl.Location = new Point(186, 62);
+            DB_Lbl.Name = "DB_Lbl";
+            DB_Lbl.Size = new Size(57, 15);
+            DB_Lbl.TabIndex = 8;
+            DB_Lbl.Text = "DB Status";
+            // 
             // Magna
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2906,5 +2917,6 @@
         private Label label48;
         private TextBox PLC_IP;
         private TextBox PLC_Port;
+        private Label DB_Lbl;
     }
 }

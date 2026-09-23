@@ -12,6 +12,23 @@ namespace Magna_TestApplication.services
               Encrypt=False;
               TrustServerCertificate=True;";
 
+        // CHANGED: No longer shows MessageBox. Returns success and message.
+        public (bool Success, string Message) TestDatabaseConnection()
+        {
+            try
+            {
+                using (var conn = new SqlConnection(_connectionString))
+                {
+                    conn.Open();
+                    return (true, $"DB Connected: {conn.Database}");
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, "DB Error: " + ex.Message);
+            }
+        }
+
         public List<PlcRegisterMap> GetPlcMappings()
         {
             var list = new List<PlcRegisterMap>();
@@ -21,13 +38,7 @@ namespace Magna_TestApplication.services
                 conn.Open();
 
                 string query = @"
-                    SELECT
-                        Id,
-                        Category,
-                        ParameterName,
-                        RegisterAddress,
-                        ValueType,
-                        UiControlName
+                    SELECT Id, Category, ParameterName, RegisterAddress, ValueType, UiControlName
                     FROM dbo.PlcRegisterMappings
                     ORDER BY Id";
 
