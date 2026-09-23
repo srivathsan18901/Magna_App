@@ -34,7 +34,7 @@ namespace Magna_TestApplication
 
         // NEW: Store the mapping from DB
         private List<PlcRegisterMap> _plcMappings = new();
-
+        private bool _wasSequenceActive = false;
         public Magna()
         {
             InitializeComponent();
@@ -119,15 +119,36 @@ namespace Magna_TestApplication
 
             try
             {
+                // 1. Periodically verify DB is still up
+                TestAndShowDbStatus();
+
                 if (_plcService.IsConnected && _plcMappings.Count > 0)
                 {
-                    // 1. Get unique addresses to read
+                    // 2. Read all mapped registers from PLC
                     var addresses = _plcMappings.Select(m => m.RegisterAddress).Distinct().ToList();
-
-                    // 2. Read all values from PLC
                     var plcValues = _plcService.ReadMultipleRegisters(addresses);
 
-                    // 3. Update UI on the main thread
+                    // =====================================================
+                    // 3. EDGE DETECTION on D102 (Sequence Start Acknowledgement)
+                    // =====================================================
+                    bool isSequenceComplete =
+                        plcValues.TryGetValue("D102", out string seqAck) && seqAck == "1";
+
+                    if (isSequenceComplete && !_wasSequenceActive)
+                    {
+                        // Rising edge: 0 → 1. A test just completed.
+                        SaveSnapshot(plcValues);
+                        _wasSequenceActive = true;
+                    }
+                    else if (!isSequenceComplete && _wasSequenceActive)
+                    {
+                        // Falling edge: 1 → 0. Test cycle finished, ready for next.
+                        _wasSequenceActive = false;
+                    }
+
+                    // =====================================================
+                    // 4. Update Home page with LIVE values
+                    // =====================================================
                     this.Invoke(new Action(() =>
                     {
                         UpdateUiFromPlc(plcValues);
@@ -142,6 +163,193 @@ namespace Magna_TestApplication
             {
                 _isReadingPlc = false;
             }
+        }
+
+        private void SaveSnapshot(Dictionary<string, string> plcValues)
+        {
+            try
+            {
+                // Build the log object
+                var log = new TestLog
+                {
+                    // --- Meta ---
+                    LoggedAt = DateTime.Now,  // Local PC time as requested
+                    Shift = GetPlcValue(plcValues, "D105"),
+                    Variant = GetPlcValue(plcValues, "D104"),
+                    Result = GetPlcValue(plcValues, "D103"),
+                    SerialNumber = GenerateSerialNumber(),
+
+                    // =========================================
+                    // FUNCTIONAL TEST
+                    // =========================================
+                    SealLoad_Min = ParseDouble(GetPlcValue(plcValues, "D106")),
+                    SealLoad_Max = ParseDouble(GetPlcValue(plcValues, "D107")),
+                    SealLoad_Actual = ParseDouble(GetPlcValue(plcValues, "D108")),
+
+                    PowerLockCurrent_Min = ParseDouble(GetPlcValue(plcValues, "D109")),
+                    PowerLockCurrent_Max = ParseDouble(GetPlcValue(plcValues, "D110")),
+                    PowerLockCurrent_Actual = ParseDouble(GetPlcValue(plcValues, "D111")),
+
+                    PowerUnlockCurrent_Min = ParseDouble(GetPlcValue(plcValues, "D112")),
+                    PowerUnlockCurrent_Max = ParseDouble(GetPlcValue(plcValues, "D113")),
+                    PowerUnlockCurrent_Actual = ParseDouble(GetPlcValue(plcValues, "D114")),
+
+                    KeyLockEffort_Min = ParseDouble(GetPlcValue(plcValues, "D115")),
+                    KeyLockEffort_Max = ParseDouble(GetPlcValue(plcValues, "D116")),
+                    KeyLockEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D117")),
+
+                    KeyLockPreTravel_Min = ParseDouble(GetPlcValue(plcValues, "D118")),
+                    KeyLockPreTravel_Max = ParseDouble(GetPlcValue(plcValues, "D119")),
+                    KeyLockPreTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D120")),
+
+                    KeyLockLockTravel_Min = ParseDouble(GetPlcValue(plcValues, "D121")),
+                    KeyLockLockTravel_Max = ParseDouble(GetPlcValue(plcValues, "D122")),
+                    KeyLockLockTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D123")),
+
+                    KeyLockFullTravel_Min = ParseDouble(GetPlcValue(plcValues, "D124")),
+                    KeyLockFullTravel_Max = ParseDouble(GetPlcValue(plcValues, "D125")),
+                    KeyLockFullTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D126")),
+
+                    KeyUnlockEffort_Min = ParseDouble(GetPlcValue(plcValues, "D127")),
+                    KeyUnlockEffort_Max = ParseDouble(GetPlcValue(plcValues, "D128")),
+                    KeyUnlockEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D129")),
+
+                    KeyUnlockPreTravel_Min = ParseDouble(GetPlcValue(plcValues, "D130")),
+                    KeyUnlockPreTravel_Max = ParseDouble(GetPlcValue(plcValues, "D131")),
+                    KeyUnlockPreTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D132")),
+
+                    KeyUnlockLockTravel_Min = ParseDouble(GetPlcValue(plcValues, "D133")),
+                    KeyUnlockLockTravel_Max = ParseDouble(GetPlcValue(plcValues, "D134")),
+                    KeyUnlockLockTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D135")),
+
+                    KeyUnlockFullTravel_Min = ParseDouble(GetPlcValue(plcValues, "D136")),
+                    KeyUnlockFullTravel_Max = ParseDouble(GetPlcValue(plcValues, "D137")),
+                    KeyUnlockFullTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D138")),
+
+                    ChildLockEffort_Min = ParseDouble(GetPlcValue(plcValues, "D139")),
+                    ChildLockEffort_Max = ParseDouble(GetPlcValue(plcValues, "D140")),
+                    ChildLockEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D141")),
+
+                    ChildLockTravel_Min = ParseDouble(GetPlcValue(plcValues, "D142")),
+                    ChildLockTravel_Max = ParseDouble(GetPlcValue(plcValues, "D143")),
+                    ChildLockTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D144")),
+
+                    ChildUnlockEffort_Min = ParseDouble(GetPlcValue(plcValues, "D145")),
+                    ChildUnlockEffort_Max = ParseDouble(GetPlcValue(plcValues, "D146")),
+                    ChildUnlockEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D147")),
+
+                    ChildUnlockTravel_Min = ParseDouble(GetPlcValue(plcValues, "D148")),
+                    ChildUnlockTravel_Max = ParseDouble(GetPlcValue(plcValues, "D149")),
+                    ChildUnlockTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D150")),
+
+                    EmgLockTorque_Min = ParseDouble(GetPlcValue(plcValues, "D151")),
+                    EmgLockTorque_Max = ParseDouble(GetPlcValue(plcValues, "D152")),
+                    EmgLockTorque_Actual = ParseDouble(GetPlcValue(plcValues, "D153")),
+
+                    EmgLockAngle_Min = ParseDouble(GetPlcValue(plcValues, "D154")),
+                    EmgLockAngle_Max = ParseDouble(GetPlcValue(plcValues, "D155")),
+                    EmgLockAngle_Actual = ParseDouble(GetPlcValue(plcValues, "D156")),
+
+                    // =========================================
+                    // TRAVEL & ENDURANCE TEST
+                    // =========================================
+                    InsideLockEffort_Min = ParseDouble(GetPlcValue(plcValues, "D157")),
+                    InsideLockEffort_Max = ParseDouble(GetPlcValue(plcValues, "D158")),
+                    InsideLockEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D159")),
+
+                    InsideLockTravel_Min = ParseDouble(GetPlcValue(plcValues, "D160")),
+                    InsideLockTravel_Max = ParseDouble(GetPlcValue(plcValues, "D161")),
+                    InsideLockTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D162")),
+
+                    InsideUnlockEffort_Min = ParseDouble(GetPlcValue(plcValues, "D163")),
+                    InsideUnlockEffort_Max = ParseDouble(GetPlcValue(plcValues, "D164")),
+                    InsideUnlockEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D165")),
+
+                    InsideUnlockTravel_Min = ParseDouble(GetPlcValue(plcValues, "D166")),
+                    InsideUnlockTravel_Max = ParseDouble(GetPlcValue(plcValues, "D167")),
+                    InsideUnlockTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D168")),
+
+                    InsideReleaseEffort_Min = ParseDouble(GetPlcValue(plcValues, "D169")),
+                    InsideReleaseEffort_Max = ParseDouble(GetPlcValue(plcValues, "D170")),
+                    InsideReleaseEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D171")),
+
+                    InsideReleasePreTravel_Min = ParseDouble(GetPlcValue(plcValues, "D172")),
+                    InsideReleasePreTravel_Max = ParseDouble(GetPlcValue(plcValues, "D173")),
+                    InsideReleasePreTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D174")),
+
+                    InsideReleaseReleaseTravel_Min = ParseDouble(GetPlcValue(plcValues, "D175")),
+                    InsideReleaseReleaseTravel_Max = ParseDouble(GetPlcValue(plcValues, "D176")),
+                    InsideReleaseReleaseTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D177")),
+
+                    InsideReleaseFullTravel_Min = ParseDouble(GetPlcValue(plcValues, "D178")),
+                    InsideReleaseFullTravel_Max = ParseDouble(GetPlcValue(plcValues, "D179")),
+                    InsideReleaseFullTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D180")),
+
+                    OutsideReleaseEffort_Min = ParseDouble(GetPlcValue(plcValues, "D181")),
+                    OutsideReleaseEffort_Max = ParseDouble(GetPlcValue(plcValues, "D182")),
+                    OutsideReleaseEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D183")),
+
+                    OutsideReleasePreTravel_Min = ParseDouble(GetPlcValue(plcValues, "D184")),
+                    OutsideReleasePreTravel_Max = ParseDouble(GetPlcValue(plcValues, "D185")),
+                    OutsideReleasePreTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D186")),
+
+                    OutsideReleaseReleaseTravel_Min = ParseDouble(GetPlcValue(plcValues, "D187")),
+                    OutsideReleaseReleaseTravel_Max = ParseDouble(GetPlcValue(plcValues, "D188")),
+                    OutsideReleaseReleaseTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D189")),
+
+                    OutsideReleaseFullTravel_Min = ParseDouble(GetPlcValue(plcValues, "D190")),
+                    OutsideReleaseFullTravel_Max = ParseDouble(GetPlcValue(plcValues, "D191")),
+                    OutsideReleaseFullTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D192"))
+                };
+
+                // Persist to DB
+                _dbService.SaveTestLog(log);
+
+                // Refresh Report page so the new row is visible
+                this.Invoke(new Action(() =>
+                {
+                    ApplyFunctionalTestFilter();     // Reloads from DB & rebinds grid
+                                                     // ApplyTravelEnduranceFilter(); // If you have a separate TE grid
+                }));
+
+                // Optional: Log to console for debugging
+                Console.WriteLine($"✔ Test saved: {log.LoggedAt}  Variant={log.Variant}  Result={log.Result}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("SaveSnapshot Error: " + ex.Message);
+                this.Invoke(new Action(() =>
+                {
+                    MessageBox.Show("Failed to save test log:\n" + ex.Message);
+                }));
+            }
+        }
+
+        /// <summary>
+        /// Safely retrieves a value from the PLC dictionary. Returns "" if not found.
+        /// </summary>
+        private string GetPlcValue(Dictionary<string, string> plcValues, string address)
+        {
+            return plcValues.TryGetValue(address, out string val) ? val : "";
+        }
+
+        /// <summary>
+        /// Converts a PLC string to double. Returns 0 on failure.
+        /// </summary>
+        private double ParseDouble(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value)) return 0;
+            if (value.StartsWith("ERR")) return 0;
+            return double.TryParse(value, out double result) ? result : 0;
+        }
+
+        /// <summary>
+        /// Generates a unique serial number. Replace this with real PLC data if available.
+        /// </summary>
+        private string GenerateSerialNumber()
+        {
+            // Format: SN-YYYYMMDD-HHMMSS-XXX
+            return $"SN-{DateTime.Now:yyyyMMdd-HHmmss}-{new Random().Next(100, 999)}";
         }
 
         // --- NEW: Dynamic UI Update Logic ---
