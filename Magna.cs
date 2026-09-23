@@ -32,6 +32,7 @@ namespace Magna_TestApplication
         private System.Threading.Timer _plcDataTimer;
         private bool _isReadingPlc = false;
 
+
         // NEW: Store the mapping from DB
         private List<PlcRegisterMap> _plcMappings = new();
         private bool _wasSequenceActive = false;
@@ -682,6 +683,32 @@ namespace Magna_TestApplication
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnTestSave_Click(object sender, EventArgs e)
+        {
+            // Build a fully populated TestLog with fake data
+            var rnd = new Random();
+            var fakeValues = new Dictionary<string, string>();
+
+            // Meta fields
+            fakeValues["D103"] = rnd.Next(0, 2) == 0 ? "PASS" : "FAIL";
+            fakeValues["D104"] = new[] { "01", "02", "03", "04" }[rnd.Next(4)];
+            fakeValues["D105"] = new[] { "A", "B", "C" }[rnd.Next(3)];
+
+            // All measurement registers: D106 through D192
+            for (int i = 106; i <= 192; i++)
+            {
+                fakeValues[$"D{i}"] = rnd.Next(10, 500).ToString();
+            }
+
+            // Call the same method the PLC trigger uses
+            SaveSnapshot(fakeValues);
+
+            MessageBox.Show(
+                "Fake snapshot saved.\n\n" +
+                "Check SSMS: SELECT TOP 5 * FROM TestLogs ORDER BY Id DESC\n" +
+                "Check Report grid: a new row should appear.");
         }
     }
 }

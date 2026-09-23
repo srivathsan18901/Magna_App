@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Magna));
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            DB_Lbl = new Label();
             PLC_Port = new TextBox();
             PLC_IP = new TextBox();
             QR_LBL = new Label();
@@ -279,7 +280,7 @@
             Varient = new Label();
             textBox1 = new TextBox();
             Shift = new Label();
-            DB_Lbl = new Label();
+            btnTestSave = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)QR_PB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -325,6 +326,15 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1605, 98);
             panel1.TabIndex = 0;
+            // 
+            // DB_Lbl
+            // 
+            DB_Lbl.AutoSize = true;
+            DB_Lbl.Location = new Point(186, 62);
+            DB_Lbl.Name = "DB_Lbl";
+            DB_Lbl.Size = new Size(57, 15);
+            DB_Lbl.TabIndex = 8;
+            DB_Lbl.Text = "DB Status";
             // 
             // PLC_Port
             // 
@@ -423,6 +433,7 @@
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(btnTestSave);
             panel2.Controls.Add(panel8);
             panel2.Controls.Add(panel7);
             panel2.Controls.Add(TET_DGV);
@@ -727,36 +738,36 @@
             TET_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             TET_DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             TET_DGV.BackgroundColor = Color.LightSkyBlue;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = Color.White;
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = SystemColors.InfoText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            TET_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = SystemColors.InfoText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            TET_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             TET_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             TET_DGV.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, inside_lock_effort, inside_lock_travel, inside_unlock_effort, inside_unlock_travel, inside_release_effort, inside_release_pretravel, inside_release_releasetravel, inside_release_full_travel, outside_release_effort, outside_release_pretravel, outside_release_release_travel, outside_release_full_travel });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.White;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            TET_DGV.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            TET_DGV.DefaultCellStyle = dataGridViewCellStyle2;
             TET_DGV.Location = new Point(12, 497);
             TET_DGV.MultiSelect = false;
             TET_DGV.Name = "TET_DGV";
             TET_DGV.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            TET_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            TET_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             TET_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             TET_DGV.Size = new Size(1561, 303);
             TET_DGV.TabIndex = 6;
@@ -881,36 +892,36 @@
             FT_DGV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             FT_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             FT_DGV.BackgroundColor = Color.LightSkyBlue;
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle10.BackColor = Color.White;
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = SystemColors.InfoText;
-            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
-            FT_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = SystemColors.InfoText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            FT_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             FT_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             FT_DGV.Columns.AddRange(new DataGridViewColumn[] { FT_SNo, FT_Date, FT_Time, FT_Shift, FT_Variant, FT_Result, seal_load, power_lock_current, power_unlock_current, key_lock_effort, key_lock_pretravel, key_lock_locktravel, key_lock_full_travel, key_unlock_effort, key_unlock_pretravel, key_unlock_locktravel, key_unlock_full_travel, child_lock_effort, child_lock_travel, child_unlock_effort, child_unlock_travel, emg_lock_torque, emg_lock_angle });
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.White;
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
-            FT_DGV.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            FT_DGV.DefaultCellStyle = dataGridViewCellStyle5;
             FT_DGV.Location = new Point(17, 103);
             FT_DGV.MultiSelect = false;
             FT_DGV.Name = "FT_DGV";
             FT_DGV.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            FT_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            FT_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             FT_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             FT_DGV.Size = new Size(1561, 303);
             FT_DGV.TabIndex = 4;
@@ -2602,14 +2613,20 @@
             Shift.Text = "Shift";
             Shift.Click += label3_Click;
             // 
-            // DB_Lbl
+            // btnTestSave
             // 
-            DB_Lbl.AutoSize = true;
-            DB_Lbl.Location = new Point(186, 62);
-            DB_Lbl.Name = "DB_Lbl";
-            DB_Lbl.Size = new Size(57, 15);
-            DB_Lbl.TabIndex = 8;
-            DB_Lbl.Text = "DB Status";
+            btnTestSave.Anchor = AnchorStyles.Right;
+            btnTestSave.BackColor = Color.Transparent;
+            btnTestSave.FlatStyle = FlatStyle.Popup;
+            btnTestSave.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTestSave.ForeColor = Color.Black;
+            btnTestSave.Location = new Point(1055, 9);
+            btnTestSave.Name = "btnTestSave";
+            btnTestSave.Size = new Size(122, 31);
+            btnTestSave.TabIndex = 6;
+            btnTestSave.Text = "Sample save";
+            btnTestSave.UseVisualStyleBackColor = false;
+            btnTestSave.Click += btnTestSave_Click;
             // 
             // Magna
             // 
@@ -2918,5 +2935,6 @@
         private TextBox PLC_IP;
         private TextBox PLC_Port;
         private Label DB_Lbl;
+        private Button btnTestSave;
     }
 }
