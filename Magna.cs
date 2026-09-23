@@ -16,6 +16,8 @@ namespace Magna_TestApplication
         // NEW: QR Decoder Service
         private QrDecoderService _qrDecoderService;
 
+        private DatabaseService _dbService;
+
         private System.Threading.Timer _plcCheckTimer;
         private bool _isCheckingPlc = false; // Prevents overlapping checks
 
@@ -27,6 +29,12 @@ namespace Magna_TestApplication
         private BindingList<FunctionalTestLog> _ftLogs;
         private BindingList<TravelAndEnduranceLog> _teLogs;
 
+        private System.Threading.Timer _plcDataTimer;
+        private bool _isReadingPlc = false;
+
+        // NEW: Store the mapping from DB
+        private List<PlcRegisterMap> _plcMappings = new();
+
         public Magna()
         {
             InitializeComponent();
@@ -34,6 +42,7 @@ namespace Magna_TestApplication
             _plcService = new PlcService();
             _qrCodeService = new QrCodeService();
             _qrDataService = new QrDataService();
+            _dbService = new DatabaseService();
             _sampleDataService = new SampleDataService();
             _qrDecoderService = new QrDecoderService(); // Initialize decoder
 
@@ -57,15 +66,82 @@ namespace Magna_TestApplication
 
         private void Magna_Load(object sender, EventArgs e)
         {
-            // Perform initial connection on the UI thread (safe here, form is ready)
-            // But to prevent hang on startup, let's do it in the background too.
+            // 1. Load Mappings from DB
+            try
+            {
+                _plcMappings = _dbService.GetPlcMappings();
+                if (_plcMappings.Count == 0)
+                {
+                    MessageBox.Show("Warning: No PLC register mappings found in Database.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DB Error: " + ex.Message);
+            }
+
+            // 2. Initial PLC Connection
             Task.Run(() => ConnectToPlc());
 
-            // Start the background timer for PLC status updates
-            // DueTime = 3000ms (wait 3 seconds before first check)
-            // Period = 3000ms (check every 3 seconds)
-            _plcCheckTimer = new System.Threading.Timer(PlcCheckTimerCallback, null, 3000, 3000);
+            // 3. Start the PLC Data Sync Timer (every 1 second for live feel)
+            _plcDataTimer = new System.Threading.Timer(PlcDataTimerCallback, null, 2000, 1000);
         }
+
+        // --- NEW: Background Worker for reading PLC and updating UI ---
+        private void PlcDataTimerCallback(object state)
+        {
+            if (_isReadingPlc) return;
+            _isReadingPlc = true;
+
+            try
+            {
+                if (_plcService.IsConnected && _plcMappings.Count > 0)
+                {
+                    // 1. Get unique addresses to read
+                    var addresses = _plcMappings.Select(m => m.RegisterAddress).Distinct().ToList();
+
+                    // 2. Read all values from PLC
+                    var plcValues = _plcService.ReadMultipleRegisters(addresses);
+
+                    // 3. Update UI on the main thread
+                    this.Invoke(new Action(() =>
+                    {
+                        UpdateUiFromPlc(plcValues);
+                    }));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("PLC Sync Error: " + ex.Message);
+            }
+            finally
+            {
+                _isReadingPlc = false;
+            }
+        }
+
+        // --- NEW: Dynamic UI Update Logic ---
+        private void UpdateUiFromPlc(Dictionary<string, string> plcValues)
+        {
+            foreach (var map in _plcMappings)
+            {
+                if (plcValues.TryGetValue(map.RegisterAddress, out string value))
+                {
+                    // Find the control on the form by its Name (from DB)
+                    Control[] controls = this.Controls.Find(map.UiControlName, true);
+
+                    if (controls.Length > 0 && controls[0] is TextBox txtBox)
+                    {
+                        // Update the textbox
+                        txtBox.Text = value;
+
+                        // Optional: Color code based on Min/Max (if you have limits in DB)
+                        // if (map.ValueType == "Actual") { ... compare with min/max ... }
+                    }
+                }
+            }
+        }
+
 
         private void Magna_FormClosing(object sender, FormClosingEventArgs e)
         {

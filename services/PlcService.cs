@@ -157,5 +157,42 @@ namespace Magna_TestApplication.services
         {
             return _isConnected && _plc != null;
         }
+
+
+        // Inside PlcService.cs
+        public Dictionary<string, string> ReadMultipleRegisters(List<string> addresses)
+        {
+            var results = new Dictionary<string, string>();
+
+            lock (_lockObject)
+            {
+                if (!CheckPlcConnection()) return results;
+
+                foreach (var address in addresses)
+                {
+                    string formatted = FormatAddress(address);
+                    if (formatted == null) continue;
+
+                    try
+                    {
+                        // Read as UInt16 (Word) since most of your D registers are numeric values
+                        var read = _plc.ReadUInt16(formatted);
+                        if (read.IsSuccess)
+                        {
+                            results[address] = read.Content.ToString();
+                        }
+                        else
+                        {
+                            results[address] = "ERR";
+                        }
+                    }
+                    catch
+                    {
+                        results[address] = "ERR";
+                    }
+                }
+            }
+            return results;
+        }
     }
 }

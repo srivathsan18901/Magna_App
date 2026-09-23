@@ -1,11 +1,16 @@
 ﻿using Magna_TestApplication.Models;
+using System.Data.SqlClient;
 
 namespace Magna_TestApplication.services
 {
     public class DatabaseService
     {
-        // Replace with your actual connection string
-        private readonly string _connectionString = "Data Source=.;Initial Catalog=MagnaDB;Integrated Security=True";
+        private readonly string _connectionString =
+            @"Data Source=(localdb)\MSSQLLocalDB;
+              Initial Catalog=MagnaDB;
+              Integrated Security=True;
+              Encrypt=False;
+              TrustServerCertificate=True;";
 
         public List<PlcRegisterMap> GetPlcMappings()
         {
@@ -14,7 +19,17 @@ namespace Magna_TestApplication.services
             using (var conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
-                string query = "SELECT Id, Category, ParameterName, RegisterAddress, ValueType, UiControlName FROM PlcRegisterMappings";
+
+                string query = @"
+                    SELECT
+                        Id,
+                        Category,
+                        ParameterName,
+                        RegisterAddress,
+                        ValueType,
+                        UiControlName
+                    FROM dbo.PlcRegisterMappings
+                    ORDER BY Id";
 
                 using (var cmd = new SqlCommand(query, conn))
                 using (var reader = cmd.ExecuteReader())
@@ -23,7 +38,7 @@ namespace Magna_TestApplication.services
                     {
                         list.Add(new PlcRegisterMap
                         {
-                            Id = (int)reader["Id"],
+                            Id = Convert.ToInt32(reader["Id"]),
                             Category = reader["Category"].ToString(),
                             ParameterName = reader["ParameterName"].ToString(),
                             RegisterAddress = reader["RegisterAddress"].ToString(),
@@ -33,6 +48,7 @@ namespace Magna_TestApplication.services
                     }
                 }
             }
+
             return list;
         }
     }
