@@ -542,37 +542,113 @@ namespace Magna_TestApplication
         private void ApplyFunctionalTestFilter()
         {
             DateTime fromDate = FT_DTP_FROM.Value.Date;
-            DateTime toDate = FT_DTP_TO.Value.Date.AddDays(1).AddSeconds(-1); // inclusive end of day
+            DateTime toDate = FT_DTP_TO.Value.Date.AddDays(1).AddSeconds(-1);
 
             string timeFilter = FT_TXT_TIME.Text.Trim();
             string variantFilter = FT_CMB_VARIANT.Text;
             string shiftFilter = FT_CMB_SHIFT.Text;
             string resultFilter = FT_CMB_RESULT.Text;
 
-            IEnumerable<FunctionalTestLog> query = _ftLogsMaster;
+            // 1. Query the DB (not the old in-memory list)
+            List<TestLog> logs;
+            try
+            {
+                logs = _dbService.GetTestLogs(fromDate, toDate);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to load logs:\n" + ex.Message);
+                return;
+            }
 
-            // Date range
-            query = query.Where(x => x.LoggedAt >= fromDate && x.LoggedAt <= toDate);
+            // 2. Apply additional filters in memory
+            IEnumerable<TestLog> query = logs;
 
-            // Time (matches HH:mm prefix)
             if (!string.IsNullOrWhiteSpace(timeFilter))
                 query = query.Where(x => x.Time.StartsWith(timeFilter));
 
-            // Variant
             if (!string.IsNullOrWhiteSpace(variantFilter) && variantFilter != "(All)")
                 query = query.Where(x => x.Variant == variantFilter);
 
-            // Shift
             if (!string.IsNullOrWhiteSpace(shiftFilter) && shiftFilter != "(All)")
                 query = query.Where(x => x.Shift == shiftFilter);
 
-            // Result
             if (!string.IsNullOrWhiteSpace(resultFilter) && resultFilter != "(All)")
                 query = query.Where(x => x.Result == resultFilter);
 
-            // Rebinding: replace contents of bound BindingList
-            _ftLogs = new BindingList<FunctionalTestLog>(query.ToList());
-            FT_DGV.DataSource = _ftLogs;
+            // 3. Bind the results to the DataGridView
+            var bindingList = new BindingList<TestLog>(query.ToList());
+            FT_DGV.DataSource = bindingList;
+
+            // 4. Optional: format columns after binding
+            FormatFTGrid();
+        }
+
+        private void FormatFTGrid()
+        {
+            if (FT_DGV.Columns.Count == 0) return;
+
+            // Hide noisy columns
+            if (FT_DGV.Columns.Contains("Id"))
+                FT_DGV.Columns["Id"].Visible = false;
+
+            // Format date / time columns
+            if (FT_DGV.Columns.Contains("Date"))
+                FT_DGV.Columns["Date"].Width = 90;
+
+            if (FT_DGV.Columns.Contains("Time"))
+                FT_DGV.Columns["Time"].Width = 80;
+
+            // Right-align all numeric columns and set 2-decimal format
+            foreach (DataGridViewColumn col in FT_DGV.Columns)
+            {
+                if (col.ValueType == typeof(double))
+                {
+                    //col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                    //col.DefaultCellStyle.Format = "N2";
+                    //col.Width = 80;
+                }
+            }
+
+            // Subscribe to RowPrePaint exactly ONCE (prevent duplicates)
+            FT_DGV.RowPrePaint -= FT_DGV_RowPrePaint;
+            FT_DGV.RowPrePaint += FT_DGV_RowPrePaint;
+        }
+
+        private void FT_DGV_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            // 1. Skip invalid row indices (header row is -1, or grid is empty)
+            if (e.RowIndex < 0 || e.RowIndex >= FT_DGV.Rows.Count)
+                return;
+
+            // 2. Make sure the columns exist before accessing them
+            if (!FT_DGV.Columns.Contains("Result"))
+                return;
+
+            try
+            {
+                var row = FT_DGV.Rows[e.RowIndex];
+                var resultCell = row.Cells["Result"];
+
+                if (resultCell?.Value == null)
+                    return;
+
+                // 3. Only color the row red if the result is FAIL
+                if (resultCell.Value.ToString() == "FAIL")
+                {
+                    row.DefaultCellStyle.BackColor = Color.MistyRose;
+                }
+                else
+                {
+                    // Reset color for PASS rows (important when grid reuses rows)
+                    row.DefaultCellStyle.BackColor = Color.White;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Fail silently — a cosmetic paint error should never crash the app
+                Console.WriteLine("RowPrePaint error: " + ex.Message);
+            }
         }
 
         // ---------------------------------------------------------------

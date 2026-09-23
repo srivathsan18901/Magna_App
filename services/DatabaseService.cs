@@ -35,46 +35,46 @@ namespace Magna_TestApplication.services
             using (var conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
-                string query = @"
-            INSERT INTO TestLogs (
-                LoggedAt, Shift, Variant, SerialNumber, Result,
-                SealLoad_Min, SealLoad_Max, SealLoad_Actual,
-                PowerLockCurrent_Min, PowerLockCurrent_Max, PowerLockCurrent_Actual,
-                InsideLockEffort_Min, InsideLockEffort_Max, InsideLockEffort_Actual
-                -- Add all other columns here
-            ) VALUES (
-                @LoggedAt, @Shift, @Variant, @SerialNumber, @Result,
-                @SealLoad_Min, @SealLoad_Max, @SealLoad_Actual,
-                @PowerLockCurrent_Min, @PowerLockCurrent_Max, @PowerLockCurrent_Actual,
-                @InsideLockEffort_Min, @InsideLockEffort_Max, @InsideLockEffort_Actual
-                -- Add all other parameters here
-            )";
+
+                // 1. Get all public properties of TestLog (except Id and helper properties)
+                var props = typeof(TestLog)
+                    .GetProperties()
+                    .Where(p => p.CanRead && p.CanWrite)         // Only settable properties
+                    .Where(p => p.Name != "Id")                  // Skip auto-increment
+                    .Where(p => p.Name != "Date" && p.Name != "Time") // Skip computed props
+                    .ToList();
+
+                // 2. Build the column list and the @parameter list
+                string columns = string.Join(", ", props.Select(p => p.Name));
+                string parameters = string.Join(", ", props.Select(p => "@" + p.Name));
+
+                string query = $"INSERT INTO TestLogs ({columns}) VALUES ({parameters})";
 
                 using (var cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@LoggedAt", log.LoggedAt);
-                    cmd.Parameters.AddWithValue("@Shift", log.Shift ?? "");
-                    cmd.Parameters.AddWithValue("@Variant", log.Variant ?? "");
-                    cmd.Parameters.AddWithValue("@SerialNumber", log.SerialNumber ?? "");
-                    cmd.Parameters.AddWithValue("@Result", log.Result ?? "");
-
-                    // Add all other parameters...
-                    cmd.Parameters.AddWithValue("@SealLoad_Min", log.SealLoad_Min);
-                    // ... etc
+                    // 3. Add a parameter for each property
+                    foreach (var prop in props)
+                    {
+                        object value = prop.GetValue(log) ?? DBNull.Value;
+                        cmd.Parameters.AddWithValue("@" + prop.Name, value);
+                    }
 
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
+
         public List<TestLog> GetTestLogs(DateTime fromDate, DateTime toDate)
         {
             var list = new List<TestLog>();
+
             using (var conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
+
                 string query = @"
-            SELECT * FROM TestLogs 
+            SELECT * FROM TestLogs
             WHERE LoggedAt >= @From AND LoggedAt <= @To
             ORDER BY LoggedAt DESC";
 
@@ -85,22 +85,52 @@ namespace Magna_TestApplication.services
 
                     using (var reader = cmd.ExecuteReader())
                     {
+                        // Get column ordinal positions once (fast)
+                        var cols = new Dictionary<string, int>();
+                        for (int i = 0; i < reader.FieldCount; i++)
+                            cols[reader.GetName(i)] = i;
+
                         while (reader.Read())
                         {
-                            list.Add(new TestLog
+                            var log = new TestLog();
+
+                            // Use reflection to fill every property from its matching column
+                            foreach (var prop in typeof(TestLog).GetProperties())
                             {
-                                Id = Convert.ToInt32(reader["Id"]),
-                                LoggedAt = Convert.ToDateTime(reader["LoggedAt"]),
-                                Shift = reader["Shift"].ToString(),
-                                Variant = reader["Variant"].ToString(),
-                                Result = reader["Result"].ToString(),
-                                SealLoad_Actual = reader["SealLoad_Actual"] == DBNull.Value ? 0 : Convert.ToDouble(reader["SealLoad_Actual"])
-                                // Map other fields...
-                            });
+                                if (!prop.CanWrite) continue;
+                                if (!cols.ContainsKey(prop.Name)) continue;
+
+                                object value = reader.GetValue(cols[prop.Name]);
+
+                                if (value == DBNull.Value)
+                                {
+                                    // Leave default (0 for double, "" for string)
+                                    continue;
+                                }
+
+                                try
+                                {
+                                    if (prop.PropertyType == typeof(double))
+                                        prop.SetValue(log, Convert.ToDouble(value));
+                                    else if (prop.PropertyType == typeof(int))
+                                        prop.SetValue(log, Convert.ToInt32(value));
+                                    else if (prop.PropertyType == typeof(DateTime))
+                                        prop.SetValue(log, Convert.ToDateTime(value));
+                                    else if (prop.PropertyType == typeof(string))
+                                        prop.SetValue(log, value.ToString());
+                                }
+                                catch
+                                {
+                                    // Ignore individual column conversion errors
+                                }
+                            }
+
+                            list.Add(log);
                         }
                     }
                 }
             }
+
             return list;
         }
 
