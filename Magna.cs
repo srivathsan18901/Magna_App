@@ -586,33 +586,95 @@ namespace Magna_TestApplication
 
         private void FormatFTGrid()
         {
-            if (FT_DGV.Columns.Count == 0) return;
+            // Only build once per data-source change
+            FT_DGV.AutoGenerateColumns = false;
 
-            // Hide noisy columns
-            if (FT_DGV.Columns.Contains("Id"))
-                FT_DGV.Columns["Id"].Visible = false;
+            if (!FT_DGV.Columns.Contains("Id"))
+                FT_DGV.Columns.Clear();
 
-            // Format date / time columns
-            if (FT_DGV.Columns.Contains("Date"))
-                FT_DGV.Columns["Date"].Width = 90;
-
-            if (FT_DGV.Columns.Contains("Time"))
-                FT_DGV.Columns["Time"].Width = 80;
-
-            // Right-align all numeric columns and set 2-decimal format
-            foreach (DataGridViewColumn col in FT_DGV.Columns)
+            // Helper to add a column
+            void AddCol(string header, string prop, int width = 80)
             {
-                if (col.ValueType == typeof(double))
+                if (FT_DGV.Columns.Contains(prop)) return;
+                FT_DGV.Columns.Add(new DataGridViewTextBoxColumn
                 {
-                    //col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                    //col.DefaultCellStyle.Format = "N2";
-                    //col.Width = 80;
-                }
+                    Name = prop,
+                    HeaderText = header,
+                    DataPropertyName = prop,
+                    Width = width
+                });
             }
 
-            // Subscribe to RowPrePaint exactly ONCE (prevent duplicates)
+            // --- Meta ---
+            AddCol("Date", "Date", 90);
+            AddCol("Time", "Time", 80);
+            AddCol("Shift", "Shift", 50);
+            AddCol("Variant", "Variant", 60);
+            AddCol("Result", "Result", 60);
+            AddCol("Serial No", "SerialNumber", 160);
+
+            // --- Functional Test: one line per parameter = 3 columns each ---
+            AddGroup("Seal Load", "SealLoad");
+            AddGroup("Power Lock Current", "PowerLockCurrent");
+            AddGroup("Power Unlock Current", "PowerUnlockCurrent");
+            AddGroup("Key Lock - Effort", "KeyLockEffort");
+            AddGroup("Key Lock - Pre Travel", "KeyLockPreTravel");
+            AddGroup("Key Lock - Lock Travel", "KeyLockLockTravel");
+            AddGroup("Key Lock - Full Travel", "KeyLockFullTravel");
+            AddGroup("Key Unlock - Effort", "KeyUnlockEffort");
+            AddGroup("Key Unlock - Pre Travel", "KeyUnlockPreTravel");
+            AddGroup("Key Unlock - Lock Travel", "KeyUnlockLockTravel");
+            AddGroup("Key Unlock - Full Travel", "KeyUnlockFullTravel");
+            AddGroup("Child Lock - Effort", "ChildLockEffort");
+            AddGroup("Child Lock - Travel", "ChildLockTravel");
+            AddGroup("Child Unlock - Effort", "ChildUnlockEffort");
+            AddGroup("Child Unlock - Travel", "ChildUnlockTravel");
+            AddGroup("EMG Lock - Torque", "EmgLockTorque");
+            AddGroup("EMG Lock - Angle", "EmgLockAngle");
+
+            // --- Travel & Endurance ---
+            AddGroup("Inside Lock - Effort", "InsideLockEffort");
+            AddGroup("Inside Lock - Travel", "InsideLockTravel");
+            AddGroup("Inside Unlock - Effort", "InsideUnlockEffort");
+            AddGroup("Inside Unlock - Travel", "InsideUnlockTravel");
+            AddGroup("Inside Release - Effort", "InsideReleaseEffort");
+            AddGroup("Inside Release - Pre Travel", "InsideReleasePreTravel");
+            AddGroup("Inside Release - Release Travel", "InsideReleaseReleaseTravel");
+            AddGroup("Inside Release - Full Travel", "InsideReleaseFullTravel");
+            AddGroup("Outside Release - Effort", "OutsideReleaseEffort");
+            AddGroup("Outside Release - Pre Travel", "OutsideReleasePreTravel");
+            AddGroup("Outside Release - Release Travel", "OutsideReleaseReleaseTravel");
+            AddGroup("Outside Release - Full Travel", "OutsideReleaseFullTravel");
+
+            // Nested helper to add Min/Max/Actual triplet
+            void AddGroup(string label, string prefix)
+            {
+                AddCol($"{label}\nMin", $"{prefix}_Min", 70);
+                AddCol($"{label}\nMax", $"{prefix}_Max", 70);
+                AddCol($"{label}\nActual", $"{prefix}_Actual", 70);
+            }
+
+            // Subscribe RowPrePaint (safe)
             FT_DGV.RowPrePaint -= FT_DGV_RowPrePaint;
             FT_DGV.RowPrePaint += FT_DGV_RowPrePaint;
+        }
+
+        // Converts "SealLoad_Min" → "Seal Load Min"
+        // Converts "KeyLockFullTravel_Actual" → "Key Lock Full Travel Actual"
+        private string FormatHeaderName(string name)
+        {
+            if (string.IsNullOrEmpty(name)) return name;
+
+            // Insert space before each uppercase letter (except the first)
+            var sb = new System.Text.StringBuilder();
+            for (int i = 0; i < name.Length; i++)
+            {
+                char c = name[i];
+                if (i > 0 && char.IsUpper(c) && !char.IsUpper(name[i - 1]))
+                    sb.Append(' ');
+                sb.Append(c);
+            }
+            return sb.ToString();
         }
 
         private void FT_DGV_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
