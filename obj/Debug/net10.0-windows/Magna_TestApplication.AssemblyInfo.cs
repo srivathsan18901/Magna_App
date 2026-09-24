@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Magna_TestApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+71aaf1a8d9e149ae4f93ab08708319b22e2cb8e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10db0c938376f31731b2dee10df865aa04f5a299")]
 [assembly: System.Reflection.AssemblyProductAttribute("Magna_TestApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Magna_TestApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

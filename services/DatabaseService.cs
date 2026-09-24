@@ -1,5 +1,4 @@
-﻿using Magna_TestApplication.Models;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 
 namespace Magna_TestApplication.services
 {
@@ -28,53 +27,51 @@ namespace Magna_TestApplication.services
                 return (false, "DB Error: " + ex.Message);
             }
         }
-
-        // Inside DatabaseService.cs
-        public void SaveTestLog(TestLog log)
+        // ============================================================
+        // GENERIC SAVE — works for any log type
+        // ============================================================
+        public void SaveLog<T>(T log, string tableName)
         {
             using (var conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
 
-                // 1. Get all public properties of TestLog (except Id and helper properties)
-                var props = typeof(TestLog)
+                var props = typeof(T)
                     .GetProperties()
-                    .Where(p => p.CanRead && p.CanWrite)         // Only settable properties
-                    .Where(p => p.Name != "Id")                  // Skip auto-increment
-                    .Where(p => p.Name != "Date" && p.Name != "Time") // Skip computed props
+                    .Where(p => p.CanRead && p.CanWrite)
+                    .Where(p => p.Name != "Id")
+                    .Where(p => p.Name != "Date" && p.Name != "Time")
                     .ToList();
 
-                // 2. Build the column list and the @parameter list
                 string columns = string.Join(", ", props.Select(p => p.Name));
                 string parameters = string.Join(", ", props.Select(p => "@" + p.Name));
-
-                string query = $"INSERT INTO TestLogs ({columns}) VALUES ({parameters})";
+                string query = $"INSERT INTO {tableName} ({columns}) VALUES ({parameters})";
 
                 using (var cmd = new SqlCommand(query, conn))
                 {
-                    // 3. Add a parameter for each property
                     foreach (var prop in props)
                     {
                         object value = prop.GetValue(log) ?? DBNull.Value;
                         cmd.Parameters.AddWithValue("@" + prop.Name, value);
                     }
-
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-
-        public List<TestLog> GetTestLogs(DateTime fromDate, DateTime toDate)
+        // ============================================================
+        // GENERIC LOAD — works for any log type
+        // ============================================================
+        public List<T> GetLogs<T>(DateTime fromDate, DateTime toDate, string tableName) where T : new()
         {
-            var list = new List<TestLog>();
+            var list = new List<T>();
 
             using (var conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
 
-                string query = @"
-            SELECT * FROM TestLogs
+                string query = $@"
+            SELECT * FROM {tableName}
             WHERE LoggedAt >= @From AND LoggedAt <= @To
             ORDER BY LoggedAt DESC";
 
@@ -85,28 +82,21 @@ namespace Magna_TestApplication.services
 
                     using (var reader = cmd.ExecuteReader())
                     {
-                        // Get column ordinal positions once (fast)
                         var cols = new Dictionary<string, int>();
                         for (int i = 0; i < reader.FieldCount; i++)
                             cols[reader.GetName(i)] = i;
 
                         while (reader.Read())
                         {
-                            var log = new TestLog();
+                            var log = new T();
 
-                            // Use reflection to fill every property from its matching column
-                            foreach (var prop in typeof(TestLog).GetProperties())
+                            foreach (var prop in typeof(T).GetProperties())
                             {
                                 if (!prop.CanWrite) continue;
                                 if (!cols.ContainsKey(prop.Name)) continue;
 
                                 object value = reader.GetValue(cols[prop.Name]);
-
-                                if (value == DBNull.Value)
-                                {
-                                    // Leave default (0 for double, "" for string)
-                                    continue;
-                                }
+                                if (value == DBNull.Value) continue;
 
                                 try
                                 {
@@ -119,10 +109,7 @@ namespace Magna_TestApplication.services
                                     else if (prop.PropertyType == typeof(string))
                                         prop.SetValue(log, value.ToString());
                                 }
-                                catch
-                                {
-                                    // Ignore individual column conversion errors
-                                }
+                                catch { /* skip bad conversion */ }
                             }
 
                             list.Add(log);
@@ -143,9 +130,10 @@ namespace Magna_TestApplication.services
                 conn.Open();
 
                 string query = @"
-                    SELECT Id, Category, ParameterName, RegisterAddress, ValueType, UiControlName
-                    FROM dbo.PlcRegisterMappings
-                    ORDER BY Id";
+            SELECT Id, Category, ParameterName, RegisterAddress, 
+                   ValueType, UiControlName, LogPropertyName, ShowInReport
+            FROM dbo.PlcRegisterMappings
+            ORDER BY Id";
 
                 using (var cmd = new SqlCommand(query, conn))
                 using (var reader = cmd.ExecuteReader())
@@ -159,7 +147,12 @@ namespace Magna_TestApplication.services
                             ParameterName = reader["ParameterName"].ToString(),
                             RegisterAddress = reader["RegisterAddress"].ToString(),
                             ValueType = reader["ValueType"].ToString(),
-                            UiControlName = reader["UiControlName"].ToString()
+                            UiControlName = reader["UiControlName"].ToString(),
+                            LogPropertyName = reader["LogPropertyName"] == DBNull.Value
+                                ? null
+                                : reader["LogPropertyName"].ToString(),
+                            ShowInReport = reader["ShowInReport"] != DBNull.Value
+                                && Convert.ToBoolean(reader["ShowInReport"])
                         });
                     }
                 }

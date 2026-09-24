@@ -583,7 +583,7 @@
             TE_TXT_TIME.BorderStyle = BorderStyle.FixedSingle;
             TE_TXT_TIME.Location = new Point(493, 11);
             TE_TXT_TIME.Name = "TE_TXT_TIME";
-            TE_TXT_TIME.Size = new Size(100, 25);
+            TE_TXT_TIME.Size = new Size(105, 25);
             TE_TXT_TIME.TabIndex = 9;
             // 
             // panel7
@@ -1120,7 +1120,7 @@
             QTY_LBL.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             QTY_LBL.AutoSize = true;
             QTY_LBL.BackColor = Color.Transparent;
-            QTY_LBL.Location = new Point(1406, 118);
+            QTY_LBL.Location = new Point(1400, 119);
             QTY_LBL.Name = "QTY_LBL";
             QTY_LBL.Size = new Size(53, 15);
             QTY_LBL.TabIndex = 5;

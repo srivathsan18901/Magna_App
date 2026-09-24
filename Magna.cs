@@ -12,30 +12,21 @@ namespace Magna_TestApplication
         private QrCodeService _qrCodeService;
         private QrDataService _qrDataService;
         private SampleDataService _sampleDataService;
-
-        // NEW: QR Decoder Service
         private QrDecoderService _qrDecoderService;
-
         private DatabaseService _dbService;
-
         private System.Threading.Timer _plcCheckTimer;
-        private bool _isCheckingPlc = false; // Prevents overlapping checks
-
-        // Master data (never filtered)
+        private bool _isCheckingPlc = false;
         private List<FunctionalTestLog> _ftLogsMaster = new();
         private List<TravelAndEnduranceLog> _teLogsMaster = new();
-
-        // Bound data (filtered view shown in grid)
         private BindingList<FunctionalTestLog> _ftLogs;
         private BindingList<TravelAndEnduranceLog> _teLogs;
-
         private System.Threading.Timer _plcDataTimer;
         private bool _isReadingPlc = false;
 
-
         // NEW: Store the mapping from DB
         private List<PlcRegisterMap> _plcMappings = new();
-        private bool _wasSequenceActive = false;
+        private bool _wasFtSequenceActive = false;
+        private bool _wasTetSequenceActive = false;
         public Magna()
         {
             InitializeComponent();
@@ -45,8 +36,7 @@ namespace Magna_TestApplication
             _qrDataService = new QrDataService();
             _dbService = new DatabaseService();
             _sampleDataService = new SampleDataService();
-            _qrDecoderService = new QrDecoderService(); // Initialize decoder
-
+            _qrDecoderService = new QrDecoderService();
             _ftLogs = new BindingList<FunctionalTestLog>();
             _teLogs = new BindingList<TravelAndEnduranceLog>();
 
@@ -132,19 +122,30 @@ namespace Magna_TestApplication
                     // =====================================================
                     // 3. EDGE DETECTION on D102 (Sequence Start Acknowledgement)
                     // =====================================================
-                    bool isSequenceComplete =
-                        plcValues.TryGetValue("D102", out string seqAck) && seqAck == "1";
+                    // --- FT edge detection on D102 ---
+                    bool isFtComplete = plcValues.TryGetValue("D102", out string ftAck) && ftAck == "1";
 
-                    if (isSequenceComplete && !_wasSequenceActive)
+                    if (isFtComplete && !_wasFtSequenceActive)
                     {
-                        // Rising edge: 0 → 1. A test just completed.
-                        SaveSnapshot(plcValues);
-                        _wasSequenceActive = true;
+                        SaveFtSnapshot(plcValues);
+                        _wasFtSequenceActive = true;
                     }
-                    else if (!isSequenceComplete && _wasSequenceActive)
+                    else if (!isFtComplete && _wasFtSequenceActive)
                     {
-                        // Falling edge: 1 → 0. Test cycle finished, ready for next.
-                        _wasSequenceActive = false;
+                        _wasFtSequenceActive = false;
+                    }
+
+                    // --- TET edge detection on D202 ---
+                    bool isTetComplete = plcValues.TryGetValue("D202", out string tetAck) && tetAck == "1";
+
+                    if (isTetComplete && !_wasTetSequenceActive)
+                    {
+                        SaveTetSnapshot(plcValues);
+                        _wasTetSequenceActive = true;
+                    }
+                    else if (!isTetComplete && _wasTetSequenceActive)
+                    {
+                        _wasTetSequenceActive = false;
                     }
 
                     // =====================================================
@@ -165,164 +166,79 @@ namespace Magna_TestApplication
                 _isReadingPlc = false;
             }
         }
-
-        private void SaveSnapshot(Dictionary<string, string> plcValues)
+        private void SaveFtSnapshot(Dictionary<string, string> plcValues)
         {
             try
             {
-                // Build the log object
-                var log = new TestLog
+                var log = new FunctionalTestLogRecord
                 {
-                    // --- Meta ---
-                    LoggedAt = DateTime.Now,  // Local PC time as requested
-                    Shift = GetPlcValue(plcValues, "D105"),
-                    Variant = GetPlcValue(plcValues, "D104"),
-                    Result = GetPlcValue(plcValues, "D103"),
-                    SerialNumber = GenerateSerialNumber(),
-
-                    // =========================================
-                    // FUNCTIONAL TEST
-                    // =========================================
-                    SealLoad_Min = ParseDouble(GetPlcValue(plcValues, "D106")),
-                    SealLoad_Max = ParseDouble(GetPlcValue(plcValues, "D107")),
-                    SealLoad_Actual = ParseDouble(GetPlcValue(plcValues, "D108")),
-
-                    PowerLockCurrent_Min = ParseDouble(GetPlcValue(plcValues, "D109")),
-                    PowerLockCurrent_Max = ParseDouble(GetPlcValue(plcValues, "D110")),
-                    PowerLockCurrent_Actual = ParseDouble(GetPlcValue(plcValues, "D111")),
-
-                    PowerUnlockCurrent_Min = ParseDouble(GetPlcValue(plcValues, "D112")),
-                    PowerUnlockCurrent_Max = ParseDouble(GetPlcValue(plcValues, "D113")),
-                    PowerUnlockCurrent_Actual = ParseDouble(GetPlcValue(plcValues, "D114")),
-
-                    KeyLockEffort_Min = ParseDouble(GetPlcValue(plcValues, "D115")),
-                    KeyLockEffort_Max = ParseDouble(GetPlcValue(plcValues, "D116")),
-                    KeyLockEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D117")),
-
-                    KeyLockPreTravel_Min = ParseDouble(GetPlcValue(plcValues, "D118")),
-                    KeyLockPreTravel_Max = ParseDouble(GetPlcValue(plcValues, "D119")),
-                    KeyLockPreTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D120")),
-
-                    KeyLockLockTravel_Min = ParseDouble(GetPlcValue(plcValues, "D121")),
-                    KeyLockLockTravel_Max = ParseDouble(GetPlcValue(plcValues, "D122")),
-                    KeyLockLockTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D123")),
-
-                    KeyLockFullTravel_Min = ParseDouble(GetPlcValue(plcValues, "D124")),
-                    KeyLockFullTravel_Max = ParseDouble(GetPlcValue(plcValues, "D125")),
-                    KeyLockFullTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D126")),
-
-                    KeyUnlockEffort_Min = ParseDouble(GetPlcValue(plcValues, "D127")),
-                    KeyUnlockEffort_Max = ParseDouble(GetPlcValue(plcValues, "D128")),
-                    KeyUnlockEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D129")),
-
-                    KeyUnlockPreTravel_Min = ParseDouble(GetPlcValue(plcValues, "D130")),
-                    KeyUnlockPreTravel_Max = ParseDouble(GetPlcValue(plcValues, "D131")),
-                    KeyUnlockPreTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D132")),
-
-                    KeyUnlockLockTravel_Min = ParseDouble(GetPlcValue(plcValues, "D133")),
-                    KeyUnlockLockTravel_Max = ParseDouble(GetPlcValue(plcValues, "D134")),
-                    KeyUnlockLockTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D135")),
-
-                    KeyUnlockFullTravel_Min = ParseDouble(GetPlcValue(plcValues, "D136")),
-                    KeyUnlockFullTravel_Max = ParseDouble(GetPlcValue(plcValues, "D137")),
-                    KeyUnlockFullTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D138")),
-
-                    ChildLockEffort_Min = ParseDouble(GetPlcValue(plcValues, "D139")),
-                    ChildLockEffort_Max = ParseDouble(GetPlcValue(plcValues, "D140")),
-                    ChildLockEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D141")),
-
-                    ChildLockTravel_Min = ParseDouble(GetPlcValue(plcValues, "D142")),
-                    ChildLockTravel_Max = ParseDouble(GetPlcValue(plcValues, "D143")),
-                    ChildLockTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D144")),
-
-                    ChildUnlockEffort_Min = ParseDouble(GetPlcValue(plcValues, "D145")),
-                    ChildUnlockEffort_Max = ParseDouble(GetPlcValue(plcValues, "D146")),
-                    ChildUnlockEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D147")),
-
-                    ChildUnlockTravel_Min = ParseDouble(GetPlcValue(plcValues, "D148")),
-                    ChildUnlockTravel_Max = ParseDouble(GetPlcValue(plcValues, "D149")),
-                    ChildUnlockTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D150")),
-
-                    EmgLockTorque_Min = ParseDouble(GetPlcValue(plcValues, "D151")),
-                    EmgLockTorque_Max = ParseDouble(GetPlcValue(plcValues, "D152")),
-                    EmgLockTorque_Actual = ParseDouble(GetPlcValue(plcValues, "D153")),
-
-                    EmgLockAngle_Min = ParseDouble(GetPlcValue(plcValues, "D154")),
-                    EmgLockAngle_Max = ParseDouble(GetPlcValue(plcValues, "D155")),
-                    EmgLockAngle_Actual = ParseDouble(GetPlcValue(plcValues, "D156")),
-
-                    // =========================================
-                    // TRAVEL & ENDURANCE TEST
-                    // =========================================
-                    InsideLockEffort_Min = ParseDouble(GetPlcValue(plcValues, "D157")),
-                    InsideLockEffort_Max = ParseDouble(GetPlcValue(plcValues, "D158")),
-                    InsideLockEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D159")),
-
-                    InsideLockTravel_Min = ParseDouble(GetPlcValue(plcValues, "D160")),
-                    InsideLockTravel_Max = ParseDouble(GetPlcValue(plcValues, "D161")),
-                    InsideLockTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D162")),
-
-                    InsideUnlockEffort_Min = ParseDouble(GetPlcValue(plcValues, "D163")),
-                    InsideUnlockEffort_Max = ParseDouble(GetPlcValue(plcValues, "D164")),
-                    InsideUnlockEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D165")),
-
-                    InsideUnlockTravel_Min = ParseDouble(GetPlcValue(plcValues, "D166")),
-                    InsideUnlockTravel_Max = ParseDouble(GetPlcValue(plcValues, "D167")),
-                    InsideUnlockTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D168")),
-
-                    InsideReleaseEffort_Min = ParseDouble(GetPlcValue(plcValues, "D169")),
-                    InsideReleaseEffort_Max = ParseDouble(GetPlcValue(plcValues, "D170")),
-                    InsideReleaseEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D171")),
-
-                    InsideReleasePreTravel_Min = ParseDouble(GetPlcValue(plcValues, "D172")),
-                    InsideReleasePreTravel_Max = ParseDouble(GetPlcValue(plcValues, "D173")),
-                    InsideReleasePreTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D174")),
-
-                    InsideReleaseReleaseTravel_Min = ParseDouble(GetPlcValue(plcValues, "D175")),
-                    InsideReleaseReleaseTravel_Max = ParseDouble(GetPlcValue(plcValues, "D176")),
-                    InsideReleaseReleaseTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D177")),
-
-                    InsideReleaseFullTravel_Min = ParseDouble(GetPlcValue(plcValues, "D178")),
-                    InsideReleaseFullTravel_Max = ParseDouble(GetPlcValue(plcValues, "D179")),
-                    InsideReleaseFullTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D180")),
-
-                    OutsideReleaseEffort_Min = ParseDouble(GetPlcValue(plcValues, "D181")),
-                    OutsideReleaseEffort_Max = ParseDouble(GetPlcValue(plcValues, "D182")),
-                    OutsideReleaseEffort_Actual = ParseDouble(GetPlcValue(plcValues, "D183")),
-
-                    OutsideReleasePreTravel_Min = ParseDouble(GetPlcValue(plcValues, "D184")),
-                    OutsideReleasePreTravel_Max = ParseDouble(GetPlcValue(plcValues, "D185")),
-                    OutsideReleasePreTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D186")),
-
-                    OutsideReleaseReleaseTravel_Min = ParseDouble(GetPlcValue(plcValues, "D187")),
-                    OutsideReleaseReleaseTravel_Max = ParseDouble(GetPlcValue(plcValues, "D188")),
-                    OutsideReleaseReleaseTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D189")),
-
-                    OutsideReleaseFullTravel_Min = ParseDouble(GetPlcValue(plcValues, "D190")),
-                    OutsideReleaseFullTravel_Max = ParseDouble(GetPlcValue(plcValues, "D191")),
-                    OutsideReleaseFullTravel_Actual = ParseDouble(GetPlcValue(plcValues, "D192"))
+                    LoggedAt = DateTime.Now,
+                    SerialNumber = GenerateSerialNumber()
                 };
 
-                // Persist to DB
-                _dbService.SaveTestLog(log);
+                FillFromMappings(log, plcValues, "FT");
 
-                // Refresh Report page so the new row is visible
-                this.Invoke(new Action(() =>
-                {
-                    ApplyFunctionalTestFilter();     // Reloads from DB & rebinds grid
-                                                     // ApplyTravelEnduranceFilter(); // If you have a separate TE grid
-                }));
+                _dbService.SaveLog(log, "FunctionalTestLogs");
 
-                // Optional: Log to console for debugging
-                Console.WriteLine($"✔ Test saved: {log.LoggedAt}  Variant={log.Variant}  Result={log.Result}");
+                this.Invoke(new Action(() => ApplyFunctionalTestFilter()));
+                Console.WriteLine($"✔ FT saved: {log.LoggedAt}  Result={log.Result}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine("SaveSnapshot Error: " + ex.Message);
-                this.Invoke(new Action(() =>
+                Console.WriteLine("SaveFtSnapshot Error: " + ex.Message);
+            }
+        }
+
+        private void SaveTetSnapshot(Dictionary<string, string> plcValues)
+        {
+            try
+            {
+                var log = new TravelEnduranceLogRecord
                 {
-                    MessageBox.Show("Failed to save test log:\n" + ex.Message);
-                }));
+                    LoggedAt = DateTime.Now,
+                    SerialNumber = GenerateSerialNumber()
+                };
+
+                FillFromMappings(log, plcValues, "TET");
+
+                _dbService.SaveLog(log, "TravelEnduranceLogs");
+
+                this.Invoke(new Action(() => ApplyTravelEnduranceFilter()));
+                Console.WriteLine($"✔ TET saved: {log.LoggedAt}  Result={log.Result}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("SaveTetSnapshot Error: " + ex.Message);
+            }
+        }
+
+        // Generic reflection-based filler
+        private void FillFromMappings<T>(T log, Dictionary<string, string> plcValues, string group) where T : class
+        {
+            var logType = typeof(T);
+
+            foreach (var map in _plcMappings)
+            {
+                if (map.LogGroup != group) continue;
+                if (string.IsNullOrWhiteSpace(map.LogPropertyName)) continue;
+                if (!plcValues.TryGetValue(map.RegisterAddress, out string rawValue)) continue;
+
+                var prop = logType.GetProperty(map.LogPropertyName);
+                if (prop == null || !prop.CanWrite) continue;
+
+                try
+                {
+                    if (prop.PropertyType == typeof(double))
+                        prop.SetValue(log, ParseDouble(rawValue));
+                    else if (prop.PropertyType == typeof(int))
+                        prop.SetValue(log, int.TryParse(rawValue, out int i) ? i : 0);
+                    else if (prop.PropertyType == typeof(string))
+                        prop.SetValue(log, rawValue ?? "");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Map error {map.RegisterAddress} → {map.LogPropertyName}: {ex.Message}");
+                }
             }
         }
 
@@ -549,111 +465,32 @@ namespace Magna_TestApplication
             string shiftFilter = FT_CMB_SHIFT.Text;
             string resultFilter = FT_CMB_RESULT.Text;
 
-            // 1. Query the DB (not the old in-memory list)
-            List<TestLog> logs;
+            List<FunctionalTestLogRecord> logs;
             try
             {
-                logs = _dbService.GetTestLogs(fromDate, toDate);
+                logs = _dbService.GetLogs<FunctionalTestLogRecord>(fromDate, toDate, "FunctionalTestLogs");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed to load logs:\n" + ex.Message);
+                MessageBox.Show("Failed to load FT logs:\n" + ex.Message);
                 return;
             }
 
-            // 2. Apply additional filters in memory
-            IEnumerable<TestLog> query = logs;
+            IEnumerable<FunctionalTestLogRecord> query = logs;
 
             if (!string.IsNullOrWhiteSpace(timeFilter))
                 query = query.Where(x => x.Time.StartsWith(timeFilter));
-
             if (!string.IsNullOrWhiteSpace(variantFilter) && variantFilter != "(All)")
                 query = query.Where(x => x.Variant == variantFilter);
-
             if (!string.IsNullOrWhiteSpace(shiftFilter) && shiftFilter != "(All)")
                 query = query.Where(x => x.Shift == shiftFilter);
-
             if (!string.IsNullOrWhiteSpace(resultFilter) && resultFilter != "(All)")
                 query = query.Where(x => x.Result == resultFilter);
 
-            // 3. Bind the results to the DataGridView
-            var bindingList = new BindingList<TestLog>(query.ToList());
-            FT_DGV.DataSource = bindingList;
-
-            // 4. Optional: format columns after binding
+            FT_DGV.DataSource = new BindingList<FunctionalTestLogRecord>(query.ToList());
             FormatFTGrid();
         }
 
-        private void FormatFTGrid()
-        {
-            if (FT_DGV.Columns.Count == 0) return;
-
-            // Hide noisy columns
-            if (FT_DGV.Columns.Contains("Id"))
-                FT_DGV.Columns["Id"].Visible = false;
-
-            // Format date / time columns
-            if (FT_DGV.Columns.Contains("Date"))
-                FT_DGV.Columns["Date"].Width = 90;
-
-            if (FT_DGV.Columns.Contains("Time"))
-                FT_DGV.Columns["Time"].Width = 80;
-
-            // Right-align all numeric columns and set 2-decimal format
-            foreach (DataGridViewColumn col in FT_DGV.Columns)
-            {
-                if (col.ValueType == typeof(double))
-                {
-                    //col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                    //col.DefaultCellStyle.Format = "N2";
-                    //col.Width = 80;
-                }
-            }
-
-            // Subscribe to RowPrePaint exactly ONCE (prevent duplicates)
-            FT_DGV.RowPrePaint -= FT_DGV_RowPrePaint;
-            FT_DGV.RowPrePaint += FT_DGV_RowPrePaint;
-        }
-
-        private void FT_DGV_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
-        {
-            // 1. Skip invalid row indices (header row is -1, or grid is empty)
-            if (e.RowIndex < 0 || e.RowIndex >= FT_DGV.Rows.Count)
-                return;
-
-            // 2. Make sure the columns exist before accessing them
-            if (!FT_DGV.Columns.Contains("Result"))
-                return;
-
-            try
-            {
-                var row = FT_DGV.Rows[e.RowIndex];
-                var resultCell = row.Cells["Result"];
-
-                if (resultCell?.Value == null)
-                    return;
-
-                // 3. Only color the row red if the result is FAIL
-                if (resultCell.Value.ToString() == "FAIL")
-                {
-                    row.DefaultCellStyle.BackColor = Color.MistyRose;
-                }
-                else
-                {
-                    // Reset color for PASS rows (important when grid reuses rows)
-                    row.DefaultCellStyle.BackColor = Color.White;
-                }
-            }
-            catch (Exception ex)
-            {
-                // Fail silently — a cosmetic paint error should never crash the app
-                Console.WriteLine("RowPrePaint error: " + ex.Message);
-            }
-        }
-
-        // ---------------------------------------------------------------
-        // TRAVEL & ENDURANCE FILTER
-        // ---------------------------------------------------------------
         private void ApplyTravelEnduranceFilter()
         {
             DateTime fromDate = TE_DTP_FROM.Value.Date;
@@ -664,25 +501,104 @@ namespace Magna_TestApplication
             string shiftFilter = TE_CMB_SHIFT.Text;
             string resultFilter = TE_CMB_RESULT.Text;
 
-            IEnumerable<TravelAndEnduranceLog> query = _teLogsMaster;
+            List<TravelEnduranceLogRecord> logs;
+            try
+            {
+                logs = _dbService.GetLogs<TravelEnduranceLogRecord>(fromDate, toDate, "TravelEnduranceLogs");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to load TET logs:\n" + ex.Message);
+                return;
+            }
 
-            query = query.Where(x => x.LoggedAt >= fromDate && x.LoggedAt <= toDate);
+            IEnumerable<TravelEnduranceLogRecord> query = logs;
 
             if (!string.IsNullOrWhiteSpace(timeFilter))
                 query = query.Where(x => x.Time.StartsWith(timeFilter));
-
             if (!string.IsNullOrWhiteSpace(variantFilter) && variantFilter != "(All)")
                 query = query.Where(x => x.Variant == variantFilter);
-
             if (!string.IsNullOrWhiteSpace(shiftFilter) && shiftFilter != "(All)")
                 query = query.Where(x => x.Shift == shiftFilter);
-
             if (!string.IsNullOrWhiteSpace(resultFilter) && resultFilter != "(All)")
                 query = query.Where(x => x.Result == resultFilter);
 
-            _teLogs = new BindingList<TravelAndEnduranceLog>(query.ToList());
-            TET_DGV.DataSource = _teLogs;
+            TET_DGV.DataSource = new BindingList<TravelEnduranceLogRecord>(query.ToList());
+            FormatTetGrid();
         }
+
+        private void FormatFTGrid()
+        {
+            if (FT_DGV.Columns.Count == 0) return;
+
+            var visibleProps = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+    { "Date", "Time", "Shift", "Variant", "SerialNumber", "Result" };
+
+            foreach (var map in _plcMappings.Where(m => m.LogGroup == "FT"
+                                                     && m.ShowInReport
+                                                     && !string.IsNullOrEmpty(m.LogPropertyName)))
+                visibleProps.Add(map.LogPropertyName);
+
+            foreach (DataGridViewColumn col in FT_DGV.Columns)
+            {
+                col.Visible = (col.Name != "Id") && visibleProps.Contains(col.Name);
+            }
+
+            FT_DGV.RowPrePaint -= FT_DGV_RowPrePaint;
+            FT_DGV.RowPrePaint += FT_DGV_RowPrePaint;
+        }
+
+        private void FormatTetGrid()
+        {
+            if (TET_DGV.Columns.Count == 0) return;
+
+            var visibleProps = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+    { "Date", "Time", "Shift", "Variant", "SerialNumber", "Result" };
+
+            foreach (var map in _plcMappings.Where(m => m.LogGroup == "TET"
+                                                     && m.ShowInReport
+                                                     && !string.IsNullOrEmpty(m.LogPropertyName)))
+                visibleProps.Add(map.LogPropertyName);
+
+            foreach (DataGridViewColumn col in TET_DGV.Columns)
+            {
+                col.Visible = (col.Name != "Id") && visibleProps.Contains(col.Name);
+            }
+
+            TET_DGV.RowPrePaint -= TET_DGV_RowPrePaint;
+            TET_DGV.RowPrePaint += TET_DGV_RowPrePaint;
+        }
+
+        private void FT_DGV_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            PaintFailRow(FT_DGV, e);
+        }
+
+        private void TET_DGV_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        {
+            PaintFailRow(TET_DGV, e);
+        }
+
+        private void PaintFailRow(DataGridView grid, DataGridViewRowPrePaintEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.RowIndex >= grid.Rows.Count) return;
+            if (!grid.Columns.Contains("Result")) return;
+
+            try
+            {
+                var row = grid.Rows[e.RowIndex];
+                var resultCell = row.Cells["Result"];
+                if (resultCell?.Value == null) return;
+
+                row.DefaultCellStyle.BackColor =
+                    resultCell.Value.ToString() == "FAIL" ? Color.MistyRose : Color.White;
+            }
+            catch { }
+        }
+
+        // ---------------------------------------------------------------
+        // TRAVEL & ENDURANCE FILTER
+        // ---------------------------------------------------------------
 
         private void FT_BTN_FILTER_Click_1(object sender, EventArgs e) => ApplyFunctionalTestFilter();
         private void FT_BTN_CLEAR_Click_1(object sender, EventArgs e)
