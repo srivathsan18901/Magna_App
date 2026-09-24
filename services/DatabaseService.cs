@@ -1,4 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using Magna_TestApplication.Models;
+using System.Data.SqlClient;
 
 namespace Magna_TestApplication.services
 {
@@ -120,7 +121,6 @@ namespace Magna_TestApplication.services
 
             return list;
         }
-
         public List<PlcRegisterMap> GetPlcMappings()
         {
             var list = new List<PlcRegisterMap>();
@@ -131,7 +131,7 @@ namespace Magna_TestApplication.services
 
                 string query = @"
             SELECT Id, Category, ParameterName, RegisterAddress, 
-                   ValueType, UiControlName, LogPropertyName, ShowInReport
+                   ValueType, UiControlName, LogPropertyName, ShowInReport, LogGroup
             FROM dbo.PlcRegisterMappings
             ORDER BY Id";
 
@@ -152,7 +152,10 @@ namespace Magna_TestApplication.services
                                 ? null
                                 : reader["LogPropertyName"].ToString(),
                             ShowInReport = reader["ShowInReport"] != DBNull.Value
-                                && Convert.ToBoolean(reader["ShowInReport"])
+                                && Convert.ToBoolean(reader["ShowInReport"]),
+                            LogGroup = reader["LogGroup"] == DBNull.Value
+                                ? null
+                                : reader["LogGroup"].ToString()
                         });
                     }
                 }
