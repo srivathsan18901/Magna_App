@@ -47,6 +47,7 @@
             PLC_LBL = new Label();
             ExportBTN = new Button();
             panel2 = new Panel();
+            SampleFtBtn = new Button();
             panel8 = new Panel();
             label51 = new Label();
             TE_BTN_CLEAR = new Button();
@@ -280,6 +281,7 @@
             Varient = new Label();
             textBox1 = new TextBox();
             Shift = new Label();
+            SampleTetBtn = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)QR_PB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -432,6 +434,8 @@
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(SampleTetBtn);
+            panel2.Controls.Add(SampleFtBtn);
             panel2.Controls.Add(panel8);
             panel2.Controls.Add(panel7);
             panel2.Controls.Add(TET_DGV);
@@ -443,6 +447,16 @@
             panel2.Size = new Size(1583, 805);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
+            // 
+            // SampleFtBtn
+            // 
+            SampleFtBtn.Location = new Point(765, 18);
+            SampleFtBtn.Name = "SampleFtBtn";
+            SampleFtBtn.Size = new Size(75, 27);
+            SampleFtBtn.TabIndex = 21;
+            SampleFtBtn.Text = "Submit";
+            SampleFtBtn.UseVisualStyleBackColor = true;
+            SampleFtBtn.Click += SampleFtBtn_Click;
             // 
             // panel8
             // 
@@ -2611,6 +2625,16 @@
             Shift.Text = "Shift";
             Shift.Click += label3_Click;
             // 
+            // SampleTetBtn
+            // 
+            SampleTetBtn.Location = new Point(910, 18);
+            SampleTetBtn.Name = "SampleTetBtn";
+            SampleTetBtn.Size = new Size(75, 27);
+            SampleTetBtn.TabIndex = 22;
+            SampleTetBtn.Text = "Submit";
+            SampleTetBtn.UseVisualStyleBackColor = true;
+            SampleTetBtn.Click += SampleTetBtn_Click;
+            // 
             // Magna
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2918,5 +2942,7 @@
         private TextBox PLC_IP;
         private TextBox PLC_Port;
         private Label DB_Lbl;
+        private Button SampleFtBtn;
+        private Button SampleTetBtn;
     }
 }

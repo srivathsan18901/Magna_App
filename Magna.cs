@@ -27,6 +27,11 @@ namespace Magna_TestApplication
         private List<PlcRegisterMap> _plcMappings = new();
         private bool _wasFtSequenceActive = false;
         private bool _wasTetSequenceActive = false;
+
+        private static readonly Random _rng = new Random();
+
+        private double Rand(double min, double max)
+            => Math.Round(min + _rng.NextDouble() * (max - min), 2);
         public Magna()
         {
             InitializeComponent();
@@ -75,6 +80,14 @@ namespace Magna_TestApplication
 
             // 4. Start the PLC sync timer
             _plcDataTimer = new System.Threading.Timer(PlcDataTimerCallback, null, 2000, 1000);
+
+            InitFilterCombos(FT_CMB_SHIFT, new[] { "A", "B", "C" });
+            InitFilterCombos(FT_CMB_VARIANT, new[] { "MAGNA-X1", "MAGNA-X2" });
+            InitFilterCombos(FT_CMB_RESULT, new[] { "PASS", "FAIL" });
+
+            InitFilterCombos(TE_CMB_SHIFT, new[] { "A", "B", "C" });
+            InitFilterCombos(TE_CMB_VARIANT, new[] { "MAGNA-X1", "MAGNA-X2" });
+            InitFilterCombos(TE_CMB_RESULT, new[] { "PASS", "FAIL" });
 
             // 5. Populate report grids immediately
             ApplyFunctionalTestFilter();
@@ -428,14 +441,25 @@ namespace Magna_TestApplication
 
             if (!string.IsNullOrWhiteSpace(FT_TXT_TIME.Text))
                 query = query.Where(x => x.Time.StartsWith(FT_TXT_TIME.Text.Trim()));
-            if (FT_CMB_VARIANT.Text != "(All)")
-                query = query.Where(x => x.Variant == FT_CMB_VARIANT.Text);
-            if (FT_CMB_SHIFT.Text != "(All)")
-                query = query.Where(x => x.Shift == FT_CMB_SHIFT.Text);
-            if (FT_CMB_RESULT.Text != "(All)")
-                query = query.Where(x => x.Result == FT_CMB_RESULT.Text);
 
-            FT_DGV.DataSource = new BindingList<FunctionalTestLogRecord>(query.ToList());
+            // Only apply if a REAL value is selected (not empty, not "(All)")
+            string variant = FT_CMB_VARIANT.Text?.Trim() ?? "";
+            if (!string.IsNullOrEmpty(variant) && variant != "(All)")
+                query = query.Where(x => x.Variant == variant);
+
+            string shift = FT_CMB_SHIFT.Text?.Trim() ?? "";
+            if (!string.IsNullOrEmpty(shift) && shift != "(All)")
+                query = query.Where(x => x.Shift == shift);
+
+            string result = FT_CMB_RESULT.Text?.Trim() ?? "";
+            if (!string.IsNullOrEmpty(result) && result != "(All)")
+                query = query.Where(x => x.Result == result);
+
+            var list = query.ToList();
+            Console.WriteLine($"[FT] from={fromDate:yyyy-MM-dd} to={toDate:yyyy-MM-dd} " +
+                              $"totalInRange={logs.Count} afterFilter={list.Count}");
+
+            FT_DGV.DataSource = new BindingList<FunctionalTestLogRecord>(list);
             FormatFTGrid();
         }
 
@@ -608,6 +632,206 @@ namespace Magna_TestApplication
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+
+        /// <summary>
+        /// Builds one fake Functional Test record with random values inside spec,
+        /// then 20% of the time forces a FAIL by pushing one value out of range.
+        /// </summary>
+        private FunctionalTestLogRecord BuildSampleFtRecord()
+        {
+            var log = new FunctionalTestLogRecord
+            {
+                LoggedAt = DateTime.Now,
+                Shift = new[] { "A", "B", "C" }[_rng.Next(3)],
+                Variant = new[] { "MAGNA-X1", "MAGNA-X2" }[_rng.Next(2)],
+                SerialNumber = GenerateSerialNumber(),
+                Result = "PASS"
+            };
+
+            // --- Seal Load ---
+            log.SealLoad_Min = 10.5;
+            log.SealLoad_Max = 25.0;
+            log.SealLoad_Actual = Rand(12.0, 23.0);
+
+            // --- Power Lock Current ---
+            log.PowerLockCurrent_Min = 0.8;
+            log.PowerLockCurrent_Max = 2.5;
+            log.PowerLockCurrent_Actual = Rand(1.0, 2.2);
+
+            // --- Power Unlock Current ---
+            log.PowerUnlockCurrent_Min = 0.7;
+            log.PowerUnlockCurrent_Max = 2.3;
+            log.PowerUnlockCurrent_Actual = Rand(0.9, 2.0);
+
+            // --- Key Lock ---
+            log.KeyLockEffort_Min = 5.0;
+            log.KeyLockEffort_Max = 15.0;
+            log.KeyLockEffort_Actual = Rand(6.0, 14.0);
+
+            log.KeyLockPreTravel_Min = 1.0;
+            log.KeyLockPreTravel_Max = 4.0;
+            log.KeyLockPreTravel_Actual = Rand(1.5, 3.5);
+
+            log.KeyLockLockTravel_Min = 3.0;
+            log.KeyLockLockTravel_Max = 8.0;
+            log.KeyLockLockTravel_Actual = Rand(4.0, 7.0);
+
+            log.KeyLockFullTravel_Min = 6.0;
+            log.KeyLockFullTravel_Max = 12.0;
+            log.KeyLockFullTravel_Actual = Rand(7.0, 11.0);
+
+            // --- Key Unlock ---
+            log.KeyUnlockEffort_Min = 5.0;
+            log.KeyUnlockEffort_Max = 15.0;
+            log.KeyUnlockEffort_Actual = Rand(6.0, 14.0);
+
+            log.KeyUnlockPreTravel_Min = 1.0;
+            log.KeyUnlockPreTravel_Max = 4.0;
+            log.KeyUnlockPreTravel_Actual = Rand(1.5, 3.5);
+
+            log.KeyUnlockLockTravel_Min = 3.0;
+            log.KeyUnlockLockTravel_Max = 8.0;
+            log.KeyUnlockLockTravel_Actual = Rand(4.0, 7.0);
+
+            log.KeyUnlockFullTravel_Min = 6.0;
+            log.KeyUnlockFullTravel_Max = 12.0;
+            log.KeyUnlockFullTravel_Actual = Rand(7.0, 11.0);
+
+            // --- Child Lock ---
+            log.ChildLockEffort_Min = 4.0;
+            log.ChildLockEffort_Max = 12.0;
+            log.ChildLockEffort_Actual = Rand(5.0, 11.0);
+
+            log.ChildLockTravel_Min = 2.0;
+            log.ChildLockTravel_Max = 6.0;
+            log.ChildLockTravel_Actual = Rand(2.5, 5.5);
+
+            log.ChildUnlockEffort_Min = 4.0;
+            log.ChildUnlockEffort_Max = 12.0;
+            log.ChildUnlockEffort_Actual = Rand(5.0, 11.0);
+
+            log.ChildUnlockTravel_Min = 2.0;
+            log.ChildUnlockTravel_Max = 6.0;
+            log.ChildUnlockTravel_Actual = Rand(2.5, 5.5);
+
+            // --- EMG Lock ---
+            log.EmgLockTorque_Min = 2.0;
+            log.EmgLockTorque_Max = 8.0;
+            log.EmgLockTorque_Actual = Rand(3.0, 7.0);
+
+            log.EmgLockAngle_Min = 15.0;
+            log.EmgLockAngle_Max = 45.0;
+            log.EmgLockAngle_Actual = Rand(20.0, 40.0);
+
+            // 20% chance to inject a FAIL
+            if (_rng.Next(100) < 20)
+            {
+                log.Result = "FAIL";
+                log.SealLoad_Actual = Rand(26.0, 30.0);   // above max
+            }
+
+            return log;
+        }
+
+        /// <summary>
+        /// Builds one fake Travel & Endurance record.
+        /// </summary>
+        private TravelEnduranceLogRecord BuildSampleTetRecord()
+        {
+            var log = new TravelEnduranceLogRecord
+            {
+                LoggedAt = DateTime.Now,
+                Shift = new[] { "A", "B", "C" }[_rng.Next(3)],
+                Variant = new[] { "MAGNA-X1", "MAGNA-X2" }[_rng.Next(2)],
+                SerialNumber = GenerateSerialNumber(),
+                Result = "PASS"
+            };
+
+            log.InsideLockEffort_Min = 4.0; log.InsideLockEffort_Max = 12.0;
+            log.InsideLockEffort_Actual = Rand(5.0, 11.0);
+
+            log.InsideLockTravel_Min = 2.0; log.InsideLockTravel_Max = 6.0;
+            log.InsideLockTravel_Actual = Rand(2.5, 5.5);
+
+            log.InsideUnlockEffort_Min = 4.0; log.InsideUnlockEffort_Max = 12.0;
+            log.InsideUnlockEffort_Actual = Rand(5.0, 11.0);
+
+            log.InsideUnlockTravel_Min = 2.0; log.InsideUnlockTravel_Max = 6.0;
+            log.InsideUnlockTravel_Actual = Rand(2.5, 5.5);
+
+            log.InsideReleaseEffort_Min = 3.0; log.InsideReleaseEffort_Max = 10.0;
+            log.InsideReleaseEffort_Actual = Rand(4.0, 9.0);
+
+            log.InsideReleasePreTravel_Min = 1.0; log.InsideReleasePreTravel_Max = 3.5;
+            log.InsideReleasePreTravel_Actual = Rand(1.2, 3.2);
+
+            log.InsideReleaseReleaseTravel_Min = 2.5; log.InsideReleaseReleaseTravel_Max = 7.0;
+            log.InsideReleaseReleaseTravel_Actual = Rand(3.0, 6.5);
+
+            log.InsideReleaseFullTravel_Min = 5.0; log.InsideReleaseFullTravel_Max = 11.0;
+            log.InsideReleaseFullTravel_Actual = Rand(6.0, 10.0);
+
+            log.OutsideReleaseEffort_Min = 3.0; log.OutsideReleaseEffort_Max = 10.0;
+            log.OutsideReleaseEffort_Actual = Rand(4.0, 9.0);
+
+            log.OutsideReleasePreTravel_Min = 1.0; log.OutsideReleasePreTravel_Max = 3.5;
+            log.OutsideReleasePreTravel_Actual = Rand(1.2, 3.2);
+
+            log.OutsideReleaseReleaseTravel_Min = 2.5; log.OutsideReleaseReleaseTravel_Max = 7.0;
+            log.OutsideReleaseReleaseTravel_Actual = Rand(3.0, 6.5);
+
+            log.OutsideReleaseFullTravel_Min = 5.0; log.OutsideReleaseFullTravel_Max = 11.0;
+            log.OutsideReleaseFullTravel_Actual = Rand(6.0, 10.0);
+
+            // 20% chance to inject a FAIL
+            if (_rng.Next(100) < 20)
+            {
+                log.Result = "FAIL";
+                log.InsideLockEffort_Actual = Rand(13.0, 15.0);  // above max
+            }
+
+            return log;
+        }
+
+        private void SampleFtBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var log = BuildSampleFtRecord();
+
+                // 1. Persist to JSON (this also updates the in-memory cache)
+                _jsonLogService.AppendFtLog(log);
+
+                // 2. Refresh the FT grid
+                ApplyFunctionalTestFilter();
+
+                Console.WriteLine($"✔ Sample FT inserted: {log.SerialNumber} [{log.Result}]");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sample FT insert failed: " + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SampleTetBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var log = BuildSampleTetRecord();
+
+                _jsonLogService.AppendTetLog(log);
+                ApplyTravelEnduranceFilter();
+
+                Console.WriteLine($"✔ Sample TET inserted: {log.SerialNumber} [{log.Result}]");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sample TET insert failed: " + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

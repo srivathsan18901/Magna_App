@@ -9,6 +9,10 @@
         public string SerialNumber { get; set; } = "";
         public string Result { get; set; } = "";
 
+        // Helper computed properties
+        public string Date => LoggedAt.ToString("dd-MM-yyyy");
+        public string Time => LoggedAt.ToString("HH:mm:ss");
+
         // Functional Test measurements
         public double SealLoad_Min { get; set; }
         public double SealLoad_Max { get; set; }
@@ -78,8 +82,5 @@
         public double EmgLockAngle_Max { get; set; }
         public double EmgLockAngle_Actual { get; set; }
 
-        // Helper
-        public string Date => LoggedAt.ToString("dd-MM-yyyy");
-        public string Time => LoggedAt.ToString("HH:mm:ss");
     }
 }
