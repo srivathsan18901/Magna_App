@@ -13,7 +13,7 @@ namespace Magna_TestApplication
         private QrDataService _qrDataService;
         private SampleDataService _sampleDataService;
         private QrDecoderService _qrDecoderService;
-        private DatabaseService _dbService;
+        private JsonLogService _jsonLogService;
         private System.Threading.Timer _plcCheckTimer;
         private bool _isCheckingPlc = false;
         private List<FunctionalTestLog> _ftLogsMaster = new();
@@ -34,7 +34,7 @@ namespace Magna_TestApplication
             _plcService = new PlcService();
             _qrCodeService = new QrCodeService();
             _qrDataService = new QrDataService();
-            _dbService = new DatabaseService();
+            _jsonLogService = new JsonLogService();
             _sampleDataService = new SampleDataService();
             _qrDecoderService = new QrDecoderService();
             _ftLogs = new BindingList<FunctionalTestLog>();
@@ -57,52 +57,30 @@ namespace Magna_TestApplication
 
         private void Magna_Load(object sender, EventArgs e)
         {
-            TestAndShowDbStatus();
-            // 1. Load Mappings from DB
-            try
+            // 1. Load register mappings from CODE (not DB)
+            _plcMappings = PlcRegisterConfig.GetMappings();
+
+            if (_plcMappings.Count == 0)
             {
-                _plcMappings = _dbService.GetPlcMappings();
-                if (_plcMappings.Count == 0)
-                {
-                    MessageBox.Show("Warning: No PLC register mappings found in Database.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("DB Error: " + ex.Message);
+                MessageBox.Show("Warning: No PLC register mappings configured.");
+                return;
             }
 
-            // 2. Initial PLC Connection
+            // 2. Show log folder on the UI (optional)
+            DB_Lbl.Text = "Logs: " + _jsonLogService.GetLogFolder();
+            DB_Lbl.ForeColor = Color.Green;
+
+            // 3. Connect PLC
             Task.Run(() => ConnectToPlc());
 
-            // 3. Start the PLC Data Sync Timer (every 1 second for live feel)
+            // 4. Start the PLC sync timer
             _plcDataTimer = new System.Threading.Timer(PlcDataTimerCallback, null, 2000, 1000);
+
+            // 5. Populate report grids immediately
+            ApplyFunctionalTestFilter();
+            ApplyTravelEnduranceFilter();
         }
 
-        private void TestAndShowDbStatus()
-        {
-            var result = _dbService.TestDatabaseConnection();
-
-            // Update the DB_LBL safely (since this might be called from a background thread in the future)
-            if (this.InvokeRequired)
-            {
-                this.Invoke(new Action(() => UpdateDbLabel(result.Success, result.Message)));
-            }
-            else
-            {
-                UpdateDbLabel(result.Success, result.Message);
-            }
-        }
-
-        private void UpdateDbLabel(bool success, string message)
-        {
-            if (DB_Lbl == null) return; // Safety check
-
-            DB_Lbl.Text = message;
-            DB_Lbl.ForeColor = success ? Color.Green : Color.Red;
-        }
-
-        // --- NEW: Background Worker for reading PLC and updating UI ---
         private void PlcDataTimerCallback(object state)
         {
             if (_isReadingPlc) return;
@@ -110,51 +88,41 @@ namespace Magna_TestApplication
 
             try
             {
-                // 1. Periodically verify DB is still up
-                TestAndShowDbStatus();
-
                 if (_plcService.IsConnected && _plcMappings.Count > 0)
                 {
-                    // 2. Read all mapped registers from PLC
-                    var addresses = _plcMappings.Select(m => m.RegisterAddress).Distinct().ToList();
+                    var addresses = _plcMappings
+                        .Select(m => m.RegisterAddress)
+                        .Distinct()
+                        .ToList();
+
                     var plcValues = _plcService.ReadMultipleRegisters(addresses);
 
-                    // =====================================================
-                    // 3. EDGE DETECTION on D102 (Sequence Start Acknowledgement)
-                    // =====================================================
-                    // --- FT edge detection on D102 ---
-                    bool isFtComplete = plcValues.TryGetValue("D102", out string ftAck) && ftAck == "1";
-
-                    if (isFtComplete && !_wasFtSequenceActive)
+                    // --- FT edge detection: D102 ---
+                    bool ftComplete = plcValues.TryGetValue("D102", out string ft) && ft == "1";
+                    if (ftComplete && !_wasFtSequenceActive)
                     {
                         SaveFtSnapshot(plcValues);
                         _wasFtSequenceActive = true;
                     }
-                    else if (!isFtComplete && _wasFtSequenceActive)
+                    else if (!ftComplete && _wasFtSequenceActive)
                     {
                         _wasFtSequenceActive = false;
                     }
 
-                    // --- TET edge detection on D202 ---
-                    bool isTetComplete = plcValues.TryGetValue("D202", out string tetAck) && tetAck == "1";
-
-                    if (isTetComplete && !_wasTetSequenceActive)
+                    // --- TET edge detection: D158 ---
+                    bool tetComplete = plcValues.TryGetValue("D158", out string tet) && tet == "1";
+                    if (tetComplete && !_wasTetSequenceActive)
                     {
                         SaveTetSnapshot(plcValues);
                         _wasTetSequenceActive = true;
                     }
-                    else if (!isTetComplete && _wasTetSequenceActive)
+                    else if (!tetComplete && _wasTetSequenceActive)
                     {
                         _wasTetSequenceActive = false;
                     }
 
-                    // =====================================================
-                    // 4. Update Home page with LIVE values
-                    // =====================================================
-                    this.Invoke(new Action(() =>
-                    {
-                        UpdateUiFromPlc(plcValues);
-                    }));
+                    // --- Home page live update ---
+                    this.Invoke(new Action(() => UpdateUiFromPlc(plcValues)));
                 }
             }
             catch (Exception ex)
@@ -166,6 +134,7 @@ namespace Magna_TestApplication
                 _isReadingPlc = false;
             }
         }
+
         private void SaveFtSnapshot(Dictionary<string, string> plcValues)
         {
             try
@@ -177,11 +146,10 @@ namespace Magna_TestApplication
                 };
 
                 FillFromMappings(log, plcValues, "FT");
-
-                _dbService.SaveLog(log, "FunctionalTestLogs");
+                _jsonLogService.AppendFtLog(log);
 
                 this.Invoke(new Action(() => ApplyFunctionalTestFilter()));
-                Console.WriteLine($"✔ FT saved: {log.LoggedAt}  Result={log.Result}");
+                Console.WriteLine($"✔ FT saved @ {log.LoggedAt}");
             }
             catch (Exception ex)
             {
@@ -200,11 +168,10 @@ namespace Magna_TestApplication
                 };
 
                 FillFromMappings(log, plcValues, "TET");
-
-                _dbService.SaveLog(log, "TravelEnduranceLogs");
+                _jsonLogService.AppendTetLog(log);
 
                 this.Invoke(new Action(() => ApplyTravelEnduranceFilter()));
-                Console.WriteLine($"✔ TET saved: {log.LoggedAt}  Result={log.Result}");
+                Console.WriteLine($"✔ TET saved @ {log.LoggedAt}");
             }
             catch (Exception ex)
             {
@@ -212,7 +179,6 @@ namespace Magna_TestApplication
             }
         }
 
-        // Generic reflection-based filler
         private void FillFromMappings<T>(T log, Dictionary<string, string> plcValues, string group) where T : class
         {
             var logType = typeof(T);
@@ -241,6 +207,7 @@ namespace Magna_TestApplication
                 }
             }
         }
+
 
         /// <summary>
         /// Safely retrieves a value from the PLC dictionary. Returns "" if not found.
@@ -451,41 +418,22 @@ namespace Magna_TestApplication
 
             _teLogsMaster.Insert(0, teLog);
         }
-
-        // ---------------------------------------------------------------
-        // FUNCTIONAL TEST FILTER
-        // ---------------------------------------------------------------
         private void ApplyFunctionalTestFilter()
         {
             DateTime fromDate = FT_DTP_FROM.Value.Date;
             DateTime toDate = FT_DTP_TO.Value.Date.AddDays(1).AddSeconds(-1);
 
-            string timeFilter = FT_TXT_TIME.Text.Trim();
-            string variantFilter = FT_CMB_VARIANT.Text;
-            string shiftFilter = FT_CMB_SHIFT.Text;
-            string resultFilter = FT_CMB_RESULT.Text;
-
-            List<FunctionalTestLogRecord> logs;
-            try
-            {
-                logs = _dbService.GetLogs<FunctionalTestLogRecord>(fromDate, toDate, "FunctionalTestLogs");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Failed to load FT logs:\n" + ex.Message);
-                return;
-            }
-
+            var logs = _jsonLogService.GetFtLogs(fromDate, toDate);
             IEnumerable<FunctionalTestLogRecord> query = logs;
 
-            if (!string.IsNullOrWhiteSpace(timeFilter))
-                query = query.Where(x => x.Time.StartsWith(timeFilter));
-            if (!string.IsNullOrWhiteSpace(variantFilter) && variantFilter != "(All)")
-                query = query.Where(x => x.Variant == variantFilter);
-            if (!string.IsNullOrWhiteSpace(shiftFilter) && shiftFilter != "(All)")
-                query = query.Where(x => x.Shift == shiftFilter);
-            if (!string.IsNullOrWhiteSpace(resultFilter) && resultFilter != "(All)")
-                query = query.Where(x => x.Result == resultFilter);
+            if (!string.IsNullOrWhiteSpace(FT_TXT_TIME.Text))
+                query = query.Where(x => x.Time.StartsWith(FT_TXT_TIME.Text.Trim()));
+            if (FT_CMB_VARIANT.Text != "(All)")
+                query = query.Where(x => x.Variant == FT_CMB_VARIANT.Text);
+            if (FT_CMB_SHIFT.Text != "(All)")
+                query = query.Where(x => x.Shift == FT_CMB_SHIFT.Text);
+            if (FT_CMB_RESULT.Text != "(All)")
+                query = query.Where(x => x.Result == FT_CMB_RESULT.Text);
 
             FT_DGV.DataSource = new BindingList<FunctionalTestLogRecord>(query.ToList());
             FormatFTGrid();
@@ -496,32 +444,17 @@ namespace Magna_TestApplication
             DateTime fromDate = TE_DTP_FROM.Value.Date;
             DateTime toDate = TE_DTP_TO.Value.Date.AddDays(1).AddSeconds(-1);
 
-            string timeFilter = TE_TXT_TIME.Text.Trim();
-            string variantFilter = TE_CMB_VARIANT.Text;
-            string shiftFilter = TE_CMB_SHIFT.Text;
-            string resultFilter = TE_CMB_RESULT.Text;
-
-            List<TravelEnduranceLogRecord> logs;
-            try
-            {
-                logs = _dbService.GetLogs<TravelEnduranceLogRecord>(fromDate, toDate, "TravelEnduranceLogs");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Failed to load TET logs:\n" + ex.Message);
-                return;
-            }
-
+            var logs = _jsonLogService.GetTetLogs(fromDate, toDate);
             IEnumerable<TravelEnduranceLogRecord> query = logs;
 
-            if (!string.IsNullOrWhiteSpace(timeFilter))
-                query = query.Where(x => x.Time.StartsWith(timeFilter));
-            if (!string.IsNullOrWhiteSpace(variantFilter) && variantFilter != "(All)")
-                query = query.Where(x => x.Variant == variantFilter);
-            if (!string.IsNullOrWhiteSpace(shiftFilter) && shiftFilter != "(All)")
-                query = query.Where(x => x.Shift == shiftFilter);
-            if (!string.IsNullOrWhiteSpace(resultFilter) && resultFilter != "(All)")
-                query = query.Where(x => x.Result == resultFilter);
+            if (!string.IsNullOrWhiteSpace(TE_TXT_TIME.Text))
+                query = query.Where(x => x.Time.StartsWith(TE_TXT_TIME.Text.Trim()));
+            if (TE_CMB_VARIANT.Text != "(All)")
+                query = query.Where(x => x.Variant == TE_CMB_VARIANT.Text);
+            if (TE_CMB_SHIFT.Text != "(All)")
+                query = query.Where(x => x.Shift == TE_CMB_SHIFT.Text);
+            if (TE_CMB_RESULT.Text != "(All)")
+                query = query.Where(x => x.Result == TE_CMB_RESULT.Text);
 
             TET_DGV.DataSource = new BindingList<TravelEnduranceLogRecord>(query.ToList());
             FormatTetGrid();
