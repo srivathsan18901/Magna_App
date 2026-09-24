@@ -26,7 +26,7 @@ new() { RegisterAddress = "D103", Category = "Communication", ParameterName = "F
         LogPropertyName = "Result", LogGroup = "FT", ShowInReport = false },
 
 new() { RegisterAddress = "D104", Category = "Communication", ParameterName = "FT_Variant",
-        ValueType = "Status", UiControlName = "",
+        ValueType = "Status", UiControlName = "FtVarient_TXT",
         LogPropertyName = "Variant", LogGroup = "FT", ShowInReport = false },
 
 new() { RegisterAddress = "D105", Category = "Communication", ParameterName = "FT_Shift",
@@ -46,7 +46,7 @@ new() { RegisterAddress = "D159", Category = "Communication", ParameterName = "T
         LogPropertyName = "Result", LogGroup = "TET", ShowInReport = false },
 
 new() { RegisterAddress = "D160", Category = "Communication", ParameterName = "TET_Variant",
-        ValueType = "Status", UiControlName = "",
+        ValueType = "Status", UiControlName = "TetVarient_TXT",
         LogPropertyName = "Variant", LogGroup = "TET", ShowInReport = false },
 
 new() { RegisterAddress = "D161", Category = "Communication", ParameterName = "TET_Shift",

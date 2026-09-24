@@ -486,19 +486,53 @@ namespace Magna_TestApplication
 
         private void FormatFTGrid()
         {
-            if (FT_DGV.Columns.Count == 0) return;
+            if (FT_DGV.Columns.Count == 0)
+                return;
 
-            var visibleProps = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
-    { "Date", "Time", "Shift", "Variant", "SerialNumber", "Result" };
+            var visibleProps = new HashSet<string>(
+                StringComparer.OrdinalIgnoreCase)
+    {
+        "Date",
+        "Time",
+        "Shift",
+        "Variant",
+        "SerialNumber",
+        "Result"
+    };
 
-            foreach (var map in _plcMappings.Where(m => m.LogGroup == "FT"
-                                                     && m.ShowInReport
-                                                     && !string.IsNullOrEmpty(m.LogPropertyName)))
+            // Add PLC mapped properties
+            foreach (var map in _plcMappings.Where(m =>
+                     m.LogGroup == "FT" &&
+                     m.ShowInReport &&
+                     !string.IsNullOrEmpty(m.LogPropertyName)))
+            {
                 visibleProps.Add(map.LogPropertyName);
+            }
 
             foreach (DataGridViewColumn col in FT_DGV.Columns)
             {
-                col.Visible = (col.Name != "Id") && visibleProps.Contains(col.Name);
+                if (col.Visible)
+                {
+                    col.HeaderCell.Style.WrapMode =
+                        DataGridViewTriState.True;
+
+                    col.MinimumWidth = 80;
+                }
+            }
+
+            foreach (DataGridViewColumn col in FT_DGV.Columns)
+            {
+                // IMPORTANT:
+                // Use DataPropertyName, NOT column Name
+                string propertyName = col.DataPropertyName;
+
+                if (string.IsNullOrWhiteSpace(propertyName))
+                    propertyName = col.Name;
+
+                col.Visible =
+                    !string.Equals(propertyName, "Id",
+                        StringComparison.OrdinalIgnoreCase)
+                    && visibleProps.Contains(propertyName);
             }
 
             FT_DGV.RowPrePaint -= FT_DGV_RowPrePaint;
@@ -507,19 +541,53 @@ namespace Magna_TestApplication
 
         private void FormatTetGrid()
         {
-            if (TET_DGV.Columns.Count == 0) return;
+            if (TET_DGV.Columns.Count == 0)
+                return;
 
-            var visibleProps = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
-    { "Date", "Time", "Shift", "Variant", "SerialNumber", "Result" };
+            var visibleProps = new HashSet<string>(
+                StringComparer.OrdinalIgnoreCase)
+    {
+        "Date",
+        "Time",
+        "Shift",
+        "Variant",
+        "SerialNumber",
+        "Result"
+    };
 
-            foreach (var map in _plcMappings.Where(m => m.LogGroup == "TET"
-                                                     && m.ShowInReport
-                                                     && !string.IsNullOrEmpty(m.LogPropertyName)))
+            // Add PLC mapped properties
+            foreach (var map in _plcMappings.Where(m =>
+                     m.LogGroup == "TET" &&
+                     m.ShowInReport &&
+                     !string.IsNullOrEmpty(m.LogPropertyName)))
+            {
                 visibleProps.Add(map.LogPropertyName);
+            }
 
             foreach (DataGridViewColumn col in TET_DGV.Columns)
             {
-                col.Visible = (col.Name != "Id") && visibleProps.Contains(col.Name);
+                if (col.Visible)
+                {
+                    col.HeaderCell.Style.WrapMode =
+                        DataGridViewTriState.True;
+
+                    col.MinimumWidth = 80;
+                }
+            }
+
+            foreach (DataGridViewColumn col in TET_DGV.Columns)
+            {
+                // IMPORTANT:
+                // Use DataPropertyName
+                string propertyName = col.DataPropertyName;
+
+                if (string.IsNullOrWhiteSpace(propertyName))
+                    propertyName = col.Name;
+
+                col.Visible =
+                    !string.Equals(propertyName, "Id",
+                        StringComparison.OrdinalIgnoreCase)
+                    && visibleProps.Contains(propertyName);
             }
 
             TET_DGV.RowPrePaint -= TET_DGV_RowPrePaint;
@@ -579,44 +647,6 @@ namespace Magna_TestApplication
             TE_CMB_SHIFT.SelectedIndex = 0;
             TE_CMB_RESULT.SelectedIndex = 0;
             ApplyTravelEnduranceFilter();
-        }
-
-        private void DisplayQr(string qrData)
-        {
-            QR_LBL.Text = qrData;
-
-            Bitmap qrImage = _qrCodeService.GenerateQr(qrData);
-
-            if (QR_PB.Image != null)
-            {
-                QR_PB.Image.Dispose();
-                QR_PB.Image = null;
-            }
-
-            QR_PB.SizeMode = PictureBoxSizeMode.Zoom;
-            QR_PB.Image = qrImage;
-        }
-
-        private void SetupFunctionalTestGrid()
-        {
-            FT_DGV.AutoGenerateColumns = false;
-            FT_DGV.AllowUserToAddRows = false;
-            FT_DGV.ReadOnly = true;
-            FT_DGV.RowHeadersVisible = false;
-            FT_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            FT_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            FT_DGV.DataSource = _ftLogs;
-        }
-
-        private void SetupTravelEnduranceGrid()
-        {
-            TET_DGV.AutoGenerateColumns = false;
-            TET_DGV.AllowUserToAddRows = false;
-            TET_DGV.ReadOnly = true;
-            TET_DGV.RowHeadersVisible = false;
-            TET_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            TET_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            TET_DGV.DataSource = _teLogs;
         }
 
         private void ExportBTN_Click(object sender, EventArgs e) { }
@@ -801,11 +831,14 @@ namespace Magna_TestApplication
             {
                 var log = BuildSampleFtRecord();
 
-                // 1. Persist to JSON (this also updates the in-memory cache)
+                // 1. Persist to JSON
                 _jsonLogService.AppendFtLog(log);
 
                 // 2. Refresh the FT grid
                 ApplyFunctionalTestFilter();
+
+                // 3. NEW: Push the record to Home page TextBoxes
+                PushFtToHomePage(log);
 
                 Console.WriteLine($"✔ Sample FT inserted: {log.SerialNumber} [{log.Result}]");
             }
@@ -825,12 +858,130 @@ namespace Magna_TestApplication
                 _jsonLogService.AppendTetLog(log);
                 ApplyTravelEnduranceFilter();
 
+                // NEW: Push to Home page
+                PushTetToHomePage(log);
+
                 Console.WriteLine($"✔ Sample TET inserted: {log.SerialNumber} [{log.Result}]");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Sample TET insert failed: " + ex.Message,
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Pushes a FunctionalTestLogRecord's values into the Home page TextBoxes.
+        /// Uses the same _plcMappings to find the right TextBox by LogPropertyName.
+        /// </summary>
+        private void PushFtToHomePage(FunctionalTestLogRecord log)
+        {
+            var logType = typeof(FunctionalTestLogRecord);
+
+            foreach (var map in _plcMappings)
+            {
+                // Only handle FT registers
+                if (map.LogGroup != "FT") continue;
+                if (string.IsNullOrWhiteSpace(map.LogPropertyName)) continue;
+                if (string.IsNullOrWhiteSpace(map.UiControlName)) continue;
+
+                var prop = logType.GetProperty(map.LogPropertyName);
+                if (prop == null) continue;
+
+                object value = prop.GetValue(log);
+                if (value == null) continue;
+
+                // Find the TextBox on the Home page
+                Control[] controls = this.Controls.Find(map.UiControlName, true);
+                if (controls.Length == 0 || controls[0] is not TextBox txtBox) continue;
+
+                // Format the value appropriately
+                string text = value switch
+                {
+                    double d => d.ToString("0.##"),
+                    int i => i.ToString(),
+                    string s => s,
+                    _ => value.ToString() ?? ""
+                };
+
+                txtBox.Text = text;
+            }
+
+            // Also push the meta (Shift / Variant / Result) into any Home-page textboxes
+            // that share those UiControlNames in the config (if you have them)
+            foreach (var map in _plcMappings)
+            {
+                if (map.LogGroup != "FT") continue;
+                if (string.IsNullOrWhiteSpace(map.UiControlName)) continue;
+
+                string? text = map.LogPropertyName switch
+                {
+                    "Shift" => log.Shift,
+                    "Variant" => log.Variant,
+                    "Result" => log.Result,
+                    _ => null
+                };
+
+                if (text == null) continue;
+
+                Control[] controls = this.Controls.Find(map.UiControlName, true);
+                if (controls.Length > 0 && controls[0] is TextBox txtBox)
+                    txtBox.Text = text;
+            }
+        }
+
+        /// <summary>
+        /// Same as above but for TravelEnduranceLogRecord.
+        /// </summary>
+        private void PushTetToHomePage(TravelEnduranceLogRecord log)
+        {
+            var logType = typeof(TravelEnduranceLogRecord);
+
+            foreach (var map in _plcMappings)
+            {
+                if (map.LogGroup != "TET") continue;
+                if (string.IsNullOrWhiteSpace(map.LogPropertyName)) continue;
+                if (string.IsNullOrWhiteSpace(map.UiControlName)) continue;
+
+                var prop = logType.GetProperty(map.LogPropertyName);
+                if (prop == null) continue;
+
+                object value = prop.GetValue(log);
+                if (value == null) continue;
+
+                Control[] controls = this.Controls.Find(map.UiControlName, true);
+                if (controls.Length == 0 || controls[0] is not TextBox txtBox) continue;
+
+                string text = value switch
+                {
+                    double d => d.ToString("0.##"),
+                    int i => i.ToString(),
+                    string s => s,
+                    _ => value.ToString() ?? ""
+                };
+
+                txtBox.Text = text;
+            }
+
+            // Meta push
+            foreach (var map in _plcMappings)
+            {
+                if (map.LogGroup != "TET") continue;
+                if (string.IsNullOrWhiteSpace(map.UiControlName)) continue;
+
+                string? text = map.LogPropertyName switch
+                {
+                    "Shift" => log.Shift,
+                    "Variant" => log.Variant,
+                    "Result" => log.Result,
+                    _ => null
+                };
+
+                if (text == null) continue;
+
+                Control[] controls = this.Controls.Find(map.UiControlName, true);
+                if (controls.Length > 0 && controls[0] is TextBox txtBox)
+                    txtBox.Text = text;
             }
         }
     }

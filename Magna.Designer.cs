@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Magna));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             panel1 = new Panel();
             DB_Lbl = new Label();
             PLC_Port = new TextBox();
@@ -47,6 +47,7 @@
             PLC_LBL = new Label();
             ExportBTN = new Button();
             panel2 = new Panel();
+            SampleTetBtn = new Button();
             SampleFtBtn = new Button();
             panel8 = new Panel();
             label51 = new Label();
@@ -128,7 +129,7 @@
             tabPage1 = new TabPage();
             panel3 = new Panel();
             panel6 = new Panel();
-            textBox95 = new TextBox();
+            TetVarient_TXT = new TextBox();
             groupBox9 = new GroupBox();
             txtOutsideReleaseFullTravelActual = new TextBox();
             label40 = new Label();
@@ -185,7 +186,7 @@
             label35 = new Label();
             label7 = new Label();
             panel5 = new Panel();
-            textBox94 = new TextBox();
+            FtVarient_TXT = new TextBox();
             txtSealLoadActual = new TextBox();
             txtSealLoadMax = new TextBox();
             txtSealLoadMin = new TextBox();
@@ -229,7 +230,7 @@
             txtKeyUnlockPreTravelMax = new TextBox();
             txtKeyUnlockPreTravelMin = new TextBox();
             txtKeyUnlockEffortActual = new TextBox();
-            textBox32 = new TextBox();
+            txtKeyUnlockEffortMax = new TextBox();
             txtKeyUnlockEffortMin = new TextBox();
             txtKeyLockFullTravelActual = new TextBox();
             txtKeyLockFullTravelMax = new TextBox();
@@ -281,7 +282,6 @@
             Varient = new Label();
             textBox1 = new TextBox();
             Shift = new Label();
-            SampleTetBtn = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)QR_PB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -447,6 +447,16 @@
             panel2.Size = new Size(1583, 805);
             panel2.TabIndex = 1;
             panel2.Paint += panel2_Paint;
+            // 
+            // SampleTetBtn
+            // 
+            SampleTetBtn.Location = new Point(910, 18);
+            SampleTetBtn.Name = "SampleTetBtn";
+            SampleTetBtn.Size = new Size(75, 27);
+            SampleTetBtn.TabIndex = 22;
+            SampleTetBtn.Text = "Submit";
+            SampleTetBtn.UseVisualStyleBackColor = true;
+            SampleTetBtn.Click += SampleTetBtn_Click;
             // 
             // SampleFtBtn
             // 
@@ -750,36 +760,36 @@
             TET_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             TET_DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             TET_DGV.BackgroundColor = Color.LightSkyBlue;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = SystemColors.InfoText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            TET_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle7.BackColor = Color.White;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = SystemColors.InfoText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            TET_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             TET_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             TET_DGV.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, inside_lock_effort, inside_lock_travel, inside_unlock_effort, inside_unlock_travel, inside_release_effort, inside_release_pretravel, inside_release_releasetravel, inside_release_full_travel, outside_release_effort, outside_release_pretravel, outside_release_release_travel, outside_release_full_travel });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            TET_DGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.White;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            TET_DGV.DefaultCellStyle = dataGridViewCellStyle8;
             TET_DGV.Location = new Point(12, 497);
             TET_DGV.MultiSelect = false;
             TET_DGV.Name = "TET_DGV";
             TET_DGV.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            TET_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            TET_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             TET_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             TET_DGV.Size = new Size(1561, 303);
             TET_DGV.TabIndex = 6;
@@ -904,36 +914,36 @@
             FT_DGV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             FT_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             FT_DGV.BackgroundColor = Color.LightSkyBlue;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = SystemColors.InfoText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            FT_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle10.BackColor = Color.White;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = SystemColors.InfoText;
+            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            FT_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             FT_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             FT_DGV.Columns.AddRange(new DataGridViewColumn[] { FT_SNo, FT_Date, FT_Time, FT_Shift, FT_Variant, FT_Result, seal_load, power_lock_current, power_unlock_current, key_lock_effort, key_lock_pretravel, key_lock_locktravel, key_lock_full_travel, key_unlock_effort, key_unlock_pretravel, key_unlock_locktravel, key_unlock_full_travel, child_lock_effort, child_lock_travel, child_unlock_effort, child_unlock_travel, emg_lock_torque, emg_lock_angle });
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.White;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            FT_DGV.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.White;
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
+            FT_DGV.DefaultCellStyle = dataGridViewCellStyle11;
             FT_DGV.Location = new Point(17, 103);
             FT_DGV.MultiSelect = false;
             FT_DGV.Name = "FT_DGV";
             FT_DGV.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            FT_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            FT_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             FT_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             FT_DGV.Size = new Size(1561, 303);
             FT_DGV.TabIndex = 4;
@@ -1180,7 +1190,7 @@
             // panel6
             // 
             panel6.Anchor = AnchorStyles.None;
-            panel6.Controls.Add(textBox95);
+            panel6.Controls.Add(TetVarient_TXT);
             panel6.Controls.Add(groupBox9);
             panel6.Controls.Add(groupBox8);
             panel6.Controls.Add(label33);
@@ -1194,13 +1204,13 @@
             panel6.TabIndex = 1;
             panel6.Paint += panel6_Paint;
             // 
-            // textBox95
+            // TetVarient_TXT
             // 
-            textBox95.BorderStyle = BorderStyle.FixedSingle;
-            textBox95.Location = new Point(436, 21);
-            textBox95.Name = "textBox95";
-            textBox95.Size = new Size(100, 25);
-            textBox95.TabIndex = 16;
+            TetVarient_TXT.BorderStyle = BorderStyle.FixedSingle;
+            TetVarient_TXT.Location = new Point(436, 21);
+            TetVarient_TXT.Name = "TetVarient_TXT";
+            TetVarient_TXT.Size = new Size(100, 25);
+            TetVarient_TXT.TabIndex = 16;
             // 
             // groupBox9
             // 
@@ -1713,7 +1723,7 @@
             // panel5
             // 
             panel5.Anchor = AnchorStyles.None;
-            panel5.Controls.Add(textBox94);
+            panel5.Controls.Add(FtVarient_TXT);
             panel5.Controls.Add(txtSealLoadActual);
             panel5.Controls.Add(txtSealLoadMax);
             panel5.Controls.Add(txtSealLoadMin);
@@ -1731,13 +1741,13 @@
             panel5.Size = new Size(774, 782);
             panel5.TabIndex = 0;
             // 
-            // textBox94
+            // FtVarient_TXT
             // 
-            textBox94.BorderStyle = BorderStyle.FixedSingle;
-            textBox94.Location = new Point(397, 21);
-            textBox94.Name = "textBox94";
-            textBox94.Size = new Size(100, 25);
-            textBox94.TabIndex = 15;
+            FtVarient_TXT.BorderStyle = BorderStyle.FixedSingle;
+            FtVarient_TXT.Location = new Point(397, 21);
+            FtVarient_TXT.Name = "FtVarient_TXT";
+            FtVarient_TXT.Size = new Size(100, 25);
+            FtVarient_TXT.TabIndex = 15;
             // 
             // txtSealLoadActual
             // 
@@ -2042,7 +2052,7 @@
             groupBox4.Controls.Add(txtKeyUnlockPreTravelMax);
             groupBox4.Controls.Add(txtKeyUnlockPreTravelMin);
             groupBox4.Controls.Add(txtKeyUnlockEffortActual);
-            groupBox4.Controls.Add(textBox32);
+            groupBox4.Controls.Add(txtKeyUnlockEffortMax);
             groupBox4.Controls.Add(txtKeyUnlockEffortMin);
             groupBox4.Controls.Add(txtKeyLockFullTravelActual);
             groupBox4.Controls.Add(txtKeyLockFullTravelMax);
@@ -2151,13 +2161,13 @@
             txtKeyUnlockEffortActual.Size = new Size(100, 25);
             txtKeyUnlockEffortActual.TabIndex = 35;
             // 
-            // textBox32
+            // txtKeyUnlockEffortMax
             // 
-            textBox32.BorderStyle = BorderStyle.FixedSingle;
-            textBox32.Location = new Point(440, 142);
-            textBox32.Name = "textBox32";
-            textBox32.Size = new Size(100, 25);
-            textBox32.TabIndex = 34;
+            txtKeyUnlockEffortMax.BorderStyle = BorderStyle.FixedSingle;
+            txtKeyUnlockEffortMax.Location = new Point(440, 142);
+            txtKeyUnlockEffortMax.Name = "txtKeyUnlockEffortMax";
+            txtKeyUnlockEffortMax.Size = new Size(100, 25);
+            txtKeyUnlockEffortMax.TabIndex = 34;
             // 
             // txtKeyUnlockEffortMin
             // 
@@ -2625,16 +2635,6 @@
             Shift.Text = "Shift";
             Shift.Click += label3_Click;
             // 
-            // SampleTetBtn
-            // 
-            SampleTetBtn.Location = new Point(910, 18);
-            SampleTetBtn.Name = "SampleTetBtn";
-            SampleTetBtn.Size = new Size(75, 27);
-            SampleTetBtn.TabIndex = 22;
-            SampleTetBtn.Text = "Submit";
-            SampleTetBtn.UseVisualStyleBackColor = true;
-            SampleTetBtn.Click += SampleTetBtn_Click;
-            // 
             // Magna
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2798,7 +2798,7 @@
         private TextBox txtKeyUnlockPreTravelMax;
         private TextBox txtKeyUnlockPreTravelMin;
         private TextBox txtKeyUnlockEffortActual;
-        private TextBox textBox32;
+        private TextBox txtKeyUnlockEffortMax;
         private TextBox txtKeyUnlockEffortMin;
         private TextBox txtKeyLockFullTravelActual;
         private TextBox txtKeyLockFullTravelMax;
@@ -2866,8 +2866,8 @@
         private TextBox txtOutsideReleasePreTravelMax;
         private TextBox txtOutsideReleaseEffortActual;
         private TextBox txtOutsideReleasePreTravelMin;
-        private TextBox textBox95;
-        private TextBox textBox94;
+        private TextBox TetVarient_TXT;
+        private TextBox FtVarient_TXT;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
