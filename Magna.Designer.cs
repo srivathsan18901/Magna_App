@@ -280,7 +280,6 @@
             Varient = new Label();
             textBox1 = new TextBox();
             Shift = new Label();
-            btnTestSave = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)QR_PB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -433,7 +432,6 @@
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(btnTestSave);
             panel2.Controls.Add(panel8);
             panel2.Controls.Add(panel7);
             panel2.Controls.Add(TET_DGV);
@@ -2613,21 +2611,6 @@
             Shift.Text = "Shift";
             Shift.Click += label3_Click;
             // 
-            // btnTestSave
-            // 
-            btnTestSave.Anchor = AnchorStyles.Right;
-            btnTestSave.BackColor = Color.Transparent;
-            btnTestSave.FlatStyle = FlatStyle.Popup;
-            btnTestSave.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnTestSave.ForeColor = Color.Black;
-            btnTestSave.Location = new Point(1055, 9);
-            btnTestSave.Name = "btnTestSave";
-            btnTestSave.Size = new Size(122, 31);
-            btnTestSave.TabIndex = 6;
-            btnTestSave.Text = "Sample save";
-            btnTestSave.UseVisualStyleBackColor = false;
-            btnTestSave.Click += btnTestSave_Click;
-            // 
             // Magna
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2935,6 +2918,5 @@
         private TextBox PLC_IP;
         private TextBox PLC_Port;
         private Label DB_Lbl;
-        private Button btnTestSave;
     }
 }
