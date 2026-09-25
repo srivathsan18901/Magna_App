@@ -1,1 +1,16 @@
-{}
+{
+  "Communication": "D100",
+  "FT_Sequence Start": "D101",
+  "FT_Sequence Start Acknowledgement": "D102",
+  "TET_Sequence Start": "D157",
+  "TET_Sequence Start Acknowledgement": "D158",
+  "SealLoad_Max": "D106",
+  "SealLoad_Min": "D107",
+  "SealLoad_Actual": "D108",
+  "PowerLockCurrent_Max": "D109",
+  "PowerLockCurrent_Min": "D110",
+  "PowerLockCurrent_Actual": "D111",
+  "PowerUnlockCurrent_Max": "D112",
+  "PowerUnlockCurrent_Min": "D113",
+  "PowerUnlockCurrent_Actual": "D114"
+}

@@ -48,8 +48,8 @@ namespace Magna_TestApplication
             _teLogs = new BindingList<TravelAndEnduranceLog>();
 
             // Set default IP and Port (Do NOT connect here)
-            PLC_IP.Text = "192.168.1.10";
-            PLC_Port.Text = "5000";
+            PLC_IP.Text = "192.168.3.111";
+            PLC_Port.Text = "502";
 
             // Default date range = last 30 days
             FT_DTP_FROM.Value = TE_DTP_FROM.Value = DateTime.Today.AddDays(-30);
@@ -61,7 +61,6 @@ namespace Magna_TestApplication
             this.Load += Magna_Load;
             this.FormClosing += Magna_FormClosing;
         }
-
         private void Magna_Load(object sender, EventArgs e)
         {
             // 1. Load base mappings from code
@@ -79,16 +78,11 @@ namespace Magna_TestApplication
                 return;
             }
 
-            // 2. Show log folder on the UI (optional)
+            // 3. Show log folder on the UI
             DB_Lbl.Text = "Logs: " + _jsonLogService.GetLogFolder();
             DB_Lbl.ForeColor = Color.Green;
 
-            // 3. Connect PLC
-            Task.Run(() => ConnectToPlc());
-
-            // 4. Start the PLC sync timer
-            _plcDataTimer = new System.Threading.Timer(PlcDataTimerCallback, null, 2000, 1000);
-
+            // 4. Initialize filter combos
             InitFilterCombos(FT_CMB_SHIFT, new[] { "A", "B", "C" });
             InitFilterCombos(FT_CMB_VARIANT, new[] { "MAGNA-X1", "MAGNA-X2" });
             InitFilterCombos(FT_CMB_RESULT, new[] { "PASS", "FAIL" });
@@ -97,9 +91,16 @@ namespace Magna_TestApplication
             InitFilterCombos(TE_CMB_VARIANT, new[] { "MAGNA-X1", "MAGNA-X2" });
             InitFilterCombos(TE_CMB_RESULT, new[] { "PASS", "FAIL" });
 
-            // 5. Populate report grids immediately
+            // 5. Populate report grids from JSON logs (independent of PLC)
             ApplyFunctionalTestFilter();
             ApplyTravelEnduranceFilter();
+
+            // 6. Set Home page TextBoxes to a "waiting" state
+            SetHomePageToWaiting();
+
+            // 7. Connect PLC (async). Timer will be started from inside ConnectToPlc
+            //    ONLY after a successful connection.
+            Task.Run(() => ConnectToPlc());
         }
 
         private void PopulatePlcConfigTab()
@@ -167,42 +168,42 @@ namespace Magna_TestApplication
 
             try
             {
-                if (_plcService.IsConnected && _plcMappings.Count > 0)
+                if (!_plcService.IsConnected || _plcMappings.Count == 0)
+                    return;
+
+                var addresses = _plcMappings
+                    .Select(m => m.RegisterAddress)
+                    .Distinct()
+                    .ToList();
+
+                var plcValues = _plcService.ReadMultipleRegisters(addresses);
+
+                // --- FT edge detection ---
+                bool ftComplete = plcValues.TryGetValue("D102", out string ft) && ft == "1";
+                if (ftComplete && !_wasFtSequenceActive)
                 {
-                    var addresses = _plcMappings
-                        .Select(m => m.RegisterAddress)
-                        .Distinct()
-                        .ToList();
-
-                    var plcValues = _plcService.ReadMultipleRegisters(addresses);
-
-                    // --- FT edge detection: D102 ---
-                    bool ftComplete = plcValues.TryGetValue("D102", out string ft) && ft == "1";
-                    if (ftComplete && !_wasFtSequenceActive)
-                    {
-                        SaveFtSnapshot(plcValues);
-                        _wasFtSequenceActive = true;
-                    }
-                    else if (!ftComplete && _wasFtSequenceActive)
-                    {
-                        _wasFtSequenceActive = false;
-                    }
-
-                    // --- TET edge detection: D158 ---
-                    bool tetComplete = plcValues.TryGetValue("D158", out string tet) && tet == "1";
-                    if (tetComplete && !_wasTetSequenceActive)
-                    {
-                        SaveTetSnapshot(plcValues);
-                        _wasTetSequenceActive = true;
-                    }
-                    else if (!tetComplete && _wasTetSequenceActive)
-                    {
-                        _wasTetSequenceActive = false;
-                    }
-
-                    // --- Home page live update ---
-                    this.Invoke(new Action(() => UpdateUiFromPlc(plcValues)));
+                    SaveFtSnapshot(plcValues);
+                    _wasFtSequenceActive = true;
                 }
+                else if (!ftComplete && _wasFtSequenceActive)
+                {
+                    _wasFtSequenceActive = false;
+                }
+
+                // --- TET edge detection ---
+                bool tetComplete = plcValues.TryGetValue("D158", out string tet) && tet == "1";
+                if (tetComplete && !_wasTetSequenceActive)
+                {
+                    SaveTetSnapshot(plcValues);
+                    _wasTetSequenceActive = true;
+                }
+                else if (!tetComplete && _wasTetSequenceActive)
+                {
+                    _wasTetSequenceActive = false;
+                }
+
+                // --- Home page live update ---
+                this.Invoke(new Action(() => UpdateUiFromPlc(plcValues)));
             }
             catch (Exception ex)
             {
@@ -318,21 +319,67 @@ namespace Magna_TestApplication
         // --- NEW: Dynamic UI Update Logic ---
         private void UpdateUiFromPlc(Dictionary<string, string> plcValues)
         {
+            if (plcValues == null || plcValues.Count == 0)
+                return;
+
             foreach (var map in _plcMappings)
             {
-                if (plcValues.TryGetValue(map.RegisterAddress, out string value))
+                // ---------------------------------------------
+                // Validate mapping
+                // ---------------------------------------------
+                if (map == null)
+                    continue;
+
+                if (string.IsNullOrWhiteSpace(map.RegisterAddress))
+                    continue;
+
+                if (string.IsNullOrWhiteSpace(map.UiControlName))
+                    continue;
+
+                // ---------------------------------------------
+                // Get PLC value
+                // ---------------------------------------------
+                if (!plcValues.TryGetValue(map.RegisterAddress, out string value))
+                    continue;
+
+                // ---------------------------------------------
+                // Find UI control
+                // ---------------------------------------------
+                Control[] controls;
+
+                try
                 {
-                    // Find the control on the form by its Name (from DB)
-                    Control[] controls = this.Controls.Find(map.UiControlName, true);
+                    controls = this.Controls.Find(
+                        map.UiControlName.Trim(),
+                        true);
+                }
+                catch (ArgumentNullException)
+                {
+                    Console.WriteLine(
+                        $"[UI ERROR] Invalid UiControlName for register {map.RegisterAddress}");
 
-                    if (controls.Length > 0 && controls[0] is TextBox txtBox)
-                    {
-                        // Update the textbox
-                        txtBox.Text = value;
+                    continue;
+                }
 
-                        // Optional: Color code based on Min/Max (if you have limits in DB)
-                        // if (map.ValueType == "Actual") { ... compare with min/max ... }
-                    }
+                if (controls.Length == 0)
+                {
+                    Console.WriteLine(
+                        $"[UI WARNING] Control '{map.UiControlName}' not found " +
+                        $"for PLC register '{map.RegisterAddress}'");
+
+                    continue;
+                }
+
+                // ---------------------------------------------
+                // Update TextBox
+                // ---------------------------------------------
+                if (controls[0] is TextBox txtBox)
+                {
+                    txtBox.Text = value;
+
+                    // Reset background to white to signal live data
+                    if (txtBox.BackColor != Color.White)
+                        txtBox.BackColor = Color.White;
                 }
             }
         }
@@ -366,6 +413,8 @@ namespace Magna_TestApplication
 
         private void ConnectToPlc()
         {
+            const string PROBE_REGISTER = "D107";
+
             string ip = PLC_IP.Text.Trim();
             string portText = PLC_Port.Text.Trim();
 
@@ -381,18 +430,83 @@ namespace Magna_TestApplication
                 return;
             }
 
-            UpdatePlcLabel("PLC Status: Connecting...", Color.Orange);
+            UpdatePlcLabelWithProbe("PLC Status: Connecting...", Color.Orange, PROBE_REGISTER, "");
 
-            // This call blocks the background thread, NOT the UI
             bool success = _plcService.Connect(ip, port);
 
-            if (success)
+            if (!success)
             {
-                UpdatePlcLabel("PLC Status: Connected", Color.Green);
+                UpdatePlcLabelWithProbe("PLC Status: Connection Failed", Color.Red, PROBE_REGISTER, "");
+                return;
+            }
+
+            // Connected — do an immediate probe read
+            string probeValue = _plcService.ReadValue(PROBE_REGISTER);
+
+            if (probeValue.StartsWith("ERR"))
+            {
+                // We connected but the probe failed → likely a protocol mismatch
+                UpdatePlcLabelWithProbe("PLC Status: Connected (Probe Failed)", Color.DarkOrange, PROBE_REGISTER, "ERR");
             }
             else
             {
-                UpdatePlcLabel("PLC Status: Connection Failed", Color.Red);
+                UpdatePlcLabelWithProbe("PLC Status: Connected", Color.Green, PROBE_REGISTER, probeValue);
+            }
+
+            // Start the timer + do the initial read
+            StartPlcDataTimer();
+            PerformInitialRead();
+        }
+
+        private void StartPlcDataTimer()
+        {
+            // Dispose any previous timer (safety)
+            _plcDataTimer?.Dispose();
+
+            // dueTime = 0  → fires immediately once
+            // period = 1000 → then fires every 1 second
+            _plcDataTimer = new System.Threading.Timer(
+                PlcDataTimerCallback,
+                null,
+                dueTime: 0,
+                period: 1000);
+        }
+
+        private void PerformInitialRead()
+        {
+            try
+            {
+                if (!_plcService.IsConnected || _plcMappings.Count == 0) return;
+
+                var addresses = _plcMappings
+                    .Select(m => m.RegisterAddress)
+                    .Distinct()
+                    .ToList();
+
+                var plcValues = _plcService.ReadMultipleRegisters(addresses);
+
+                // Update Home page on the UI thread
+                this.Invoke(new Action(() => UpdateUiFromPlc(plcValues)));
+
+                Console.WriteLine($"[Initial Read] Read {plcValues.Count} values from PLC");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Initial read error: " + ex.Message);
+            }
+        }
+
+        private void SetHomePageToWaiting()
+        {
+            foreach (var map in _plcMappings)
+            {
+                if (string.IsNullOrWhiteSpace(map.UiControlName)) continue;
+
+                Control[] found = this.Controls.Find(map.UiControlName, true);
+                if (found.Length == 0 || found[0] is not TextBox txtBox) continue;
+
+                txtBox.Text = "";  // Or use "--" if you prefer
+                txtBox.BackColor = Color.FromArgb(245, 245, 245);  // light grey
             }
         }
 
@@ -400,7 +514,6 @@ namespace Magna_TestApplication
         {
             if (this.IsDisposed) return;
 
-            // Use Invoke to marshal the call to the UI thread
             this.Invoke(new Action(() =>
             {
                 PLC_LBL.Text = text;
@@ -408,26 +521,54 @@ namespace Magna_TestApplication
             }));
         }
 
+        /// <summary>
+        /// Overload: shows the PLC status and appends a probe register reading.
+        /// Example output: "PLC Status: Connected  |  D107 = 25"
+        /// </summary>
+        private void UpdatePlcLabelWithProbe(string statusText, Color color, string register, string value)
+        {
+            if (this.IsDisposed) return;
+
+            string display = string.IsNullOrWhiteSpace(value)
+                ? $"{statusText}  |  {register} = --"
+                : $"{statusText}  |  {register} = {value}";
+
+            this.Invoke(new Action(() =>
+            {
+                PLC_LBL.Text = display;
+                PLC_LBL.ForeColor = color;
+            }));
+        }
+
         private void UpdatePlcStatus()
         {
-            // If we are not connected, try to reconnect
+            const string PROBE_REGISTER = "D107";
+
             if (!_plcService.IsConnected)
             {
+                UpdatePlcLabelWithProbe("PLC Status: Disconnected", Color.Red, PROBE_REGISTER, "");
                 ConnectToPlc();
                 return;
             }
 
-            // If we are connected, do a quick read to verify it's still alive
-            string testRead = _plcService.ReadValue("D0");
+            string probeValue = _plcService.ReadValue(PROBE_REGISTER);
 
-            if (testRead.StartsWith("ERR"))
+            if (probeValue.StartsWith("ERR"))
             {
-                UpdatePlcLabel("PLC Status: Connection Lost", Color.Red);
-                _plcService.Disconnect();
+                // Show the actual error message in the console
+                Console.WriteLine($"[Probe Error] {probeValue}");
+
+                // Truncate the message for the label
+                string shortMsg = probeValue.Length > 40
+                    ? probeValue.Substring(0, 37) + "..."
+                    : probeValue;
+
+                UpdatePlcLabelWithProbe("PLC Status: Probe Failed", Color.DarkOrange, PROBE_REGISTER, shortMsg);
+                // Do NOT disconnect — the connection itself is fine
             }
             else
             {
-                UpdatePlcLabel("PLC Status: Connected", Color.Green);
+                UpdatePlcLabelWithProbe("PLC Status: Connected", Color.Green, PROBE_REGISTER, probeValue);
             }
         }
 
