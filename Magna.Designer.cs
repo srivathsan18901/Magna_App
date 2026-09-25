@@ -37,11 +37,11 @@
             DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             panel1 = new Panel();
             DB_Lbl = new Label();
-            PLC_Port = new TextBox();
-            PLC_IP = new TextBox();
             QR_LBL = new Label();
+            PLC_Port = new TextBox();
             QR_PB = new PictureBox();
             pictureBox2 = new PictureBox();
+            PLC_IP = new TextBox();
             PRINT_STS = new Label();
             pictureBox1 = new PictureBox();
             PLC_LBL = new Label();
@@ -282,6 +282,169 @@
             Varient = new Label();
             textBox1 = new TextBox();
             Shift = new Label();
+            tabPage4 = new TabPage();
+            panel11 = new Panel();
+            Reload_BTN = new Button();
+            PLC_Port_Addr = new TextBox();
+            PLC_IP_Addr = new TextBox();
+            RestoreDefaults_BTN = new Button();
+            SavePLC_BTN = new Button();
+            label93 = new Label();
+            TXT_TET_SequenceStart = new TextBox();
+            label101 = new Label();
+            TXT_TET_SequenceStartAcknowledgement = new TextBox();
+            label102 = new Label();
+            TXT_FT_SequenceStart = new TextBox();
+            label100 = new Label();
+            TXT_Result_TET = new TextBox();
+            TXT_Shift_TET = new TextBox();
+            TXT_Variant_TET = new TextBox();
+            label97 = new Label();
+            label98 = new Label();
+            label99 = new Label();
+            TXT_Result_FT = new TextBox();
+            TXT_Shift_FT = new TextBox();
+            TXT_Varient_FT = new TextBox();
+            label96 = new Label();
+            label95 = new Label();
+            label94 = new Label();
+            TXT_FT_SequenceStartAcknowledgement = new TextBox();
+            TXT_Communication = new TextBox();
+            label92 = new Label();
+            label91 = new Label();
+            panel9 = new Panel();
+            groupBox10 = new GroupBox();
+            textBox8 = new TextBox();
+            label54 = new Label();
+            textBox9 = new TextBox();
+            label55 = new Label();
+            textBox10 = new TextBox();
+            label56 = new Label();
+            textBox11 = new TextBox();
+            textBox12 = new TextBox();
+            label57 = new Label();
+            textBox13 = new TextBox();
+            textBox14 = new TextBox();
+            textBox15 = new TextBox();
+            textBox16 = new TextBox();
+            textBox17 = new TextBox();
+            textBox18 = new TextBox();
+            textBox19 = new TextBox();
+            groupBox11 = new GroupBox();
+            textBox20 = new TextBox();
+            label58 = new Label();
+            textBox21 = new TextBox();
+            label59 = new Label();
+            textBox22 = new TextBox();
+            label60 = new Label();
+            textBox23 = new TextBox();
+            textBox24 = new TextBox();
+            label61 = new Label();
+            textBox25 = new TextBox();
+            textBox26 = new TextBox();
+            textBox27 = new TextBox();
+            textBox28 = new TextBox();
+            textBox29 = new TextBox();
+            textBox30 = new TextBox();
+            textBox31 = new TextBox();
+            label62 = new Label();
+            groupBox12 = new GroupBox();
+            textBox32 = new TextBox();
+            label63 = new Label();
+            textBox33 = new TextBox();
+            label64 = new Label();
+            textBox34 = new TextBox();
+            label65 = new Label();
+            textBox35 = new TextBox();
+            textBox36 = new TextBox();
+            label66 = new Label();
+            textBox37 = new TextBox();
+            textBox38 = new TextBox();
+            textBox39 = new TextBox();
+            textBox40 = new TextBox();
+            textBox41 = new TextBox();
+            textBox42 = new TextBox();
+            textBox43 = new TextBox();
+            label67 = new Label();
+            label68 = new Label();
+            label69 = new Label();
+            panel10 = new Panel();
+            TXT_SealLoad_Actual = new TextBox();
+            TXT_SealLoad_Max = new TextBox();
+            TXT_SealLoad_Min = new TextBox();
+            label70 = new Label();
+            label71 = new Label();
+            label72 = new Label();
+            groupBox13 = new GroupBox();
+            textBox48 = new TextBox();
+            textBox49 = new TextBox();
+            label73 = new Label();
+            textBox50 = new TextBox();
+            label74 = new Label();
+            textBox51 = new TextBox();
+            textBox52 = new TextBox();
+            textBox53 = new TextBox();
+            groupBox14 = new GroupBox();
+            textBox54 = new TextBox();
+            label75 = new Label();
+            textBox55 = new TextBox();
+            label76 = new Label();
+            textBox56 = new TextBox();
+            label77 = new Label();
+            textBox57 = new TextBox();
+            textBox58 = new TextBox();
+            label78 = new Label();
+            textBox59 = new TextBox();
+            textBox60 = new TextBox();
+            textBox61 = new TextBox();
+            textBox62 = new TextBox();
+            textBox63 = new TextBox();
+            textBox64 = new TextBox();
+            textBox65 = new TextBox();
+            groupBox15 = new GroupBox();
+            textBox66 = new TextBox();
+            textBox67 = new TextBox();
+            textBox68 = new TextBox();
+            textBox69 = new TextBox();
+            textBox70 = new TextBox();
+            textBox71 = new TextBox();
+            textBox72 = new TextBox();
+            textBox73 = new TextBox();
+            textBox74 = new TextBox();
+            textBox75 = new TextBox();
+            textBox76 = new TextBox();
+            textBox77 = new TextBox();
+            textBox78 = new TextBox();
+            textBox79 = new TextBox();
+            textBox80 = new TextBox();
+            textBox81 = new TextBox();
+            textBox82 = new TextBox();
+            textBox83 = new TextBox();
+            textBox84 = new TextBox();
+            textBox85 = new TextBox();
+            textBox86 = new TextBox();
+            textBox87 = new TextBox();
+            textBox88 = new TextBox();
+            textBox89 = new TextBox();
+            label79 = new Label();
+            label80 = new Label();
+            label81 = new Label();
+            label82 = new Label();
+            label83 = new Label();
+            label84 = new Label();
+            label85 = new Label();
+            label86 = new Label();
+            groupBox16 = new GroupBox();
+            TXT_PowerUnlockCurrent_Actual = new TextBox();
+            TXT_PowerUnlockCurrent_Max = new TextBox();
+            TXT_PowerUnlockCurrent_Min = new TextBox();
+            TXT_PowerLockCurrent_Actual = new TextBox();
+            label87 = new Label();
+            TXT_PowerLockCurrent_Max = new TextBox();
+            TXT_PowerLockCurrent_Min = new TextBox();
+            label88 = new Label();
+            label89 = new Label();
+            label90 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)QR_PB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -308,6 +471,17 @@
             panel4.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
+            tabPage4.SuspendLayout();
+            panel11.SuspendLayout();
+            panel9.SuspendLayout();
+            groupBox10.SuspendLayout();
+            groupBox11.SuspendLayout();
+            groupBox12.SuspendLayout();
+            panel10.SuspendLayout();
+            groupBox13.SuspendLayout();
+            groupBox14.SuspendLayout();
+            groupBox15.SuspendLayout();
+            groupBox16.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -315,11 +489,11 @@
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.Transparent;
             panel1.Controls.Add(DB_Lbl);
-            panel1.Controls.Add(PLC_Port);
-            panel1.Controls.Add(PLC_IP);
             panel1.Controls.Add(QR_LBL);
+            panel1.Controls.Add(PLC_Port);
             panel1.Controls.Add(QR_PB);
             panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(PLC_IP);
             panel1.Controls.Add(PRINT_STS);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(PLC_LBL);
@@ -331,31 +505,11 @@
             // DB_Lbl
             // 
             DB_Lbl.AutoSize = true;
-            DB_Lbl.Location = new Point(186, 62);
+            DB_Lbl.Location = new Point(1265, 80);
             DB_Lbl.Name = "DB_Lbl";
             DB_Lbl.Size = new Size(57, 15);
             DB_Lbl.TabIndex = 8;
             DB_Lbl.Text = "DB Status";
-            // 
-            // PLC_Port
-            // 
-            PLC_Port.BackColor = Color.White;
-            PLC_Port.BorderStyle = BorderStyle.FixedSingle;
-            PLC_Port.Location = new Point(323, 29);
-            PLC_Port.Name = "PLC_Port";
-            PLC_Port.ReadOnly = true;
-            PLC_Port.Size = new Size(59, 23);
-            PLC_Port.TabIndex = 7;
-            // 
-            // PLC_IP
-            // 
-            PLC_IP.BackColor = Color.White;
-            PLC_IP.BorderStyle = BorderStyle.FixedSingle;
-            PLC_IP.Location = new Point(186, 29);
-            PLC_IP.Name = "PLC_IP";
-            PLC_IP.ReadOnly = true;
-            PLC_IP.Size = new Size(131, 23);
-            PLC_IP.TabIndex = 6;
             // 
             // QR_LBL
             // 
@@ -365,6 +519,15 @@
             QR_LBL.Name = "QR_LBL";
             QR_LBL.Size = new Size(0, 15);
             QR_LBL.TabIndex = 5;
+            // 
+            // PLC_Port
+            // 
+            PLC_Port.BackColor = Color.White;
+            PLC_Port.BorderStyle = BorderStyle.FixedSingle;
+            PLC_Port.Location = new Point(325, 28);
+            PLC_Port.Name = "PLC_Port";
+            PLC_Port.Size = new Size(59, 23);
+            PLC_Port.TabIndex = 7;
             // 
             // QR_PB
             // 
@@ -387,10 +550,19 @@
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
+            // PLC_IP
+            // 
+            PLC_IP.BackColor = Color.White;
+            PLC_IP.BorderStyle = BorderStyle.FixedSingle;
+            PLC_IP.Location = new Point(188, 28);
+            PLC_IP.Name = "PLC_IP";
+            PLC_IP.Size = new Size(131, 23);
+            PLC_IP.TabIndex = 6;
+            // 
             // PRINT_STS
             // 
             PRINT_STS.AutoSize = true;
-            PRINT_STS.Location = new Point(389, 62);
+            PRINT_STS.Location = new Point(189, 62);
             PRINT_STS.Name = "PRINT_STS";
             PRINT_STS.Size = new Size(77, 15);
             PRINT_STS.TabIndex = 3;
@@ -409,7 +581,7 @@
             // PLC_LBL
             // 
             PLC_LBL.AutoSize = true;
-            PLC_LBL.Location = new Point(389, 33);
+            PLC_LBL.Location = new Point(394, 32);
             PLC_LBL.Name = "PLC_LBL";
             PLC_LBL.Size = new Size(63, 15);
             PLC_LBL.TabIndex = 2;
@@ -1156,6 +1328,7 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPage4);
             tabControl1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
             tabControl1.Location = new Point(0, 147);
             tabControl1.Name = "tabControl1";
@@ -2635,6 +2808,1541 @@
             Shift.Text = "Shift";
             Shift.Click += label3_Click;
             // 
+            // tabPage4
+            // 
+            tabPage4.BackgroundImage = (Image)resources.GetObject("tabPage4.BackgroundImage");
+            tabPage4.BackgroundImageLayout = ImageLayout.Stretch;
+            tabPage4.Controls.Add(panel11);
+            tabPage4.Controls.Add(panel9);
+            tabPage4.Controls.Add(panel10);
+            tabPage4.Location = new Point(4, 26);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Size = new Size(1597, 826);
+            tabPage4.TabIndex = 0;
+            tabPage4.Text = "PLC_Config";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // panel11
+            // 
+            panel11.Anchor = AnchorStyles.None;
+            panel11.Controls.Add(Reload_BTN);
+            panel11.Controls.Add(PLC_Port_Addr);
+            panel11.Controls.Add(PLC_IP_Addr);
+            panel11.Controls.Add(RestoreDefaults_BTN);
+            panel11.Controls.Add(SavePLC_BTN);
+            panel11.Controls.Add(label93);
+            panel11.Controls.Add(TXT_TET_SequenceStart);
+            panel11.Controls.Add(label101);
+            panel11.Controls.Add(TXT_TET_SequenceStartAcknowledgement);
+            panel11.Controls.Add(label102);
+            panel11.Controls.Add(TXT_FT_SequenceStart);
+            panel11.Controls.Add(label100);
+            panel11.Controls.Add(TXT_Result_TET);
+            panel11.Controls.Add(TXT_Shift_TET);
+            panel11.Controls.Add(TXT_Variant_TET);
+            panel11.Controls.Add(label97);
+            panel11.Controls.Add(label98);
+            panel11.Controls.Add(label99);
+            panel11.Controls.Add(TXT_Result_FT);
+            panel11.Controls.Add(TXT_Shift_FT);
+            panel11.Controls.Add(TXT_Varient_FT);
+            panel11.Controls.Add(label96);
+            panel11.Controls.Add(label95);
+            panel11.Controls.Add(label94);
+            panel11.Controls.Add(TXT_FT_SequenceStartAcknowledgement);
+            panel11.Controls.Add(TXT_Communication);
+            panel11.Controls.Add(label92);
+            panel11.Controls.Add(label91);
+            panel11.Location = new Point(792, 553);
+            panel11.Name = "panel11";
+            panel11.Size = new Size(788, 216);
+            panel11.TabIndex = 4;
+            // 
+            // Reload_BTN
+            // 
+            Reload_BTN.Location = new Point(651, 144);
+            Reload_BTN.Name = "Reload_BTN";
+            Reload_BTN.Size = new Size(122, 33);
+            Reload_BTN.TabIndex = 77;
+            Reload_BTN.Text = "Reload";
+            Reload_BTN.UseVisualStyleBackColor = true;
+            Reload_BTN.Click += Reload_BTN_Click;
+            // 
+            // PLC_Port_Addr
+            // 
+            PLC_Port_Addr.BackColor = Color.White;
+            PLC_Port_Addr.BorderStyle = BorderStyle.FixedSingle;
+            PLC_Port_Addr.Location = new Point(377, 14);
+            PLC_Port_Addr.Name = "PLC_Port_Addr";
+            PLC_Port_Addr.Size = new Size(59, 25);
+            PLC_Port_Addr.TabIndex = 76;
+            // 
+            // PLC_IP_Addr
+            // 
+            PLC_IP_Addr.BackColor = Color.White;
+            PLC_IP_Addr.BorderStyle = BorderStyle.FixedSingle;
+            PLC_IP_Addr.Location = new Point(240, 14);
+            PLC_IP_Addr.Name = "PLC_IP_Addr";
+            PLC_IP_Addr.Size = new Size(131, 25);
+            PLC_IP_Addr.TabIndex = 75;
+            // 
+            // RestoreDefaults_BTN
+            // 
+            RestoreDefaults_BTN.Location = new Point(651, 106);
+            RestoreDefaults_BTN.Name = "RestoreDefaults_BTN";
+            RestoreDefaults_BTN.Size = new Size(122, 33);
+            RestoreDefaults_BTN.TabIndex = 74;
+            RestoreDefaults_BTN.Text = "Restore";
+            RestoreDefaults_BTN.UseVisualStyleBackColor = true;
+            RestoreDefaults_BTN.Click += RestoreDefaults_BTN_Click;
+            // 
+            // SavePLC_BTN
+            // 
+            SavePLC_BTN.Location = new Point(651, 67);
+            SavePLC_BTN.Name = "SavePLC_BTN";
+            SavePLC_BTN.Size = new Size(122, 33);
+            SavePLC_BTN.TabIndex = 5;
+            SavePLC_BTN.Text = "Save";
+            SavePLC_BTN.UseVisualStyleBackColor = true;
+            SavePLC_BTN.Click += SavePLC_BTN_Click;
+            // 
+            // label93
+            // 
+            label93.AutoSize = true;
+            label93.Location = new Point(122, 18);
+            label93.Name = "label93";
+            label93.Size = new Size(102, 17);
+            label93.TabIndex = 73;
+            label93.Text = "PLC_IP_Address";
+            // 
+            // TXT_TET_SequenceStart
+            // 
+            TXT_TET_SequenceStart.BorderStyle = BorderStyle.FixedSingle;
+            TXT_TET_SequenceStart.Location = new Point(532, 50);
+            TXT_TET_SequenceStart.Name = "TXT_TET_SequenceStart";
+            TXT_TET_SequenceStart.Size = new Size(100, 25);
+            TXT_TET_SequenceStart.TabIndex = 72;
+            // 
+            // label101
+            // 
+            label101.AutoSize = true;
+            label101.Location = new Point(396, 52);
+            label101.Name = "label101";
+            label101.Size = new Size(87, 17);
+            label101.TabIndex = 71;
+            label101.Text = "TET_SeqStart";
+            // 
+            // TXT_TET_SequenceStartAcknowledgement
+            // 
+            TXT_TET_SequenceStartAcknowledgement.BorderStyle = BorderStyle.FixedSingle;
+            TXT_TET_SequenceStartAcknowledgement.Location = new Point(532, 81);
+            TXT_TET_SequenceStartAcknowledgement.Name = "TXT_TET_SequenceStartAcknowledgement";
+            TXT_TET_SequenceStartAcknowledgement.Size = new Size(100, 25);
+            TXT_TET_SequenceStartAcknowledgement.TabIndex = 70;
+            // 
+            // label102
+            // 
+            label102.AutoSize = true;
+            label102.Location = new Point(396, 83);
+            label102.Name = "label102";
+            label102.Size = new Size(115, 17);
+            label102.TabIndex = 69;
+            label102.Text = "TET_SeqStart_Acq";
+            // 
+            // TXT_FT_SequenceStart
+            // 
+            TXT_FT_SequenceStart.BorderStyle = BorderStyle.FixedSingle;
+            TXT_FT_SequenceStart.Location = new Point(240, 48);
+            TXT_FT_SequenceStart.Name = "TXT_FT_SequenceStart";
+            TXT_FT_SequenceStart.Size = new Size(100, 25);
+            TXT_FT_SequenceStart.TabIndex = 68;
+            // 
+            // label100
+            // 
+            label100.AutoSize = true;
+            label100.Location = new Point(122, 50);
+            label100.Name = "label100";
+            label100.Size = new Size(79, 17);
+            label100.TabIndex = 67;
+            label100.Text = "FT_SeqStart";
+            // 
+            // TXT_Result_TET
+            // 
+            TXT_Result_TET.BorderStyle = BorderStyle.FixedSingle;
+            TXT_Result_TET.Location = new Point(532, 172);
+            TXT_Result_TET.Name = "TXT_Result_TET";
+            TXT_Result_TET.Size = new Size(100, 25);
+            TXT_Result_TET.TabIndex = 66;
+            // 
+            // TXT_Shift_TET
+            // 
+            TXT_Shift_TET.BorderStyle = BorderStyle.FixedSingle;
+            TXT_Shift_TET.Location = new Point(532, 109);
+            TXT_Shift_TET.Name = "TXT_Shift_TET";
+            TXT_Shift_TET.Size = new Size(100, 25);
+            TXT_Shift_TET.TabIndex = 64;
+            // 
+            // TXT_Variant_TET
+            // 
+            TXT_Variant_TET.BorderStyle = BorderStyle.FixedSingle;
+            TXT_Variant_TET.Location = new Point(532, 140);
+            TXT_Variant_TET.Name = "TXT_Variant_TET";
+            TXT_Variant_TET.Size = new Size(100, 25);
+            TXT_Variant_TET.TabIndex = 65;
+            // 
+            // label97
+            // 
+            label97.AutoSize = true;
+            label97.Location = new Point(396, 174);
+            label97.Name = "label97";
+            label97.Size = new Size(74, 17);
+            label97.TabIndex = 63;
+            label97.Text = "TET_Result";
+            // 
+            // label98
+            // 
+            label98.AutoSize = true;
+            label98.Location = new Point(396, 142);
+            label98.Name = "label98";
+            label98.Size = new Size(80, 17);
+            label98.TabIndex = 62;
+            label98.Text = "TET_Varient";
+            // 
+            // label99
+            // 
+            label99.AutoSize = true;
+            label99.Location = new Point(396, 112);
+            label99.Name = "label99";
+            label99.Size = new Size(65, 17);
+            label99.TabIndex = 61;
+            label99.Text = "TET_Shift";
+            // 
+            // TXT_Result_FT
+            // 
+            TXT_Result_FT.BorderStyle = BorderStyle.FixedSingle;
+            TXT_Result_FT.Location = new Point(240, 172);
+            TXT_Result_FT.Name = "TXT_Result_FT";
+            TXT_Result_FT.Size = new Size(100, 25);
+            TXT_Result_FT.TabIndex = 60;
+            // 
+            // TXT_Shift_FT
+            // 
+            TXT_Shift_FT.BorderStyle = BorderStyle.FixedSingle;
+            TXT_Shift_FT.Location = new Point(240, 109);
+            TXT_Shift_FT.Name = "TXT_Shift_FT";
+            TXT_Shift_FT.Size = new Size(100, 25);
+            TXT_Shift_FT.TabIndex = 58;
+            // 
+            // TXT_Varient_FT
+            // 
+            TXT_Varient_FT.BorderStyle = BorderStyle.FixedSingle;
+            TXT_Varient_FT.Location = new Point(240, 140);
+            TXT_Varient_FT.Name = "TXT_Varient_FT";
+            TXT_Varient_FT.Size = new Size(100, 25);
+            TXT_Varient_FT.TabIndex = 59;
+            // 
+            // label96
+            // 
+            label96.AutoSize = true;
+            label96.Location = new Point(122, 174);
+            label96.Name = "label96";
+            label96.Size = new Size(66, 17);
+            label96.TabIndex = 57;
+            label96.Text = "FT_Result";
+            // 
+            // label95
+            // 
+            label95.AutoSize = true;
+            label95.Location = new Point(122, 142);
+            label95.Name = "label95";
+            label95.Size = new Size(72, 17);
+            label95.TabIndex = 56;
+            label95.Text = "FT_Varient";
+            // 
+            // label94
+            // 
+            label94.AutoSize = true;
+            label94.Location = new Point(122, 112);
+            label94.Name = "label94";
+            label94.Size = new Size(57, 17);
+            label94.TabIndex = 55;
+            label94.Text = "FT_Shift";
+            // 
+            // TXT_FT_SequenceStartAcknowledgement
+            // 
+            TXT_FT_SequenceStartAcknowledgement.BorderStyle = BorderStyle.FixedSingle;
+            TXT_FT_SequenceStartAcknowledgement.Location = new Point(240, 79);
+            TXT_FT_SequenceStartAcknowledgement.Name = "TXT_FT_SequenceStartAcknowledgement";
+            TXT_FT_SequenceStartAcknowledgement.Size = new Size(100, 25);
+            TXT_FT_SequenceStartAcknowledgement.TabIndex = 53;
+            // 
+            // TXT_Communication
+            // 
+            TXT_Communication.BorderStyle = BorderStyle.FixedSingle;
+            TXT_Communication.Location = new Point(577, 14);
+            TXT_Communication.Name = "TXT_Communication";
+            TXT_Communication.Size = new Size(100, 25);
+            TXT_Communication.TabIndex = 52;
+            // 
+            // label92
+            // 
+            label92.AutoSize = true;
+            label92.Location = new Point(122, 81);
+            label92.Name = "label92";
+            label92.Size = new Size(107, 17);
+            label92.TabIndex = 6;
+            label92.Text = "FT_SeqStart_Acq";
+            // 
+            // label91
+            // 
+            label91.AutoSize = true;
+            label91.Location = new Point(465, 16);
+            label91.Name = "label91";
+            label91.Size = new Size(106, 17);
+            label91.TabIndex = 5;
+            label91.Text = "Communication";
+            // 
+            // panel9
+            // 
+            panel9.Anchor = AnchorStyles.None;
+            panel9.Controls.Add(groupBox10);
+            panel9.Controls.Add(groupBox11);
+            panel9.Controls.Add(label62);
+            panel9.Controls.Add(groupBox12);
+            panel9.Controls.Add(label67);
+            panel9.Controls.Add(label68);
+            panel9.Controls.Add(label69);
+            panel9.Location = new Point(792, 22);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(792, 523);
+            panel9.TabIndex = 3;
+            // 
+            // groupBox10
+            // 
+            groupBox10.Controls.Add(textBox8);
+            groupBox10.Controls.Add(label54);
+            groupBox10.Controls.Add(textBox9);
+            groupBox10.Controls.Add(label55);
+            groupBox10.Controls.Add(textBox10);
+            groupBox10.Controls.Add(label56);
+            groupBox10.Controls.Add(textBox11);
+            groupBox10.Controls.Add(textBox12);
+            groupBox10.Controls.Add(label57);
+            groupBox10.Controls.Add(textBox13);
+            groupBox10.Controls.Add(textBox14);
+            groupBox10.Controls.Add(textBox15);
+            groupBox10.Controls.Add(textBox16);
+            groupBox10.Controls.Add(textBox17);
+            groupBox10.Controls.Add(textBox18);
+            groupBox10.Controls.Add(textBox19);
+            groupBox10.Location = new Point(16, 372);
+            groupBox10.Name = "groupBox10";
+            groupBox10.Size = new Size(716, 140);
+            groupBox10.TabIndex = 59;
+            groupBox10.TabStop = false;
+            groupBox10.Text = "Outside Release";
+            // 
+            // textBox8
+            // 
+            textBox8.BorderStyle = BorderStyle.FixedSingle;
+            textBox8.Location = new Point(566, 110);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(100, 25);
+            textBox8.TabIndex = 56;
+            // 
+            // label54
+            // 
+            label54.AutoSize = true;
+            label54.Location = new Point(20, 110);
+            label54.Name = "label54";
+            label54.Size = new Size(216, 17);
+            label54.TabIndex = 11;
+            label54.Text = "Outside release - Full travel (MM)";
+            // 
+            // textBox9
+            // 
+            textBox9.BorderStyle = BorderStyle.FixedSingle;
+            textBox9.Location = new Point(440, 110);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(100, 25);
+            textBox9.TabIndex = 55;
+            // 
+            // label55
+            // 
+            label55.AutoSize = true;
+            label55.Location = new Point(20, 56);
+            label55.Name = "label55";
+            label55.Size = new Size(213, 17);
+            label55.TabIndex = 10;
+            label55.Text = "Outside release - Pre travel (MM)";
+            // 
+            // textBox10
+            // 
+            textBox10.BorderStyle = BorderStyle.FixedSingle;
+            textBox10.Location = new Point(308, 110);
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(100, 25);
+            textBox10.TabIndex = 54;
+            // 
+            // label56
+            // 
+            label56.AutoSize = true;
+            label56.Location = new Point(20, 83);
+            label56.Name = "label56";
+            label56.Size = new Size(239, 17);
+            label56.TabIndex = 8;
+            label56.Text = "Outside release - Release travel (MM)";
+            // 
+            // textBox11
+            // 
+            textBox11.BorderStyle = BorderStyle.FixedSingle;
+            textBox11.Location = new Point(566, 79);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(100, 25);
+            textBox11.TabIndex = 53;
+            // 
+            // textBox12
+            // 
+            textBox12.BorderStyle = BorderStyle.FixedSingle;
+            textBox12.Location = new Point(440, 79);
+            textBox12.Name = "textBox12";
+            textBox12.Size = new Size(100, 25);
+            textBox12.TabIndex = 52;
+            // 
+            // label57
+            // 
+            label57.AutoSize = true;
+            label57.Location = new Point(20, 29);
+            label57.Name = "label57";
+            label57.Size = new Size(175, 17);
+            label57.TabIndex = 6;
+            label57.Text = "Outside release - Effort (N)";
+            // 
+            // textBox13
+            // 
+            textBox13.BorderStyle = BorderStyle.FixedSingle;
+            textBox13.Location = new Point(308, 79);
+            textBox13.Name = "textBox13";
+            textBox13.Size = new Size(100, 25);
+            textBox13.TabIndex = 51;
+            // 
+            // textBox14
+            // 
+            textBox14.BorderStyle = BorderStyle.FixedSingle;
+            textBox14.Location = new Point(308, 16);
+            textBox14.Name = "textBox14";
+            textBox14.Size = new Size(100, 25);
+            textBox14.TabIndex = 45;
+            // 
+            // textBox15
+            // 
+            textBox15.BorderStyle = BorderStyle.FixedSingle;
+            textBox15.Location = new Point(566, 47);
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(100, 25);
+            textBox15.TabIndex = 50;
+            // 
+            // textBox16
+            // 
+            textBox16.BorderStyle = BorderStyle.FixedSingle;
+            textBox16.Location = new Point(440, 16);
+            textBox16.Name = "textBox16";
+            textBox16.Size = new Size(100, 25);
+            textBox16.TabIndex = 46;
+            // 
+            // textBox17
+            // 
+            textBox17.BorderStyle = BorderStyle.FixedSingle;
+            textBox17.Location = new Point(440, 47);
+            textBox17.Name = "textBox17";
+            textBox17.Size = new Size(100, 25);
+            textBox17.TabIndex = 49;
+            // 
+            // textBox18
+            // 
+            textBox18.BorderStyle = BorderStyle.FixedSingle;
+            textBox18.Location = new Point(566, 16);
+            textBox18.Name = "textBox18";
+            textBox18.Size = new Size(100, 25);
+            textBox18.TabIndex = 47;
+            // 
+            // textBox19
+            // 
+            textBox19.BorderStyle = BorderStyle.FixedSingle;
+            textBox19.Location = new Point(308, 47);
+            textBox19.Name = "textBox19";
+            textBox19.Size = new Size(100, 25);
+            textBox19.TabIndex = 48;
+            // 
+            // groupBox11
+            // 
+            groupBox11.Controls.Add(textBox20);
+            groupBox11.Controls.Add(label58);
+            groupBox11.Controls.Add(textBox21);
+            groupBox11.Controls.Add(label59);
+            groupBox11.Controls.Add(textBox22);
+            groupBox11.Controls.Add(label60);
+            groupBox11.Controls.Add(textBox23);
+            groupBox11.Controls.Add(textBox24);
+            groupBox11.Controls.Add(label61);
+            groupBox11.Controls.Add(textBox25);
+            groupBox11.Controls.Add(textBox26);
+            groupBox11.Controls.Add(textBox27);
+            groupBox11.Controls.Add(textBox28);
+            groupBox11.Controls.Add(textBox29);
+            groupBox11.Controls.Add(textBox30);
+            groupBox11.Controls.Add(textBox31);
+            groupBox11.Location = new Point(16, 208);
+            groupBox11.Name = "groupBox11";
+            groupBox11.Size = new Size(716, 140);
+            groupBox11.TabIndex = 58;
+            groupBox11.TabStop = false;
+            groupBox11.Text = "Inside Release";
+            // 
+            // textBox20
+            // 
+            textBox20.BorderStyle = BorderStyle.FixedSingle;
+            textBox20.Location = new Point(566, 110);
+            textBox20.Name = "textBox20";
+            textBox20.Size = new Size(100, 25);
+            textBox20.TabIndex = 56;
+            // 
+            // label58
+            // 
+            label58.AutoSize = true;
+            label58.Location = new Point(20, 110);
+            label58.Name = "label58";
+            label58.Size = new Size(205, 17);
+            label58.TabIndex = 11;
+            label58.Text = "Inside release - Full travel (MM)";
+            // 
+            // textBox21
+            // 
+            textBox21.BorderStyle = BorderStyle.FixedSingle;
+            textBox21.Location = new Point(440, 110);
+            textBox21.Name = "textBox21";
+            textBox21.Size = new Size(100, 25);
+            textBox21.TabIndex = 55;
+            // 
+            // label59
+            // 
+            label59.AutoSize = true;
+            label59.Location = new Point(20, 56);
+            label59.Name = "label59";
+            label59.Size = new Size(202, 17);
+            label59.TabIndex = 10;
+            label59.Text = "Inside release - Pre travel (MM)";
+            // 
+            // textBox22
+            // 
+            textBox22.BorderStyle = BorderStyle.FixedSingle;
+            textBox22.Location = new Point(308, 110);
+            textBox22.Name = "textBox22";
+            textBox22.Size = new Size(100, 25);
+            textBox22.TabIndex = 54;
+            // 
+            // label60
+            // 
+            label60.AutoSize = true;
+            label60.Location = new Point(20, 83);
+            label60.Name = "label60";
+            label60.Size = new Size(228, 17);
+            label60.TabIndex = 8;
+            label60.Text = "Inside release - Release travel (MM)";
+            // 
+            // textBox23
+            // 
+            textBox23.BorderStyle = BorderStyle.FixedSingle;
+            textBox23.Location = new Point(566, 79);
+            textBox23.Name = "textBox23";
+            textBox23.Size = new Size(100, 25);
+            textBox23.TabIndex = 53;
+            // 
+            // textBox24
+            // 
+            textBox24.BorderStyle = BorderStyle.FixedSingle;
+            textBox24.Location = new Point(440, 79);
+            textBox24.Name = "textBox24";
+            textBox24.Size = new Size(100, 25);
+            textBox24.TabIndex = 52;
+            // 
+            // label61
+            // 
+            label61.AutoSize = true;
+            label61.Location = new Point(20, 29);
+            label61.Name = "label61";
+            label61.Size = new Size(164, 17);
+            label61.TabIndex = 6;
+            label61.Text = "Inside release - Effort (N)";
+            // 
+            // textBox25
+            // 
+            textBox25.BorderStyle = BorderStyle.FixedSingle;
+            textBox25.Location = new Point(308, 79);
+            textBox25.Name = "textBox25";
+            textBox25.Size = new Size(100, 25);
+            textBox25.TabIndex = 51;
+            // 
+            // textBox26
+            // 
+            textBox26.BorderStyle = BorderStyle.FixedSingle;
+            textBox26.Location = new Point(308, 16);
+            textBox26.Name = "textBox26";
+            textBox26.Size = new Size(100, 25);
+            textBox26.TabIndex = 45;
+            // 
+            // textBox27
+            // 
+            textBox27.BorderStyle = BorderStyle.FixedSingle;
+            textBox27.Location = new Point(566, 47);
+            textBox27.Name = "textBox27";
+            textBox27.Size = new Size(100, 25);
+            textBox27.TabIndex = 50;
+            // 
+            // textBox28
+            // 
+            textBox28.BorderStyle = BorderStyle.FixedSingle;
+            textBox28.Location = new Point(440, 16);
+            textBox28.Name = "textBox28";
+            textBox28.Size = new Size(100, 25);
+            textBox28.TabIndex = 46;
+            // 
+            // textBox29
+            // 
+            textBox29.BorderStyle = BorderStyle.FixedSingle;
+            textBox29.Location = new Point(440, 47);
+            textBox29.Name = "textBox29";
+            textBox29.Size = new Size(100, 25);
+            textBox29.TabIndex = 49;
+            // 
+            // textBox30
+            // 
+            textBox30.BorderStyle = BorderStyle.FixedSingle;
+            textBox30.Location = new Point(566, 16);
+            textBox30.Name = "textBox30";
+            textBox30.Size = new Size(100, 25);
+            textBox30.TabIndex = 47;
+            // 
+            // textBox31
+            // 
+            textBox31.BorderStyle = BorderStyle.FixedSingle;
+            textBox31.Location = new Point(308, 47);
+            textBox31.Name = "textBox31";
+            textBox31.Size = new Size(100, 25);
+            textBox31.TabIndex = 48;
+            // 
+            // label62
+            // 
+            label62.AutoSize = true;
+            label62.Location = new Point(606, 24);
+            label62.Name = "label62";
+            label62.Size = new Size(47, 17);
+            label62.TabIndex = 17;
+            label62.Text = "Actual";
+            // 
+            // groupBox12
+            // 
+            groupBox12.Controls.Add(textBox32);
+            groupBox12.Controls.Add(label63);
+            groupBox12.Controls.Add(textBox33);
+            groupBox12.Controls.Add(label64);
+            groupBox12.Controls.Add(textBox34);
+            groupBox12.Controls.Add(label65);
+            groupBox12.Controls.Add(textBox35);
+            groupBox12.Controls.Add(textBox36);
+            groupBox12.Controls.Add(label66);
+            groupBox12.Controls.Add(textBox37);
+            groupBox12.Controls.Add(textBox38);
+            groupBox12.Controls.Add(textBox39);
+            groupBox12.Controls.Add(textBox40);
+            groupBox12.Controls.Add(textBox41);
+            groupBox12.Controls.Add(textBox42);
+            groupBox12.Controls.Add(textBox43);
+            groupBox12.Location = new Point(16, 49);
+            groupBox12.Name = "groupBox12";
+            groupBox12.Size = new Size(716, 140);
+            groupBox12.TabIndex = 57;
+            groupBox12.TabStop = false;
+            groupBox12.Text = "Inside Lock";
+            // 
+            // textBox32
+            // 
+            textBox32.BorderStyle = BorderStyle.FixedSingle;
+            textBox32.Location = new Point(566, 110);
+            textBox32.Name = "textBox32";
+            textBox32.Size = new Size(100, 25);
+            textBox32.TabIndex = 56;
+            // 
+            // label63
+            // 
+            label63.AutoSize = true;
+            label63.Location = new Point(20, 110);
+            label63.Name = "label63";
+            label63.Size = new Size(179, 17);
+            label63.TabIndex = 11;
+            label63.Text = "Inside Unlock - Travel (MM)";
+            // 
+            // textBox33
+            // 
+            textBox33.BorderStyle = BorderStyle.FixedSingle;
+            textBox33.Location = new Point(440, 110);
+            textBox33.Name = "textBox33";
+            textBox33.Size = new Size(100, 25);
+            textBox33.TabIndex = 55;
+            // 
+            // label64
+            // 
+            label64.AutoSize = true;
+            label64.Location = new Point(20, 56);
+            label64.Name = "label64";
+            label64.Size = new Size(165, 17);
+            label64.TabIndex = 10;
+            label64.Text = "Inside Lock - Travel (MM)";
+            // 
+            // textBox34
+            // 
+            textBox34.BorderStyle = BorderStyle.FixedSingle;
+            textBox34.Location = new Point(308, 110);
+            textBox34.Name = "textBox34";
+            textBox34.Size = new Size(100, 25);
+            textBox34.TabIndex = 54;
+            // 
+            // label65
+            // 
+            label65.AutoSize = true;
+            label65.Location = new Point(20, 82);
+            label65.Name = "label65";
+            label65.Size = new Size(163, 17);
+            label65.TabIndex = 8;
+            label65.Text = "Inside Unlock - Effort (N)";
+            // 
+            // textBox35
+            // 
+            textBox35.BorderStyle = BorderStyle.FixedSingle;
+            textBox35.Location = new Point(566, 79);
+            textBox35.Name = "textBox35";
+            textBox35.Size = new Size(100, 25);
+            textBox35.TabIndex = 53;
+            // 
+            // textBox36
+            // 
+            textBox36.BorderStyle = BorderStyle.FixedSingle;
+            textBox36.Location = new Point(440, 79);
+            textBox36.Name = "textBox36";
+            textBox36.Size = new Size(100, 25);
+            textBox36.TabIndex = 52;
+            // 
+            // label66
+            // 
+            label66.AutoSize = true;
+            label66.Location = new Point(20, 29);
+            label66.Name = "label66";
+            label66.Size = new Size(149, 17);
+            label66.TabIndex = 6;
+            label66.Text = "Inside Lock - Effort (N)";
+            // 
+            // textBox37
+            // 
+            textBox37.BorderStyle = BorderStyle.FixedSingle;
+            textBox37.Location = new Point(308, 79);
+            textBox37.Name = "textBox37";
+            textBox37.Size = new Size(100, 25);
+            textBox37.TabIndex = 51;
+            // 
+            // textBox38
+            // 
+            textBox38.BorderStyle = BorderStyle.FixedSingle;
+            textBox38.Location = new Point(308, 16);
+            textBox38.Name = "textBox38";
+            textBox38.Size = new Size(100, 25);
+            textBox38.TabIndex = 45;
+            // 
+            // textBox39
+            // 
+            textBox39.BorderStyle = BorderStyle.FixedSingle;
+            textBox39.Location = new Point(566, 47);
+            textBox39.Name = "textBox39";
+            textBox39.Size = new Size(100, 25);
+            textBox39.TabIndex = 50;
+            // 
+            // textBox40
+            // 
+            textBox40.BorderStyle = BorderStyle.FixedSingle;
+            textBox40.Location = new Point(440, 16);
+            textBox40.Name = "textBox40";
+            textBox40.Size = new Size(100, 25);
+            textBox40.TabIndex = 46;
+            // 
+            // textBox41
+            // 
+            textBox41.BorderStyle = BorderStyle.FixedSingle;
+            textBox41.Location = new Point(440, 47);
+            textBox41.Name = "textBox41";
+            textBox41.Size = new Size(100, 25);
+            textBox41.TabIndex = 49;
+            // 
+            // textBox42
+            // 
+            textBox42.BorderStyle = BorderStyle.FixedSingle;
+            textBox42.Location = new Point(566, 16);
+            textBox42.Name = "textBox42";
+            textBox42.Size = new Size(100, 25);
+            textBox42.TabIndex = 47;
+            // 
+            // textBox43
+            // 
+            textBox43.BorderStyle = BorderStyle.FixedSingle;
+            textBox43.Location = new Point(308, 47);
+            textBox43.Name = "textBox43";
+            textBox43.Size = new Size(100, 25);
+            textBox43.TabIndex = 48;
+            // 
+            // label67
+            // 
+            label67.AutoSize = true;
+            label67.Location = new Point(473, 24);
+            label67.Name = "label67";
+            label67.Size = new Size(70, 17);
+            label67.TabIndex = 16;
+            label67.Text = "Maximum";
+            // 
+            // label68
+            // 
+            label68.AutoSize = true;
+            label68.Location = new Point(340, 24);
+            label68.Name = "label68";
+            label68.Size = new Size(68, 17);
+            label68.TabIndex = 15;
+            label68.Text = "Minimum";
+            // 
+            // label69
+            // 
+            label69.AutoSize = true;
+            label69.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            label69.Location = new Point(3, 4);
+            label69.Name = "label69";
+            label69.Size = new Size(203, 21);
+            label69.TabIndex = 2;
+            label69.Text = "Travel and Endurance Test";
+            // 
+            // panel10
+            // 
+            panel10.Anchor = AnchorStyles.None;
+            panel10.Controls.Add(TXT_SealLoad_Actual);
+            panel10.Controls.Add(TXT_SealLoad_Max);
+            panel10.Controls.Add(TXT_SealLoad_Min);
+            panel10.Controls.Add(label70);
+            panel10.Controls.Add(label71);
+            panel10.Controls.Add(label72);
+            panel10.Controls.Add(groupBox13);
+            panel10.Controls.Add(groupBox14);
+            panel10.Controls.Add(groupBox15);
+            panel10.Controls.Add(groupBox16);
+            panel10.Controls.Add(label89);
+            panel10.Controls.Add(label90);
+            panel10.Location = new Point(12, 22);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(774, 747);
+            panel10.TabIndex = 2;
+            // 
+            // TXT_SealLoad_Actual
+            // 
+            TXT_SealLoad_Actual.BorderStyle = BorderStyle.FixedSingle;
+            TXT_SealLoad_Actual.Location = new Point(588, 56);
+            TXT_SealLoad_Actual.Name = "TXT_SealLoad_Actual";
+            TXT_SealLoad_Actual.Size = new Size(100, 25);
+            TXT_SealLoad_Actual.TabIndex = 14;
+            // 
+            // TXT_SealLoad_Max
+            // 
+            TXT_SealLoad_Max.BorderStyle = BorderStyle.FixedSingle;
+            TXT_SealLoad_Max.Location = new Point(462, 56);
+            TXT_SealLoad_Max.Name = "TXT_SealLoad_Max";
+            TXT_SealLoad_Max.Size = new Size(100, 25);
+            TXT_SealLoad_Max.TabIndex = 13;
+            // 
+            // TXT_SealLoad_Min
+            // 
+            TXT_SealLoad_Min.BorderStyle = BorderStyle.FixedSingle;
+            TXT_SealLoad_Min.Location = new Point(330, 56);
+            TXT_SealLoad_Min.Name = "TXT_SealLoad_Min";
+            TXT_SealLoad_Min.Size = new Size(100, 25);
+            TXT_SealLoad_Min.TabIndex = 12;
+            // 
+            // label70
+            // 
+            label70.AutoSize = true;
+            label70.Location = new Point(614, 31);
+            label70.Name = "label70";
+            label70.Size = new Size(47, 17);
+            label70.TabIndex = 11;
+            label70.Text = "Actual";
+            // 
+            // label71
+            // 
+            label71.AutoSize = true;
+            label71.Location = new Point(481, 31);
+            label71.Name = "label71";
+            label71.Size = new Size(70, 17);
+            label71.TabIndex = 10;
+            label71.Text = "Maximum";
+            // 
+            // label72
+            // 
+            label72.AutoSize = true;
+            label72.Location = new Point(348, 31);
+            label72.Name = "label72";
+            label72.Size = new Size(68, 17);
+            label72.TabIndex = 9;
+            label72.Text = "Minimum";
+            // 
+            // groupBox13
+            // 
+            groupBox13.Controls.Add(textBox48);
+            groupBox13.Controls.Add(textBox49);
+            groupBox13.Controls.Add(label73);
+            groupBox13.Controls.Add(textBox50);
+            groupBox13.Controls.Add(label74);
+            groupBox13.Controls.Add(textBox51);
+            groupBox13.Controls.Add(textBox52);
+            groupBox13.Controls.Add(textBox53);
+            groupBox13.Location = new Point(22, 624);
+            groupBox13.Name = "groupBox13";
+            groupBox13.Size = new Size(716, 100);
+            groupBox13.TabIndex = 8;
+            groupBox13.TabStop = false;
+            groupBox13.Text = "Emergency Lock";
+            // 
+            // textBox48
+            // 
+            textBox48.BorderStyle = BorderStyle.FixedSingle;
+            textBox48.Location = new Point(566, 55);
+            textBox48.Name = "textBox48";
+            textBox48.Size = new Size(100, 25);
+            textBox48.TabIndex = 26;
+            // 
+            // textBox49
+            // 
+            textBox49.BorderStyle = BorderStyle.FixedSingle;
+            textBox49.Location = new Point(440, 55);
+            textBox49.Name = "textBox49";
+            textBox49.Size = new Size(100, 25);
+            textBox49.TabIndex = 25;
+            // 
+            // label73
+            // 
+            label73.AutoSize = true;
+            label73.Location = new Point(20, 58);
+            label73.Name = "label73";
+            label73.Size = new Size(156, 17);
+            label73.TabIndex = 7;
+            label73.Text = "EMG Lock - Angle (Deg)";
+            // 
+            // textBox50
+            // 
+            textBox50.BorderStyle = BorderStyle.FixedSingle;
+            textBox50.Location = new Point(308, 55);
+            textBox50.Name = "textBox50";
+            textBox50.Size = new Size(100, 25);
+            textBox50.TabIndex = 24;
+            // 
+            // label74
+            // 
+            label74.AutoSize = true;
+            label74.Location = new Point(20, 29);
+            label74.Name = "label74";
+            label74.Size = new Size(160, 17);
+            label74.TabIndex = 6;
+            label74.Text = "EMG Lock - Torque (Nm)";
+            // 
+            // textBox51
+            // 
+            textBox51.BorderStyle = BorderStyle.FixedSingle;
+            textBox51.Location = new Point(566, 24);
+            textBox51.Name = "textBox51";
+            textBox51.Size = new Size(100, 25);
+            textBox51.TabIndex = 23;
+            // 
+            // textBox52
+            // 
+            textBox52.BorderStyle = BorderStyle.FixedSingle;
+            textBox52.Location = new Point(308, 24);
+            textBox52.Name = "textBox52";
+            textBox52.Size = new Size(100, 25);
+            textBox52.TabIndex = 21;
+            // 
+            // textBox53
+            // 
+            textBox53.BorderStyle = BorderStyle.FixedSingle;
+            textBox53.Location = new Point(440, 24);
+            textBox53.Name = "textBox53";
+            textBox53.Size = new Size(100, 25);
+            textBox53.TabIndex = 22;
+            // 
+            // groupBox14
+            // 
+            groupBox14.Controls.Add(textBox54);
+            groupBox14.Controls.Add(label75);
+            groupBox14.Controls.Add(textBox55);
+            groupBox14.Controls.Add(label76);
+            groupBox14.Controls.Add(textBox56);
+            groupBox14.Controls.Add(label77);
+            groupBox14.Controls.Add(textBox57);
+            groupBox14.Controls.Add(textBox58);
+            groupBox14.Controls.Add(label78);
+            groupBox14.Controls.Add(textBox59);
+            groupBox14.Controls.Add(textBox60);
+            groupBox14.Controls.Add(textBox61);
+            groupBox14.Controls.Add(textBox62);
+            groupBox14.Controls.Add(textBox63);
+            groupBox14.Controls.Add(textBox64);
+            groupBox14.Controls.Add(textBox65);
+            groupBox14.Location = new Point(22, 478);
+            groupBox14.Name = "groupBox14";
+            groupBox14.Size = new Size(716, 140);
+            groupBox14.TabIndex = 8;
+            groupBox14.TabStop = false;
+            groupBox14.Text = "Child Lock";
+            // 
+            // textBox54
+            // 
+            textBox54.BorderStyle = BorderStyle.FixedSingle;
+            textBox54.Location = new Point(566, 110);
+            textBox54.Name = "textBox54";
+            textBox54.Size = new Size(100, 25);
+            textBox54.TabIndex = 56;
+            // 
+            // label75
+            // 
+            label75.AutoSize = true;
+            label75.Location = new Point(20, 110);
+            label75.Name = "label75";
+            label75.Size = new Size(174, 17);
+            label75.TabIndex = 11;
+            label75.Text = "Child Unlock - Travel (MM)";
+            // 
+            // textBox55
+            // 
+            textBox55.BorderStyle = BorderStyle.FixedSingle;
+            textBox55.Location = new Point(440, 110);
+            textBox55.Name = "textBox55";
+            textBox55.Size = new Size(100, 25);
+            textBox55.TabIndex = 55;
+            // 
+            // label76
+            // 
+            label76.AutoSize = true;
+            label76.Location = new Point(20, 56);
+            label76.Name = "label76";
+            label76.Size = new Size(160, 17);
+            label76.TabIndex = 10;
+            label76.Text = "Child Lock - Travel (MM)";
+            // 
+            // textBox56
+            // 
+            textBox56.BorderStyle = BorderStyle.FixedSingle;
+            textBox56.Location = new Point(308, 110);
+            textBox56.Name = "textBox56";
+            textBox56.Size = new Size(100, 25);
+            textBox56.TabIndex = 54;
+            // 
+            // label77
+            // 
+            label77.AutoSize = true;
+            label77.Location = new Point(20, 82);
+            label77.Name = "label77";
+            label77.Size = new Size(158, 17);
+            label77.TabIndex = 8;
+            label77.Text = "Child Unlock - Effort (N)";
+            // 
+            // textBox57
+            // 
+            textBox57.BorderStyle = BorderStyle.FixedSingle;
+            textBox57.Location = new Point(566, 79);
+            textBox57.Name = "textBox57";
+            textBox57.Size = new Size(100, 25);
+            textBox57.TabIndex = 53;
+            // 
+            // textBox58
+            // 
+            textBox58.BorderStyle = BorderStyle.FixedSingle;
+            textBox58.Location = new Point(440, 79);
+            textBox58.Name = "textBox58";
+            textBox58.Size = new Size(100, 25);
+            textBox58.TabIndex = 52;
+            // 
+            // label78
+            // 
+            label78.AutoSize = true;
+            label78.Location = new Point(20, 29);
+            label78.Name = "label78";
+            label78.Size = new Size(144, 17);
+            label78.TabIndex = 6;
+            label78.Text = "Child Lock - Effort (N)";
+            // 
+            // textBox59
+            // 
+            textBox59.BorderStyle = BorderStyle.FixedSingle;
+            textBox59.Location = new Point(308, 79);
+            textBox59.Name = "textBox59";
+            textBox59.Size = new Size(100, 25);
+            textBox59.TabIndex = 51;
+            // 
+            // textBox60
+            // 
+            textBox60.BorderStyle = BorderStyle.FixedSingle;
+            textBox60.Location = new Point(308, 16);
+            textBox60.Name = "textBox60";
+            textBox60.Size = new Size(100, 25);
+            textBox60.TabIndex = 45;
+            // 
+            // textBox61
+            // 
+            textBox61.BorderStyle = BorderStyle.FixedSingle;
+            textBox61.Location = new Point(566, 47);
+            textBox61.Name = "textBox61";
+            textBox61.Size = new Size(100, 25);
+            textBox61.TabIndex = 50;
+            // 
+            // textBox62
+            // 
+            textBox62.BorderStyle = BorderStyle.FixedSingle;
+            textBox62.Location = new Point(440, 16);
+            textBox62.Name = "textBox62";
+            textBox62.Size = new Size(100, 25);
+            textBox62.TabIndex = 46;
+            // 
+            // textBox63
+            // 
+            textBox63.BorderStyle = BorderStyle.FixedSingle;
+            textBox63.Location = new Point(440, 47);
+            textBox63.Name = "textBox63";
+            textBox63.Size = new Size(100, 25);
+            textBox63.TabIndex = 49;
+            // 
+            // textBox64
+            // 
+            textBox64.BorderStyle = BorderStyle.FixedSingle;
+            textBox64.Location = new Point(566, 16);
+            textBox64.Name = "textBox64";
+            textBox64.Size = new Size(100, 25);
+            textBox64.TabIndex = 47;
+            // 
+            // textBox65
+            // 
+            textBox65.BorderStyle = BorderStyle.FixedSingle;
+            textBox65.Location = new Point(308, 47);
+            textBox65.Name = "textBox65";
+            textBox65.Size = new Size(100, 25);
+            textBox65.TabIndex = 48;
+            // 
+            // groupBox15
+            // 
+            groupBox15.Controls.Add(textBox66);
+            groupBox15.Controls.Add(textBox67);
+            groupBox15.Controls.Add(textBox68);
+            groupBox15.Controls.Add(textBox69);
+            groupBox15.Controls.Add(textBox70);
+            groupBox15.Controls.Add(textBox71);
+            groupBox15.Controls.Add(textBox72);
+            groupBox15.Controls.Add(textBox73);
+            groupBox15.Controls.Add(textBox74);
+            groupBox15.Controls.Add(textBox75);
+            groupBox15.Controls.Add(textBox76);
+            groupBox15.Controls.Add(textBox77);
+            groupBox15.Controls.Add(textBox78);
+            groupBox15.Controls.Add(textBox79);
+            groupBox15.Controls.Add(textBox80);
+            groupBox15.Controls.Add(textBox81);
+            groupBox15.Controls.Add(textBox82);
+            groupBox15.Controls.Add(textBox83);
+            groupBox15.Controls.Add(textBox84);
+            groupBox15.Controls.Add(textBox85);
+            groupBox15.Controls.Add(textBox86);
+            groupBox15.Controls.Add(textBox87);
+            groupBox15.Controls.Add(textBox88);
+            groupBox15.Controls.Add(textBox89);
+            groupBox15.Controls.Add(label79);
+            groupBox15.Controls.Add(label80);
+            groupBox15.Controls.Add(label81);
+            groupBox15.Controls.Add(label82);
+            groupBox15.Controls.Add(label83);
+            groupBox15.Controls.Add(label84);
+            groupBox15.Controls.Add(label85);
+            groupBox15.Controls.Add(label86);
+            groupBox15.Location = new Point(22, 206);
+            groupBox15.Name = "groupBox15";
+            groupBox15.Size = new Size(716, 266);
+            groupBox15.TabIndex = 8;
+            groupBox15.TabStop = false;
+            groupBox15.Text = "Key Lock";
+            // 
+            // textBox66
+            // 
+            textBox66.BorderStyle = BorderStyle.FixedSingle;
+            textBox66.Location = new Point(566, 231);
+            textBox66.Name = "textBox66";
+            textBox66.Size = new Size(100, 25);
+            textBox66.TabIndex = 44;
+            // 
+            // textBox67
+            // 
+            textBox67.BorderStyle = BorderStyle.FixedSingle;
+            textBox67.Location = new Point(440, 231);
+            textBox67.Name = "textBox67";
+            textBox67.Size = new Size(100, 25);
+            textBox67.TabIndex = 43;
+            // 
+            // textBox68
+            // 
+            textBox68.BorderStyle = BorderStyle.FixedSingle;
+            textBox68.Location = new Point(308, 231);
+            textBox68.Name = "textBox68";
+            textBox68.Size = new Size(100, 25);
+            textBox68.TabIndex = 42;
+            // 
+            // textBox69
+            // 
+            textBox69.BorderStyle = BorderStyle.FixedSingle;
+            textBox69.Location = new Point(566, 202);
+            textBox69.Name = "textBox69";
+            textBox69.Size = new Size(100, 25);
+            textBox69.TabIndex = 41;
+            // 
+            // textBox70
+            // 
+            textBox70.BorderStyle = BorderStyle.FixedSingle;
+            textBox70.Location = new Point(440, 202);
+            textBox70.Name = "textBox70";
+            textBox70.Size = new Size(100, 25);
+            textBox70.TabIndex = 40;
+            // 
+            // textBox71
+            // 
+            textBox71.BorderStyle = BorderStyle.FixedSingle;
+            textBox71.Location = new Point(308, 202);
+            textBox71.Name = "textBox71";
+            textBox71.Size = new Size(100, 25);
+            textBox71.TabIndex = 39;
+            // 
+            // textBox72
+            // 
+            textBox72.BorderStyle = BorderStyle.FixedSingle;
+            textBox72.Location = new Point(566, 173);
+            textBox72.Name = "textBox72";
+            textBox72.Size = new Size(100, 25);
+            textBox72.TabIndex = 38;
+            // 
+            // textBox73
+            // 
+            textBox73.BorderStyle = BorderStyle.FixedSingle;
+            textBox73.Location = new Point(440, 173);
+            textBox73.Name = "textBox73";
+            textBox73.Size = new Size(100, 25);
+            textBox73.TabIndex = 37;
+            // 
+            // textBox74
+            // 
+            textBox74.BorderStyle = BorderStyle.FixedSingle;
+            textBox74.Location = new Point(308, 173);
+            textBox74.Name = "textBox74";
+            textBox74.Size = new Size(100, 25);
+            textBox74.TabIndex = 36;
+            // 
+            // textBox75
+            // 
+            textBox75.BorderStyle = BorderStyle.FixedSingle;
+            textBox75.Location = new Point(566, 142);
+            textBox75.Name = "textBox75";
+            textBox75.Size = new Size(100, 25);
+            textBox75.TabIndex = 35;
+            // 
+            // textBox76
+            // 
+            textBox76.BorderStyle = BorderStyle.FixedSingle;
+            textBox76.Location = new Point(440, 142);
+            textBox76.Name = "textBox76";
+            textBox76.Size = new Size(100, 25);
+            textBox76.TabIndex = 34;
+            // 
+            // textBox77
+            // 
+            textBox77.BorderStyle = BorderStyle.FixedSingle;
+            textBox77.Location = new Point(308, 142);
+            textBox77.Name = "textBox77";
+            textBox77.Size = new Size(100, 25);
+            textBox77.TabIndex = 33;
+            // 
+            // textBox78
+            // 
+            textBox78.BorderStyle = BorderStyle.FixedSingle;
+            textBox78.Location = new Point(566, 112);
+            textBox78.Name = "textBox78";
+            textBox78.Size = new Size(100, 25);
+            textBox78.TabIndex = 32;
+            // 
+            // textBox79
+            // 
+            textBox79.BorderStyle = BorderStyle.FixedSingle;
+            textBox79.Location = new Point(440, 112);
+            textBox79.Name = "textBox79";
+            textBox79.Size = new Size(100, 25);
+            textBox79.TabIndex = 31;
+            // 
+            // textBox80
+            // 
+            textBox80.BorderStyle = BorderStyle.FixedSingle;
+            textBox80.Location = new Point(308, 112);
+            textBox80.Name = "textBox80";
+            textBox80.Size = new Size(100, 25);
+            textBox80.TabIndex = 30;
+            // 
+            // textBox81
+            // 
+            textBox81.BorderStyle = BorderStyle.FixedSingle;
+            textBox81.Location = new Point(566, 81);
+            textBox81.Name = "textBox81";
+            textBox81.Size = new Size(100, 25);
+            textBox81.TabIndex = 29;
+            // 
+            // textBox82
+            // 
+            textBox82.BorderStyle = BorderStyle.FixedSingle;
+            textBox82.Location = new Point(440, 81);
+            textBox82.Name = "textBox82";
+            textBox82.Size = new Size(100, 25);
+            textBox82.TabIndex = 28;
+            // 
+            // textBox83
+            // 
+            textBox83.BorderStyle = BorderStyle.FixedSingle;
+            textBox83.Location = new Point(308, 81);
+            textBox83.Name = "textBox83";
+            textBox83.Size = new Size(100, 25);
+            textBox83.TabIndex = 27;
+            // 
+            // textBox84
+            // 
+            textBox84.BorderStyle = BorderStyle.FixedSingle;
+            textBox84.Location = new Point(566, 49);
+            textBox84.Name = "textBox84";
+            textBox84.Size = new Size(100, 25);
+            textBox84.TabIndex = 26;
+            // 
+            // textBox85
+            // 
+            textBox85.BorderStyle = BorderStyle.FixedSingle;
+            textBox85.Location = new Point(440, 49);
+            textBox85.Name = "textBox85";
+            textBox85.Size = new Size(100, 25);
+            textBox85.TabIndex = 25;
+            // 
+            // textBox86
+            // 
+            textBox86.BorderStyle = BorderStyle.FixedSingle;
+            textBox86.Location = new Point(308, 49);
+            textBox86.Name = "textBox86";
+            textBox86.Size = new Size(100, 25);
+            textBox86.TabIndex = 24;
+            // 
+            // textBox87
+            // 
+            textBox87.BorderStyle = BorderStyle.FixedSingle;
+            textBox87.Location = new Point(566, 18);
+            textBox87.Name = "textBox87";
+            textBox87.Size = new Size(100, 25);
+            textBox87.TabIndex = 23;
+            // 
+            // textBox88
+            // 
+            textBox88.BorderStyle = BorderStyle.FixedSingle;
+            textBox88.Location = new Point(440, 18);
+            textBox88.Name = "textBox88";
+            textBox88.Size = new Size(100, 25);
+            textBox88.TabIndex = 22;
+            // 
+            // textBox89
+            // 
+            textBox89.BorderStyle = BorderStyle.FixedSingle;
+            textBox89.Location = new Point(308, 18);
+            textBox89.Name = "textBox89";
+            textBox89.Size = new Size(100, 25);
+            textBox89.TabIndex = 21;
+            // 
+            // label79
+            // 
+            label79.AutoSize = true;
+            label79.Location = new Point(20, 229);
+            label79.Name = "label79";
+            label79.Size = new Size(190, 17);
+            label79.TabIndex = 13;
+            label79.Text = "Key UnLock - full travel (MM)";
+            // 
+            // label80
+            // 
+            label80.AutoSize = true;
+            label80.Location = new Point(20, 203);
+            label80.Name = "label80";
+            label80.Size = new Size(194, 17);
+            label80.TabIndex = 12;
+            label80.Text = "Key UnLock - lock travel (MM)";
+            // 
+            // label81
+            // 
+            label81.AutoSize = true;
+            label81.Location = new Point(20, 173);
+            label81.Name = "label81";
+            label81.Size = new Size(189, 17);
+            label81.TabIndex = 11;
+            label81.Text = "Key UnLock - pre travel (MM)";
+            // 
+            // label82
+            // 
+            label82.AutoSize = true;
+            label82.Location = new Point(20, 145);
+            label82.Name = "label82";
+            label82.Size = new Size(151, 17);
+            label82.TabIndex = 10;
+            label82.Text = "Key UnLock - Effort (N)";
+            // 
+            // label83
+            // 
+            label83.AutoSize = true;
+            label83.Location = new Point(20, 115);
+            label83.Name = "label83";
+            label83.Size = new Size(173, 17);
+            label83.TabIndex = 9;
+            label83.Text = "Key Lock - full travel (MM)";
+            // 
+            // label84
+            // 
+            label84.AutoSize = true;
+            label84.Location = new Point(20, 87);
+            label84.Name = "label84";
+            label84.Size = new Size(177, 17);
+            label84.TabIndex = 8;
+            label84.Text = "Key Lock - lock travel (MM)";
+            // 
+            // label85
+            // 
+            label85.AutoSize = true;
+            label85.Location = new Point(20, 58);
+            label85.Name = "label85";
+            label85.Size = new Size(174, 17);
+            label85.TabIndex = 7;
+            label85.Text = "Key Lock - Pre Travel (MM)";
+            // 
+            // label86
+            // 
+            label86.AutoSize = true;
+            label86.Location = new Point(20, 29);
+            label86.Name = "label86";
+            label86.Size = new Size(134, 17);
+            label86.TabIndex = 6;
+            label86.Text = "Key Lock - Effort (N)";
+            // 
+            // groupBox16
+            // 
+            groupBox16.Controls.Add(TXT_PowerUnlockCurrent_Actual);
+            groupBox16.Controls.Add(TXT_PowerUnlockCurrent_Max);
+            groupBox16.Controls.Add(TXT_PowerUnlockCurrent_Min);
+            groupBox16.Controls.Add(TXT_PowerLockCurrent_Actual);
+            groupBox16.Controls.Add(label87);
+            groupBox16.Controls.Add(TXT_PowerLockCurrent_Max);
+            groupBox16.Controls.Add(TXT_PowerLockCurrent_Min);
+            groupBox16.Controls.Add(label88);
+            groupBox16.Location = new Point(22, 93);
+            groupBox16.Name = "groupBox16";
+            groupBox16.Size = new Size(716, 98);
+            groupBox16.TabIndex = 5;
+            groupBox16.TabStop = false;
+            groupBox16.Text = "Motor Current";
+            // 
+            // TXT_PowerUnlockCurrent_Actual
+            // 
+            TXT_PowerUnlockCurrent_Actual.BorderStyle = BorderStyle.FixedSingle;
+            TXT_PowerUnlockCurrent_Actual.Location = new Point(566, 54);
+            TXT_PowerUnlockCurrent_Actual.Name = "TXT_PowerUnlockCurrent_Actual";
+            TXT_PowerUnlockCurrent_Actual.Size = new Size(100, 25);
+            TXT_PowerUnlockCurrent_Actual.TabIndex = 20;
+            // 
+            // TXT_PowerUnlockCurrent_Max
+            // 
+            TXT_PowerUnlockCurrent_Max.BorderStyle = BorderStyle.FixedSingle;
+            TXT_PowerUnlockCurrent_Max.Location = new Point(440, 54);
+            TXT_PowerUnlockCurrent_Max.Name = "TXT_PowerUnlockCurrent_Max";
+            TXT_PowerUnlockCurrent_Max.Size = new Size(100, 25);
+            TXT_PowerUnlockCurrent_Max.TabIndex = 19;
+            // 
+            // TXT_PowerUnlockCurrent_Min
+            // 
+            TXT_PowerUnlockCurrent_Min.BorderStyle = BorderStyle.FixedSingle;
+            TXT_PowerUnlockCurrent_Min.Location = new Point(308, 54);
+            TXT_PowerUnlockCurrent_Min.Name = "TXT_PowerUnlockCurrent_Min";
+            TXT_PowerUnlockCurrent_Min.Size = new Size(100, 25);
+            TXT_PowerUnlockCurrent_Min.TabIndex = 18;
+            // 
+            // TXT_PowerLockCurrent_Actual
+            // 
+            TXT_PowerLockCurrent_Actual.BorderStyle = BorderStyle.FixedSingle;
+            TXT_PowerLockCurrent_Actual.Location = new Point(566, 23);
+            TXT_PowerLockCurrent_Actual.Name = "TXT_PowerLockCurrent_Actual";
+            TXT_PowerLockCurrent_Actual.Size = new Size(100, 25);
+            TXT_PowerLockCurrent_Actual.TabIndex = 17;
+            // 
+            // label87
+            // 
+            label87.AutoSize = true;
+            label87.Location = new Point(20, 60);
+            label87.Name = "label87";
+            label87.Size = new Size(193, 17);
+            label87.TabIndex = 7;
+            label87.Text = "Power Unlock Current (Amph)";
+            // 
+            // TXT_PowerLockCurrent_Max
+            // 
+            TXT_PowerLockCurrent_Max.BorderStyle = BorderStyle.FixedSingle;
+            TXT_PowerLockCurrent_Max.Location = new Point(440, 23);
+            TXT_PowerLockCurrent_Max.Name = "TXT_PowerLockCurrent_Max";
+            TXT_PowerLockCurrent_Max.Size = new Size(100, 25);
+            TXT_PowerLockCurrent_Max.TabIndex = 16;
+            // 
+            // TXT_PowerLockCurrent_Min
+            // 
+            TXT_PowerLockCurrent_Min.BorderStyle = BorderStyle.FixedSingle;
+            TXT_PowerLockCurrent_Min.Location = new Point(308, 23);
+            TXT_PowerLockCurrent_Min.Name = "TXT_PowerLockCurrent_Min";
+            TXT_PowerLockCurrent_Min.Size = new Size(100, 25);
+            TXT_PowerLockCurrent_Min.TabIndex = 15;
+            // 
+            // label88
+            // 
+            label88.AutoSize = true;
+            label88.Location = new Point(20, 29);
+            label88.Name = "label88";
+            label88.Size = new Size(179, 17);
+            label88.TabIndex = 6;
+            label88.Text = "Power Lock Current (Amph)";
+            // 
+            // label89
+            // 
+            label89.AutoSize = true;
+            label89.Location = new Point(42, 59);
+            label89.Name = "label89";
+            label89.Size = new Size(91, 17);
+            label89.TabIndex = 4;
+            label89.Text = "Seal Load (N)";
+            // 
+            // label90
+            // 
+            label90.AutoSize = true;
+            label90.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic);
+            label90.Location = new Point(3, 4);
+            label90.Name = "label90";
+            label90.Size = new Size(123, 21);
+            label90.TabIndex = 1;
+            label90.Text = "Functional Test";
+            // 
             // Magna
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -2691,6 +4399,27 @@
             groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            tabPage4.ResumeLayout(false);
+            panel11.ResumeLayout(false);
+            panel11.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
+            groupBox10.ResumeLayout(false);
+            groupBox10.PerformLayout();
+            groupBox11.ResumeLayout(false);
+            groupBox11.PerformLayout();
+            groupBox12.ResumeLayout(false);
+            groupBox12.PerformLayout();
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
+            groupBox13.ResumeLayout(false);
+            groupBox13.PerformLayout();
+            groupBox14.ResumeLayout(false);
+            groupBox14.PerformLayout();
+            groupBox15.ResumeLayout(false);
+            groupBox15.PerformLayout();
+            groupBox16.ResumeLayout(false);
+            groupBox16.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -2944,5 +4673,168 @@
         private Label DB_Lbl;
         private Button SampleFtBtn;
         private Button SampleTetBtn;
+        private TabPage tabPage4;
+        private Panel panel9;
+        private GroupBox groupBox10;
+        private TextBox textBox8;
+        private Label label54;
+        private TextBox textBox9;
+        private Label label55;
+        private TextBox textBox10;
+        private Label label56;
+        private TextBox textBox11;
+        private TextBox textBox12;
+        private Label label57;
+        private TextBox textBox13;
+        private TextBox textBox14;
+        private TextBox textBox15;
+        private TextBox textBox16;
+        private TextBox textBox17;
+        private TextBox textBox18;
+        private TextBox textBox19;
+        private GroupBox groupBox11;
+        private TextBox textBox20;
+        private Label label58;
+        private TextBox textBox21;
+        private Label label59;
+        private TextBox textBox22;
+        private Label label60;
+        private TextBox textBox23;
+        private TextBox textBox24;
+        private Label label61;
+        private TextBox textBox25;
+        private TextBox textBox26;
+        private TextBox textBox27;
+        private TextBox textBox28;
+        private TextBox textBox29;
+        private TextBox textBox30;
+        private TextBox textBox31;
+        private Label label62;
+        private GroupBox groupBox12;
+        private TextBox textBox32;
+        private Label label63;
+        private TextBox textBox33;
+        private Label label64;
+        private TextBox textBox34;
+        private Label label65;
+        private TextBox textBox35;
+        private TextBox textBox36;
+        private Label label66;
+        private TextBox textBox37;
+        private TextBox textBox38;
+        private TextBox textBox39;
+        private TextBox textBox40;
+        private TextBox textBox41;
+        private TextBox textBox42;
+        private TextBox textBox43;
+        private Label label67;
+        private Label label68;
+        private Label label69;
+        private Panel panel10;
+        private TextBox TXT_SealLoad_Actual;
+        private TextBox TXT_SealLoad_Max;
+        private TextBox TXT_SealLoad_Min;
+        private Label label70;
+        private Label label71;
+        private Label label72;
+        private GroupBox groupBox13;
+        private TextBox textBox48;
+        private TextBox textBox49;
+        private Label label73;
+        private TextBox textBox50;
+        private Label label74;
+        private TextBox textBox51;
+        private TextBox textBox52;
+        private TextBox textBox53;
+        private GroupBox groupBox14;
+        private TextBox textBox54;
+        private Label label75;
+        private TextBox textBox55;
+        private Label label76;
+        private TextBox textBox56;
+        private Label label77;
+        private TextBox textBox57;
+        private TextBox textBox58;
+        private Label label78;
+        private TextBox textBox59;
+        private TextBox textBox60;
+        private TextBox textBox61;
+        private TextBox textBox62;
+        private TextBox textBox63;
+        private TextBox textBox64;
+        private TextBox textBox65;
+        private GroupBox groupBox15;
+        private TextBox textBox66;
+        private TextBox textBox67;
+        private TextBox textBox68;
+        private TextBox textBox69;
+        private TextBox textBox70;
+        private TextBox textBox71;
+        private TextBox textBox72;
+        private TextBox textBox73;
+        private TextBox textBox74;
+        private TextBox textBox75;
+        private TextBox textBox76;
+        private TextBox textBox77;
+        private TextBox textBox78;
+        private TextBox textBox79;
+        private TextBox textBox80;
+        private TextBox textBox81;
+        private TextBox textBox82;
+        private TextBox textBox83;
+        private TextBox textBox84;
+        private TextBox textBox85;
+        private TextBox textBox86;
+        private TextBox textBox87;
+        private TextBox textBox88;
+        private TextBox textBox89;
+        private Label label79;
+        private Label label80;
+        private Label label81;
+        private Label label82;
+        private Label label83;
+        private Label label84;
+        private Label label85;
+        private Label label86;
+        private GroupBox groupBox16;
+        private TextBox TXT_PowerUnlockCurrent_Actual;
+        private TextBox TXT_PowerUnlockCurrent_Max;
+        private TextBox TXT_PowerUnlockCurrent_Min;
+        private TextBox TXT_PowerLockCurrent_Actual;
+        private Label label87;
+        private TextBox TXT_PowerLockCurrent_Max;
+        private TextBox TXT_PowerLockCurrent_Min;
+        private Label label88;
+        private Label label89;
+        private Label label90;
+        private Panel panel11;
+        private TextBox TXT_Result_TET;
+        private TextBox TXT_Shift_TET;
+        private TextBox TXT_Variant_TET;
+        private Label label97;
+        private Label label98;
+        private Label label99;
+        private TextBox TXT_Result_FT;
+        private TextBox TXT_Shift_FT;
+        private TextBox TXT_Varient_FT;
+        private Label label96;
+        private Label label95;
+        private Label label94;
+        private TextBox TXT_FT_SequenceStartAcknowledgement;
+        private TextBox TXT_Communication;
+        private Label label92;
+        private Label label91;
+        private TextBox TXT_FT_SequenceStart;
+        private Label label100;
+        private TextBox TXT_TET_SequenceStart;
+        private Label label101;
+        private TextBox TXT_TET_SequenceStartAcknowledgement;
+        private Label label102;
+        private Button SavePLC_BTN;
+        private Label label93;
+        private Button RestoreDefaults_BTN;
+        private TextBox PLC_Port_Addr;
+        private TextBox PLC_IP_Addr;
+        private Button Reload_BTN;
     }
 }

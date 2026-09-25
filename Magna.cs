@@ -13,6 +13,7 @@ namespace Magna_TestApplication
         private QrDataService _qrDataService;
         private SampleDataService _sampleDataService;
         private QrDecoderService _qrDecoderService;
+        private PlcConfigService _plcConfigService;
         private JsonLogService _jsonLogService;
         private System.Threading.Timer _plcCheckTimer;
         private bool _isCheckingPlc = false;
@@ -41,6 +42,7 @@ namespace Magna_TestApplication
             _qrDataService = new QrDataService();
             _jsonLogService = new JsonLogService();
             _sampleDataService = new SampleDataService();
+            _plcConfigService = new PlcConfigService();
             _qrDecoderService = new QrDecoderService();
             _ftLogs = new BindingList<FunctionalTestLog>();
             _teLogs = new BindingList<TravelAndEnduranceLog>();
@@ -62,8 +64,14 @@ namespace Magna_TestApplication
 
         private void Magna_Load(object sender, EventArgs e)
         {
-            // 1. Load register mappings from CODE (not DB)
-            _plcMappings = PlcRegisterConfig.GetMappings();
+            // 1. Load base mappings from code
+            var baseMappings = PlcRegisterConfig.GetMappings();
+
+            // 2. Apply user overrides (if any)
+            ApplyConfigOverrides(baseMappings);
+
+            _plcMappings = baseMappings;
+            PopulatePlcConfigTab();
 
             if (_plcMappings.Count == 0)
             {
@@ -92,6 +100,64 @@ namespace Magna_TestApplication
             // 5. Populate report grids immediately
             ApplyFunctionalTestFilter();
             ApplyTravelEnduranceFilter();
+        }
+
+        private void PopulatePlcConfigTab()
+        {
+            foreach (var map in _plcMappings)
+            {
+                // Determine the TextBox name based on the same naming convention
+                string textBoxName = GetConfigTextBoxName(map);
+                if (string.IsNullOrWhiteSpace(textBoxName)) continue;
+
+                Control[] found = this.Controls.Find(textBoxName, true);
+                if (found.Length == 0 || found[0] is not TextBox txtBox) continue;
+
+                txtBox.Text = map.RegisterAddress;
+            }
+
+            // Also populate special fields
+            PLC_IP_Addr.Text = PLC_IP.Text;      // if you want the config tab to show it
+            PLC_Port_Addr.Text = PLC_Port.Text;
+        }
+
+        private string GetConfigTextBoxName(PlcRegisterMap map)
+        {
+            // Meta (Result/Variant/Shift) → use LogPropertyName
+            // Measurements → use LogPropertyName  
+            // Everything else → use ParameterName
+            string key = !string.IsNullOrWhiteSpace(map.LogPropertyName)
+                ? map.LogPropertyName
+                : map.ParameterName;
+
+            if (string.IsNullOrWhiteSpace(key)) return null;
+
+            // Sanitize: remove spaces, dashes
+            key = key.Replace(" ", "").Replace("-", "_");
+
+            return "TXT_" + key;
+        }
+
+        private void ApplyConfigOverrides(List<PlcRegisterMap> mappings)
+        {
+            var overrides = _plcConfigService.RegisterOverrides;
+            if (overrides == null || overrides.Count == 0) return;
+
+            foreach (var map in mappings)
+            {
+                // Key priority: LogPropertyName first, then ParameterName
+                string key = !string.IsNullOrWhiteSpace(map.LogPropertyName)
+                    ? map.LogPropertyName
+                    : map.ParameterName;
+
+                if (string.IsNullOrWhiteSpace(key)) continue;
+
+                if (overrides.TryGetValue(key, out string newAddress)
+                    && !string.IsNullOrWhiteSpace(newAddress))
+                {
+                    map.RegisterAddress = newAddress;
+                }
+            }
         }
 
         private void PlcDataTimerCallback(object state)
@@ -983,6 +1049,126 @@ namespace Magna_TestApplication
                 if (controls.Length > 0 && controls[0] is TextBox txtBox)
                     txtBox.Text = text;
             }
+        }
+
+        private void SavePLC_BTN_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var overrides = new Dictionary<string, string>();
+
+                foreach (var map in _plcMappings)
+                {
+                    string textBoxName = GetConfigTextBoxName(map);
+                    if (string.IsNullOrWhiteSpace(textBoxName)) continue;
+
+                    Control[] found = this.Controls.Find(textBoxName, true);
+                    if (found.Length == 0 || found[0] is not TextBox txtBox) continue;
+
+                    string newAddress = txtBox.Text.Trim().ToUpper();
+
+                    // Validate address format (D100, M50, X0, Y0, etc.)
+                    if (!IsValidPlcAddress(newAddress))
+                    {
+                        MessageBox.Show($"Invalid PLC address: '{newAddress}' for {map.ParameterName}",
+                                        "Validation Error",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    // Save only if the address has changed OR always save everything
+                    string key = !string.IsNullOrWhiteSpace(map.LogPropertyName)
+                        ? map.LogPropertyName
+                        : map.ParameterName;
+
+                    if (!string.IsNullOrWhiteSpace(key))
+                        overrides[key] = newAddress;
+                }
+
+                // Persist to JSON
+                _plcConfigService.Save(overrides);
+
+                // Re-apply to in-memory mappings
+                ApplyConfigOverrides(_plcMappings);
+
+                // In SavePLC_BTN_Click, after saving register overrides:
+                string newIp = PLC_IP.Text.Trim();
+                string newPort = PLC_Port.Text.Trim();
+
+                if (!string.IsNullOrWhiteSpace(newIp))
+                {
+                    PLC_IP.Text = newIp;
+                    overrides["PLC_IP"] = newIp;
+                }
+
+                if (!string.IsNullOrWhiteSpace(newPort) && int.TryParse(newPort, out _))
+                {
+                    PLC_Port.Text = newPort;
+                    overrides["PLC_Port"] = newPort;
+                }
+
+                MessageBox.Show($"PLC config saved successfully.\n\nFile: {_plcConfigService.GetConfigPath()}",
+                                "Success",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Console.WriteLine($"✔ Saved {overrides.Count} register overrides");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to save PLC config:\n" + ex.Message,
+                                "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool IsValidPlcAddress(string address)
+        {
+            if (string.IsNullOrWhiteSpace(address)) return false;
+
+            // Accept D100, M50, X0, Y0, W100 — with optional bit suffix (e.g., D100.1)
+            return System.Text.RegularExpressions.Regex.IsMatch(
+                address,
+                @"^[DWMXY]\d+(\.\d+)?$");
+        }
+
+        private void RestoreDefaults_BTN_Click(object sender, EventArgs e)
+        {
+            var confirm = MessageBox.Show(
+                "This will reset all register addresses to their default values.\n\nContinue?",
+                "Confirm Reset",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm != DialogResult.Yes) return;
+
+            try
+            {
+                // Clear overrides and save empty
+                _plcConfigService.Save(new Dictionary<string, string>());
+
+                // Reload base mappings from code
+                _plcMappings = PlcRegisterConfig.GetMappings();
+
+                // Repopulate TextBoxes
+                PopulatePlcConfigTab();
+
+                MessageBox.Show("Register addresses restored to defaults.",
+                                "Restored",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Restore failed:\n" + ex.Message,
+                                "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Reload_BTN_Click(object sender, EventArgs e)
+        {
+            _plcConfigService.Load();                 // Re-read JSON from disk
+            _plcMappings = PlcRegisterConfig.GetMappings();
+            ApplyConfigOverrides(_plcMappings);
+            PopulatePlcConfigTab();
         }
     }
 }

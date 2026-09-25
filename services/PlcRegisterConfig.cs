@@ -21,17 +21,17 @@ namespace Magna_TestApplication.services
                     ValueType = "Status", UiControlName = "",
                     LogPropertyName = null, LogGroup = null, ShowInReport = false },
             // FT meta
-new() { RegisterAddress = "D103", Category = "Communication", ParameterName = "FT_Result",
-        ValueType = "Status", UiControlName = "",
-        LogPropertyName = "Result", LogGroup = "FT", ShowInReport = false },
+            new() { RegisterAddress = "D103", Category = "Communication", ParameterName = "FT_Result",
+                    ValueType = "Status", UiControlName = "",
+                    LogPropertyName = "Result", LogGroup = "FT", ShowInReport = false },
 
-new() { RegisterAddress = "D104", Category = "Communication", ParameterName = "FT_Variant",
-        ValueType = "Status", UiControlName = "FtVarient_TXT",
-        LogPropertyName = "Variant", LogGroup = "FT", ShowInReport = false },
+            new() { RegisterAddress = "D104", Category = "Communication", ParameterName = "FT_Variant",
+                    ValueType = "Status", UiControlName = "FtVarient_TXT",
+                    LogPropertyName = "Variant", LogGroup = "FT", ShowInReport = false },
 
-new() { RegisterAddress = "D105", Category = "Communication", ParameterName = "FT_Shift",
-        ValueType = "Status", UiControlName = "",
-        LogPropertyName = "Shift", LogGroup = "FT", ShowInReport = false },
+            new() { RegisterAddress = "D105", Category = "Communication", ParameterName = "FT_Shift",
+                    ValueType = "Status", UiControlName = "",
+                    LogPropertyName = "Shift", LogGroup = "FT", ShowInReport = false },
 
             new() { RegisterAddress = "D157", Category = "Communication", ParameterName = "TET_Sequence Start",
                     ValueType = "Status", UiControlName = "",
@@ -40,18 +40,18 @@ new() { RegisterAddress = "D105", Category = "Communication", ParameterName = "F
             new() { RegisterAddress = "D158", Category = "Communication", ParameterName = "TET_Sequence Start Acknowledgement",
                     ValueType = "Status", UiControlName = "",
                     LogPropertyName = null, LogGroup = null, ShowInReport = false },
-// TET meta
-new() { RegisterAddress = "D159", Category = "Communication", ParameterName = "TET_Result",
-        ValueType = "Status", UiControlName = "",
-        LogPropertyName = "Result", LogGroup = "TET", ShowInReport = false },
+            // TET meta
+            new() { RegisterAddress = "D159", Category = "Communication", ParameterName = "TET_Result",
+                    ValueType = "Status", UiControlName = "",
+                    LogPropertyName = "Result", LogGroup = "TET", ShowInReport = false },
 
-new() { RegisterAddress = "D160", Category = "Communication", ParameterName = "TET_Variant",
-        ValueType = "Status", UiControlName = "TetVarient_TXT",
-        LogPropertyName = "Variant", LogGroup = "TET", ShowInReport = false },
+            new() { RegisterAddress = "D160", Category = "Communication", ParameterName = "TET_Variant",
+                    ValueType = "Status", UiControlName = "TetVarient_TXT",
+                    LogPropertyName = "Variant", LogGroup = "TET", ShowInReport = false },
 
-new() { RegisterAddress = "D161", Category = "Communication", ParameterName = "TET_Shift",
-        ValueType = "Status", UiControlName = "",
-        LogPropertyName = "Shift", LogGroup = "TET", ShowInReport = false },
+            new() { RegisterAddress = "D161", Category = "Communication", ParameterName = "TET_Shift",
+                    ValueType = "Status", UiControlName = "",
+                    LogPropertyName = "Shift", LogGroup = "TET", ShowInReport = false },
 
             // ==========================================================
             // FUNCTIONAL TEST — Seal Load
