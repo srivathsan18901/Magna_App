@@ -1227,6 +1227,9 @@ namespace Magna_TestApplication
             {
                 var overrides = new Dictionary<string, string>();
 
+                // =========================================================
+                // 1. Collect all register overrides from TextBoxes
+                // =========================================================
                 foreach (var map in _plcMappings)
                 {
                     string textBoxName = GetConfigTextBoxName(map);
@@ -1237,7 +1240,6 @@ namespace Magna_TestApplication
 
                     string newAddress = txtBox.Text.Trim().ToUpper();
 
-                    // Validate address format (D100, M50, X0, Y0, etc.)
                     if (!IsValidPlcAddress(newAddress))
                     {
                         MessageBox.Show($"Invalid PLC address: '{newAddress}' for {map.ParameterName}",
@@ -1246,7 +1248,6 @@ namespace Magna_TestApplication
                         return;
                     }
 
-                    // Save only if the address has changed OR always save everything
                     string key = !string.IsNullOrWhiteSpace(map.LogPropertyName)
                         ? map.LogPropertyName
                         : map.ParameterName;
@@ -1255,33 +1256,111 @@ namespace Magna_TestApplication
                         overrides[key] = newAddress;
                 }
 
-                // Persist to JSON
+                // =========================================================
+                // 2. Capture IP / Port from the config tab's TextBoxes
+                //    (these are separate from the register TextBoxes)
+                // =========================================================
+                string newIp = PLC_IP_Addr.Text.Trim();
+                string newPortText = PLC_Port_Addr.Text.Trim();
+
+                // Fallback: use the ones from the top bar if config tab is empty
+                if (string.IsNullOrWhiteSpace(newIp))
+                    newIp = PLC_IP.Text.Trim();
+                if (string.IsNullOrWhiteSpace(newPortText))
+                    newPortText = PLC_Port.Text.Trim();
+
+                // Validate
+                if (string.IsNullOrWhiteSpace(newIp))
+                {
+                    MessageBox.Show("PLC IP cannot be empty.", "Validation Error",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!int.TryParse(newPortText, out int newPort))
+                {
+                    MessageBox.Show("PLC Port must be a valid number.", "Validation Error",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                overrides["PLC_IP"] = newIp;
+                overrides["PLC_Port"] = newPortText;
+
+                // =========================================================
+                // 3. Detect if IP/Port actually changed
+                // =========================================================
+                string oldIp = PLC_IP.Text.Trim();
+                string oldPortText = PLC_Port.Text.Trim();
+                bool connectionChanged = (oldIp != newIp) || (oldPortText != newPortText);
+
+                // =========================================================
+                // 4. Persist to JSON
+                // =========================================================
                 _plcConfigService.Save(overrides);
 
-                // Re-apply to in-memory mappings
+                // =========================================================
+                // 5. Update the top-bar TextBoxes too (so UI stays in sync)
+                // =========================================================
+                PLC_IP.Text = newIp;
+                PLC_Port.Text = newPortText;
+
+                // =========================================================
+                // 6. Re-apply register overrides to in-memory mappings
+                // =========================================================
+                _plcMappings = PlcRegisterConfig.GetMappings();
                 ApplyConfigOverrides(_plcMappings);
 
-                // In SavePLC_BTN_Click, after saving register overrides:
-                string newIp = PLC_IP.Text.Trim();
-                string newPort = PLC_Port.Text.Trim();
-
-                if (!string.IsNullOrWhiteSpace(newIp))
+                // =========================================================
+                // 7. Reconnect PLC if IP/Port changed, then restart timer
+                // =========================================================
+                Task.Run(() =>
                 {
-                    PLC_IP.Text = newIp;
-                    overrides["PLC_IP"] = newIp;
-                }
+                    try
+                    {
+                        // Stop the existing timer to prevent racing
+                        _plcDataTimer?.Dispose();
+                        _plcDataTimer = null;
 
-                if (!string.IsNullOrWhiteSpace(newPort) && int.TryParse(newPort, out _))
-                {
-                    PLC_Port.Text = newPort;
-                    overrides["PLC_Port"] = newPort;
-                }
+                        // Force disconnect from old PLC
+                        _plcService.Disconnect();
 
-                MessageBox.Show($"PLC config saved successfully.\n\nFile: {_plcConfigService.GetConfigPath()}",
-                                "Success",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Wait a moment for the TCP socket to fully close
+                        Thread.Sleep(300);
 
-                Console.WriteLine($"✔ Saved {overrides.Count} register overrides");
+                        // Reconnect with the new IP/Port
+                        // ConnectToPlc() itself will restart the timer on success
+                        ConnectToPlc();
+
+                        // If the PLC was already connected and IP didn't change,
+                        // ConnectToPlc() may not have been called by the disconnect.
+                        // So explicitly restart the timer as a safety net.
+                        if (_plcService.IsConnected)
+                        {
+                            StartPlcDataTimer();
+                            PerformInitialRead();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Post-save reconnect error: " + ex.Message);
+                    }
+                });
+
+                // =========================================================
+                // 8. User feedback
+                // =========================================================
+                MessageBox.Show(
+                    $"PLC config saved successfully.\n\n" +
+                    $"IP: {newIp}:{newPort}\n" +
+                    $"Registers updated: {overrides.Count - 2}\n\n" +
+                    (connectionChanged
+                        ? "Reconnecting to PLC with new settings..."
+                        : "Register changes applied."),
+                    "Success",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Console.WriteLine($"✔ Saved {overrides.Count} overrides. IP change: {connectionChanged}");
             }
             catch (Exception ex)
             {
@@ -1318,8 +1397,30 @@ namespace Magna_TestApplication
                 // Reload base mappings from code
                 _plcMappings = PlcRegisterConfig.GetMappings();
 
-                // Repopulate TextBoxes
+                // Repopulate TextBoxes on the config tab
                 PopulatePlcConfigTab();
+
+                // =========================================================
+                // Restart the PLC timer so it uses the restored defaults
+                // =========================================================
+                Task.Run(() =>
+                {
+                    try
+                    {
+                        _plcDataTimer?.Dispose();
+                        _plcDataTimer = null;
+
+                        if (_plcService.IsConnected)
+                        {
+                            StartPlcDataTimer();
+                            PerformInitialRead();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Restore restart error: " + ex.Message);
+                    }
+                });
 
                 MessageBox.Show("Register addresses restored to defaults.",
                                 "Restored",
@@ -1335,10 +1436,28 @@ namespace Magna_TestApplication
 
         private void Reload_BTN_Click(object sender, EventArgs e)
         {
-            _plcConfigService.Load();                 // Re-read JSON from disk
-            _plcMappings = PlcRegisterConfig.GetMappings();
-            ApplyConfigOverrides(_plcMappings);
-            PopulatePlcConfigTab();
+            try
+            {
+                _plcConfigService.Load();                 // Re-read JSON from disk
+                _plcMappings = PlcRegisterConfig.GetMappings();
+                ApplyConfigOverrides(_plcMappings);
+                PopulatePlcConfigTab();
+
+                // =========================================================
+                // Force an immediate PLC read with the freshly loaded config
+                // =========================================================
+                if (_plcService.IsConnected)
+                {
+                    Task.Run(() => PerformInitialRead());
+                }
+
+                Console.WriteLine("✔ Config reloaded from disk");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Reload failed:\n" + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
