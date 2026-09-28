@@ -124,19 +124,48 @@ namespace Magna_TestApplication
 
         private string GetConfigTextBoxName(PlcRegisterMap map)
         {
-            // Meta (Result/Variant/Shift) → use LogPropertyName
-            // Measurements → use LogPropertyName  
-            // Everything else → use ParameterName
-            string key = !string.IsNullOrWhiteSpace(map.LogPropertyName)
-                ? map.LogPropertyName
-                : map.ParameterName;
+            if (map == null) return null;
 
-            if (string.IsNullOrWhiteSpace(key)) return null;
+            // ---------------------------------------------
+            // 1. Meta registers (Result / Variant / Shift / Sequence Start)
+            //    These have LogGroup = "FT" or "TET" and ParameterName starting with "FT_" or "TET_"
+            // ---------------------------------------------
+            if (!string.IsNullOrWhiteSpace(map.LogGroup)
+                && (map.ParameterName.StartsWith("FT_") || map.ParameterName.StartsWith("TET_")))
+            {
+                // e.g. "FT_Result"              → "TXT_Result_FT"
+                //      "TET_Sequence Start"      → "TXT_SequenceStart_TET"
+                //      "FT_Sequence Start Acknowledgement" → "TXT_SequenceStartAcknowledgement_FT"
 
-            // Sanitize: remove spaces, dashes
-            key = key.Replace(" ", "").Replace("-", "_");
+                string pn = map.ParameterName.Replace(" ", "").Replace("-", "_");
 
-            return "TXT_" + key;
+                string group = map.LogGroup;               // "FT" or "TET"
+                string prefix = group + "_";               // "FT_" or "TET_"
+
+                if (pn.StartsWith(prefix))
+                {
+                    string body = pn.Substring(prefix.Length);   // remove "FT_" / "TET_"
+                    return "TXT_" + body + "_" + group;
+                }
+            }
+
+            // ---------------------------------------------
+            // 2. Measurements (SealLoad_Max, InsideLockEffort_Min, etc.)
+            // ---------------------------------------------
+            if (!string.IsNullOrWhiteSpace(map.LogPropertyName))
+                return "TXT_" + map.LogPropertyName;
+
+            // ---------------------------------------------
+            // 3. Pure status registers (Communication, FT_Sequence Start Ack control, etc.)
+            //    Fall back to ParameterName
+            // ---------------------------------------------
+            if (!string.IsNullOrWhiteSpace(map.ParameterName))
+            {
+                string pn = map.ParameterName.Replace(" ", "").Replace("-", "_");
+                return "TXT_" + pn;
+            }
+
+            return null;
         }
 
         private void ApplyConfigOverrides(List<PlcRegisterMap> mappings)
