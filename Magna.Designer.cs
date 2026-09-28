@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Magna));
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             panel1 = new Panel();
             DB_Lbl = new Label();
             QR_LBL = new Label();
@@ -932,36 +932,36 @@
             TET_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             TET_DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             TET_DGV.BackgroundColor = Color.LightSkyBlue;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = Color.White;
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = SystemColors.InfoText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            TET_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = Color.White;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = SystemColors.InfoText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            TET_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             TET_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             TET_DGV.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, inside_lock_effort, inside_lock_travel, inside_unlock_effort, inside_unlock_travel, inside_release_effort, inside_release_pretravel, inside_release_releasetravel, inside_release_full_travel, outside_release_effort, outside_release_pretravel, outside_release_release_travel, outside_release_full_travel });
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.White;
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            TET_DGV.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            TET_DGV.DefaultCellStyle = dataGridViewCellStyle2;
             TET_DGV.Location = new Point(12, 497);
             TET_DGV.MultiSelect = false;
             TET_DGV.Name = "TET_DGV";
             TET_DGV.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            TET_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            TET_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             TET_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             TET_DGV.Size = new Size(1561, 303);
             TET_DGV.TabIndex = 6;
@@ -1086,36 +1086,36 @@
             FT_DGV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             FT_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             FT_DGV.BackgroundColor = Color.LightSkyBlue;
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle10.BackColor = Color.White;
-            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle10.ForeColor = SystemColors.InfoText;
-            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
-            FT_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle4.BackColor = Color.White;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = SystemColors.InfoText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            FT_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             FT_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             FT_DGV.Columns.AddRange(new DataGridViewColumn[] { FT_SNo, FT_Date, FT_Time, FT_Shift, FT_Variant, FT_Result, seal_load, power_lock_current, power_unlock_current, key_lock_effort, key_lock_pretravel, key_lock_locktravel, key_lock_full_travel, key_unlock_effort, key_unlock_pretravel, key_unlock_locktravel, key_unlock_full_travel, child_lock_effort, child_lock_travel, child_unlock_effort, child_unlock_travel, emg_lock_torque, emg_lock_angle });
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.White;
-            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
-            FT_DGV.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            FT_DGV.DefaultCellStyle = dataGridViewCellStyle5;
             FT_DGV.Location = new Point(17, 103);
             FT_DGV.MultiSelect = false;
             FT_DGV.Name = "FT_DGV";
             FT_DGV.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            FT_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            FT_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             FT_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             FT_DGV.Size = new Size(1561, 303);
             FT_DGV.TabIndex = 4;
@@ -1379,9 +1379,12 @@
             // 
             // TetVarient_TXT
             // 
+            TetVarient_TXT.BackColor = Color.White;
             TetVarient_TXT.BorderStyle = BorderStyle.FixedSingle;
             TetVarient_TXT.Location = new Point(436, 21);
             TetVarient_TXT.Name = "TetVarient_TXT";
+            TetVarient_TXT.ReadOnly = true;
+            TetVarient_TXT.RightToLeft = RightToLeft.No;
             TetVarient_TXT.Size = new Size(100, 25);
             TetVarient_TXT.TabIndex = 16;
             // 
@@ -1412,9 +1415,12 @@
             // 
             // txtOutsideReleaseFullTravelActual
             // 
+            txtOutsideReleaseFullTravelActual.BackColor = Color.White;
             txtOutsideReleaseFullTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtOutsideReleaseFullTravelActual.Location = new Point(566, 110);
             txtOutsideReleaseFullTravelActual.Name = "txtOutsideReleaseFullTravelActual";
+            txtOutsideReleaseFullTravelActual.ReadOnly = true;
+            txtOutsideReleaseFullTravelActual.RightToLeft = RightToLeft.No;
             txtOutsideReleaseFullTravelActual.Size = new Size(100, 25);
             txtOutsideReleaseFullTravelActual.TabIndex = 56;
             // 
@@ -1429,9 +1435,12 @@
             // 
             // txtOutsideReleaseFullTravelMax
             // 
+            txtOutsideReleaseFullTravelMax.BackColor = Color.White;
             txtOutsideReleaseFullTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtOutsideReleaseFullTravelMax.Location = new Point(440, 110);
             txtOutsideReleaseFullTravelMax.Name = "txtOutsideReleaseFullTravelMax";
+            txtOutsideReleaseFullTravelMax.ReadOnly = true;
+            txtOutsideReleaseFullTravelMax.RightToLeft = RightToLeft.No;
             txtOutsideReleaseFullTravelMax.Size = new Size(100, 25);
             txtOutsideReleaseFullTravelMax.TabIndex = 55;
             // 
@@ -1446,9 +1455,12 @@
             // 
             // txtOutsideReleaseFullTravelMin
             // 
+            txtOutsideReleaseFullTravelMin.BackColor = Color.White;
             txtOutsideReleaseFullTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtOutsideReleaseFullTravelMin.Location = new Point(308, 110);
             txtOutsideReleaseFullTravelMin.Name = "txtOutsideReleaseFullTravelMin";
+            txtOutsideReleaseFullTravelMin.ReadOnly = true;
+            txtOutsideReleaseFullTravelMin.RightToLeft = RightToLeft.No;
             txtOutsideReleaseFullTravelMin.Size = new Size(100, 25);
             txtOutsideReleaseFullTravelMin.TabIndex = 54;
             // 
@@ -1463,17 +1475,23 @@
             // 
             // txtOutsideReleaseReleaseTravelActual
             // 
+            txtOutsideReleaseReleaseTravelActual.BackColor = Color.White;
             txtOutsideReleaseReleaseTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtOutsideReleaseReleaseTravelActual.Location = new Point(566, 79);
             txtOutsideReleaseReleaseTravelActual.Name = "txtOutsideReleaseReleaseTravelActual";
+            txtOutsideReleaseReleaseTravelActual.ReadOnly = true;
+            txtOutsideReleaseReleaseTravelActual.RightToLeft = RightToLeft.No;
             txtOutsideReleaseReleaseTravelActual.Size = new Size(100, 25);
             txtOutsideReleaseReleaseTravelActual.TabIndex = 53;
             // 
             // txtOutsideReleaseReleaseTravelMax
             // 
+            txtOutsideReleaseReleaseTravelMax.BackColor = Color.White;
             txtOutsideReleaseReleaseTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtOutsideReleaseReleaseTravelMax.Location = new Point(440, 79);
             txtOutsideReleaseReleaseTravelMax.Name = "txtOutsideReleaseReleaseTravelMax";
+            txtOutsideReleaseReleaseTravelMax.ReadOnly = true;
+            txtOutsideReleaseReleaseTravelMax.RightToLeft = RightToLeft.No;
             txtOutsideReleaseReleaseTravelMax.Size = new Size(100, 25);
             txtOutsideReleaseReleaseTravelMax.TabIndex = 52;
             // 
@@ -1488,57 +1506,78 @@
             // 
             // txtOutsideReleaseReleaseTravelMin
             // 
+            txtOutsideReleaseReleaseTravelMin.BackColor = Color.White;
             txtOutsideReleaseReleaseTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtOutsideReleaseReleaseTravelMin.Location = new Point(308, 79);
             txtOutsideReleaseReleaseTravelMin.Name = "txtOutsideReleaseReleaseTravelMin";
+            txtOutsideReleaseReleaseTravelMin.ReadOnly = true;
+            txtOutsideReleaseReleaseTravelMin.RightToLeft = RightToLeft.No;
             txtOutsideReleaseReleaseTravelMin.Size = new Size(100, 25);
             txtOutsideReleaseReleaseTravelMin.TabIndex = 51;
             // 
             // txtOutsideReleaseEffortMin
             // 
+            txtOutsideReleaseEffortMin.BackColor = Color.White;
             txtOutsideReleaseEffortMin.BorderStyle = BorderStyle.FixedSingle;
             txtOutsideReleaseEffortMin.Location = new Point(308, 16);
             txtOutsideReleaseEffortMin.Name = "txtOutsideReleaseEffortMin";
+            txtOutsideReleaseEffortMin.ReadOnly = true;
+            txtOutsideReleaseEffortMin.RightToLeft = RightToLeft.No;
             txtOutsideReleaseEffortMin.Size = new Size(100, 25);
             txtOutsideReleaseEffortMin.TabIndex = 45;
             // 
             // txtOutsideReleasePreTravelActual
             // 
+            txtOutsideReleasePreTravelActual.BackColor = Color.White;
             txtOutsideReleasePreTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtOutsideReleasePreTravelActual.Location = new Point(566, 47);
             txtOutsideReleasePreTravelActual.Name = "txtOutsideReleasePreTravelActual";
+            txtOutsideReleasePreTravelActual.ReadOnly = true;
+            txtOutsideReleasePreTravelActual.RightToLeft = RightToLeft.No;
             txtOutsideReleasePreTravelActual.Size = new Size(100, 25);
             txtOutsideReleasePreTravelActual.TabIndex = 50;
             // 
             // txtOutsideReleaseEffortMax
             // 
+            txtOutsideReleaseEffortMax.BackColor = Color.White;
             txtOutsideReleaseEffortMax.BorderStyle = BorderStyle.FixedSingle;
             txtOutsideReleaseEffortMax.Location = new Point(440, 16);
             txtOutsideReleaseEffortMax.Name = "txtOutsideReleaseEffortMax";
+            txtOutsideReleaseEffortMax.ReadOnly = true;
+            txtOutsideReleaseEffortMax.RightToLeft = RightToLeft.No;
             txtOutsideReleaseEffortMax.Size = new Size(100, 25);
             txtOutsideReleaseEffortMax.TabIndex = 46;
             // 
             // txtOutsideReleasePreTravelMax
             // 
+            txtOutsideReleasePreTravelMax.BackColor = Color.White;
             txtOutsideReleasePreTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtOutsideReleasePreTravelMax.Location = new Point(440, 47);
             txtOutsideReleasePreTravelMax.Name = "txtOutsideReleasePreTravelMax";
+            txtOutsideReleasePreTravelMax.ReadOnly = true;
+            txtOutsideReleasePreTravelMax.RightToLeft = RightToLeft.No;
             txtOutsideReleasePreTravelMax.Size = new Size(100, 25);
             txtOutsideReleasePreTravelMax.TabIndex = 49;
             // 
             // txtOutsideReleaseEffortActual
             // 
+            txtOutsideReleaseEffortActual.BackColor = Color.White;
             txtOutsideReleaseEffortActual.BorderStyle = BorderStyle.FixedSingle;
             txtOutsideReleaseEffortActual.Location = new Point(566, 16);
             txtOutsideReleaseEffortActual.Name = "txtOutsideReleaseEffortActual";
+            txtOutsideReleaseEffortActual.ReadOnly = true;
+            txtOutsideReleaseEffortActual.RightToLeft = RightToLeft.No;
             txtOutsideReleaseEffortActual.Size = new Size(100, 25);
             txtOutsideReleaseEffortActual.TabIndex = 47;
             // 
             // txtOutsideReleasePreTravelMin
             // 
+            txtOutsideReleasePreTravelMin.BackColor = Color.White;
             txtOutsideReleasePreTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtOutsideReleasePreTravelMin.Location = new Point(308, 47);
             txtOutsideReleasePreTravelMin.Name = "txtOutsideReleasePreTravelMin";
+            txtOutsideReleasePreTravelMin.ReadOnly = true;
+            txtOutsideReleasePreTravelMin.RightToLeft = RightToLeft.No;
             txtOutsideReleasePreTravelMin.Size = new Size(100, 25);
             txtOutsideReleasePreTravelMin.TabIndex = 48;
             // 
@@ -1569,9 +1608,12 @@
             // 
             // txtInsideReleaseFullTravelActual
             // 
+            txtInsideReleaseFullTravelActual.BackColor = Color.White;
             txtInsideReleaseFullTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtInsideReleaseFullTravelActual.Location = new Point(566, 110);
             txtInsideReleaseFullTravelActual.Name = "txtInsideReleaseFullTravelActual";
+            txtInsideReleaseFullTravelActual.ReadOnly = true;
+            txtInsideReleaseFullTravelActual.RightToLeft = RightToLeft.No;
             txtInsideReleaseFullTravelActual.Size = new Size(100, 25);
             txtInsideReleaseFullTravelActual.TabIndex = 56;
             // 
@@ -1586,9 +1628,12 @@
             // 
             // txtInsideReleaseFullTravelMax
             // 
+            txtInsideReleaseFullTravelMax.BackColor = Color.White;
             txtInsideReleaseFullTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtInsideReleaseFullTravelMax.Location = new Point(440, 110);
             txtInsideReleaseFullTravelMax.Name = "txtInsideReleaseFullTravelMax";
+            txtInsideReleaseFullTravelMax.ReadOnly = true;
+            txtInsideReleaseFullTravelMax.RightToLeft = RightToLeft.No;
             txtInsideReleaseFullTravelMax.Size = new Size(100, 25);
             txtInsideReleaseFullTravelMax.TabIndex = 55;
             // 
@@ -1603,9 +1648,12 @@
             // 
             // txtInsideReleaseFullTravelMin
             // 
+            txtInsideReleaseFullTravelMin.BackColor = Color.White;
             txtInsideReleaseFullTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtInsideReleaseFullTravelMin.Location = new Point(308, 110);
             txtInsideReleaseFullTravelMin.Name = "txtInsideReleaseFullTravelMin";
+            txtInsideReleaseFullTravelMin.ReadOnly = true;
+            txtInsideReleaseFullTravelMin.RightToLeft = RightToLeft.No;
             txtInsideReleaseFullTravelMin.Size = new Size(100, 25);
             txtInsideReleaseFullTravelMin.TabIndex = 54;
             // 
@@ -1620,17 +1668,23 @@
             // 
             // txtInsideReleaseReleaseTravelActual
             // 
+            txtInsideReleaseReleaseTravelActual.BackColor = Color.White;
             txtInsideReleaseReleaseTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtInsideReleaseReleaseTravelActual.Location = new Point(566, 79);
             txtInsideReleaseReleaseTravelActual.Name = "txtInsideReleaseReleaseTravelActual";
+            txtInsideReleaseReleaseTravelActual.ReadOnly = true;
+            txtInsideReleaseReleaseTravelActual.RightToLeft = RightToLeft.No;
             txtInsideReleaseReleaseTravelActual.Size = new Size(100, 25);
             txtInsideReleaseReleaseTravelActual.TabIndex = 53;
             // 
             // txtInsideReleaseReleaseTravelMax
             // 
+            txtInsideReleaseReleaseTravelMax.BackColor = Color.White;
             txtInsideReleaseReleaseTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtInsideReleaseReleaseTravelMax.Location = new Point(440, 79);
             txtInsideReleaseReleaseTravelMax.Name = "txtInsideReleaseReleaseTravelMax";
+            txtInsideReleaseReleaseTravelMax.ReadOnly = true;
+            txtInsideReleaseReleaseTravelMax.RightToLeft = RightToLeft.No;
             txtInsideReleaseReleaseTravelMax.Size = new Size(100, 25);
             txtInsideReleaseReleaseTravelMax.TabIndex = 52;
             // 
@@ -1645,57 +1699,78 @@
             // 
             // txtInsideReleaseReleaseTravelMin
             // 
+            txtInsideReleaseReleaseTravelMin.BackColor = Color.White;
             txtInsideReleaseReleaseTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtInsideReleaseReleaseTravelMin.Location = new Point(308, 79);
             txtInsideReleaseReleaseTravelMin.Name = "txtInsideReleaseReleaseTravelMin";
+            txtInsideReleaseReleaseTravelMin.ReadOnly = true;
+            txtInsideReleaseReleaseTravelMin.RightToLeft = RightToLeft.No;
             txtInsideReleaseReleaseTravelMin.Size = new Size(100, 25);
             txtInsideReleaseReleaseTravelMin.TabIndex = 51;
             // 
             // txtInsideReleaseEffortMin
             // 
+            txtInsideReleaseEffortMin.BackColor = Color.White;
             txtInsideReleaseEffortMin.BorderStyle = BorderStyle.FixedSingle;
             txtInsideReleaseEffortMin.Location = new Point(308, 16);
             txtInsideReleaseEffortMin.Name = "txtInsideReleaseEffortMin";
+            txtInsideReleaseEffortMin.ReadOnly = true;
+            txtInsideReleaseEffortMin.RightToLeft = RightToLeft.No;
             txtInsideReleaseEffortMin.Size = new Size(100, 25);
             txtInsideReleaseEffortMin.TabIndex = 45;
             // 
             // txtInsideReleasePreTravelActual
             // 
+            txtInsideReleasePreTravelActual.BackColor = Color.White;
             txtInsideReleasePreTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtInsideReleasePreTravelActual.Location = new Point(566, 47);
             txtInsideReleasePreTravelActual.Name = "txtInsideReleasePreTravelActual";
+            txtInsideReleasePreTravelActual.ReadOnly = true;
+            txtInsideReleasePreTravelActual.RightToLeft = RightToLeft.No;
             txtInsideReleasePreTravelActual.Size = new Size(100, 25);
             txtInsideReleasePreTravelActual.TabIndex = 50;
             // 
             // txtInsideReleaseEffortMax
             // 
+            txtInsideReleaseEffortMax.BackColor = Color.White;
             txtInsideReleaseEffortMax.BorderStyle = BorderStyle.FixedSingle;
             txtInsideReleaseEffortMax.Location = new Point(440, 16);
             txtInsideReleaseEffortMax.Name = "txtInsideReleaseEffortMax";
+            txtInsideReleaseEffortMax.ReadOnly = true;
+            txtInsideReleaseEffortMax.RightToLeft = RightToLeft.No;
             txtInsideReleaseEffortMax.Size = new Size(100, 25);
             txtInsideReleaseEffortMax.TabIndex = 46;
             // 
             // txtInsideReleasePreTravelMax
             // 
+            txtInsideReleasePreTravelMax.BackColor = Color.White;
             txtInsideReleasePreTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtInsideReleasePreTravelMax.Location = new Point(440, 47);
             txtInsideReleasePreTravelMax.Name = "txtInsideReleasePreTravelMax";
+            txtInsideReleasePreTravelMax.ReadOnly = true;
+            txtInsideReleasePreTravelMax.RightToLeft = RightToLeft.No;
             txtInsideReleasePreTravelMax.Size = new Size(100, 25);
             txtInsideReleasePreTravelMax.TabIndex = 49;
             // 
             // txtInsideReleaseEffortActual
             // 
+            txtInsideReleaseEffortActual.BackColor = Color.White;
             txtInsideReleaseEffortActual.BorderStyle = BorderStyle.FixedSingle;
             txtInsideReleaseEffortActual.Location = new Point(566, 16);
             txtInsideReleaseEffortActual.Name = "txtInsideReleaseEffortActual";
+            txtInsideReleaseEffortActual.ReadOnly = true;
+            txtInsideReleaseEffortActual.RightToLeft = RightToLeft.No;
             txtInsideReleaseEffortActual.Size = new Size(100, 25);
             txtInsideReleaseEffortActual.TabIndex = 47;
             // 
             // txtInsideReleasePreTravelMin
             // 
+            txtInsideReleasePreTravelMin.BackColor = Color.White;
             txtInsideReleasePreTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtInsideReleasePreTravelMin.Location = new Point(308, 47);
             txtInsideReleasePreTravelMin.Name = "txtInsideReleasePreTravelMin";
+            txtInsideReleasePreTravelMin.ReadOnly = true;
+            txtInsideReleasePreTravelMin.RightToLeft = RightToLeft.No;
             txtInsideReleasePreTravelMin.Size = new Size(100, 25);
             txtInsideReleasePreTravelMin.TabIndex = 48;
             // 
@@ -1735,9 +1810,12 @@
             // 
             // txtInsideUnlockTravelActual
             // 
+            txtInsideUnlockTravelActual.BackColor = Color.White;
             txtInsideUnlockTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtInsideUnlockTravelActual.Location = new Point(566, 110);
             txtInsideUnlockTravelActual.Name = "txtInsideUnlockTravelActual";
+            txtInsideUnlockTravelActual.ReadOnly = true;
+            txtInsideUnlockTravelActual.RightToLeft = RightToLeft.No;
             txtInsideUnlockTravelActual.Size = new Size(100, 25);
             txtInsideUnlockTravelActual.TabIndex = 56;
             // 
@@ -1752,9 +1830,12 @@
             // 
             // txtInsideUnlockTravelMax
             // 
+            txtInsideUnlockTravelMax.BackColor = Color.White;
             txtInsideUnlockTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtInsideUnlockTravelMax.Location = new Point(440, 110);
             txtInsideUnlockTravelMax.Name = "txtInsideUnlockTravelMax";
+            txtInsideUnlockTravelMax.ReadOnly = true;
+            txtInsideUnlockTravelMax.RightToLeft = RightToLeft.No;
             txtInsideUnlockTravelMax.Size = new Size(100, 25);
             txtInsideUnlockTravelMax.TabIndex = 55;
             // 
@@ -1769,9 +1850,12 @@
             // 
             // txtInsideUnlockTravelMin
             // 
+            txtInsideUnlockTravelMin.BackColor = Color.White;
             txtInsideUnlockTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtInsideUnlockTravelMin.Location = new Point(308, 110);
             txtInsideUnlockTravelMin.Name = "txtInsideUnlockTravelMin";
+            txtInsideUnlockTravelMin.ReadOnly = true;
+            txtInsideUnlockTravelMin.RightToLeft = RightToLeft.No;
             txtInsideUnlockTravelMin.Size = new Size(100, 25);
             txtInsideUnlockTravelMin.TabIndex = 54;
             // 
@@ -1786,17 +1870,23 @@
             // 
             // txtInsideUnlockEffortActual
             // 
+            txtInsideUnlockEffortActual.BackColor = Color.White;
             txtInsideUnlockEffortActual.BorderStyle = BorderStyle.FixedSingle;
             txtInsideUnlockEffortActual.Location = new Point(566, 79);
             txtInsideUnlockEffortActual.Name = "txtInsideUnlockEffortActual";
+            txtInsideUnlockEffortActual.ReadOnly = true;
+            txtInsideUnlockEffortActual.RightToLeft = RightToLeft.No;
             txtInsideUnlockEffortActual.Size = new Size(100, 25);
             txtInsideUnlockEffortActual.TabIndex = 53;
             // 
             // txtInsideUnlockEffortMax
             // 
+            txtInsideUnlockEffortMax.BackColor = Color.White;
             txtInsideUnlockEffortMax.BorderStyle = BorderStyle.FixedSingle;
             txtInsideUnlockEffortMax.Location = new Point(440, 79);
             txtInsideUnlockEffortMax.Name = "txtInsideUnlockEffortMax";
+            txtInsideUnlockEffortMax.ReadOnly = true;
+            txtInsideUnlockEffortMax.RightToLeft = RightToLeft.No;
             txtInsideUnlockEffortMax.Size = new Size(100, 25);
             txtInsideUnlockEffortMax.TabIndex = 52;
             // 
@@ -1811,57 +1901,78 @@
             // 
             // txtInsideUnlockEffortMin
             // 
+            txtInsideUnlockEffortMin.BackColor = Color.White;
             txtInsideUnlockEffortMin.BorderStyle = BorderStyle.FixedSingle;
             txtInsideUnlockEffortMin.Location = new Point(308, 79);
             txtInsideUnlockEffortMin.Name = "txtInsideUnlockEffortMin";
+            txtInsideUnlockEffortMin.ReadOnly = true;
+            txtInsideUnlockEffortMin.RightToLeft = RightToLeft.No;
             txtInsideUnlockEffortMin.Size = new Size(100, 25);
             txtInsideUnlockEffortMin.TabIndex = 51;
             // 
             // txtInsideLockEffortMin
             // 
+            txtInsideLockEffortMin.BackColor = Color.White;
             txtInsideLockEffortMin.BorderStyle = BorderStyle.FixedSingle;
             txtInsideLockEffortMin.Location = new Point(308, 16);
             txtInsideLockEffortMin.Name = "txtInsideLockEffortMin";
+            txtInsideLockEffortMin.ReadOnly = true;
+            txtInsideLockEffortMin.RightToLeft = RightToLeft.No;
             txtInsideLockEffortMin.Size = new Size(100, 25);
             txtInsideLockEffortMin.TabIndex = 45;
             // 
             // txtInsideLockTravelActual
             // 
+            txtInsideLockTravelActual.BackColor = Color.White;
             txtInsideLockTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtInsideLockTravelActual.Location = new Point(566, 47);
             txtInsideLockTravelActual.Name = "txtInsideLockTravelActual";
+            txtInsideLockTravelActual.ReadOnly = true;
+            txtInsideLockTravelActual.RightToLeft = RightToLeft.No;
             txtInsideLockTravelActual.Size = new Size(100, 25);
             txtInsideLockTravelActual.TabIndex = 50;
             // 
             // txtInsideLockEffortMax
             // 
+            txtInsideLockEffortMax.BackColor = Color.White;
             txtInsideLockEffortMax.BorderStyle = BorderStyle.FixedSingle;
             txtInsideLockEffortMax.Location = new Point(440, 16);
             txtInsideLockEffortMax.Name = "txtInsideLockEffortMax";
+            txtInsideLockEffortMax.ReadOnly = true;
+            txtInsideLockEffortMax.RightToLeft = RightToLeft.No;
             txtInsideLockEffortMax.Size = new Size(100, 25);
             txtInsideLockEffortMax.TabIndex = 46;
             // 
             // txtInsideLockTravelMax
             // 
+            txtInsideLockTravelMax.BackColor = Color.White;
             txtInsideLockTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtInsideLockTravelMax.Location = new Point(440, 47);
             txtInsideLockTravelMax.Name = "txtInsideLockTravelMax";
+            txtInsideLockTravelMax.ReadOnly = true;
+            txtInsideLockTravelMax.RightToLeft = RightToLeft.No;
             txtInsideLockTravelMax.Size = new Size(100, 25);
             txtInsideLockTravelMax.TabIndex = 49;
             // 
             // txtInsideLockEffortActual
             // 
+            txtInsideLockEffortActual.BackColor = Color.White;
             txtInsideLockEffortActual.BorderStyle = BorderStyle.FixedSingle;
             txtInsideLockEffortActual.Location = new Point(566, 16);
             txtInsideLockEffortActual.Name = "txtInsideLockEffortActual";
+            txtInsideLockEffortActual.ReadOnly = true;
+            txtInsideLockEffortActual.RightToLeft = RightToLeft.No;
             txtInsideLockEffortActual.Size = new Size(100, 25);
             txtInsideLockEffortActual.TabIndex = 47;
             // 
             // txtInsideLockTravelMin
             // 
+            txtInsideLockTravelMin.BackColor = Color.White;
             txtInsideLockTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtInsideLockTravelMin.Location = new Point(308, 47);
             txtInsideLockTravelMin.Name = "txtInsideLockTravelMin";
+            txtInsideLockTravelMin.ReadOnly = true;
+            txtInsideLockTravelMin.RightToLeft = RightToLeft.No;
             txtInsideLockTravelMin.Size = new Size(100, 25);
             txtInsideLockTravelMin.TabIndex = 48;
             // 
@@ -1916,33 +2027,45 @@
             // 
             // FtVarient_TXT
             // 
+            FtVarient_TXT.BackColor = Color.White;
             FtVarient_TXT.BorderStyle = BorderStyle.FixedSingle;
             FtVarient_TXT.Location = new Point(397, 21);
             FtVarient_TXT.Name = "FtVarient_TXT";
+            FtVarient_TXT.ReadOnly = true;
+            FtVarient_TXT.RightToLeft = RightToLeft.No;
             FtVarient_TXT.Size = new Size(100, 25);
             FtVarient_TXT.TabIndex = 15;
             // 
             // txtSealLoadActual
             // 
+            txtSealLoadActual.BackColor = Color.White;
             txtSealLoadActual.BorderStyle = BorderStyle.FixedSingle;
             txtSealLoadActual.Location = new Point(588, 111);
             txtSealLoadActual.Name = "txtSealLoadActual";
+            txtSealLoadActual.ReadOnly = true;
+            txtSealLoadActual.RightToLeft = RightToLeft.No;
             txtSealLoadActual.Size = new Size(100, 25);
             txtSealLoadActual.TabIndex = 14;
             // 
             // txtSealLoadMax
             // 
+            txtSealLoadMax.BackColor = Color.White;
             txtSealLoadMax.BorderStyle = BorderStyle.FixedSingle;
             txtSealLoadMax.Location = new Point(462, 111);
             txtSealLoadMax.Name = "txtSealLoadMax";
+            txtSealLoadMax.ReadOnly = true;
+            txtSealLoadMax.RightToLeft = RightToLeft.No;
             txtSealLoadMax.Size = new Size(100, 25);
             txtSealLoadMax.TabIndex = 13;
             // 
             // txtSealLoadMin
             // 
+            txtSealLoadMin.BackColor = Color.White;
             txtSealLoadMin.BorderStyle = BorderStyle.FixedSingle;
             txtSealLoadMin.Location = new Point(330, 111);
             txtSealLoadMin.Name = "txtSealLoadMin";
+            txtSealLoadMin.ReadOnly = true;
+            txtSealLoadMin.RightToLeft = RightToLeft.No;
             txtSealLoadMin.Size = new Size(100, 25);
             txtSealLoadMin.TabIndex = 12;
             // 
@@ -1992,17 +2115,23 @@
             // 
             // txtEmgLockAngleActual
             // 
+            txtEmgLockAngleActual.BackColor = Color.White;
             txtEmgLockAngleActual.BorderStyle = BorderStyle.FixedSingle;
             txtEmgLockAngleActual.Location = new Point(566, 55);
             txtEmgLockAngleActual.Name = "txtEmgLockAngleActual";
+            txtEmgLockAngleActual.ReadOnly = true;
+            txtEmgLockAngleActual.RightToLeft = RightToLeft.No;
             txtEmgLockAngleActual.Size = new Size(100, 25);
             txtEmgLockAngleActual.TabIndex = 26;
             // 
             // txtEmgLockAngleMax
             // 
+            txtEmgLockAngleMax.BackColor = Color.White;
             txtEmgLockAngleMax.BorderStyle = BorderStyle.FixedSingle;
             txtEmgLockAngleMax.Location = new Point(440, 55);
             txtEmgLockAngleMax.Name = "txtEmgLockAngleMax";
+            txtEmgLockAngleMax.ReadOnly = true;
+            txtEmgLockAngleMax.RightToLeft = RightToLeft.No;
             txtEmgLockAngleMax.Size = new Size(100, 25);
             txtEmgLockAngleMax.TabIndex = 25;
             // 
@@ -2017,9 +2146,12 @@
             // 
             // txtEmgLockAngleMin
             // 
+            txtEmgLockAngleMin.BackColor = Color.White;
             txtEmgLockAngleMin.BorderStyle = BorderStyle.FixedSingle;
             txtEmgLockAngleMin.Location = new Point(308, 55);
             txtEmgLockAngleMin.Name = "txtEmgLockAngleMin";
+            txtEmgLockAngleMin.ReadOnly = true;
+            txtEmgLockAngleMin.RightToLeft = RightToLeft.No;
             txtEmgLockAngleMin.Size = new Size(100, 25);
             txtEmgLockAngleMin.TabIndex = 24;
             // 
@@ -2034,25 +2166,34 @@
             // 
             // txtEmgLockTorqueActual
             // 
+            txtEmgLockTorqueActual.BackColor = Color.White;
             txtEmgLockTorqueActual.BorderStyle = BorderStyle.FixedSingle;
             txtEmgLockTorqueActual.Location = new Point(566, 24);
             txtEmgLockTorqueActual.Name = "txtEmgLockTorqueActual";
+            txtEmgLockTorqueActual.ReadOnly = true;
+            txtEmgLockTorqueActual.RightToLeft = RightToLeft.No;
             txtEmgLockTorqueActual.Size = new Size(100, 25);
             txtEmgLockTorqueActual.TabIndex = 23;
             // 
             // txtEmgLockTorqueMin
             // 
+            txtEmgLockTorqueMin.BackColor = Color.White;
             txtEmgLockTorqueMin.BorderStyle = BorderStyle.FixedSingle;
             txtEmgLockTorqueMin.Location = new Point(308, 24);
             txtEmgLockTorqueMin.Name = "txtEmgLockTorqueMin";
+            txtEmgLockTorqueMin.ReadOnly = true;
+            txtEmgLockTorqueMin.RightToLeft = RightToLeft.No;
             txtEmgLockTorqueMin.Size = new Size(100, 25);
             txtEmgLockTorqueMin.TabIndex = 21;
             // 
             // txtEmgLockTorqueMax
             // 
+            txtEmgLockTorqueMax.BackColor = Color.White;
             txtEmgLockTorqueMax.BorderStyle = BorderStyle.FixedSingle;
             txtEmgLockTorqueMax.Location = new Point(440, 24);
             txtEmgLockTorqueMax.Name = "txtEmgLockTorqueMax";
+            txtEmgLockTorqueMax.ReadOnly = true;
+            txtEmgLockTorqueMax.RightToLeft = RightToLeft.No;
             txtEmgLockTorqueMax.Size = new Size(100, 25);
             txtEmgLockTorqueMax.TabIndex = 22;
             // 
@@ -2083,9 +2224,12 @@
             // 
             // txtChildUnlockTravelActual
             // 
+            txtChildUnlockTravelActual.BackColor = Color.White;
             txtChildUnlockTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtChildUnlockTravelActual.Location = new Point(566, 110);
             txtChildUnlockTravelActual.Name = "txtChildUnlockTravelActual";
+            txtChildUnlockTravelActual.ReadOnly = true;
+            txtChildUnlockTravelActual.RightToLeft = RightToLeft.No;
             txtChildUnlockTravelActual.Size = new Size(100, 25);
             txtChildUnlockTravelActual.TabIndex = 56;
             // 
@@ -2100,9 +2244,12 @@
             // 
             // txtChildUnlockTravelMax
             // 
+            txtChildUnlockTravelMax.BackColor = Color.White;
             txtChildUnlockTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtChildUnlockTravelMax.Location = new Point(440, 110);
             txtChildUnlockTravelMax.Name = "txtChildUnlockTravelMax";
+            txtChildUnlockTravelMax.ReadOnly = true;
+            txtChildUnlockTravelMax.RightToLeft = RightToLeft.No;
             txtChildUnlockTravelMax.Size = new Size(100, 25);
             txtChildUnlockTravelMax.TabIndex = 55;
             // 
@@ -2117,9 +2264,12 @@
             // 
             // txtChildUnlockTravelMin
             // 
+            txtChildUnlockTravelMin.BackColor = Color.White;
             txtChildUnlockTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtChildUnlockTravelMin.Location = new Point(308, 110);
             txtChildUnlockTravelMin.Name = "txtChildUnlockTravelMin";
+            txtChildUnlockTravelMin.ReadOnly = true;
+            txtChildUnlockTravelMin.RightToLeft = RightToLeft.No;
             txtChildUnlockTravelMin.Size = new Size(100, 25);
             txtChildUnlockTravelMin.TabIndex = 54;
             // 
@@ -2134,17 +2284,23 @@
             // 
             // txtChildUnlockEffortActual
             // 
+            txtChildUnlockEffortActual.BackColor = Color.White;
             txtChildUnlockEffortActual.BorderStyle = BorderStyle.FixedSingle;
             txtChildUnlockEffortActual.Location = new Point(566, 79);
             txtChildUnlockEffortActual.Name = "txtChildUnlockEffortActual";
+            txtChildUnlockEffortActual.ReadOnly = true;
+            txtChildUnlockEffortActual.RightToLeft = RightToLeft.No;
             txtChildUnlockEffortActual.Size = new Size(100, 25);
             txtChildUnlockEffortActual.TabIndex = 53;
             // 
             // txtChildUnlockEffortMax
             // 
+            txtChildUnlockEffortMax.BackColor = Color.White;
             txtChildUnlockEffortMax.BorderStyle = BorderStyle.FixedSingle;
             txtChildUnlockEffortMax.Location = new Point(440, 79);
             txtChildUnlockEffortMax.Name = "txtChildUnlockEffortMax";
+            txtChildUnlockEffortMax.ReadOnly = true;
+            txtChildUnlockEffortMax.RightToLeft = RightToLeft.No;
             txtChildUnlockEffortMax.Size = new Size(100, 25);
             txtChildUnlockEffortMax.TabIndex = 52;
             // 
@@ -2159,57 +2315,78 @@
             // 
             // txtChildUnlockEffortMin
             // 
+            txtChildUnlockEffortMin.BackColor = Color.White;
             txtChildUnlockEffortMin.BorderStyle = BorderStyle.FixedSingle;
             txtChildUnlockEffortMin.Location = new Point(308, 79);
             txtChildUnlockEffortMin.Name = "txtChildUnlockEffortMin";
+            txtChildUnlockEffortMin.ReadOnly = true;
+            txtChildUnlockEffortMin.RightToLeft = RightToLeft.No;
             txtChildUnlockEffortMin.Size = new Size(100, 25);
             txtChildUnlockEffortMin.TabIndex = 51;
             // 
             // txtChildLockEffortMin
             // 
+            txtChildLockEffortMin.BackColor = Color.White;
             txtChildLockEffortMin.BorderStyle = BorderStyle.FixedSingle;
             txtChildLockEffortMin.Location = new Point(308, 16);
             txtChildLockEffortMin.Name = "txtChildLockEffortMin";
+            txtChildLockEffortMin.ReadOnly = true;
+            txtChildLockEffortMin.RightToLeft = RightToLeft.No;
             txtChildLockEffortMin.Size = new Size(100, 25);
             txtChildLockEffortMin.TabIndex = 45;
             // 
             // txtChildLockTravelActual
             // 
+            txtChildLockTravelActual.BackColor = Color.White;
             txtChildLockTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtChildLockTravelActual.Location = new Point(566, 47);
             txtChildLockTravelActual.Name = "txtChildLockTravelActual";
+            txtChildLockTravelActual.ReadOnly = true;
+            txtChildLockTravelActual.RightToLeft = RightToLeft.No;
             txtChildLockTravelActual.Size = new Size(100, 25);
             txtChildLockTravelActual.TabIndex = 50;
             // 
             // txtChildLockEffortMax
             // 
+            txtChildLockEffortMax.BackColor = Color.White;
             txtChildLockEffortMax.BorderStyle = BorderStyle.FixedSingle;
             txtChildLockEffortMax.Location = new Point(440, 16);
             txtChildLockEffortMax.Name = "txtChildLockEffortMax";
+            txtChildLockEffortMax.ReadOnly = true;
+            txtChildLockEffortMax.RightToLeft = RightToLeft.No;
             txtChildLockEffortMax.Size = new Size(100, 25);
             txtChildLockEffortMax.TabIndex = 46;
             // 
             // txtChildLockTravelMax
             // 
+            txtChildLockTravelMax.BackColor = Color.White;
             txtChildLockTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtChildLockTravelMax.Location = new Point(440, 47);
             txtChildLockTravelMax.Name = "txtChildLockTravelMax";
+            txtChildLockTravelMax.ReadOnly = true;
+            txtChildLockTravelMax.RightToLeft = RightToLeft.No;
             txtChildLockTravelMax.Size = new Size(100, 25);
             txtChildLockTravelMax.TabIndex = 49;
             // 
             // txtChildLockEffortActual
             // 
+            txtChildLockEffortActual.BackColor = Color.White;
             txtChildLockEffortActual.BorderStyle = BorderStyle.FixedSingle;
             txtChildLockEffortActual.Location = new Point(566, 16);
             txtChildLockEffortActual.Name = "txtChildLockEffortActual";
+            txtChildLockEffortActual.ReadOnly = true;
+            txtChildLockEffortActual.RightToLeft = RightToLeft.No;
             txtChildLockEffortActual.Size = new Size(100, 25);
             txtChildLockEffortActual.TabIndex = 47;
             // 
             // txtChildLockTravelMin
             // 
+            txtChildLockTravelMin.BackColor = Color.White;
             txtChildLockTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtChildLockTravelMin.Location = new Point(308, 47);
             txtChildLockTravelMin.Name = "txtChildLockTravelMin";
+            txtChildLockTravelMin.ReadOnly = true;
+            txtChildLockTravelMin.RightToLeft = RightToLeft.No;
             txtChildLockTravelMin.Size = new Size(100, 25);
             txtChildLockTravelMin.TabIndex = 48;
             // 
@@ -2256,193 +2433,265 @@
             // 
             // txtKeyUnlockFullTravelActual
             // 
+            txtKeyUnlockFullTravelActual.BackColor = Color.White;
             txtKeyUnlockFullTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtKeyUnlockFullTravelActual.Location = new Point(566, 231);
             txtKeyUnlockFullTravelActual.Name = "txtKeyUnlockFullTravelActual";
+            txtKeyUnlockFullTravelActual.ReadOnly = true;
+            txtKeyUnlockFullTravelActual.RightToLeft = RightToLeft.No;
             txtKeyUnlockFullTravelActual.Size = new Size(100, 25);
             txtKeyUnlockFullTravelActual.TabIndex = 44;
             // 
             // txtKeyUnlockFullTravelMax
             // 
+            txtKeyUnlockFullTravelMax.BackColor = Color.White;
             txtKeyUnlockFullTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtKeyUnlockFullTravelMax.Location = new Point(440, 231);
             txtKeyUnlockFullTravelMax.Name = "txtKeyUnlockFullTravelMax";
+            txtKeyUnlockFullTravelMax.ReadOnly = true;
+            txtKeyUnlockFullTravelMax.RightToLeft = RightToLeft.No;
             txtKeyUnlockFullTravelMax.Size = new Size(100, 25);
             txtKeyUnlockFullTravelMax.TabIndex = 43;
             // 
             // txtKeyUnlockFullTravelMin
             // 
+            txtKeyUnlockFullTravelMin.BackColor = Color.White;
             txtKeyUnlockFullTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtKeyUnlockFullTravelMin.Location = new Point(308, 231);
             txtKeyUnlockFullTravelMin.Name = "txtKeyUnlockFullTravelMin";
+            txtKeyUnlockFullTravelMin.ReadOnly = true;
+            txtKeyUnlockFullTravelMin.RightToLeft = RightToLeft.No;
             txtKeyUnlockFullTravelMin.Size = new Size(100, 25);
             txtKeyUnlockFullTravelMin.TabIndex = 42;
             // 
             // txtKeyUnlockLockTravelActual
             // 
+            txtKeyUnlockLockTravelActual.BackColor = Color.White;
             txtKeyUnlockLockTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtKeyUnlockLockTravelActual.Location = new Point(566, 202);
             txtKeyUnlockLockTravelActual.Name = "txtKeyUnlockLockTravelActual";
+            txtKeyUnlockLockTravelActual.ReadOnly = true;
+            txtKeyUnlockLockTravelActual.RightToLeft = RightToLeft.No;
             txtKeyUnlockLockTravelActual.Size = new Size(100, 25);
             txtKeyUnlockLockTravelActual.TabIndex = 41;
             // 
             // txtKeyUnlockLockTravelMax
             // 
+            txtKeyUnlockLockTravelMax.BackColor = Color.White;
             txtKeyUnlockLockTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtKeyUnlockLockTravelMax.Location = new Point(440, 202);
             txtKeyUnlockLockTravelMax.Name = "txtKeyUnlockLockTravelMax";
+            txtKeyUnlockLockTravelMax.ReadOnly = true;
+            txtKeyUnlockLockTravelMax.RightToLeft = RightToLeft.No;
             txtKeyUnlockLockTravelMax.Size = new Size(100, 25);
             txtKeyUnlockLockTravelMax.TabIndex = 40;
             // 
             // txtKeyUnlockLockTravelMin
             // 
+            txtKeyUnlockLockTravelMin.BackColor = Color.White;
             txtKeyUnlockLockTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtKeyUnlockLockTravelMin.Location = new Point(308, 202);
             txtKeyUnlockLockTravelMin.Name = "txtKeyUnlockLockTravelMin";
+            txtKeyUnlockLockTravelMin.ReadOnly = true;
+            txtKeyUnlockLockTravelMin.RightToLeft = RightToLeft.No;
             txtKeyUnlockLockTravelMin.Size = new Size(100, 25);
             txtKeyUnlockLockTravelMin.TabIndex = 39;
             // 
             // txtKeyUnlockPreTravelActual
             // 
+            txtKeyUnlockPreTravelActual.BackColor = Color.White;
             txtKeyUnlockPreTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtKeyUnlockPreTravelActual.Location = new Point(566, 173);
             txtKeyUnlockPreTravelActual.Name = "txtKeyUnlockPreTravelActual";
+            txtKeyUnlockPreTravelActual.ReadOnly = true;
+            txtKeyUnlockPreTravelActual.RightToLeft = RightToLeft.No;
             txtKeyUnlockPreTravelActual.Size = new Size(100, 25);
             txtKeyUnlockPreTravelActual.TabIndex = 38;
             // 
             // txtKeyUnlockPreTravelMax
             // 
+            txtKeyUnlockPreTravelMax.BackColor = Color.White;
             txtKeyUnlockPreTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtKeyUnlockPreTravelMax.Location = new Point(440, 173);
             txtKeyUnlockPreTravelMax.Name = "txtKeyUnlockPreTravelMax";
+            txtKeyUnlockPreTravelMax.ReadOnly = true;
+            txtKeyUnlockPreTravelMax.RightToLeft = RightToLeft.No;
             txtKeyUnlockPreTravelMax.Size = new Size(100, 25);
             txtKeyUnlockPreTravelMax.TabIndex = 37;
             // 
             // txtKeyUnlockPreTravelMin
             // 
+            txtKeyUnlockPreTravelMin.BackColor = Color.White;
             txtKeyUnlockPreTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtKeyUnlockPreTravelMin.Location = new Point(308, 173);
             txtKeyUnlockPreTravelMin.Name = "txtKeyUnlockPreTravelMin";
+            txtKeyUnlockPreTravelMin.ReadOnly = true;
+            txtKeyUnlockPreTravelMin.RightToLeft = RightToLeft.No;
             txtKeyUnlockPreTravelMin.Size = new Size(100, 25);
             txtKeyUnlockPreTravelMin.TabIndex = 36;
             // 
             // txtKeyUnlockEffortActual
             // 
+            txtKeyUnlockEffortActual.BackColor = Color.White;
             txtKeyUnlockEffortActual.BorderStyle = BorderStyle.FixedSingle;
             txtKeyUnlockEffortActual.Location = new Point(566, 142);
             txtKeyUnlockEffortActual.Name = "txtKeyUnlockEffortActual";
+            txtKeyUnlockEffortActual.ReadOnly = true;
+            txtKeyUnlockEffortActual.RightToLeft = RightToLeft.No;
             txtKeyUnlockEffortActual.Size = new Size(100, 25);
             txtKeyUnlockEffortActual.TabIndex = 35;
             // 
             // txtKeyUnlockEffortMax
             // 
+            txtKeyUnlockEffortMax.BackColor = Color.White;
             txtKeyUnlockEffortMax.BorderStyle = BorderStyle.FixedSingle;
             txtKeyUnlockEffortMax.Location = new Point(440, 142);
             txtKeyUnlockEffortMax.Name = "txtKeyUnlockEffortMax";
+            txtKeyUnlockEffortMax.ReadOnly = true;
+            txtKeyUnlockEffortMax.RightToLeft = RightToLeft.No;
             txtKeyUnlockEffortMax.Size = new Size(100, 25);
             txtKeyUnlockEffortMax.TabIndex = 34;
             // 
             // txtKeyUnlockEffortMin
             // 
+            txtKeyUnlockEffortMin.BackColor = Color.White;
             txtKeyUnlockEffortMin.BorderStyle = BorderStyle.FixedSingle;
             txtKeyUnlockEffortMin.Location = new Point(308, 142);
             txtKeyUnlockEffortMin.Name = "txtKeyUnlockEffortMin";
+            txtKeyUnlockEffortMin.ReadOnly = true;
+            txtKeyUnlockEffortMin.RightToLeft = RightToLeft.No;
             txtKeyUnlockEffortMin.Size = new Size(100, 25);
             txtKeyUnlockEffortMin.TabIndex = 33;
             // 
             // txtKeyLockFullTravelActual
             // 
+            txtKeyLockFullTravelActual.BackColor = Color.White;
             txtKeyLockFullTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtKeyLockFullTravelActual.Location = new Point(566, 112);
             txtKeyLockFullTravelActual.Name = "txtKeyLockFullTravelActual";
+            txtKeyLockFullTravelActual.ReadOnly = true;
+            txtKeyLockFullTravelActual.RightToLeft = RightToLeft.No;
             txtKeyLockFullTravelActual.Size = new Size(100, 25);
             txtKeyLockFullTravelActual.TabIndex = 32;
             // 
             // txtKeyLockFullTravelMax
             // 
+            txtKeyLockFullTravelMax.BackColor = Color.White;
             txtKeyLockFullTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtKeyLockFullTravelMax.Location = new Point(440, 112);
             txtKeyLockFullTravelMax.Name = "txtKeyLockFullTravelMax";
+            txtKeyLockFullTravelMax.ReadOnly = true;
+            txtKeyLockFullTravelMax.RightToLeft = RightToLeft.No;
             txtKeyLockFullTravelMax.Size = new Size(100, 25);
             txtKeyLockFullTravelMax.TabIndex = 31;
             // 
             // txtKeyLockFullTravelMin
             // 
+            txtKeyLockFullTravelMin.BackColor = Color.White;
             txtKeyLockFullTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtKeyLockFullTravelMin.Location = new Point(308, 112);
             txtKeyLockFullTravelMin.Name = "txtKeyLockFullTravelMin";
+            txtKeyLockFullTravelMin.ReadOnly = true;
+            txtKeyLockFullTravelMin.RightToLeft = RightToLeft.No;
             txtKeyLockFullTravelMin.Size = new Size(100, 25);
             txtKeyLockFullTravelMin.TabIndex = 30;
             // 
             // txtKeyLockLockTravelActual
             // 
+            txtKeyLockLockTravelActual.BackColor = Color.White;
             txtKeyLockLockTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtKeyLockLockTravelActual.Location = new Point(566, 81);
             txtKeyLockLockTravelActual.Name = "txtKeyLockLockTravelActual";
+            txtKeyLockLockTravelActual.ReadOnly = true;
+            txtKeyLockLockTravelActual.RightToLeft = RightToLeft.No;
             txtKeyLockLockTravelActual.Size = new Size(100, 25);
             txtKeyLockLockTravelActual.TabIndex = 29;
             // 
             // txtKeyLockLockTravelMax
             // 
+            txtKeyLockLockTravelMax.BackColor = Color.White;
             txtKeyLockLockTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtKeyLockLockTravelMax.Location = new Point(440, 81);
             txtKeyLockLockTravelMax.Name = "txtKeyLockLockTravelMax";
+            txtKeyLockLockTravelMax.ReadOnly = true;
+            txtKeyLockLockTravelMax.RightToLeft = RightToLeft.No;
             txtKeyLockLockTravelMax.Size = new Size(100, 25);
             txtKeyLockLockTravelMax.TabIndex = 28;
             // 
             // txtKeyLockLockTravelMin
             // 
+            txtKeyLockLockTravelMin.BackColor = Color.White;
             txtKeyLockLockTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtKeyLockLockTravelMin.Location = new Point(308, 81);
             txtKeyLockLockTravelMin.Name = "txtKeyLockLockTravelMin";
+            txtKeyLockLockTravelMin.ReadOnly = true;
+            txtKeyLockLockTravelMin.RightToLeft = RightToLeft.No;
             txtKeyLockLockTravelMin.Size = new Size(100, 25);
             txtKeyLockLockTravelMin.TabIndex = 27;
             // 
             // txtKeyLockPreTravelActual
             // 
+            txtKeyLockPreTravelActual.BackColor = Color.White;
             txtKeyLockPreTravelActual.BorderStyle = BorderStyle.FixedSingle;
             txtKeyLockPreTravelActual.Location = new Point(566, 49);
             txtKeyLockPreTravelActual.Name = "txtKeyLockPreTravelActual";
+            txtKeyLockPreTravelActual.ReadOnly = true;
+            txtKeyLockPreTravelActual.RightToLeft = RightToLeft.No;
             txtKeyLockPreTravelActual.Size = new Size(100, 25);
             txtKeyLockPreTravelActual.TabIndex = 26;
             // 
             // txtKeyLockPreTravelMax
             // 
+            txtKeyLockPreTravelMax.BackColor = Color.White;
             txtKeyLockPreTravelMax.BorderStyle = BorderStyle.FixedSingle;
             txtKeyLockPreTravelMax.Location = new Point(440, 49);
             txtKeyLockPreTravelMax.Name = "txtKeyLockPreTravelMax";
+            txtKeyLockPreTravelMax.ReadOnly = true;
+            txtKeyLockPreTravelMax.RightToLeft = RightToLeft.No;
             txtKeyLockPreTravelMax.Size = new Size(100, 25);
             txtKeyLockPreTravelMax.TabIndex = 25;
             // 
             // txtKeyLockPreTravelMin
             // 
+            txtKeyLockPreTravelMin.BackColor = Color.White;
             txtKeyLockPreTravelMin.BorderStyle = BorderStyle.FixedSingle;
             txtKeyLockPreTravelMin.Location = new Point(308, 49);
             txtKeyLockPreTravelMin.Name = "txtKeyLockPreTravelMin";
+            txtKeyLockPreTravelMin.ReadOnly = true;
+            txtKeyLockPreTravelMin.RightToLeft = RightToLeft.No;
             txtKeyLockPreTravelMin.Size = new Size(100, 25);
             txtKeyLockPreTravelMin.TabIndex = 24;
             // 
             // txtKeyLockEffortActual
             // 
+            txtKeyLockEffortActual.BackColor = Color.White;
             txtKeyLockEffortActual.BorderStyle = BorderStyle.FixedSingle;
             txtKeyLockEffortActual.Location = new Point(566, 18);
             txtKeyLockEffortActual.Name = "txtKeyLockEffortActual";
+            txtKeyLockEffortActual.ReadOnly = true;
+            txtKeyLockEffortActual.RightToLeft = RightToLeft.No;
             txtKeyLockEffortActual.Size = new Size(100, 25);
             txtKeyLockEffortActual.TabIndex = 23;
             // 
             // txtKeyLockEffortMax
             // 
+            txtKeyLockEffortMax.BackColor = Color.White;
             txtKeyLockEffortMax.BorderStyle = BorderStyle.FixedSingle;
             txtKeyLockEffortMax.Location = new Point(440, 18);
             txtKeyLockEffortMax.Name = "txtKeyLockEffortMax";
+            txtKeyLockEffortMax.ReadOnly = true;
+            txtKeyLockEffortMax.RightToLeft = RightToLeft.No;
             txtKeyLockEffortMax.Size = new Size(100, 25);
             txtKeyLockEffortMax.TabIndex = 22;
             // 
             // txtKeyLockEffortMin
             // 
+            txtKeyLockEffortMin.BackColor = Color.White;
             txtKeyLockEffortMin.BorderStyle = BorderStyle.FixedSingle;
             txtKeyLockEffortMin.Location = new Point(308, 18);
             txtKeyLockEffortMin.Name = "txtKeyLockEffortMin";
+            txtKeyLockEffortMin.ReadOnly = true;
+            txtKeyLockEffortMin.RightToLeft = RightToLeft.No;
             txtKeyLockEffortMin.Size = new Size(100, 25);
             txtKeyLockEffortMin.TabIndex = 21;
             // 
@@ -2537,33 +2786,45 @@
             // 
             // txtPowerUnlockActual
             // 
+            txtPowerUnlockActual.BackColor = Color.White;
             txtPowerUnlockActual.BorderStyle = BorderStyle.FixedSingle;
             txtPowerUnlockActual.Location = new Point(566, 54);
             txtPowerUnlockActual.Name = "txtPowerUnlockActual";
+            txtPowerUnlockActual.ReadOnly = true;
+            txtPowerUnlockActual.RightToLeft = RightToLeft.No;
             txtPowerUnlockActual.Size = new Size(100, 25);
             txtPowerUnlockActual.TabIndex = 20;
             // 
             // txtPowerUnlockMax
             // 
+            txtPowerUnlockMax.BackColor = Color.White;
             txtPowerUnlockMax.BorderStyle = BorderStyle.FixedSingle;
             txtPowerUnlockMax.Location = new Point(440, 54);
             txtPowerUnlockMax.Name = "txtPowerUnlockMax";
+            txtPowerUnlockMax.ReadOnly = true;
+            txtPowerUnlockMax.RightToLeft = RightToLeft.No;
             txtPowerUnlockMax.Size = new Size(100, 25);
             txtPowerUnlockMax.TabIndex = 19;
             // 
             // txtPowerUnlockMin
             // 
+            txtPowerUnlockMin.BackColor = Color.White;
             txtPowerUnlockMin.BorderStyle = BorderStyle.FixedSingle;
             txtPowerUnlockMin.Location = new Point(308, 54);
             txtPowerUnlockMin.Name = "txtPowerUnlockMin";
+            txtPowerUnlockMin.ReadOnly = true;
+            txtPowerUnlockMin.RightToLeft = RightToLeft.No;
             txtPowerUnlockMin.Size = new Size(100, 25);
             txtPowerUnlockMin.TabIndex = 18;
             // 
             // txtPowerLockActual
             // 
+            txtPowerLockActual.BackColor = Color.White;
             txtPowerLockActual.BorderStyle = BorderStyle.FixedSingle;
             txtPowerLockActual.Location = new Point(566, 23);
             txtPowerLockActual.Name = "txtPowerLockActual";
+            txtPowerLockActual.ReadOnly = true;
+            txtPowerLockActual.RightToLeft = RightToLeft.No;
             txtPowerLockActual.Size = new Size(100, 25);
             txtPowerLockActual.TabIndex = 17;
             // 
@@ -2578,17 +2839,23 @@
             // 
             // txtPowerLockMax
             // 
+            txtPowerLockMax.BackColor = Color.White;
             txtPowerLockMax.BorderStyle = BorderStyle.FixedSingle;
             txtPowerLockMax.Location = new Point(440, 23);
             txtPowerLockMax.Name = "txtPowerLockMax";
+            txtPowerLockMax.ReadOnly = true;
+            txtPowerLockMax.RightToLeft = RightToLeft.No;
             txtPowerLockMax.Size = new Size(100, 25);
             txtPowerLockMax.TabIndex = 16;
             // 
             // txtPowerLockMin
             // 
+            txtPowerLockMin.BackColor = Color.White;
             txtPowerLockMin.BorderStyle = BorderStyle.FixedSingle;
             txtPowerLockMin.Location = new Point(308, 23);
             txtPowerLockMin.Name = "txtPowerLockMin";
+            txtPowerLockMin.ReadOnly = true;
+            txtPowerLockMin.RightToLeft = RightToLeft.No;
             txtPowerLockMin.Size = new Size(100, 25);
             txtPowerLockMin.TabIndex = 15;
             // 
@@ -3650,6 +3917,7 @@
             TXT_SealLoad_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_SealLoad_Actual.Location = new Point(588, 56);
             TXT_SealLoad_Actual.Name = "TXT_SealLoad_Actual";
+            TXT_SealLoad_Actual.ReadOnly = true;
             TXT_SealLoad_Actual.Size = new Size(100, 25);
             TXT_SealLoad_Actual.TabIndex = 14;
             // 
@@ -3658,6 +3926,7 @@
             TXT_SealLoad_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_SealLoad_Max.Location = new Point(462, 56);
             TXT_SealLoad_Max.Name = "TXT_SealLoad_Max";
+            TXT_SealLoad_Max.ReadOnly = true;
             TXT_SealLoad_Max.Size = new Size(100, 25);
             TXT_SealLoad_Max.TabIndex = 13;
             // 
@@ -3666,6 +3935,7 @@
             TXT_SealLoad_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_SealLoad_Min.Location = new Point(330, 56);
             TXT_SealLoad_Min.Name = "TXT_SealLoad_Min";
+            TXT_SealLoad_Min.ReadOnly = true;
             TXT_SealLoad_Min.Size = new Size(100, 25);
             TXT_SealLoad_Min.TabIndex = 12;
             // 
@@ -3718,6 +3988,7 @@
             TXT_EmgLockAngle_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_EmgLockAngle_Actual.Location = new Point(566, 55);
             TXT_EmgLockAngle_Actual.Name = "TXT_EmgLockAngle_Actual";
+            TXT_EmgLockAngle_Actual.ReadOnly = true;
             TXT_EmgLockAngle_Actual.Size = new Size(100, 25);
             TXT_EmgLockAngle_Actual.TabIndex = 26;
             // 
@@ -3726,6 +3997,7 @@
             TXT_EmgLockAngle_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_EmgLockAngle_Max.Location = new Point(440, 55);
             TXT_EmgLockAngle_Max.Name = "TXT_EmgLockAngle_Max";
+            TXT_EmgLockAngle_Max.ReadOnly = true;
             TXT_EmgLockAngle_Max.Size = new Size(100, 25);
             TXT_EmgLockAngle_Max.TabIndex = 25;
             // 
@@ -3743,6 +4015,7 @@
             TXT_EmgLockAngle_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_EmgLockAngle_Min.Location = new Point(308, 55);
             TXT_EmgLockAngle_Min.Name = "TXT_EmgLockAngle_Min";
+            TXT_EmgLockAngle_Min.ReadOnly = true;
             TXT_EmgLockAngle_Min.Size = new Size(100, 25);
             TXT_EmgLockAngle_Min.TabIndex = 24;
             // 
@@ -3760,6 +4033,7 @@
             TXT_EmgLockTorque_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_EmgLockTorque_Actual.Location = new Point(566, 24);
             TXT_EmgLockTorque_Actual.Name = "TXT_EmgLockTorque_Actual";
+            TXT_EmgLockTorque_Actual.ReadOnly = true;
             TXT_EmgLockTorque_Actual.Size = new Size(100, 25);
             TXT_EmgLockTorque_Actual.TabIndex = 23;
             // 
@@ -3768,6 +4042,7 @@
             TXT_EmgLockTorque_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_EmgLockTorque_Min.Location = new Point(308, 24);
             TXT_EmgLockTorque_Min.Name = "TXT_EmgLockTorque_Min";
+            TXT_EmgLockTorque_Min.ReadOnly = true;
             TXT_EmgLockTorque_Min.Size = new Size(100, 25);
             TXT_EmgLockTorque_Min.TabIndex = 21;
             // 
@@ -3776,6 +4051,7 @@
             TXT_EmgLockTorque_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_EmgLockTorque_Max.Location = new Point(440, 24);
             TXT_EmgLockTorque_Max.Name = "TXT_EmgLockTorque_Max";
+            TXT_EmgLockTorque_Max.ReadOnly = true;
             TXT_EmgLockTorque_Max.Size = new Size(100, 25);
             TXT_EmgLockTorque_Max.TabIndex = 22;
             // 
@@ -3809,6 +4085,7 @@
             TXT_ChildUnlockTravel_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_ChildUnlockTravel_Actual.Location = new Point(566, 110);
             TXT_ChildUnlockTravel_Actual.Name = "TXT_ChildUnlockTravel_Actual";
+            TXT_ChildUnlockTravel_Actual.ReadOnly = true;
             TXT_ChildUnlockTravel_Actual.Size = new Size(100, 25);
             TXT_ChildUnlockTravel_Actual.TabIndex = 56;
             // 
@@ -3826,6 +4103,7 @@
             TXT_ChildUnlockTravel_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_ChildUnlockTravel_Max.Location = new Point(440, 110);
             TXT_ChildUnlockTravel_Max.Name = "TXT_ChildUnlockTravel_Max";
+            TXT_ChildUnlockTravel_Max.ReadOnly = true;
             TXT_ChildUnlockTravel_Max.Size = new Size(100, 25);
             TXT_ChildUnlockTravel_Max.TabIndex = 55;
             // 
@@ -3843,6 +4121,7 @@
             TXT_ChildUnlockTravel_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_ChildUnlockTravel_Min.Location = new Point(308, 110);
             TXT_ChildUnlockTravel_Min.Name = "TXT_ChildUnlockTravel_Min";
+            TXT_ChildUnlockTravel_Min.ReadOnly = true;
             TXT_ChildUnlockTravel_Min.Size = new Size(100, 25);
             TXT_ChildUnlockTravel_Min.TabIndex = 54;
             // 
@@ -3860,6 +4139,7 @@
             TXT_ChildUnlockEffort_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_ChildUnlockEffort_Actual.Location = new Point(566, 79);
             TXT_ChildUnlockEffort_Actual.Name = "TXT_ChildUnlockEffort_Actual";
+            TXT_ChildUnlockEffort_Actual.ReadOnly = true;
             TXT_ChildUnlockEffort_Actual.Size = new Size(100, 25);
             TXT_ChildUnlockEffort_Actual.TabIndex = 53;
             // 
@@ -3868,6 +4148,7 @@
             TXT_ChildUnlockEffort_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_ChildUnlockEffort_Max.Location = new Point(440, 79);
             TXT_ChildUnlockEffort_Max.Name = "TXT_ChildUnlockEffort_Max";
+            TXT_ChildUnlockEffort_Max.ReadOnly = true;
             TXT_ChildUnlockEffort_Max.Size = new Size(100, 25);
             TXT_ChildUnlockEffort_Max.TabIndex = 52;
             // 
@@ -3885,6 +4166,7 @@
             TXT_ChildUnlockEffort_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_ChildUnlockEffort_Min.Location = new Point(308, 79);
             TXT_ChildUnlockEffort_Min.Name = "TXT_ChildUnlockEffort_Min";
+            TXT_ChildUnlockEffort_Min.ReadOnly = true;
             TXT_ChildUnlockEffort_Min.Size = new Size(100, 25);
             TXT_ChildUnlockEffort_Min.TabIndex = 51;
             // 
@@ -3893,6 +4175,7 @@
             TXT_ChildLockEffort_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_ChildLockEffort_Min.Location = new Point(308, 16);
             TXT_ChildLockEffort_Min.Name = "TXT_ChildLockEffort_Min";
+            TXT_ChildLockEffort_Min.ReadOnly = true;
             TXT_ChildLockEffort_Min.Size = new Size(100, 25);
             TXT_ChildLockEffort_Min.TabIndex = 45;
             // 
@@ -3901,6 +4184,7 @@
             TXT_ChildLockTravel_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_ChildLockTravel_Actual.Location = new Point(566, 47);
             TXT_ChildLockTravel_Actual.Name = "TXT_ChildLockTravel_Actual";
+            TXT_ChildLockTravel_Actual.ReadOnly = true;
             TXT_ChildLockTravel_Actual.Size = new Size(100, 25);
             TXT_ChildLockTravel_Actual.TabIndex = 50;
             // 
@@ -3909,6 +4193,7 @@
             TXT_ChildLockEffort_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_ChildLockEffort_Max.Location = new Point(440, 16);
             TXT_ChildLockEffort_Max.Name = "TXT_ChildLockEffort_Max";
+            TXT_ChildLockEffort_Max.ReadOnly = true;
             TXT_ChildLockEffort_Max.Size = new Size(100, 25);
             TXT_ChildLockEffort_Max.TabIndex = 46;
             // 
@@ -3917,6 +4202,7 @@
             TXT_ChildLockTravel_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_ChildLockTravel_Max.Location = new Point(440, 47);
             TXT_ChildLockTravel_Max.Name = "TXT_ChildLockTravel_Max";
+            TXT_ChildLockTravel_Max.ReadOnly = true;
             TXT_ChildLockTravel_Max.Size = new Size(100, 25);
             TXT_ChildLockTravel_Max.TabIndex = 49;
             // 
@@ -3925,6 +4211,7 @@
             TXT_ChildLockEffort_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_ChildLockEffort_Actual.Location = new Point(566, 16);
             TXT_ChildLockEffort_Actual.Name = "TXT_ChildLockEffort_Actual";
+            TXT_ChildLockEffort_Actual.ReadOnly = true;
             TXT_ChildLockEffort_Actual.Size = new Size(100, 25);
             TXT_ChildLockEffort_Actual.TabIndex = 47;
             // 
@@ -3933,6 +4220,7 @@
             TXT_ChildLockTravel_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_ChildLockTravel_Min.Location = new Point(308, 47);
             TXT_ChildLockTravel_Min.Name = "TXT_ChildLockTravel_Min";
+            TXT_ChildLockTravel_Min.ReadOnly = true;
             TXT_ChildLockTravel_Min.Size = new Size(100, 25);
             TXT_ChildLockTravel_Min.TabIndex = 48;
             // 
@@ -3982,6 +4270,7 @@
             TXT_KeyUnlockFullTravel_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyUnlockFullTravel_Actual.Location = new Point(566, 231);
             TXT_KeyUnlockFullTravel_Actual.Name = "TXT_KeyUnlockFullTravel_Actual";
+            TXT_KeyUnlockFullTravel_Actual.ReadOnly = true;
             TXT_KeyUnlockFullTravel_Actual.Size = new Size(100, 25);
             TXT_KeyUnlockFullTravel_Actual.TabIndex = 44;
             // 
@@ -3990,6 +4279,7 @@
             TXT_KeyUnlockFullTravel_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyUnlockFullTravel_Max.Location = new Point(440, 231);
             TXT_KeyUnlockFullTravel_Max.Name = "TXT_KeyUnlockFullTravel_Max";
+            TXT_KeyUnlockFullTravel_Max.ReadOnly = true;
             TXT_KeyUnlockFullTravel_Max.Size = new Size(100, 25);
             TXT_KeyUnlockFullTravel_Max.TabIndex = 43;
             // 
@@ -3998,6 +4288,7 @@
             TXT_KeyUnlockFullTravel_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyUnlockFullTravel_Min.Location = new Point(308, 231);
             TXT_KeyUnlockFullTravel_Min.Name = "TXT_KeyUnlockFullTravel_Min";
+            TXT_KeyUnlockFullTravel_Min.ReadOnly = true;
             TXT_KeyUnlockFullTravel_Min.Size = new Size(100, 25);
             TXT_KeyUnlockFullTravel_Min.TabIndex = 42;
             // 
@@ -4006,6 +4297,7 @@
             TXT_KeyUnlockLockTravel_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyUnlockLockTravel_Actual.Location = new Point(566, 202);
             TXT_KeyUnlockLockTravel_Actual.Name = "TXT_KeyUnlockLockTravel_Actual";
+            TXT_KeyUnlockLockTravel_Actual.ReadOnly = true;
             TXT_KeyUnlockLockTravel_Actual.Size = new Size(100, 25);
             TXT_KeyUnlockLockTravel_Actual.TabIndex = 41;
             // 
@@ -4014,6 +4306,7 @@
             TXT_KeyUnlockLockTravel_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyUnlockLockTravel_Max.Location = new Point(440, 202);
             TXT_KeyUnlockLockTravel_Max.Name = "TXT_KeyUnlockLockTravel_Max";
+            TXT_KeyUnlockLockTravel_Max.ReadOnly = true;
             TXT_KeyUnlockLockTravel_Max.Size = new Size(100, 25);
             TXT_KeyUnlockLockTravel_Max.TabIndex = 40;
             // 
@@ -4022,6 +4315,7 @@
             TXT_KeyUnlockLockTravel_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyUnlockLockTravel_Min.Location = new Point(308, 202);
             TXT_KeyUnlockLockTravel_Min.Name = "TXT_KeyUnlockLockTravel_Min";
+            TXT_KeyUnlockLockTravel_Min.ReadOnly = true;
             TXT_KeyUnlockLockTravel_Min.Size = new Size(100, 25);
             TXT_KeyUnlockLockTravel_Min.TabIndex = 39;
             // 
@@ -4030,6 +4324,7 @@
             TXT_KeyUnlockPreTravel_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyUnlockPreTravel_Actual.Location = new Point(566, 173);
             TXT_KeyUnlockPreTravel_Actual.Name = "TXT_KeyUnlockPreTravel_Actual";
+            TXT_KeyUnlockPreTravel_Actual.ReadOnly = true;
             TXT_KeyUnlockPreTravel_Actual.Size = new Size(100, 25);
             TXT_KeyUnlockPreTravel_Actual.TabIndex = 38;
             // 
@@ -4038,6 +4333,7 @@
             TXT_KeyUnlockPreTravel_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyUnlockPreTravel_Max.Location = new Point(440, 173);
             TXT_KeyUnlockPreTravel_Max.Name = "TXT_KeyUnlockPreTravel_Max";
+            TXT_KeyUnlockPreTravel_Max.ReadOnly = true;
             TXT_KeyUnlockPreTravel_Max.Size = new Size(100, 25);
             TXT_KeyUnlockPreTravel_Max.TabIndex = 37;
             // 
@@ -4046,6 +4342,7 @@
             TXT_KeyUnlockPreTravel_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyUnlockPreTravel_Min.Location = new Point(308, 173);
             TXT_KeyUnlockPreTravel_Min.Name = "TXT_KeyUnlockPreTravel_Min";
+            TXT_KeyUnlockPreTravel_Min.ReadOnly = true;
             TXT_KeyUnlockPreTravel_Min.Size = new Size(100, 25);
             TXT_KeyUnlockPreTravel_Min.TabIndex = 36;
             // 
@@ -4054,6 +4351,7 @@
             TXT_KeyUnlockEffort_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyUnlockEffort_Actual.Location = new Point(566, 142);
             TXT_KeyUnlockEffort_Actual.Name = "TXT_KeyUnlockEffort_Actual";
+            TXT_KeyUnlockEffort_Actual.ReadOnly = true;
             TXT_KeyUnlockEffort_Actual.Size = new Size(100, 25);
             TXT_KeyUnlockEffort_Actual.TabIndex = 35;
             // 
@@ -4062,6 +4360,7 @@
             TXT_KeyUnlockEffort_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyUnlockEffort_Max.Location = new Point(440, 142);
             TXT_KeyUnlockEffort_Max.Name = "TXT_KeyUnlockEffort_Max";
+            TXT_KeyUnlockEffort_Max.ReadOnly = true;
             TXT_KeyUnlockEffort_Max.Size = new Size(100, 25);
             TXT_KeyUnlockEffort_Max.TabIndex = 34;
             // 
@@ -4070,6 +4369,7 @@
             TXT_KeyUnlockEffort_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyUnlockEffort_Min.Location = new Point(308, 142);
             TXT_KeyUnlockEffort_Min.Name = "TXT_KeyUnlockEffort_Min";
+            TXT_KeyUnlockEffort_Min.ReadOnly = true;
             TXT_KeyUnlockEffort_Min.Size = new Size(100, 25);
             TXT_KeyUnlockEffort_Min.TabIndex = 33;
             // 
@@ -4078,6 +4378,7 @@
             TXT_KeyLockFullTravel_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyLockFullTravel_Actual.Location = new Point(566, 112);
             TXT_KeyLockFullTravel_Actual.Name = "TXT_KeyLockFullTravel_Actual";
+            TXT_KeyLockFullTravel_Actual.ReadOnly = true;
             TXT_KeyLockFullTravel_Actual.Size = new Size(100, 25);
             TXT_KeyLockFullTravel_Actual.TabIndex = 32;
             // 
@@ -4086,6 +4387,7 @@
             TXT_KeyLockFullTravel_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyLockFullTravel_Min.Location = new Point(440, 112);
             TXT_KeyLockFullTravel_Min.Name = "TXT_KeyLockFullTravel_Min";
+            TXT_KeyLockFullTravel_Min.ReadOnly = true;
             TXT_KeyLockFullTravel_Min.Size = new Size(100, 25);
             TXT_KeyLockFullTravel_Min.TabIndex = 31;
             // 
@@ -4094,6 +4396,7 @@
             TXT_KeyLockFullTravel_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyLockFullTravel_Max.Location = new Point(308, 112);
             TXT_KeyLockFullTravel_Max.Name = "TXT_KeyLockFullTravel_Max";
+            TXT_KeyLockFullTravel_Max.ReadOnly = true;
             TXT_KeyLockFullTravel_Max.Size = new Size(100, 25);
             TXT_KeyLockFullTravel_Max.TabIndex = 30;
             // 
@@ -4102,6 +4405,7 @@
             TXT_KeyLockLockTravel_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyLockLockTravel_Actual.Location = new Point(566, 81);
             TXT_KeyLockLockTravel_Actual.Name = "TXT_KeyLockLockTravel_Actual";
+            TXT_KeyLockLockTravel_Actual.ReadOnly = true;
             TXT_KeyLockLockTravel_Actual.Size = new Size(100, 25);
             TXT_KeyLockLockTravel_Actual.TabIndex = 29;
             // 
@@ -4110,6 +4414,7 @@
             TXT_KeyLockLockTravel_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyLockLockTravel_Max.Location = new Point(440, 81);
             TXT_KeyLockLockTravel_Max.Name = "TXT_KeyLockLockTravel_Max";
+            TXT_KeyLockLockTravel_Max.ReadOnly = true;
             TXT_KeyLockLockTravel_Max.Size = new Size(100, 25);
             TXT_KeyLockLockTravel_Max.TabIndex = 28;
             // 
@@ -4118,6 +4423,7 @@
             TXT_KeyLockLockTravel_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyLockLockTravel_Min.Location = new Point(308, 81);
             TXT_KeyLockLockTravel_Min.Name = "TXT_KeyLockLockTravel_Min";
+            TXT_KeyLockLockTravel_Min.ReadOnly = true;
             TXT_KeyLockLockTravel_Min.Size = new Size(100, 25);
             TXT_KeyLockLockTravel_Min.TabIndex = 27;
             // 
@@ -4126,6 +4432,7 @@
             TXT_KeyLockPreTravel_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyLockPreTravel_Actual.Location = new Point(566, 49);
             TXT_KeyLockPreTravel_Actual.Name = "TXT_KeyLockPreTravel_Actual";
+            TXT_KeyLockPreTravel_Actual.ReadOnly = true;
             TXT_KeyLockPreTravel_Actual.Size = new Size(100, 25);
             TXT_KeyLockPreTravel_Actual.TabIndex = 26;
             // 
@@ -4134,6 +4441,7 @@
             TXT_KeyLockPreTravel_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyLockPreTravel_Max.Location = new Point(440, 49);
             TXT_KeyLockPreTravel_Max.Name = "TXT_KeyLockPreTravel_Max";
+            TXT_KeyLockPreTravel_Max.ReadOnly = true;
             TXT_KeyLockPreTravel_Max.Size = new Size(100, 25);
             TXT_KeyLockPreTravel_Max.TabIndex = 25;
             // 
@@ -4142,6 +4450,7 @@
             TXT_KeyLockPreTravel_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyLockPreTravel_Min.Location = new Point(308, 49);
             TXT_KeyLockPreTravel_Min.Name = "TXT_KeyLockPreTravel_Min";
+            TXT_KeyLockPreTravel_Min.ReadOnly = true;
             TXT_KeyLockPreTravel_Min.Size = new Size(100, 25);
             TXT_KeyLockPreTravel_Min.TabIndex = 24;
             // 
@@ -4150,6 +4459,7 @@
             TXT_KeyLockEffort_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyLockEffort_Actual.Location = new Point(566, 18);
             TXT_KeyLockEffort_Actual.Name = "TXT_KeyLockEffort_Actual";
+            TXT_KeyLockEffort_Actual.ReadOnly = true;
             TXT_KeyLockEffort_Actual.Size = new Size(100, 25);
             TXT_KeyLockEffort_Actual.TabIndex = 23;
             // 
@@ -4158,6 +4468,7 @@
             TXT_KeyLockEffort_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyLockEffort_Max.Location = new Point(440, 18);
             TXT_KeyLockEffort_Max.Name = "TXT_KeyLockEffort_Max";
+            TXT_KeyLockEffort_Max.ReadOnly = true;
             TXT_KeyLockEffort_Max.Size = new Size(100, 25);
             TXT_KeyLockEffort_Max.TabIndex = 22;
             // 
@@ -4166,6 +4477,7 @@
             TXT_KeyLockEffort_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_KeyLockEffort_Min.Location = new Point(308, 18);
             TXT_KeyLockEffort_Min.Name = "TXT_KeyLockEffort_Min";
+            TXT_KeyLockEffort_Min.ReadOnly = true;
             TXT_KeyLockEffort_Min.Size = new Size(100, 25);
             TXT_KeyLockEffort_Min.TabIndex = 21;
             // 
@@ -4263,6 +4575,7 @@
             TXT_PowerUnlockCurrent_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_PowerUnlockCurrent_Actual.Location = new Point(566, 54);
             TXT_PowerUnlockCurrent_Actual.Name = "TXT_PowerUnlockCurrent_Actual";
+            TXT_PowerUnlockCurrent_Actual.ReadOnly = true;
             TXT_PowerUnlockCurrent_Actual.Size = new Size(100, 25);
             TXT_PowerUnlockCurrent_Actual.TabIndex = 20;
             // 
@@ -4271,6 +4584,7 @@
             TXT_PowerUnlockCurrent_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_PowerUnlockCurrent_Max.Location = new Point(440, 54);
             TXT_PowerUnlockCurrent_Max.Name = "TXT_PowerUnlockCurrent_Max";
+            TXT_PowerUnlockCurrent_Max.ReadOnly = true;
             TXT_PowerUnlockCurrent_Max.Size = new Size(100, 25);
             TXT_PowerUnlockCurrent_Max.TabIndex = 19;
             // 
@@ -4279,6 +4593,7 @@
             TXT_PowerUnlockCurrent_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_PowerUnlockCurrent_Min.Location = new Point(308, 54);
             TXT_PowerUnlockCurrent_Min.Name = "TXT_PowerUnlockCurrent_Min";
+            TXT_PowerUnlockCurrent_Min.ReadOnly = true;
             TXT_PowerUnlockCurrent_Min.Size = new Size(100, 25);
             TXT_PowerUnlockCurrent_Min.TabIndex = 18;
             // 
@@ -4287,6 +4602,7 @@
             TXT_PowerLockCurrent_Actual.BorderStyle = BorderStyle.FixedSingle;
             TXT_PowerLockCurrent_Actual.Location = new Point(566, 23);
             TXT_PowerLockCurrent_Actual.Name = "TXT_PowerLockCurrent_Actual";
+            TXT_PowerLockCurrent_Actual.ReadOnly = true;
             TXT_PowerLockCurrent_Actual.Size = new Size(100, 25);
             TXT_PowerLockCurrent_Actual.TabIndex = 17;
             // 
@@ -4304,6 +4620,7 @@
             TXT_PowerLockCurrent_Max.BorderStyle = BorderStyle.FixedSingle;
             TXT_PowerLockCurrent_Max.Location = new Point(440, 23);
             TXT_PowerLockCurrent_Max.Name = "TXT_PowerLockCurrent_Max";
+            TXT_PowerLockCurrent_Max.ReadOnly = true;
             TXT_PowerLockCurrent_Max.Size = new Size(100, 25);
             TXT_PowerLockCurrent_Max.TabIndex = 16;
             // 
@@ -4312,6 +4629,7 @@
             TXT_PowerLockCurrent_Min.BorderStyle = BorderStyle.FixedSingle;
             TXT_PowerLockCurrent_Min.Location = new Point(308, 23);
             TXT_PowerLockCurrent_Min.Name = "TXT_PowerLockCurrent_Min";
+            TXT_PowerLockCurrent_Min.ReadOnly = true;
             TXT_PowerLockCurrent_Min.Size = new Size(100, 25);
             TXT_PowerLockCurrent_Min.TabIndex = 15;
             // 
