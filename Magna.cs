@@ -107,58 +107,73 @@ namespace Magna_TestApplication
         {
             foreach (var map in _plcMappings)
             {
-                // Determine the TextBox name based on the same naming convention
-                string textBoxName = GetConfigTextBoxName(map);
-                if (string.IsNullOrWhiteSpace(textBoxName)) continue;
+                // -------- Primary register --------
+                string tb1 = GetConfigTextBoxName(map, second: false);
+                if (!string.IsNullOrWhiteSpace(tb1))
+                {
+                    Control[] found = this.Controls.Find(tb1, true);
+                    if (found.Length > 0 && found[0] is TextBox t1)
+                        t1.Text = map.RegisterAddress;
+                }
 
-                Control[] found = this.Controls.Find(textBoxName, true);
-                if (found.Length == 0 || found[0] is not TextBox txtBox) continue;
-
-                txtBox.Text = map.RegisterAddress;
+                // -------- Paired register (only for Float32) --------
+                if (map.DataType == "Float32")
+                {
+                    string tb2 = GetConfigTextBoxName(map, second: true);
+                    if (!string.IsNullOrWhiteSpace(tb2))
+                    {
+                        Control[] found = this.Controls.Find(tb2, true);
+                        if (found.Length > 0 && found[0] is TextBox t2)
+                            t2.Text = map.RegisterAddress2;
+                    }
+                }
             }
 
-            // Also populate special fields
-            PLC_IP_Addr.Text = PLC_IP.Text;      // if you want the config tab to show it
+            // IP / Port
+            PLC_IP_Addr.Text = PLC_IP.Text;
             PLC_Port_Addr.Text = PLC_Port.Text;
         }
 
-        private string GetConfigTextBoxName(PlcRegisterMap map)
+        /// <summary>
+        /// Returns the TextBox name for a register mapping.
+        /// When <paramref name="second"/> is true, returns the paired "…_2" TextBox
+        /// (only used for Float32 mappings which occupy two registers).
+        /// </summary>
+        private string GetConfigTextBoxName(PlcRegisterMap map, bool second = false)
+        {
+            string baseName = GetConfigTextBoxNameInternal(map);
+            if (string.IsNullOrWhiteSpace(baseName)) return null;
+
+            return second ? baseName + "_2" : baseName;
+        }
+
+        /// <summary>
+        /// Internal helper — same naming logic as before.
+        /// </summary>
+        private string GetConfigTextBoxNameInternal(PlcRegisterMap map)
         {
             if (map == null) return null;
 
-            // ---------------------------------------------
             // 1. Meta registers (Result / Variant / Shift / Sequence Start)
-            //    These have LogGroup = "FT" or "TET" and ParameterName starting with "FT_" or "TET_"
-            // ---------------------------------------------
             if (!string.IsNullOrWhiteSpace(map.LogGroup)
                 && (map.ParameterName.StartsWith("FT_") || map.ParameterName.StartsWith("TET_")))
             {
-                // e.g. "FT_Result"              → "TXT_Result_FT"
-                //      "TET_Sequence Start"      → "TXT_SequenceStart_TET"
-                //      "FT_Sequence Start Acknowledgement" → "TXT_SequenceStartAcknowledgement_FT"
-
                 string pn = map.ParameterName.Replace(" ", "").Replace("-", "_");
-
-                string group = map.LogGroup;               // "FT" or "TET"
-                string prefix = group + "_";               // "FT_" or "TET_"
+                string group = map.LogGroup;
+                string prefix = group + "_";
 
                 if (pn.StartsWith(prefix))
                 {
-                    string body = pn.Substring(prefix.Length);   // remove "FT_" / "TET_"
+                    string body = pn.Substring(prefix.Length);
                     return "TXT_" + body + "_" + group;
                 }
             }
 
-            // ---------------------------------------------
-            // 2. Measurements (SealLoad_Max, InsideLockEffort_Min, etc.)
-            // ---------------------------------------------
+            // 2. Measurements
             if (!string.IsNullOrWhiteSpace(map.LogPropertyName))
                 return "TXT_" + map.LogPropertyName;
 
-            // ---------------------------------------------
-            // 3. Pure status registers (Communication, FT_Sequence Start Ack control, etc.)
-            //    Fall back to ParameterName
-            // ---------------------------------------------
+            // 3. Fallback to ParameterName
             if (!string.IsNullOrWhiteSpace(map.ParameterName))
             {
                 string pn = map.ParameterName.Replace(" ", "").Replace("-", "_");
@@ -175,19 +190,47 @@ namespace Magna_TestApplication
 
             foreach (var map in mappings)
             {
-                // Key priority: LogPropertyName first, then ParameterName
-                string key = !string.IsNullOrWhiteSpace(map.LogPropertyName)
-                    ? map.LogPropertyName
-                    : map.ParameterName;
-
+                string key = GetConfigKey(map);
                 if (string.IsNullOrWhiteSpace(key)) continue;
 
-                if (overrides.TryGetValue(key, out string newAddress)
-                    && !string.IsNullOrWhiteSpace(newAddress))
+                // Primary register
+                if (overrides.TryGetValue(key, out string addr1) && !string.IsNullOrWhiteSpace(addr1))
+                    map.RegisterAddress = addr1;
+
+                // Paired register (Float32 only)
+                if (map.DataType == "Float32")
                 {
-                    map.RegisterAddress = newAddress;
+                    if (overrides.TryGetValue(key + "_2", out string addr2)
+                        && !string.IsNullOrWhiteSpace(addr2))
+                    {
+                        map.RegisterAddress2 = addr2;
+                    }
                 }
             }
+        }
+
+        /// <summary>
+        /// Builds the config key used in plc_config.json.
+        /// Same logic as GetConfigTextBoxName but WITHOUT the "TXT_" prefix
+        /// and WITHOUT group suffix for meta — keeps it stable and unique.
+        /// </summary>
+        private string GetConfigKey(PlcRegisterMap map)
+        {
+            if (map == null) return null;
+
+            // Meta with FT/TET prefix → use ParameterName as-is
+            if (!string.IsNullOrWhiteSpace(map.LogGroup)
+                && (map.ParameterName.StartsWith("FT_") || map.ParameterName.StartsWith("TET_")))
+            {
+                return map.ParameterName.Replace(" ", "").Replace("-", "_");
+            }
+
+            // Measurements → LogPropertyName
+            if (!string.IsNullOrWhiteSpace(map.LogPropertyName))
+                return map.LogPropertyName;
+
+            // Fallback
+            return map.ParameterName?.Replace(" ", "").Replace("-", "_");
         }
 
         private void PlcDataTimerCallback(object state)
@@ -200,12 +243,8 @@ namespace Magna_TestApplication
                 if (!_plcService.IsConnected || _plcMappings.Count == 0)
                     return;
 
-                var addresses = _plcMappings
-                    .Select(m => m.RegisterAddress)
-                    .Distinct()
-                    .ToList();
-
-                var plcValues = _plcService.ReadMultipleRegisters(addresses);
+                // NEW: pass mappings directly so PlcService can read floats.
+                var plcValues = _plcService.ReadMultipleRegisters(_plcMappings);
 
                 // --- FT edge detection ---
                 bool ftComplete = plcValues.TryGetValue("D102", out string ft) && ft == "1";
@@ -220,7 +259,7 @@ namespace Magna_TestApplication
                 }
 
                 // --- TET edge detection ---
-                bool tetComplete = plcValues.TryGetValue("D158", out string tet) && tet == "1";
+                bool tetComplete = plcValues.TryGetValue("D209", out string tet) && tet == "1";
                 if (tetComplete && !_wasTetSequenceActive)
                 {
                     SaveTetSnapshot(plcValues);
@@ -231,7 +270,6 @@ namespace Magna_TestApplication
                     _wasTetSequenceActive = false;
                 }
 
-                // --- Home page live update ---
                 this.Invoke(new Action(() => UpdateUiFromPlc(plcValues)));
             }
             catch (Exception ex)
@@ -507,14 +545,9 @@ namespace Magna_TestApplication
             {
                 if (!_plcService.IsConnected || _plcMappings.Count == 0) return;
 
-                var addresses = _plcMappings
-                    .Select(m => m.RegisterAddress)
-                    .Distinct()
-                    .ToList();
+                // NEW: pass mappings directly
+                var plcValues = _plcService.ReadMultipleRegisters(_plcMappings);
 
-                var plcValues = _plcService.ReadMultipleRegisters(addresses);
-
-                // Update Home page on the UI thread
                 this.Invoke(new Action(() => UpdateUiFromPlc(plcValues)));
 
                 Console.WriteLine($"[Initial Read] Read {plcValues.Count} values from PLC");
@@ -1227,33 +1260,51 @@ namespace Magna_TestApplication
             {
                 var overrides = new Dictionary<string, string>();
 
-                // =========================================================
-                // 1. Collect all register overrides from TextBoxes
-                // =========================================================
                 foreach (var map in _plcMappings)
                 {
-                    string textBoxName = GetConfigTextBoxName(map);
-                    if (string.IsNullOrWhiteSpace(textBoxName)) continue;
+                    string key = GetConfigKey(map);
+                    if (string.IsNullOrWhiteSpace(key)) continue;
 
-                    Control[] found = this.Controls.Find(textBoxName, true);
-                    if (found.Length == 0 || found[0] is not TextBox txtBox) continue;
-
-                    string newAddress = txtBox.Text.Trim().ToUpper();
-
-                    if (!IsValidPlcAddress(newAddress))
+                    // -------- Primary register --------
+                    string tb1 = GetConfigTextBoxName(map, second: false);
+                    if (!string.IsNullOrWhiteSpace(tb1))
                     {
-                        MessageBox.Show($"Invalid PLC address: '{newAddress}' for {map.ParameterName}",
-                                        "Validation Error",
-                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
+                        Control[] f1 = this.Controls.Find(tb1, true);
+                        if (f1.Length > 0 && f1[0] is TextBox t1)
+                        {
+                            string addr1 = t1.Text.Trim().ToUpper();
+                            if (!IsValidPlcAddress(addr1))
+                            {
+                                MessageBox.Show($"Invalid PLC address: '{addr1}' for {map.ParameterName}",
+                                                "Validation Error",
+                                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                return;
+                            }
+                            overrides[key] = addr1;
+                        }
                     }
 
-                    string key = !string.IsNullOrWhiteSpace(map.LogPropertyName)
-                        ? map.LogPropertyName
-                        : map.ParameterName;
-
-                    if (!string.IsNullOrWhiteSpace(key))
-                        overrides[key] = newAddress;
+                    // -------- Paired register (Float32 only) --------
+                    if (map.DataType == "Float32")
+                    {
+                        string tb2 = GetConfigTextBoxName(map, second: true);
+                        if (!string.IsNullOrWhiteSpace(tb2))
+                        {
+                            Control[] f2 = this.Controls.Find(tb2, true);
+                            if (f2.Length > 0 && f2[0] is TextBox t2)
+                            {
+                                string addr2 = t2.Text.Trim().ToUpper();
+                                if (!IsValidPlcAddress(addr2))
+                                {
+                                    MessageBox.Show($"Invalid PLC address: '{addr2}' for {map.ParameterName} (paired)",
+                                                    "Validation Error",
+                                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    return;
+                                }
+                                overrides[key + "_2"] = addr2;
+                            }
+                        }
+                    }
                 }
 
                 // =========================================================

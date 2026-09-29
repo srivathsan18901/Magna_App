@@ -158,9 +158,45 @@ namespace Magna_TestApplication.services
             return _isConnected && _plc != null;
         }
 
+        /// <summary>
+        /// Reads a 32-bit float from two consecutive PLC registers.
+        /// </summary>
+        public float? ReadFloat(string lowWordAddress, string highWordAddress)
+        {
+            lock (_lockObject)
+            {
+                if (!CheckPlcConnection()) return null;
 
-        // Inside PlcService.cs
-        public Dictionary<string, string> ReadMultipleRegisters(List<string> addresses)
+                string low = FormatAddress(lowWordAddress);
+                string high = FormatAddress(highWordAddress);
+                if (low == null || high == null) return null;
+
+                try
+                {
+                    var lowResult = _plc.ReadUInt16(low);
+                    var highResult = _plc.ReadUInt16(high);
+
+                    if (!lowResult.IsSuccess || !highResult.IsSuccess)
+                        return null;
+
+                    // Combine: Mitsubishi typically stores LOW word first, HIGH word second.
+                    // If your PLC does it the other way, swap the arguments below.
+                    uint combined = ((uint)highResult.Content << 16) | lowResult.Content;
+
+                    // Convert raw bits to float
+                    byte[] bytes = BitConverter.GetBytes(combined);
+                    return BitConverter.ToSingle(bytes, 0);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"ReadFloat error ({low},{high}): {ex.Message}");
+                    return null;
+                }
+            }
+        }
+
+
+        public Dictionary<string, string> ReadMultipleRegisters(List<PlcRegisterMap> maps)
         {
             var results = new Dictionary<string, string>();
 
@@ -168,30 +204,32 @@ namespace Magna_TestApplication.services
             {
                 if (!CheckPlcConnection()) return results;
 
-                foreach (var address in addresses)
+                foreach (var map in maps)
                 {
-                    string formatted = FormatAddress(address);
-                    if (formatted == null) continue;
-
                     try
                     {
-                        // Read as UInt16 (Word) since most of your D registers are numeric values
-                        var read = _plc.ReadUInt16(formatted);
-                        if (read.IsSuccess)
+                        if (map.DataType == "Float32" && !string.IsNullOrWhiteSpace(map.RegisterAddress2))
                         {
-                            results[address] = read.Content.ToString();
+                            var f = ReadFloat(map.RegisterAddress, map.RegisterAddress2);
+                            results[map.RegisterAddress] = f.HasValue
+                                ? f.Value.ToString("0.####")
+                                : "ERR";
                         }
                         else
                         {
-                            results[address] = "ERR";
+                            var read = _plc.ReadUInt16(map.RegisterAddress);
+                            results[map.RegisterAddress] = read.IsSuccess
+                                ? read.Content.ToString()
+                                : "ERR";
                         }
                     }
                     catch
                     {
-                        results[address] = "ERR";
+                        results[map.RegisterAddress] = "ERR";
                     }
                 }
             }
+
             return results;
         }
     }
