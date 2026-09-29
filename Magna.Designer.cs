@@ -415,7 +415,7 @@
             label71 = new Label();
             label72 = new Label();
             groupBox13 = new GroupBox();
-            TXT_EmgLockAngle_Actaul_2 = new TextBox();
+            TXT_EmgLockAngle_Actual_2 = new TextBox();
             TXT_EmgLockAngle_Max_2 = new TextBox();
             TXT_EmgLockTorque_Actual_2 = new TextBox();
             TXT_EmgLockTorque_Max_2 = new TextBox();
@@ -3173,7 +3173,7 @@
             tabPage4.Name = "tabPage4";
             tabPage4.Size = new Size(1597, 826);
             tabPage4.TabIndex = 0;
-            tabPage4.Text = "PLC_Config";
+            tabPage4.Text = "Configuration";
             tabPage4.UseVisualStyleBackColor = true;
             // 
             // panel11
@@ -4409,7 +4409,7 @@
             // 
             // groupBox13
             // 
-            groupBox13.Controls.Add(TXT_EmgLockAngle_Actaul_2);
+            groupBox13.Controls.Add(TXT_EmgLockAngle_Actual_2);
             groupBox13.Controls.Add(TXT_EmgLockAngle_Max_2);
             groupBox13.Controls.Add(TXT_EmgLockTorque_Actual_2);
             groupBox13.Controls.Add(TXT_EmgLockTorque_Max_2);
@@ -4430,14 +4430,14 @@
             groupBox13.TabStop = false;
             groupBox13.Text = "Emergency Lock";
             // 
-            // TXT_EmgLockAngle_Actaul_2
+            // TXT_EmgLockAngle_Actual_2
             // 
-            TXT_EmgLockAngle_Actaul_2.BackColor = Color.White;
-            TXT_EmgLockAngle_Actaul_2.BorderStyle = BorderStyle.FixedSingle;
-            TXT_EmgLockAngle_Actaul_2.Location = new Point(609, 55);
-            TXT_EmgLockAngle_Actaul_2.Name = "TXT_EmgLockAngle_Actaul_2";
-            TXT_EmgLockAngle_Actaul_2.Size = new Size(50, 25);
-            TXT_EmgLockAngle_Actaul_2.TabIndex = 32;
+            TXT_EmgLockAngle_Actual_2.BackColor = Color.White;
+            TXT_EmgLockAngle_Actual_2.BorderStyle = BorderStyle.FixedSingle;
+            TXT_EmgLockAngle_Actual_2.Location = new Point(609, 55);
+            TXT_EmgLockAngle_Actual_2.Name = "TXT_EmgLockAngle_Actual_2";
+            TXT_EmgLockAngle_Actual_2.Size = new Size(50, 25);
+            TXT_EmgLockAngle_Actual_2.TabIndex = 32;
             // 
             // TXT_EmgLockAngle_Max_2
             // 
@@ -6124,7 +6124,7 @@
         private TextBox TXT_InsideLockTravel_Min_2;
         private TextBox TXT_SealLoad_Actual_2;
         private TextBox TXT_SealLoad_Max_2;
-        private TextBox TXT_EmgLockAngle_Actaul_2;
+        private TextBox TXT_EmgLockAngle_Actual_2;
         private TextBox TXT_EmgLockAngle_Max_2;
         private TextBox TXT_EmgLockTorque_Actual_2;
         private TextBox TXT_EmgLockTorque_Max_2;
