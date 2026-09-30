@@ -111,6 +111,7 @@
   "EmgLockAngle_Min": "D204",
   "EmgLockAngle_Min_2": "D205",
   "EmgLockAngle_Actual": "D206",
+  "EmgLockAngle_Actual_2": "D207",
   "InsideLockEffort_Max": "D213",
   "InsideLockEffort_Max_2": "D214",
   "InsideLockEffort_Min": "D215",
@@ -183,6 +184,6 @@
   "OutsideReleaseFullTravel_Min_2": "D282",
   "OutsideReleaseFullTravel_Actual": "D283",
   "OutsideReleaseFullTravel_Actual_2": "D284",
-  "PLC_IP": "192.168.3.116",
+  "PLC_IP": "192.168.3.111",
   "PLC_Port": "502"
 }
