@@ -4,9 +4,11 @@
     {
         public int Id { get; set; }
         public DateTime LoggedAt { get; set; }
+
+        public int SNo { get; set; }
         public string Shift { get; set; } = "";
         public string Variant { get; set; } = "";
-        public string SerialNumber { get; set; } = "";
+        //public string SerialNumber { get; set; } = "";
         public string Result { get; set; } = "";
 
         // Travel & Endurance measurements

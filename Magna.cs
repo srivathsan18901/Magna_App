@@ -288,8 +288,9 @@ namespace Magna_TestApplication
             {
                 var log = new FunctionalTestLogRecord
                 {
+                    SNo = GetNextTetSNo(),
                     LoggedAt = DateTime.Now,
-                    SerialNumber = GenerateSerialNumber()
+
                 };
 
                 FillFromMappings(log, plcValues, "FT");
@@ -304,14 +305,23 @@ namespace Magna_TestApplication
             }
         }
 
+        private int GetNextTetSNo()
+        {
+            var logs = _jsonLogService.GetTetLogs(
+                DateTime.Today,
+                DateTime.Today.AddDays(1).AddSeconds(-1));
+
+            return logs.Count + 1;
+        }
+
         private void SaveTetSnapshot(Dictionary<string, string> plcValues)
         {
             try
             {
                 var log = new TravelEnduranceLogRecord
                 {
+                    SNo = GetNextTetSNo(),
                     LoggedAt = DateTime.Now,
-                    SerialNumber = GenerateSerialNumber()
                 };
 
                 FillFromMappings(log, plcValues, "TET");
@@ -374,14 +384,6 @@ namespace Magna_TestApplication
             return double.TryParse(value, out double result) ? result : 0;
         }
 
-        /// <summary>
-        /// Generates a unique serial number. Replace this with real PLC data if available.
-        /// </summary>
-        private string GenerateSerialNumber()
-        {
-            // Format: SN-YYYYMMDD-HHMMSS-XXX
-            return $"SN-{DateTime.Now:yyyyMMdd-HHmmss}-{new Random().Next(100, 999)}";
-        }
 
         // --- NEW: Dynamic UI Update Logic ---
         private void UpdateUiFromPlc(Dictionary<string, string> plcValues)
@@ -753,6 +755,174 @@ namespace Magna_TestApplication
             FormatTetGrid();
         }
 
+        private void FormatGridColumns(DataGridView grid)
+        {
+            if (grid == null || grid.Columns.Count == 0)
+                return;
+
+            // =========================================================
+            // GRID SETTINGS
+            // =========================================================
+
+            // Keep horizontal scrolling
+            grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            grid.ScrollBars = ScrollBars.Both;
+
+            // Allow header text wrapping
+            grid.ColumnHeadersDefaultCellStyle.WrapMode =
+                DataGridViewTriState.True;
+
+            grid.ColumnHeadersDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
+
+            // Allow header height to be calculated automatically
+            grid.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+
+            // =========================================================
+            // COLUMN SETTINGS
+            // =========================================================
+
+            foreach (DataGridViewColumn col in grid.Columns)
+            {
+                if (!col.Visible)
+                    continue;
+
+                string propertyName = col.DataPropertyName;
+
+                if (string.IsNullOrWhiteSpace(propertyName))
+                    propertyName = col.Name;
+
+                // -----------------------------------------------------
+                // Hide internal ID
+                // -----------------------------------------------------
+
+                if (propertyName.Equals(
+                    "Id",
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    col.Visible = false;
+                    continue;
+                }
+
+                // -----------------------------------------------------
+                // BASIC COLUMNS
+                // -----------------------------------------------------
+
+                if (propertyName.Equals(
+                    "SNo",
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    col.Width = 60;
+                }
+                else if (propertyName.Equals(
+                    "Date",
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    col.Width = 100;
+                }
+                else if (propertyName.Equals(
+                    "Time",
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    col.Width = 90;
+                }
+                else if (propertyName.Equals(
+                    "Shift",
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    col.Width = 70;
+                }
+                else if (propertyName.Equals(
+                    "Variant",
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    col.Width = 120;
+                }
+                else if (propertyName.Equals(
+                    "Result",
+                    StringComparison.OrdinalIgnoreCase))
+                {
+                    col.Width = 80;
+                }
+                else
+                {
+                    // -------------------------------------------------
+                    // MEASUREMENT COLUMNS
+                    // -------------------------------------------------
+
+                    col.Width = 145;
+                }
+
+                // -----------------------------------------------------
+                // HEADER TEXT
+                // -----------------------------------------------------
+
+                col.HeaderText = MakeReadableHeader(propertyName);
+
+                // Force wrapping
+                col.HeaderCell.Style.WrapMode =
+                    DataGridViewTriState.True;
+
+                // Header alignment
+                col.HeaderCell.Style.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+
+                // Cell alignment
+                col.DefaultCellStyle.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+            }
+
+            // =========================================================
+            // FORCE HEADER HEIGHT RECALCULATION
+            // =========================================================
+
+            grid.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        }
+
+        private string MakeReadableHeader(string propertyName)
+        {
+            if (string.IsNullOrWhiteSpace(propertyName))
+                return "";
+
+            switch (propertyName)
+            {
+                case "SNo":
+                    return "S.No";
+
+                case "Date":
+                    return "Date";
+
+                case "Time":
+                    return "Time";
+
+                case "Shift":
+                    return "Shift";
+
+                case "Variant":
+                    return "Variant";
+
+                case "Result":
+                    return "Result";
+
+                default:
+                    break;
+            }
+
+            // Replace underscores with spaces
+            string header = propertyName.Replace("_", " ");
+
+            // Put "Actual" on a separate line
+            header = header.Replace(" Actual", "\nActual");
+
+            // Put "Min" / "Max" on separate lines
+            header = header.Replace(" Min", "\nMin");
+            header = header.Replace(" Max", "\nMax");
+
+            return header;
+        }
+
         private void FormatFTGrid()
         {
             if (FT_DGV.Columns.Count == 0)
@@ -761,11 +931,11 @@ namespace Magna_TestApplication
             var visibleProps = new HashSet<string>(
                 StringComparer.OrdinalIgnoreCase)
     {
+        "SNo",
         "Date",
         "Time",
         "Shift",
         "Variant",
-        "SerialNumber",
         "Result"
     };
 
@@ -778,32 +948,26 @@ namespace Magna_TestApplication
                 visibleProps.Add(map.LogPropertyName);
             }
 
+            // Set visibility
             foreach (DataGridViewColumn col in FT_DGV.Columns)
             {
-                if (col.Visible)
-                {
-                    col.HeaderCell.Style.WrapMode =
-                        DataGridViewTriState.True;
-
-                    col.MinimumWidth = 80;
-                }
-            }
-
-            foreach (DataGridViewColumn col in FT_DGV.Columns)
-            {
-                // IMPORTANT:
-                // Use DataPropertyName, NOT column Name
                 string propertyName = col.DataPropertyName;
 
                 if (string.IsNullOrWhiteSpace(propertyName))
                     propertyName = col.Name;
 
                 col.Visible =
-                    !string.Equals(propertyName, "Id",
+                    !string.Equals(
+                        propertyName,
+                        "Id",
                         StringComparison.OrdinalIgnoreCase)
                     && visibleProps.Contains(propertyName);
             }
 
+            // Apply width + header formatting
+            FormatGridColumns(FT_DGV);
+
+            // FAIL row coloring
             FT_DGV.RowPrePaint -= FT_DGV_RowPrePaint;
             FT_DGV.RowPrePaint += FT_DGV_RowPrePaint;
         }
@@ -816,11 +980,11 @@ namespace Magna_TestApplication
             var visibleProps = new HashSet<string>(
                 StringComparer.OrdinalIgnoreCase)
     {
+        "SNo",
         "Date",
         "Time",
         "Shift",
         "Variant",
-        "SerialNumber",
         "Result"
     };
 
@@ -833,32 +997,26 @@ namespace Magna_TestApplication
                 visibleProps.Add(map.LogPropertyName);
             }
 
+            // Set visibility
             foreach (DataGridViewColumn col in TET_DGV.Columns)
             {
-                if (col.Visible)
-                {
-                    col.HeaderCell.Style.WrapMode =
-                        DataGridViewTriState.True;
-
-                    col.MinimumWidth = 80;
-                }
-            }
-
-            foreach (DataGridViewColumn col in TET_DGV.Columns)
-            {
-                // IMPORTANT:
-                // Use DataPropertyName
                 string propertyName = col.DataPropertyName;
 
                 if (string.IsNullOrWhiteSpace(propertyName))
                     propertyName = col.Name;
 
                 col.Visible =
-                    !string.Equals(propertyName, "Id",
+                    !string.Equals(
+                        propertyName,
+                        "Id",
                         StringComparison.OrdinalIgnoreCase)
                     && visibleProps.Contains(propertyName);
             }
 
+            // Apply width + header formatting
+            FormatGridColumns(TET_DGV);
+
+            // FAIL row coloring
             TET_DGV.RowPrePaint -= TET_DGV_RowPrePaint;
             TET_DGV.RowPrePaint += TET_DGV_RowPrePaint;
         }
@@ -945,7 +1103,7 @@ namespace Magna_TestApplication
                 LoggedAt = DateTime.Now,
                 Shift = new[] { "A", "B", "C" }[_rng.Next(3)],
                 Variant = new[] { "MAGNA-X1", "MAGNA-X2" }[_rng.Next(2)],
-                SerialNumber = GenerateSerialNumber(),
+                SNo = GetNextTetSNo(),
                 Result = "PASS"
             };
 
@@ -1044,7 +1202,7 @@ namespace Magna_TestApplication
                 LoggedAt = DateTime.Now,
                 Shift = new[] { "A", "B", "C" }[_rng.Next(3)],
                 Variant = new[] { "MAGNA-X1", "MAGNA-X2" }[_rng.Next(2)],
-                SerialNumber = GenerateSerialNumber(),
+                SNo = GetNextTetSNo(),
                 Result = "PASS"
             };
 
@@ -1109,7 +1267,7 @@ namespace Magna_TestApplication
                 // 3. NEW: Push the record to Home page TextBoxes
                 PushFtToHomePage(log);
 
-                Console.WriteLine($"✔ Sample FT inserted: {log.SerialNumber} [{log.Result}]");
+                Console.WriteLine($"✔ Sample FT inserted: {log.SNo} [{log.Result}]");
             }
             catch (Exception ex)
             {
@@ -1130,7 +1288,7 @@ namespace Magna_TestApplication
                 // NEW: Push to Home page
                 PushTetToHomePage(log);
 
-                Console.WriteLine($"✔ Sample TET inserted: {log.SerialNumber} [{log.Result}]");
+                Console.WriteLine($"✔ Sample TET inserted: {log.SNo} [{log.Result}]");
             }
             catch (Exception ex)
             {
