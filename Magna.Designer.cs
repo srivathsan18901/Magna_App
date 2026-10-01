@@ -267,8 +267,144 @@
             tabPage3 = new TabPage();
             panel4 = new Panel();
             groupBox2 = new GroupBox();
+            button1 = new Button();
+            textBox91 = new TextBox();
+            label135 = new Label();
+            textBox92 = new TextBox();
+            label136 = new Label();
+            textBox93 = new TextBox();
+            label137 = new Label();
+            groupBox21 = new GroupBox();
+            textBox4 = new TextBox();
+            label3 = new Label();
+            textBox5 = new TextBox();
+            label4 = new Label();
+            textBox6 = new TextBox();
+            label5 = new Label();
+            textBox58 = new TextBox();
+            textBox59 = new TextBox();
+            label123 = new Label();
+            textBox60 = new TextBox();
+            textBox61 = new TextBox();
+            textBox62 = new TextBox();
+            textBox63 = new TextBox();
+            textBox64 = new TextBox();
+            textBox65 = new TextBox();
+            textBox66 = new TextBox();
+            groupBox22 = new GroupBox();
+            textBox67 = new TextBox();
+            label124 = new Label();
+            textBox68 = new TextBox();
+            label125 = new Label();
+            textBox69 = new TextBox();
+            label126 = new Label();
+            textBox70 = new TextBox();
+            textBox71 = new TextBox();
+            label127 = new Label();
+            textBox72 = new TextBox();
+            textBox73 = new TextBox();
+            textBox74 = new TextBox();
+            textBox75 = new TextBox();
+            textBox76 = new TextBox();
+            textBox77 = new TextBox();
+            textBox78 = new TextBox();
+            label128 = new Label();
+            groupBox23 = new GroupBox();
+            textBox79 = new TextBox();
+            label129 = new Label();
+            textBox80 = new TextBox();
+            label130 = new Label();
+            textBox81 = new TextBox();
+            label131 = new Label();
+            textBox82 = new TextBox();
+            textBox83 = new TextBox();
+            label132 = new Label();
+            textBox84 = new TextBox();
+            textBox85 = new TextBox();
+            textBox86 = new TextBox();
+            textBox87 = new TextBox();
+            textBox88 = new TextBox();
+            textBox89 = new TextBox();
+            textBox90 = new TextBox();
+            label133 = new Label();
+            label134 = new Label();
             groupBox1 = new GroupBox();
             button2 = new Button();
+            textBox7 = new TextBox();
+            textBox8 = new TextBox();
+            textBox9 = new TextBox();
+            label103 = new Label();
+            label104 = new Label();
+            label105 = new Label();
+            groupBox17 = new GroupBox();
+            textBox10 = new TextBox();
+            textBox11 = new TextBox();
+            label106 = new Label();
+            textBox12 = new TextBox();
+            label107 = new Label();
+            textBox13 = new TextBox();
+            textBox14 = new TextBox();
+            textBox15 = new TextBox();
+            groupBox18 = new GroupBox();
+            textBox16 = new TextBox();
+            label108 = new Label();
+            textBox17 = new TextBox();
+            label109 = new Label();
+            textBox18 = new TextBox();
+            label110 = new Label();
+            textBox19 = new TextBox();
+            textBox20 = new TextBox();
+            label111 = new Label();
+            textBox21 = new TextBox();
+            textBox22 = new TextBox();
+            textBox23 = new TextBox();
+            textBox24 = new TextBox();
+            textBox25 = new TextBox();
+            textBox26 = new TextBox();
+            textBox27 = new TextBox();
+            groupBox19 = new GroupBox();
+            textBox28 = new TextBox();
+            textBox29 = new TextBox();
+            textBox30 = new TextBox();
+            textBox31 = new TextBox();
+            textBox32 = new TextBox();
+            textBox33 = new TextBox();
+            textBox34 = new TextBox();
+            textBox35 = new TextBox();
+            textBox36 = new TextBox();
+            textBox37 = new TextBox();
+            textBox38 = new TextBox();
+            textBox39 = new TextBox();
+            textBox40 = new TextBox();
+            textBox41 = new TextBox();
+            textBox42 = new TextBox();
+            textBox43 = new TextBox();
+            textBox44 = new TextBox();
+            textBox45 = new TextBox();
+            textBox46 = new TextBox();
+            textBox47 = new TextBox();
+            textBox48 = new TextBox();
+            textBox49 = new TextBox();
+            textBox50 = new TextBox();
+            textBox51 = new TextBox();
+            label112 = new Label();
+            label113 = new Label();
+            label114 = new Label();
+            label115 = new Label();
+            label116 = new Label();
+            label117 = new Label();
+            label118 = new Label();
+            label119 = new Label();
+            groupBox20 = new GroupBox();
+            textBox52 = new TextBox();
+            textBox53 = new TextBox();
+            textBox54 = new TextBox();
+            textBox55 = new TextBox();
+            label120 = new Label();
+            textBox56 = new TextBox();
+            textBox57 = new TextBox();
+            label121 = new Label();
+            label122 = new Label();
             textBox3 = new TextBox();
             Result = new Label();
             textBox2 = new TextBox();
@@ -525,142 +661,6 @@
             label88 = new Label();
             label89 = new Label();
             label90 = new Label();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            label103 = new Label();
-            label104 = new Label();
-            label105 = new Label();
-            groupBox17 = new GroupBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            label106 = new Label();
-            textBox12 = new TextBox();
-            label107 = new Label();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
-            groupBox18 = new GroupBox();
-            textBox16 = new TextBox();
-            label108 = new Label();
-            textBox17 = new TextBox();
-            label109 = new Label();
-            textBox18 = new TextBox();
-            label110 = new Label();
-            textBox19 = new TextBox();
-            textBox20 = new TextBox();
-            label111 = new Label();
-            textBox21 = new TextBox();
-            textBox22 = new TextBox();
-            textBox23 = new TextBox();
-            textBox24 = new TextBox();
-            textBox25 = new TextBox();
-            textBox26 = new TextBox();
-            textBox27 = new TextBox();
-            groupBox19 = new GroupBox();
-            textBox28 = new TextBox();
-            textBox29 = new TextBox();
-            textBox30 = new TextBox();
-            textBox31 = new TextBox();
-            textBox32 = new TextBox();
-            textBox33 = new TextBox();
-            textBox34 = new TextBox();
-            textBox35 = new TextBox();
-            textBox36 = new TextBox();
-            textBox37 = new TextBox();
-            textBox38 = new TextBox();
-            textBox39 = new TextBox();
-            textBox40 = new TextBox();
-            textBox41 = new TextBox();
-            textBox42 = new TextBox();
-            textBox43 = new TextBox();
-            textBox44 = new TextBox();
-            textBox45 = new TextBox();
-            textBox46 = new TextBox();
-            textBox47 = new TextBox();
-            textBox48 = new TextBox();
-            textBox49 = new TextBox();
-            textBox50 = new TextBox();
-            textBox51 = new TextBox();
-            label112 = new Label();
-            label113 = new Label();
-            label114 = new Label();
-            label115 = new Label();
-            label116 = new Label();
-            label117 = new Label();
-            label118 = new Label();
-            label119 = new Label();
-            groupBox20 = new GroupBox();
-            textBox52 = new TextBox();
-            textBox53 = new TextBox();
-            textBox54 = new TextBox();
-            textBox55 = new TextBox();
-            label120 = new Label();
-            textBox56 = new TextBox();
-            textBox57 = new TextBox();
-            label121 = new Label();
-            label122 = new Label();
-            groupBox21 = new GroupBox();
-            textBox4 = new TextBox();
-            label3 = new Label();
-            textBox5 = new TextBox();
-            label4 = new Label();
-            textBox6 = new TextBox();
-            label5 = new Label();
-            textBox58 = new TextBox();
-            textBox59 = new TextBox();
-            label123 = new Label();
-            textBox60 = new TextBox();
-            textBox61 = new TextBox();
-            textBox62 = new TextBox();
-            textBox63 = new TextBox();
-            textBox64 = new TextBox();
-            textBox65 = new TextBox();
-            textBox66 = new TextBox();
-            groupBox22 = new GroupBox();
-            textBox67 = new TextBox();
-            label124 = new Label();
-            textBox68 = new TextBox();
-            label125 = new Label();
-            textBox69 = new TextBox();
-            label126 = new Label();
-            textBox70 = new TextBox();
-            textBox71 = new TextBox();
-            label127 = new Label();
-            textBox72 = new TextBox();
-            textBox73 = new TextBox();
-            textBox74 = new TextBox();
-            textBox75 = new TextBox();
-            textBox76 = new TextBox();
-            textBox77 = new TextBox();
-            textBox78 = new TextBox();
-            label128 = new Label();
-            groupBox23 = new GroupBox();
-            textBox79 = new TextBox();
-            label129 = new Label();
-            textBox80 = new TextBox();
-            label130 = new Label();
-            textBox81 = new TextBox();
-            label131 = new Label();
-            textBox82 = new TextBox();
-            textBox83 = new TextBox();
-            label132 = new Label();
-            textBox84 = new TextBox();
-            textBox85 = new TextBox();
-            textBox86 = new TextBox();
-            textBox87 = new TextBox();
-            textBox88 = new TextBox();
-            textBox89 = new TextBox();
-            textBox90 = new TextBox();
-            label133 = new Label();
-            label134 = new Label();
-            button1 = new Button();
-            textBox91 = new TextBox();
-            label135 = new Label();
-            textBox92 = new TextBox();
-            label136 = new Label();
-            textBox93 = new TextBox();
-            label137 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)QR_PB).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -686,7 +686,14 @@
             tabPage3.SuspendLayout();
             panel4.SuspendLayout();
             groupBox2.SuspendLayout();
+            groupBox21.SuspendLayout();
+            groupBox22.SuspendLayout();
+            groupBox23.SuspendLayout();
             groupBox1.SuspendLayout();
+            groupBox17.SuspendLayout();
+            groupBox18.SuspendLayout();
+            groupBox19.SuspendLayout();
+            groupBox20.SuspendLayout();
             tabPage4.SuspendLayout();
             panel11.SuspendLayout();
             panel9.SuspendLayout();
@@ -698,13 +705,6 @@
             groupBox14.SuspendLayout();
             groupBox15.SuspendLayout();
             groupBox16.SuspendLayout();
-            groupBox17.SuspendLayout();
-            groupBox18.SuspendLayout();
-            groupBox19.SuspendLayout();
-            groupBox20.SuspendLayout();
-            groupBox21.SuspendLayout();
-            groupBox22.SuspendLayout();
-            groupBox23.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -3150,6 +3150,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.Anchor = AnchorStyles.None;
             groupBox2.BackColor = Color.Transparent;
             groupBox2.Controls.Add(button1);
             groupBox2.Controls.Add(textBox91);
@@ -3171,8 +3172,639 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Travel and Endurance Test";
             // 
+            // button1
+            // 
+            button1.Location = new Point(605, 36);
+            button1.Name = "button1";
+            button1.Size = new Size(84, 31);
+            button1.TabIndex = 72;
+            button1.Text = "Enter";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox91
+            // 
+            textBox91.BorderStyle = BorderStyle.FixedSingle;
+            textBox91.Location = new Point(489, 41);
+            textBox91.Name = "textBox91";
+            textBox91.Size = new Size(100, 25);
+            textBox91.TabIndex = 70;
+            // 
+            // label135
+            // 
+            label135.AutoSize = true;
+            label135.Location = new Point(427, 43);
+            label135.Name = "label135";
+            label135.Size = new Size(46, 17);
+            label135.TabIndex = 71;
+            label135.Text = "Result";
+            // 
+            // textBox92
+            // 
+            textBox92.BorderStyle = BorderStyle.FixedSingle;
+            textBox92.Location = new Point(300, 41);
+            textBox92.Name = "textBox92";
+            textBox92.Size = new Size(100, 25);
+            textBox92.TabIndex = 68;
+            // 
+            // label136
+            // 
+            label136.AutoSize = true;
+            label136.Location = new Point(237, 43);
+            label136.Name = "label136";
+            label136.Size = new Size(52, 17);
+            label136.TabIndex = 69;
+            label136.Text = "Varient";
+            // 
+            // textBox93
+            // 
+            textBox93.BorderStyle = BorderStyle.FixedSingle;
+            textBox93.Location = new Point(122, 41);
+            textBox93.Name = "textBox93";
+            textBox93.Size = new Size(100, 25);
+            textBox93.TabIndex = 66;
+            // 
+            // label137
+            // 
+            label137.AutoSize = true;
+            label137.Location = new Point(66, 43);
+            label137.Name = "label137";
+            label137.Size = new Size(37, 17);
+            label137.TabIndex = 67;
+            label137.Text = "Shift";
+            // 
+            // groupBox21
+            // 
+            groupBox21.Controls.Add(textBox4);
+            groupBox21.Controls.Add(label3);
+            groupBox21.Controls.Add(textBox5);
+            groupBox21.Controls.Add(label4);
+            groupBox21.Controls.Add(textBox6);
+            groupBox21.Controls.Add(label5);
+            groupBox21.Controls.Add(textBox58);
+            groupBox21.Controls.Add(textBox59);
+            groupBox21.Controls.Add(label123);
+            groupBox21.Controls.Add(textBox60);
+            groupBox21.Controls.Add(textBox61);
+            groupBox21.Controls.Add(textBox62);
+            groupBox21.Controls.Add(textBox63);
+            groupBox21.Controls.Add(textBox64);
+            groupBox21.Controls.Add(textBox65);
+            groupBox21.Controls.Add(textBox66);
+            groupBox21.Location = new Point(21, 427);
+            groupBox21.Name = "groupBox21";
+            groupBox21.Size = new Size(716, 140);
+            groupBox21.TabIndex = 65;
+            groupBox21.TabStop = false;
+            groupBox21.Text = "Outside Release";
+            // 
+            // textBox4
+            // 
+            textBox4.BackColor = Color.White;
+            textBox4.BorderStyle = BorderStyle.FixedSingle;
+            textBox4.Location = new Point(566, 110);
+            textBox4.Name = "textBox4";
+            textBox4.RightToLeft = RightToLeft.No;
+            textBox4.Size = new Size(100, 25);
+            textBox4.TabIndex = 56;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(20, 110);
+            label3.Name = "label3";
+            label3.Size = new Size(216, 17);
+            label3.TabIndex = 11;
+            label3.Text = "Outside release - Full travel (MM)";
+            // 
+            // textBox5
+            // 
+            textBox5.BackColor = Color.White;
+            textBox5.BorderStyle = BorderStyle.FixedSingle;
+            textBox5.Location = new Point(440, 110);
+            textBox5.Name = "textBox5";
+            textBox5.RightToLeft = RightToLeft.No;
+            textBox5.Size = new Size(100, 25);
+            textBox5.TabIndex = 55;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(20, 56);
+            label4.Name = "label4";
+            label4.Size = new Size(213, 17);
+            label4.TabIndex = 10;
+            label4.Text = "Outside release - Pre travel (MM)";
+            // 
+            // textBox6
+            // 
+            textBox6.BackColor = Color.White;
+            textBox6.BorderStyle = BorderStyle.FixedSingle;
+            textBox6.Location = new Point(308, 110);
+            textBox6.Name = "textBox6";
+            textBox6.RightToLeft = RightToLeft.No;
+            textBox6.Size = new Size(100, 25);
+            textBox6.TabIndex = 54;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(20, 83);
+            label5.Name = "label5";
+            label5.Size = new Size(239, 17);
+            label5.TabIndex = 8;
+            label5.Text = "Outside release - Release travel (MM)";
+            // 
+            // textBox58
+            // 
+            textBox58.BackColor = Color.White;
+            textBox58.BorderStyle = BorderStyle.FixedSingle;
+            textBox58.Location = new Point(566, 79);
+            textBox58.Name = "textBox58";
+            textBox58.RightToLeft = RightToLeft.No;
+            textBox58.Size = new Size(100, 25);
+            textBox58.TabIndex = 53;
+            // 
+            // textBox59
+            // 
+            textBox59.BackColor = Color.White;
+            textBox59.BorderStyle = BorderStyle.FixedSingle;
+            textBox59.Location = new Point(440, 79);
+            textBox59.Name = "textBox59";
+            textBox59.RightToLeft = RightToLeft.No;
+            textBox59.Size = new Size(100, 25);
+            textBox59.TabIndex = 52;
+            // 
+            // label123
+            // 
+            label123.AutoSize = true;
+            label123.Location = new Point(20, 29);
+            label123.Name = "label123";
+            label123.Size = new Size(175, 17);
+            label123.TabIndex = 6;
+            label123.Text = "Outside release - Effort (N)";
+            // 
+            // textBox60
+            // 
+            textBox60.BackColor = Color.White;
+            textBox60.BorderStyle = BorderStyle.FixedSingle;
+            textBox60.Location = new Point(308, 79);
+            textBox60.Name = "textBox60";
+            textBox60.RightToLeft = RightToLeft.No;
+            textBox60.Size = new Size(100, 25);
+            textBox60.TabIndex = 51;
+            // 
+            // textBox61
+            // 
+            textBox61.BackColor = Color.White;
+            textBox61.BorderStyle = BorderStyle.FixedSingle;
+            textBox61.Location = new Point(308, 16);
+            textBox61.Name = "textBox61";
+            textBox61.RightToLeft = RightToLeft.No;
+            textBox61.Size = new Size(100, 25);
+            textBox61.TabIndex = 45;
+            // 
+            // textBox62
+            // 
+            textBox62.BackColor = Color.White;
+            textBox62.BorderStyle = BorderStyle.FixedSingle;
+            textBox62.Location = new Point(566, 47);
+            textBox62.Name = "textBox62";
+            textBox62.RightToLeft = RightToLeft.No;
+            textBox62.Size = new Size(100, 25);
+            textBox62.TabIndex = 50;
+            // 
+            // textBox63
+            // 
+            textBox63.BackColor = Color.White;
+            textBox63.BorderStyle = BorderStyle.FixedSingle;
+            textBox63.Location = new Point(440, 16);
+            textBox63.Name = "textBox63";
+            textBox63.RightToLeft = RightToLeft.No;
+            textBox63.Size = new Size(100, 25);
+            textBox63.TabIndex = 46;
+            // 
+            // textBox64
+            // 
+            textBox64.BackColor = Color.White;
+            textBox64.BorderStyle = BorderStyle.FixedSingle;
+            textBox64.Location = new Point(440, 47);
+            textBox64.Name = "textBox64";
+            textBox64.RightToLeft = RightToLeft.No;
+            textBox64.Size = new Size(100, 25);
+            textBox64.TabIndex = 49;
+            // 
+            // textBox65
+            // 
+            textBox65.BackColor = Color.White;
+            textBox65.BorderStyle = BorderStyle.FixedSingle;
+            textBox65.Location = new Point(566, 16);
+            textBox65.Name = "textBox65";
+            textBox65.RightToLeft = RightToLeft.No;
+            textBox65.Size = new Size(100, 25);
+            textBox65.TabIndex = 47;
+            // 
+            // textBox66
+            // 
+            textBox66.BackColor = Color.White;
+            textBox66.BorderStyle = BorderStyle.FixedSingle;
+            textBox66.Location = new Point(308, 47);
+            textBox66.Name = "textBox66";
+            textBox66.RightToLeft = RightToLeft.No;
+            textBox66.Size = new Size(100, 25);
+            textBox66.TabIndex = 48;
+            // 
+            // groupBox22
+            // 
+            groupBox22.Controls.Add(textBox67);
+            groupBox22.Controls.Add(label124);
+            groupBox22.Controls.Add(textBox68);
+            groupBox22.Controls.Add(label125);
+            groupBox22.Controls.Add(textBox69);
+            groupBox22.Controls.Add(label126);
+            groupBox22.Controls.Add(textBox70);
+            groupBox22.Controls.Add(textBox71);
+            groupBox22.Controls.Add(label127);
+            groupBox22.Controls.Add(textBox72);
+            groupBox22.Controls.Add(textBox73);
+            groupBox22.Controls.Add(textBox74);
+            groupBox22.Controls.Add(textBox75);
+            groupBox22.Controls.Add(textBox76);
+            groupBox22.Controls.Add(textBox77);
+            groupBox22.Controls.Add(textBox78);
+            groupBox22.Location = new Point(21, 263);
+            groupBox22.Name = "groupBox22";
+            groupBox22.Size = new Size(716, 140);
+            groupBox22.TabIndex = 64;
+            groupBox22.TabStop = false;
+            groupBox22.Text = "Inside Release";
+            // 
+            // textBox67
+            // 
+            textBox67.BackColor = Color.White;
+            textBox67.BorderStyle = BorderStyle.FixedSingle;
+            textBox67.Location = new Point(566, 110);
+            textBox67.Name = "textBox67";
+            textBox67.RightToLeft = RightToLeft.No;
+            textBox67.Size = new Size(100, 25);
+            textBox67.TabIndex = 56;
+            // 
+            // label124
+            // 
+            label124.AutoSize = true;
+            label124.Location = new Point(20, 110);
+            label124.Name = "label124";
+            label124.Size = new Size(205, 17);
+            label124.TabIndex = 11;
+            label124.Text = "Inside release - Full travel (MM)";
+            // 
+            // textBox68
+            // 
+            textBox68.BackColor = Color.White;
+            textBox68.BorderStyle = BorderStyle.FixedSingle;
+            textBox68.Location = new Point(440, 110);
+            textBox68.Name = "textBox68";
+            textBox68.RightToLeft = RightToLeft.No;
+            textBox68.Size = new Size(100, 25);
+            textBox68.TabIndex = 55;
+            // 
+            // label125
+            // 
+            label125.AutoSize = true;
+            label125.Location = new Point(20, 56);
+            label125.Name = "label125";
+            label125.Size = new Size(202, 17);
+            label125.TabIndex = 10;
+            label125.Text = "Inside release - Pre travel (MM)";
+            // 
+            // textBox69
+            // 
+            textBox69.BackColor = Color.White;
+            textBox69.BorderStyle = BorderStyle.FixedSingle;
+            textBox69.Location = new Point(308, 110);
+            textBox69.Name = "textBox69";
+            textBox69.RightToLeft = RightToLeft.No;
+            textBox69.Size = new Size(100, 25);
+            textBox69.TabIndex = 54;
+            // 
+            // label126
+            // 
+            label126.AutoSize = true;
+            label126.Location = new Point(20, 83);
+            label126.Name = "label126";
+            label126.Size = new Size(228, 17);
+            label126.TabIndex = 8;
+            label126.Text = "Inside release - Release travel (MM)";
+            // 
+            // textBox70
+            // 
+            textBox70.BackColor = Color.White;
+            textBox70.BorderStyle = BorderStyle.FixedSingle;
+            textBox70.Location = new Point(566, 79);
+            textBox70.Name = "textBox70";
+            textBox70.RightToLeft = RightToLeft.No;
+            textBox70.Size = new Size(100, 25);
+            textBox70.TabIndex = 53;
+            // 
+            // textBox71
+            // 
+            textBox71.BackColor = Color.White;
+            textBox71.BorderStyle = BorderStyle.FixedSingle;
+            textBox71.Location = new Point(440, 79);
+            textBox71.Name = "textBox71";
+            textBox71.RightToLeft = RightToLeft.No;
+            textBox71.Size = new Size(100, 25);
+            textBox71.TabIndex = 52;
+            // 
+            // label127
+            // 
+            label127.AutoSize = true;
+            label127.Location = new Point(20, 29);
+            label127.Name = "label127";
+            label127.Size = new Size(164, 17);
+            label127.TabIndex = 6;
+            label127.Text = "Inside release - Effort (N)";
+            // 
+            // textBox72
+            // 
+            textBox72.BackColor = Color.White;
+            textBox72.BorderStyle = BorderStyle.FixedSingle;
+            textBox72.Location = new Point(308, 79);
+            textBox72.Name = "textBox72";
+            textBox72.RightToLeft = RightToLeft.No;
+            textBox72.Size = new Size(100, 25);
+            textBox72.TabIndex = 51;
+            // 
+            // textBox73
+            // 
+            textBox73.BackColor = Color.White;
+            textBox73.BorderStyle = BorderStyle.FixedSingle;
+            textBox73.Location = new Point(308, 16);
+            textBox73.Name = "textBox73";
+            textBox73.RightToLeft = RightToLeft.No;
+            textBox73.Size = new Size(100, 25);
+            textBox73.TabIndex = 45;
+            // 
+            // textBox74
+            // 
+            textBox74.BackColor = Color.White;
+            textBox74.BorderStyle = BorderStyle.FixedSingle;
+            textBox74.Location = new Point(566, 47);
+            textBox74.Name = "textBox74";
+            textBox74.RightToLeft = RightToLeft.No;
+            textBox74.Size = new Size(100, 25);
+            textBox74.TabIndex = 50;
+            // 
+            // textBox75
+            // 
+            textBox75.BackColor = Color.White;
+            textBox75.BorderStyle = BorderStyle.FixedSingle;
+            textBox75.Location = new Point(440, 16);
+            textBox75.Name = "textBox75";
+            textBox75.RightToLeft = RightToLeft.No;
+            textBox75.Size = new Size(100, 25);
+            textBox75.TabIndex = 46;
+            // 
+            // textBox76
+            // 
+            textBox76.BackColor = Color.White;
+            textBox76.BorderStyle = BorderStyle.FixedSingle;
+            textBox76.Location = new Point(440, 47);
+            textBox76.Name = "textBox76";
+            textBox76.RightToLeft = RightToLeft.No;
+            textBox76.Size = new Size(100, 25);
+            textBox76.TabIndex = 49;
+            // 
+            // textBox77
+            // 
+            textBox77.BackColor = Color.White;
+            textBox77.BorderStyle = BorderStyle.FixedSingle;
+            textBox77.Location = new Point(566, 16);
+            textBox77.Name = "textBox77";
+            textBox77.RightToLeft = RightToLeft.No;
+            textBox77.Size = new Size(100, 25);
+            textBox77.TabIndex = 47;
+            // 
+            // textBox78
+            // 
+            textBox78.BackColor = Color.White;
+            textBox78.BorderStyle = BorderStyle.FixedSingle;
+            textBox78.Location = new Point(308, 47);
+            textBox78.Name = "textBox78";
+            textBox78.RightToLeft = RightToLeft.No;
+            textBox78.Size = new Size(100, 25);
+            textBox78.TabIndex = 48;
+            // 
+            // label128
+            // 
+            label128.AutoSize = true;
+            label128.Location = new Point(611, 79);
+            label128.Name = "label128";
+            label128.Size = new Size(47, 17);
+            label128.TabIndex = 62;
+            label128.Text = "Actual";
+            // 
+            // groupBox23
+            // 
+            groupBox23.Controls.Add(textBox79);
+            groupBox23.Controls.Add(label129);
+            groupBox23.Controls.Add(textBox80);
+            groupBox23.Controls.Add(label130);
+            groupBox23.Controls.Add(textBox81);
+            groupBox23.Controls.Add(label131);
+            groupBox23.Controls.Add(textBox82);
+            groupBox23.Controls.Add(textBox83);
+            groupBox23.Controls.Add(label132);
+            groupBox23.Controls.Add(textBox84);
+            groupBox23.Controls.Add(textBox85);
+            groupBox23.Controls.Add(textBox86);
+            groupBox23.Controls.Add(textBox87);
+            groupBox23.Controls.Add(textBox88);
+            groupBox23.Controls.Add(textBox89);
+            groupBox23.Controls.Add(textBox90);
+            groupBox23.Location = new Point(21, 104);
+            groupBox23.Name = "groupBox23";
+            groupBox23.Size = new Size(716, 140);
+            groupBox23.TabIndex = 63;
+            groupBox23.TabStop = false;
+            groupBox23.Text = "Inside Lock";
+            // 
+            // textBox79
+            // 
+            textBox79.BackColor = Color.White;
+            textBox79.BorderStyle = BorderStyle.FixedSingle;
+            textBox79.Location = new Point(566, 110);
+            textBox79.Name = "textBox79";
+            textBox79.RightToLeft = RightToLeft.No;
+            textBox79.Size = new Size(100, 25);
+            textBox79.TabIndex = 56;
+            // 
+            // label129
+            // 
+            label129.AutoSize = true;
+            label129.Location = new Point(20, 110);
+            label129.Name = "label129";
+            label129.Size = new Size(179, 17);
+            label129.TabIndex = 11;
+            label129.Text = "Inside Unlock - Travel (MM)";
+            // 
+            // textBox80
+            // 
+            textBox80.BackColor = Color.White;
+            textBox80.BorderStyle = BorderStyle.FixedSingle;
+            textBox80.Location = new Point(440, 110);
+            textBox80.Name = "textBox80";
+            textBox80.RightToLeft = RightToLeft.No;
+            textBox80.Size = new Size(100, 25);
+            textBox80.TabIndex = 55;
+            // 
+            // label130
+            // 
+            label130.AutoSize = true;
+            label130.Location = new Point(20, 56);
+            label130.Name = "label130";
+            label130.Size = new Size(165, 17);
+            label130.TabIndex = 10;
+            label130.Text = "Inside Lock - Travel (MM)";
+            // 
+            // textBox81
+            // 
+            textBox81.BackColor = Color.White;
+            textBox81.BorderStyle = BorderStyle.FixedSingle;
+            textBox81.Location = new Point(308, 110);
+            textBox81.Name = "textBox81";
+            textBox81.RightToLeft = RightToLeft.No;
+            textBox81.Size = new Size(100, 25);
+            textBox81.TabIndex = 54;
+            // 
+            // label131
+            // 
+            label131.AutoSize = true;
+            label131.Location = new Point(20, 82);
+            label131.Name = "label131";
+            label131.Size = new Size(163, 17);
+            label131.TabIndex = 8;
+            label131.Text = "Inside Unlock - Effort (N)";
+            // 
+            // textBox82
+            // 
+            textBox82.BackColor = Color.White;
+            textBox82.BorderStyle = BorderStyle.FixedSingle;
+            textBox82.Location = new Point(566, 79);
+            textBox82.Name = "textBox82";
+            textBox82.RightToLeft = RightToLeft.No;
+            textBox82.Size = new Size(100, 25);
+            textBox82.TabIndex = 53;
+            // 
+            // textBox83
+            // 
+            textBox83.BackColor = Color.White;
+            textBox83.BorderStyle = BorderStyle.FixedSingle;
+            textBox83.Location = new Point(440, 79);
+            textBox83.Name = "textBox83";
+            textBox83.RightToLeft = RightToLeft.No;
+            textBox83.Size = new Size(100, 25);
+            textBox83.TabIndex = 52;
+            // 
+            // label132
+            // 
+            label132.AutoSize = true;
+            label132.Location = new Point(20, 29);
+            label132.Name = "label132";
+            label132.Size = new Size(149, 17);
+            label132.TabIndex = 6;
+            label132.Text = "Inside Lock - Effort (N)";
+            // 
+            // textBox84
+            // 
+            textBox84.BackColor = Color.White;
+            textBox84.BorderStyle = BorderStyle.FixedSingle;
+            textBox84.Location = new Point(308, 79);
+            textBox84.Name = "textBox84";
+            textBox84.RightToLeft = RightToLeft.No;
+            textBox84.Size = new Size(100, 25);
+            textBox84.TabIndex = 51;
+            // 
+            // textBox85
+            // 
+            textBox85.BackColor = Color.White;
+            textBox85.BorderStyle = BorderStyle.FixedSingle;
+            textBox85.Location = new Point(308, 16);
+            textBox85.Name = "textBox85";
+            textBox85.RightToLeft = RightToLeft.No;
+            textBox85.Size = new Size(100, 25);
+            textBox85.TabIndex = 45;
+            // 
+            // textBox86
+            // 
+            textBox86.BackColor = Color.White;
+            textBox86.BorderStyle = BorderStyle.FixedSingle;
+            textBox86.Location = new Point(566, 47);
+            textBox86.Name = "textBox86";
+            textBox86.RightToLeft = RightToLeft.No;
+            textBox86.Size = new Size(100, 25);
+            textBox86.TabIndex = 50;
+            // 
+            // textBox87
+            // 
+            textBox87.BackColor = Color.White;
+            textBox87.BorderStyle = BorderStyle.FixedSingle;
+            textBox87.Location = new Point(440, 16);
+            textBox87.Name = "textBox87";
+            textBox87.RightToLeft = RightToLeft.No;
+            textBox87.Size = new Size(100, 25);
+            textBox87.TabIndex = 46;
+            // 
+            // textBox88
+            // 
+            textBox88.BackColor = Color.White;
+            textBox88.BorderStyle = BorderStyle.FixedSingle;
+            textBox88.Location = new Point(440, 47);
+            textBox88.Name = "textBox88";
+            textBox88.RightToLeft = RightToLeft.No;
+            textBox88.Size = new Size(100, 25);
+            textBox88.TabIndex = 49;
+            // 
+            // textBox89
+            // 
+            textBox89.BackColor = Color.White;
+            textBox89.BorderStyle = BorderStyle.FixedSingle;
+            textBox89.Location = new Point(566, 16);
+            textBox89.Name = "textBox89";
+            textBox89.RightToLeft = RightToLeft.No;
+            textBox89.Size = new Size(100, 25);
+            textBox89.TabIndex = 47;
+            // 
+            // textBox90
+            // 
+            textBox90.BackColor = Color.White;
+            textBox90.BorderStyle = BorderStyle.FixedSingle;
+            textBox90.Location = new Point(308, 47);
+            textBox90.Name = "textBox90";
+            textBox90.RightToLeft = RightToLeft.No;
+            textBox90.Size = new Size(100, 25);
+            textBox90.TabIndex = 48;
+            // 
+            // label133
+            // 
+            label133.AutoSize = true;
+            label133.Location = new Point(478, 79);
+            label133.Name = "label133";
+            label133.Size = new Size(70, 17);
+            label133.TabIndex = 61;
+            label133.Text = "Maximum";
+            // 
+            // label134
+            // 
+            label134.AutoSize = true;
+            label134.Location = new Point(345, 79);
+            label134.Name = "label134";
+            label134.Size = new Size(68, 17);
+            label134.TabIndex = 60;
+            label134.Text = "Minimum";
+            // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.None;
             groupBox1.BackColor = Color.Transparent;
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(textBox7);
@@ -3207,6 +3839,796 @@
             button2.TabIndex = 6;
             button2.Text = "Enter";
             button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox7
+            // 
+            textBox7.BackColor = Color.White;
+            textBox7.BorderStyle = BorderStyle.FixedSingle;
+            textBox7.Location = new Point(610, 104);
+            textBox7.Name = "textBox7";
+            textBox7.RightToLeft = RightToLeft.No;
+            textBox7.Size = new Size(100, 25);
+            textBox7.TabIndex = 25;
+            // 
+            // textBox8
+            // 
+            textBox8.BackColor = Color.White;
+            textBox8.BorderStyle = BorderStyle.FixedSingle;
+            textBox8.Location = new Point(484, 104);
+            textBox8.Name = "textBox8";
+            textBox8.RightToLeft = RightToLeft.No;
+            textBox8.Size = new Size(100, 25);
+            textBox8.TabIndex = 24;
+            // 
+            // textBox9
+            // 
+            textBox9.BackColor = Color.White;
+            textBox9.BorderStyle = BorderStyle.FixedSingle;
+            textBox9.Location = new Point(352, 104);
+            textBox9.Name = "textBox9";
+            textBox9.RightToLeft = RightToLeft.No;
+            textBox9.Size = new Size(100, 25);
+            textBox9.TabIndex = 23;
+            // 
+            // label103
+            // 
+            label103.AutoSize = true;
+            label103.Location = new Point(636, 79);
+            label103.Name = "label103";
+            label103.Size = new Size(47, 17);
+            label103.TabIndex = 22;
+            label103.Text = "Actual";
+            // 
+            // label104
+            // 
+            label104.AutoSize = true;
+            label104.Location = new Point(503, 79);
+            label104.Name = "label104";
+            label104.Size = new Size(70, 17);
+            label104.TabIndex = 21;
+            label104.Text = "Maximum";
+            // 
+            // label105
+            // 
+            label105.AutoSize = true;
+            label105.Location = new Point(370, 79);
+            label105.Name = "label105";
+            label105.Size = new Size(68, 17);
+            label105.TabIndex = 20;
+            label105.Text = "Minimum";
+            // 
+            // groupBox17
+            // 
+            groupBox17.Controls.Add(textBox10);
+            groupBox17.Controls.Add(textBox11);
+            groupBox17.Controls.Add(label106);
+            groupBox17.Controls.Add(textBox12);
+            groupBox17.Controls.Add(label107);
+            groupBox17.Controls.Add(textBox13);
+            groupBox17.Controls.Add(textBox14);
+            groupBox17.Controls.Add(textBox15);
+            groupBox17.Location = new Point(44, 672);
+            groupBox17.Name = "groupBox17";
+            groupBox17.Size = new Size(716, 100);
+            groupBox17.TabIndex = 17;
+            groupBox17.TabStop = false;
+            groupBox17.Text = "Emergency Lock";
+            // 
+            // textBox10
+            // 
+            textBox10.BackColor = Color.White;
+            textBox10.BorderStyle = BorderStyle.FixedSingle;
+            textBox10.Location = new Point(566, 55);
+            textBox10.Name = "textBox10";
+            textBox10.RightToLeft = RightToLeft.No;
+            textBox10.Size = new Size(100, 25);
+            textBox10.TabIndex = 26;
+            // 
+            // textBox11
+            // 
+            textBox11.BackColor = Color.White;
+            textBox11.BorderStyle = BorderStyle.FixedSingle;
+            textBox11.Location = new Point(440, 55);
+            textBox11.Name = "textBox11";
+            textBox11.RightToLeft = RightToLeft.No;
+            textBox11.Size = new Size(100, 25);
+            textBox11.TabIndex = 25;
+            // 
+            // label106
+            // 
+            label106.AutoSize = true;
+            label106.Location = new Point(20, 58);
+            label106.Name = "label106";
+            label106.Size = new Size(156, 17);
+            label106.TabIndex = 7;
+            label106.Text = "EMG Lock - Angle (Deg)";
+            // 
+            // textBox12
+            // 
+            textBox12.BackColor = Color.White;
+            textBox12.BorderStyle = BorderStyle.FixedSingle;
+            textBox12.Location = new Point(308, 55);
+            textBox12.Name = "textBox12";
+            textBox12.RightToLeft = RightToLeft.No;
+            textBox12.Size = new Size(100, 25);
+            textBox12.TabIndex = 24;
+            // 
+            // label107
+            // 
+            label107.AutoSize = true;
+            label107.Location = new Point(20, 29);
+            label107.Name = "label107";
+            label107.Size = new Size(160, 17);
+            label107.TabIndex = 6;
+            label107.Text = "EMG Lock - Torque (Nm)";
+            // 
+            // textBox13
+            // 
+            textBox13.BackColor = Color.White;
+            textBox13.BorderStyle = BorderStyle.FixedSingle;
+            textBox13.Location = new Point(566, 24);
+            textBox13.Name = "textBox13";
+            textBox13.RightToLeft = RightToLeft.No;
+            textBox13.Size = new Size(100, 25);
+            textBox13.TabIndex = 23;
+            // 
+            // textBox14
+            // 
+            textBox14.BackColor = Color.White;
+            textBox14.BorderStyle = BorderStyle.FixedSingle;
+            textBox14.Location = new Point(308, 24);
+            textBox14.Name = "textBox14";
+            textBox14.RightToLeft = RightToLeft.No;
+            textBox14.Size = new Size(100, 25);
+            textBox14.TabIndex = 21;
+            // 
+            // textBox15
+            // 
+            textBox15.BackColor = Color.White;
+            textBox15.BorderStyle = BorderStyle.FixedSingle;
+            textBox15.Location = new Point(440, 24);
+            textBox15.Name = "textBox15";
+            textBox15.RightToLeft = RightToLeft.No;
+            textBox15.Size = new Size(100, 25);
+            textBox15.TabIndex = 22;
+            // 
+            // groupBox18
+            // 
+            groupBox18.Controls.Add(textBox16);
+            groupBox18.Controls.Add(label108);
+            groupBox18.Controls.Add(textBox17);
+            groupBox18.Controls.Add(label109);
+            groupBox18.Controls.Add(textBox18);
+            groupBox18.Controls.Add(label110);
+            groupBox18.Controls.Add(textBox19);
+            groupBox18.Controls.Add(textBox20);
+            groupBox18.Controls.Add(label111);
+            groupBox18.Controls.Add(textBox21);
+            groupBox18.Controls.Add(textBox22);
+            groupBox18.Controls.Add(textBox23);
+            groupBox18.Controls.Add(textBox24);
+            groupBox18.Controls.Add(textBox25);
+            groupBox18.Controls.Add(textBox26);
+            groupBox18.Controls.Add(textBox27);
+            groupBox18.Location = new Point(44, 526);
+            groupBox18.Name = "groupBox18";
+            groupBox18.Size = new Size(716, 140);
+            groupBox18.TabIndex = 18;
+            groupBox18.TabStop = false;
+            groupBox18.Text = "Child Lock";
+            // 
+            // textBox16
+            // 
+            textBox16.BackColor = Color.White;
+            textBox16.BorderStyle = BorderStyle.FixedSingle;
+            textBox16.Location = new Point(566, 110);
+            textBox16.Name = "textBox16";
+            textBox16.RightToLeft = RightToLeft.No;
+            textBox16.Size = new Size(100, 25);
+            textBox16.TabIndex = 56;
+            // 
+            // label108
+            // 
+            label108.AutoSize = true;
+            label108.Location = new Point(20, 110);
+            label108.Name = "label108";
+            label108.Size = new Size(174, 17);
+            label108.TabIndex = 11;
+            label108.Text = "Child Unlock - Travel (MM)";
+            // 
+            // textBox17
+            // 
+            textBox17.BackColor = Color.White;
+            textBox17.BorderStyle = BorderStyle.FixedSingle;
+            textBox17.Location = new Point(440, 110);
+            textBox17.Name = "textBox17";
+            textBox17.RightToLeft = RightToLeft.No;
+            textBox17.Size = new Size(100, 25);
+            textBox17.TabIndex = 55;
+            // 
+            // label109
+            // 
+            label109.AutoSize = true;
+            label109.Location = new Point(20, 56);
+            label109.Name = "label109";
+            label109.Size = new Size(160, 17);
+            label109.TabIndex = 10;
+            label109.Text = "Child Lock - Travel (MM)";
+            // 
+            // textBox18
+            // 
+            textBox18.BackColor = Color.White;
+            textBox18.BorderStyle = BorderStyle.FixedSingle;
+            textBox18.Location = new Point(308, 110);
+            textBox18.Name = "textBox18";
+            textBox18.RightToLeft = RightToLeft.No;
+            textBox18.Size = new Size(100, 25);
+            textBox18.TabIndex = 54;
+            // 
+            // label110
+            // 
+            label110.AutoSize = true;
+            label110.Location = new Point(20, 82);
+            label110.Name = "label110";
+            label110.Size = new Size(158, 17);
+            label110.TabIndex = 8;
+            label110.Text = "Child Unlock - Effort (N)";
+            // 
+            // textBox19
+            // 
+            textBox19.BackColor = Color.White;
+            textBox19.BorderStyle = BorderStyle.FixedSingle;
+            textBox19.Location = new Point(566, 79);
+            textBox19.Name = "textBox19";
+            textBox19.RightToLeft = RightToLeft.No;
+            textBox19.Size = new Size(100, 25);
+            textBox19.TabIndex = 53;
+            // 
+            // textBox20
+            // 
+            textBox20.BackColor = Color.White;
+            textBox20.BorderStyle = BorderStyle.FixedSingle;
+            textBox20.Location = new Point(440, 79);
+            textBox20.Name = "textBox20";
+            textBox20.RightToLeft = RightToLeft.No;
+            textBox20.Size = new Size(100, 25);
+            textBox20.TabIndex = 52;
+            // 
+            // label111
+            // 
+            label111.AutoSize = true;
+            label111.Location = new Point(20, 29);
+            label111.Name = "label111";
+            label111.Size = new Size(144, 17);
+            label111.TabIndex = 6;
+            label111.Text = "Child Lock - Effort (N)";
+            // 
+            // textBox21
+            // 
+            textBox21.BackColor = Color.White;
+            textBox21.BorderStyle = BorderStyle.FixedSingle;
+            textBox21.Location = new Point(308, 79);
+            textBox21.Name = "textBox21";
+            textBox21.RightToLeft = RightToLeft.No;
+            textBox21.Size = new Size(100, 25);
+            textBox21.TabIndex = 51;
+            // 
+            // textBox22
+            // 
+            textBox22.BackColor = Color.White;
+            textBox22.BorderStyle = BorderStyle.FixedSingle;
+            textBox22.Location = new Point(308, 16);
+            textBox22.Name = "textBox22";
+            textBox22.RightToLeft = RightToLeft.No;
+            textBox22.Size = new Size(100, 25);
+            textBox22.TabIndex = 45;
+            // 
+            // textBox23
+            // 
+            textBox23.BackColor = Color.White;
+            textBox23.BorderStyle = BorderStyle.FixedSingle;
+            textBox23.Location = new Point(566, 47);
+            textBox23.Name = "textBox23";
+            textBox23.RightToLeft = RightToLeft.No;
+            textBox23.Size = new Size(100, 25);
+            textBox23.TabIndex = 50;
+            // 
+            // textBox24
+            // 
+            textBox24.BackColor = Color.White;
+            textBox24.BorderStyle = BorderStyle.FixedSingle;
+            textBox24.Location = new Point(440, 16);
+            textBox24.Name = "textBox24";
+            textBox24.RightToLeft = RightToLeft.No;
+            textBox24.Size = new Size(100, 25);
+            textBox24.TabIndex = 46;
+            // 
+            // textBox25
+            // 
+            textBox25.BackColor = Color.White;
+            textBox25.BorderStyle = BorderStyle.FixedSingle;
+            textBox25.Location = new Point(440, 47);
+            textBox25.Name = "textBox25";
+            textBox25.RightToLeft = RightToLeft.No;
+            textBox25.Size = new Size(100, 25);
+            textBox25.TabIndex = 49;
+            // 
+            // textBox26
+            // 
+            textBox26.BackColor = Color.White;
+            textBox26.BorderStyle = BorderStyle.FixedSingle;
+            textBox26.Location = new Point(566, 16);
+            textBox26.Name = "textBox26";
+            textBox26.RightToLeft = RightToLeft.No;
+            textBox26.Size = new Size(100, 25);
+            textBox26.TabIndex = 47;
+            // 
+            // textBox27
+            // 
+            textBox27.BackColor = Color.White;
+            textBox27.BorderStyle = BorderStyle.FixedSingle;
+            textBox27.Location = new Point(308, 47);
+            textBox27.Name = "textBox27";
+            textBox27.RightToLeft = RightToLeft.No;
+            textBox27.Size = new Size(100, 25);
+            textBox27.TabIndex = 48;
+            // 
+            // groupBox19
+            // 
+            groupBox19.Controls.Add(textBox28);
+            groupBox19.Controls.Add(textBox29);
+            groupBox19.Controls.Add(textBox30);
+            groupBox19.Controls.Add(textBox31);
+            groupBox19.Controls.Add(textBox32);
+            groupBox19.Controls.Add(textBox33);
+            groupBox19.Controls.Add(textBox34);
+            groupBox19.Controls.Add(textBox35);
+            groupBox19.Controls.Add(textBox36);
+            groupBox19.Controls.Add(textBox37);
+            groupBox19.Controls.Add(textBox38);
+            groupBox19.Controls.Add(textBox39);
+            groupBox19.Controls.Add(textBox40);
+            groupBox19.Controls.Add(textBox41);
+            groupBox19.Controls.Add(textBox42);
+            groupBox19.Controls.Add(textBox43);
+            groupBox19.Controls.Add(textBox44);
+            groupBox19.Controls.Add(textBox45);
+            groupBox19.Controls.Add(textBox46);
+            groupBox19.Controls.Add(textBox47);
+            groupBox19.Controls.Add(textBox48);
+            groupBox19.Controls.Add(textBox49);
+            groupBox19.Controls.Add(textBox50);
+            groupBox19.Controls.Add(textBox51);
+            groupBox19.Controls.Add(label112);
+            groupBox19.Controls.Add(label113);
+            groupBox19.Controls.Add(label114);
+            groupBox19.Controls.Add(label115);
+            groupBox19.Controls.Add(label116);
+            groupBox19.Controls.Add(label117);
+            groupBox19.Controls.Add(label118);
+            groupBox19.Controls.Add(label119);
+            groupBox19.Location = new Point(44, 254);
+            groupBox19.Name = "groupBox19";
+            groupBox19.Size = new Size(716, 266);
+            groupBox19.TabIndex = 19;
+            groupBox19.TabStop = false;
+            groupBox19.Text = "Key Lock";
+            // 
+            // textBox28
+            // 
+            textBox28.BackColor = Color.White;
+            textBox28.BorderStyle = BorderStyle.FixedSingle;
+            textBox28.Location = new Point(566, 231);
+            textBox28.Name = "textBox28";
+            textBox28.RightToLeft = RightToLeft.No;
+            textBox28.Size = new Size(100, 25);
+            textBox28.TabIndex = 44;
+            // 
+            // textBox29
+            // 
+            textBox29.BackColor = Color.White;
+            textBox29.BorderStyle = BorderStyle.FixedSingle;
+            textBox29.Location = new Point(440, 231);
+            textBox29.Name = "textBox29";
+            textBox29.RightToLeft = RightToLeft.No;
+            textBox29.Size = new Size(100, 25);
+            textBox29.TabIndex = 43;
+            // 
+            // textBox30
+            // 
+            textBox30.BackColor = Color.White;
+            textBox30.BorderStyle = BorderStyle.FixedSingle;
+            textBox30.Location = new Point(308, 231);
+            textBox30.Name = "textBox30";
+            textBox30.RightToLeft = RightToLeft.No;
+            textBox30.Size = new Size(100, 25);
+            textBox30.TabIndex = 42;
+            // 
+            // textBox31
+            // 
+            textBox31.BackColor = Color.White;
+            textBox31.BorderStyle = BorderStyle.FixedSingle;
+            textBox31.Location = new Point(566, 202);
+            textBox31.Name = "textBox31";
+            textBox31.RightToLeft = RightToLeft.No;
+            textBox31.Size = new Size(100, 25);
+            textBox31.TabIndex = 41;
+            // 
+            // textBox32
+            // 
+            textBox32.BackColor = Color.White;
+            textBox32.BorderStyle = BorderStyle.FixedSingle;
+            textBox32.Location = new Point(440, 202);
+            textBox32.Name = "textBox32";
+            textBox32.RightToLeft = RightToLeft.No;
+            textBox32.Size = new Size(100, 25);
+            textBox32.TabIndex = 40;
+            // 
+            // textBox33
+            // 
+            textBox33.BackColor = Color.White;
+            textBox33.BorderStyle = BorderStyle.FixedSingle;
+            textBox33.Location = new Point(308, 202);
+            textBox33.Name = "textBox33";
+            textBox33.RightToLeft = RightToLeft.No;
+            textBox33.Size = new Size(100, 25);
+            textBox33.TabIndex = 39;
+            // 
+            // textBox34
+            // 
+            textBox34.BackColor = Color.White;
+            textBox34.BorderStyle = BorderStyle.FixedSingle;
+            textBox34.Location = new Point(566, 173);
+            textBox34.Name = "textBox34";
+            textBox34.RightToLeft = RightToLeft.No;
+            textBox34.Size = new Size(100, 25);
+            textBox34.TabIndex = 38;
+            // 
+            // textBox35
+            // 
+            textBox35.BackColor = Color.White;
+            textBox35.BorderStyle = BorderStyle.FixedSingle;
+            textBox35.Location = new Point(440, 173);
+            textBox35.Name = "textBox35";
+            textBox35.RightToLeft = RightToLeft.No;
+            textBox35.Size = new Size(100, 25);
+            textBox35.TabIndex = 37;
+            // 
+            // textBox36
+            // 
+            textBox36.BackColor = Color.White;
+            textBox36.BorderStyle = BorderStyle.FixedSingle;
+            textBox36.Location = new Point(308, 173);
+            textBox36.Name = "textBox36";
+            textBox36.RightToLeft = RightToLeft.No;
+            textBox36.Size = new Size(100, 25);
+            textBox36.TabIndex = 36;
+            // 
+            // textBox37
+            // 
+            textBox37.BackColor = Color.White;
+            textBox37.BorderStyle = BorderStyle.FixedSingle;
+            textBox37.Location = new Point(566, 142);
+            textBox37.Name = "textBox37";
+            textBox37.RightToLeft = RightToLeft.No;
+            textBox37.Size = new Size(100, 25);
+            textBox37.TabIndex = 35;
+            // 
+            // textBox38
+            // 
+            textBox38.BackColor = Color.White;
+            textBox38.BorderStyle = BorderStyle.FixedSingle;
+            textBox38.Location = new Point(440, 142);
+            textBox38.Name = "textBox38";
+            textBox38.RightToLeft = RightToLeft.No;
+            textBox38.Size = new Size(100, 25);
+            textBox38.TabIndex = 34;
+            // 
+            // textBox39
+            // 
+            textBox39.BackColor = Color.White;
+            textBox39.BorderStyle = BorderStyle.FixedSingle;
+            textBox39.Location = new Point(308, 142);
+            textBox39.Name = "textBox39";
+            textBox39.RightToLeft = RightToLeft.No;
+            textBox39.Size = new Size(100, 25);
+            textBox39.TabIndex = 33;
+            // 
+            // textBox40
+            // 
+            textBox40.BackColor = Color.White;
+            textBox40.BorderStyle = BorderStyle.FixedSingle;
+            textBox40.Location = new Point(566, 112);
+            textBox40.Name = "textBox40";
+            textBox40.RightToLeft = RightToLeft.No;
+            textBox40.Size = new Size(100, 25);
+            textBox40.TabIndex = 32;
+            // 
+            // textBox41
+            // 
+            textBox41.BackColor = Color.White;
+            textBox41.BorderStyle = BorderStyle.FixedSingle;
+            textBox41.Location = new Point(440, 112);
+            textBox41.Name = "textBox41";
+            textBox41.RightToLeft = RightToLeft.No;
+            textBox41.Size = new Size(100, 25);
+            textBox41.TabIndex = 31;
+            // 
+            // textBox42
+            // 
+            textBox42.BackColor = Color.White;
+            textBox42.BorderStyle = BorderStyle.FixedSingle;
+            textBox42.Location = new Point(308, 112);
+            textBox42.Name = "textBox42";
+            textBox42.RightToLeft = RightToLeft.No;
+            textBox42.Size = new Size(100, 25);
+            textBox42.TabIndex = 30;
+            // 
+            // textBox43
+            // 
+            textBox43.BackColor = Color.White;
+            textBox43.BorderStyle = BorderStyle.FixedSingle;
+            textBox43.Location = new Point(566, 81);
+            textBox43.Name = "textBox43";
+            textBox43.RightToLeft = RightToLeft.No;
+            textBox43.Size = new Size(100, 25);
+            textBox43.TabIndex = 29;
+            // 
+            // textBox44
+            // 
+            textBox44.BackColor = Color.White;
+            textBox44.BorderStyle = BorderStyle.FixedSingle;
+            textBox44.Location = new Point(440, 81);
+            textBox44.Name = "textBox44";
+            textBox44.RightToLeft = RightToLeft.No;
+            textBox44.Size = new Size(100, 25);
+            textBox44.TabIndex = 28;
+            // 
+            // textBox45
+            // 
+            textBox45.BackColor = Color.White;
+            textBox45.BorderStyle = BorderStyle.FixedSingle;
+            textBox45.Location = new Point(308, 81);
+            textBox45.Name = "textBox45";
+            textBox45.RightToLeft = RightToLeft.No;
+            textBox45.Size = new Size(100, 25);
+            textBox45.TabIndex = 27;
+            // 
+            // textBox46
+            // 
+            textBox46.BackColor = Color.White;
+            textBox46.BorderStyle = BorderStyle.FixedSingle;
+            textBox46.Location = new Point(566, 49);
+            textBox46.Name = "textBox46";
+            textBox46.RightToLeft = RightToLeft.No;
+            textBox46.Size = new Size(100, 25);
+            textBox46.TabIndex = 26;
+            // 
+            // textBox47
+            // 
+            textBox47.BackColor = Color.White;
+            textBox47.BorderStyle = BorderStyle.FixedSingle;
+            textBox47.Location = new Point(440, 49);
+            textBox47.Name = "textBox47";
+            textBox47.RightToLeft = RightToLeft.No;
+            textBox47.Size = new Size(100, 25);
+            textBox47.TabIndex = 25;
+            // 
+            // textBox48
+            // 
+            textBox48.BackColor = Color.White;
+            textBox48.BorderStyle = BorderStyle.FixedSingle;
+            textBox48.Location = new Point(308, 49);
+            textBox48.Name = "textBox48";
+            textBox48.RightToLeft = RightToLeft.No;
+            textBox48.Size = new Size(100, 25);
+            textBox48.TabIndex = 24;
+            // 
+            // textBox49
+            // 
+            textBox49.BackColor = Color.White;
+            textBox49.BorderStyle = BorderStyle.FixedSingle;
+            textBox49.Location = new Point(566, 18);
+            textBox49.Name = "textBox49";
+            textBox49.RightToLeft = RightToLeft.No;
+            textBox49.Size = new Size(100, 25);
+            textBox49.TabIndex = 23;
+            // 
+            // textBox50
+            // 
+            textBox50.BackColor = Color.White;
+            textBox50.BorderStyle = BorderStyle.FixedSingle;
+            textBox50.Location = new Point(440, 18);
+            textBox50.Name = "textBox50";
+            textBox50.RightToLeft = RightToLeft.No;
+            textBox50.Size = new Size(100, 25);
+            textBox50.TabIndex = 22;
+            // 
+            // textBox51
+            // 
+            textBox51.BackColor = Color.White;
+            textBox51.BorderStyle = BorderStyle.FixedSingle;
+            textBox51.Location = new Point(308, 18);
+            textBox51.Name = "textBox51";
+            textBox51.RightToLeft = RightToLeft.No;
+            textBox51.Size = new Size(100, 25);
+            textBox51.TabIndex = 21;
+            // 
+            // label112
+            // 
+            label112.AutoSize = true;
+            label112.Location = new Point(20, 229);
+            label112.Name = "label112";
+            label112.Size = new Size(190, 17);
+            label112.TabIndex = 13;
+            label112.Text = "Key UnLock - full travel (MM)";
+            // 
+            // label113
+            // 
+            label113.AutoSize = true;
+            label113.Location = new Point(20, 203);
+            label113.Name = "label113";
+            label113.Size = new Size(194, 17);
+            label113.TabIndex = 12;
+            label113.Text = "Key UnLock - lock travel (MM)";
+            // 
+            // label114
+            // 
+            label114.AutoSize = true;
+            label114.Location = new Point(20, 173);
+            label114.Name = "label114";
+            label114.Size = new Size(189, 17);
+            label114.TabIndex = 11;
+            label114.Text = "Key UnLock - pre travel (MM)";
+            // 
+            // label115
+            // 
+            label115.AutoSize = true;
+            label115.Location = new Point(20, 145);
+            label115.Name = "label115";
+            label115.Size = new Size(151, 17);
+            label115.TabIndex = 10;
+            label115.Text = "Key UnLock - Effort (N)";
+            // 
+            // label116
+            // 
+            label116.AutoSize = true;
+            label116.Location = new Point(20, 115);
+            label116.Name = "label116";
+            label116.Size = new Size(173, 17);
+            label116.TabIndex = 9;
+            label116.Text = "Key Lock - full travel (MM)";
+            // 
+            // label117
+            // 
+            label117.AutoSize = true;
+            label117.Location = new Point(20, 87);
+            label117.Name = "label117";
+            label117.Size = new Size(177, 17);
+            label117.TabIndex = 8;
+            label117.Text = "Key Lock - lock travel (MM)";
+            // 
+            // label118
+            // 
+            label118.AutoSize = true;
+            label118.Location = new Point(20, 58);
+            label118.Name = "label118";
+            label118.Size = new Size(174, 17);
+            label118.TabIndex = 7;
+            label118.Text = "Key Lock - Pre Travel (MM)";
+            // 
+            // label119
+            // 
+            label119.AutoSize = true;
+            label119.Location = new Point(20, 29);
+            label119.Name = "label119";
+            label119.Size = new Size(134, 17);
+            label119.TabIndex = 6;
+            label119.Text = "Key Lock - Effort (N)";
+            // 
+            // groupBox20
+            // 
+            groupBox20.Controls.Add(textBox52);
+            groupBox20.Controls.Add(textBox53);
+            groupBox20.Controls.Add(textBox54);
+            groupBox20.Controls.Add(textBox55);
+            groupBox20.Controls.Add(label120);
+            groupBox20.Controls.Add(textBox56);
+            groupBox20.Controls.Add(textBox57);
+            groupBox20.Controls.Add(label121);
+            groupBox20.Location = new Point(44, 141);
+            groupBox20.Name = "groupBox20";
+            groupBox20.Size = new Size(716, 98);
+            groupBox20.TabIndex = 16;
+            groupBox20.TabStop = false;
+            groupBox20.Text = "Motor Current";
+            // 
+            // textBox52
+            // 
+            textBox52.BackColor = Color.White;
+            textBox52.BorderStyle = BorderStyle.FixedSingle;
+            textBox52.Location = new Point(566, 54);
+            textBox52.Name = "textBox52";
+            textBox52.RightToLeft = RightToLeft.No;
+            textBox52.Size = new Size(100, 25);
+            textBox52.TabIndex = 20;
+            // 
+            // textBox53
+            // 
+            textBox53.BackColor = Color.White;
+            textBox53.BorderStyle = BorderStyle.FixedSingle;
+            textBox53.Location = new Point(440, 54);
+            textBox53.Name = "textBox53";
+            textBox53.RightToLeft = RightToLeft.No;
+            textBox53.Size = new Size(100, 25);
+            textBox53.TabIndex = 19;
+            // 
+            // textBox54
+            // 
+            textBox54.BackColor = Color.White;
+            textBox54.BorderStyle = BorderStyle.FixedSingle;
+            textBox54.Location = new Point(308, 54);
+            textBox54.Name = "textBox54";
+            textBox54.RightToLeft = RightToLeft.No;
+            textBox54.Size = new Size(100, 25);
+            textBox54.TabIndex = 18;
+            // 
+            // textBox55
+            // 
+            textBox55.BackColor = Color.White;
+            textBox55.BorderStyle = BorderStyle.FixedSingle;
+            textBox55.Location = new Point(566, 23);
+            textBox55.Name = "textBox55";
+            textBox55.RightToLeft = RightToLeft.No;
+            textBox55.Size = new Size(100, 25);
+            textBox55.TabIndex = 17;
+            // 
+            // label120
+            // 
+            label120.AutoSize = true;
+            label120.Location = new Point(20, 60);
+            label120.Name = "label120";
+            label120.Size = new Size(193, 17);
+            label120.TabIndex = 7;
+            label120.Text = "Power Unlock Current (Amph)";
+            // 
+            // textBox56
+            // 
+            textBox56.BackColor = Color.White;
+            textBox56.BorderStyle = BorderStyle.FixedSingle;
+            textBox56.Location = new Point(440, 23);
+            textBox56.Name = "textBox56";
+            textBox56.RightToLeft = RightToLeft.No;
+            textBox56.Size = new Size(100, 25);
+            textBox56.TabIndex = 16;
+            // 
+            // textBox57
+            // 
+            textBox57.BackColor = Color.White;
+            textBox57.BorderStyle = BorderStyle.FixedSingle;
+            textBox57.Location = new Point(308, 23);
+            textBox57.Name = "textBox57";
+            textBox57.RightToLeft = RightToLeft.No;
+            textBox57.Size = new Size(100, 25);
+            textBox57.TabIndex = 15;
+            // 
+            // label121
+            // 
+            label121.AutoSize = true;
+            label121.Location = new Point(20, 29);
+            label121.Name = "label121";
+            label121.Size = new Size(179, 17);
+            label121.TabIndex = 6;
+            label121.Text = "Power Lock Current (Amph)";
+            // 
+            // label122
+            // 
+            label122.AutoSize = true;
+            label122.Location = new Point(64, 107);
+            label122.Name = "label122";
+            label122.Size = new Size(91, 17);
+            label122.TabIndex = 15;
+            label122.Text = "Seal Load (N)";
             // 
             // textBox3
             // 
@@ -5681,1426 +7103,6 @@
             label90.TabIndex = 1;
             label90.Text = "Functional Test";
             // 
-            // textBox7
-            // 
-            textBox7.BackColor = Color.White;
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(610, 104);
-            textBox7.Name = "textBox7";
-            textBox7.RightToLeft = RightToLeft.No;
-            textBox7.Size = new Size(100, 25);
-            textBox7.TabIndex = 25;
-            // 
-            // textBox8
-            // 
-            textBox8.BackColor = Color.White;
-            textBox8.BorderStyle = BorderStyle.FixedSingle;
-            textBox8.Location = new Point(484, 104);
-            textBox8.Name = "textBox8";
-            textBox8.RightToLeft = RightToLeft.No;
-            textBox8.Size = new Size(100, 25);
-            textBox8.TabIndex = 24;
-            // 
-            // textBox9
-            // 
-            textBox9.BackColor = Color.White;
-            textBox9.BorderStyle = BorderStyle.FixedSingle;
-            textBox9.Location = new Point(352, 104);
-            textBox9.Name = "textBox9";
-            textBox9.RightToLeft = RightToLeft.No;
-            textBox9.Size = new Size(100, 25);
-            textBox9.TabIndex = 23;
-            // 
-            // label103
-            // 
-            label103.AutoSize = true;
-            label103.Location = new Point(636, 79);
-            label103.Name = "label103";
-            label103.Size = new Size(47, 17);
-            label103.TabIndex = 22;
-            label103.Text = "Actual";
-            // 
-            // label104
-            // 
-            label104.AutoSize = true;
-            label104.Location = new Point(503, 79);
-            label104.Name = "label104";
-            label104.Size = new Size(70, 17);
-            label104.TabIndex = 21;
-            label104.Text = "Maximum";
-            // 
-            // label105
-            // 
-            label105.AutoSize = true;
-            label105.Location = new Point(370, 79);
-            label105.Name = "label105";
-            label105.Size = new Size(68, 17);
-            label105.TabIndex = 20;
-            label105.Text = "Minimum";
-            // 
-            // groupBox17
-            // 
-            groupBox17.Controls.Add(textBox10);
-            groupBox17.Controls.Add(textBox11);
-            groupBox17.Controls.Add(label106);
-            groupBox17.Controls.Add(textBox12);
-            groupBox17.Controls.Add(label107);
-            groupBox17.Controls.Add(textBox13);
-            groupBox17.Controls.Add(textBox14);
-            groupBox17.Controls.Add(textBox15);
-            groupBox17.Location = new Point(44, 672);
-            groupBox17.Name = "groupBox17";
-            groupBox17.Size = new Size(716, 100);
-            groupBox17.TabIndex = 17;
-            groupBox17.TabStop = false;
-            groupBox17.Text = "Emergency Lock";
-            // 
-            // textBox10
-            // 
-            textBox10.BackColor = Color.White;
-            textBox10.BorderStyle = BorderStyle.FixedSingle;
-            textBox10.Location = new Point(566, 55);
-            textBox10.Name = "textBox10";
-            textBox10.RightToLeft = RightToLeft.No;
-            textBox10.Size = new Size(100, 25);
-            textBox10.TabIndex = 26;
-            // 
-            // textBox11
-            // 
-            textBox11.BackColor = Color.White;
-            textBox11.BorderStyle = BorderStyle.FixedSingle;
-            textBox11.Location = new Point(440, 55);
-            textBox11.Name = "textBox11";
-            textBox11.RightToLeft = RightToLeft.No;
-            textBox11.Size = new Size(100, 25);
-            textBox11.TabIndex = 25;
-            // 
-            // label106
-            // 
-            label106.AutoSize = true;
-            label106.Location = new Point(20, 58);
-            label106.Name = "label106";
-            label106.Size = new Size(156, 17);
-            label106.TabIndex = 7;
-            label106.Text = "EMG Lock - Angle (Deg)";
-            // 
-            // textBox12
-            // 
-            textBox12.BackColor = Color.White;
-            textBox12.BorderStyle = BorderStyle.FixedSingle;
-            textBox12.Location = new Point(308, 55);
-            textBox12.Name = "textBox12";
-            textBox12.RightToLeft = RightToLeft.No;
-            textBox12.Size = new Size(100, 25);
-            textBox12.TabIndex = 24;
-            // 
-            // label107
-            // 
-            label107.AutoSize = true;
-            label107.Location = new Point(20, 29);
-            label107.Name = "label107";
-            label107.Size = new Size(160, 17);
-            label107.TabIndex = 6;
-            label107.Text = "EMG Lock - Torque (Nm)";
-            // 
-            // textBox13
-            // 
-            textBox13.BackColor = Color.White;
-            textBox13.BorderStyle = BorderStyle.FixedSingle;
-            textBox13.Location = new Point(566, 24);
-            textBox13.Name = "textBox13";
-            textBox13.RightToLeft = RightToLeft.No;
-            textBox13.Size = new Size(100, 25);
-            textBox13.TabIndex = 23;
-            // 
-            // textBox14
-            // 
-            textBox14.BackColor = Color.White;
-            textBox14.BorderStyle = BorderStyle.FixedSingle;
-            textBox14.Location = new Point(308, 24);
-            textBox14.Name = "textBox14";
-            textBox14.RightToLeft = RightToLeft.No;
-            textBox14.Size = new Size(100, 25);
-            textBox14.TabIndex = 21;
-            // 
-            // textBox15
-            // 
-            textBox15.BackColor = Color.White;
-            textBox15.BorderStyle = BorderStyle.FixedSingle;
-            textBox15.Location = new Point(440, 24);
-            textBox15.Name = "textBox15";
-            textBox15.RightToLeft = RightToLeft.No;
-            textBox15.Size = new Size(100, 25);
-            textBox15.TabIndex = 22;
-            // 
-            // groupBox18
-            // 
-            groupBox18.Controls.Add(textBox16);
-            groupBox18.Controls.Add(label108);
-            groupBox18.Controls.Add(textBox17);
-            groupBox18.Controls.Add(label109);
-            groupBox18.Controls.Add(textBox18);
-            groupBox18.Controls.Add(label110);
-            groupBox18.Controls.Add(textBox19);
-            groupBox18.Controls.Add(textBox20);
-            groupBox18.Controls.Add(label111);
-            groupBox18.Controls.Add(textBox21);
-            groupBox18.Controls.Add(textBox22);
-            groupBox18.Controls.Add(textBox23);
-            groupBox18.Controls.Add(textBox24);
-            groupBox18.Controls.Add(textBox25);
-            groupBox18.Controls.Add(textBox26);
-            groupBox18.Controls.Add(textBox27);
-            groupBox18.Location = new Point(44, 526);
-            groupBox18.Name = "groupBox18";
-            groupBox18.Size = new Size(716, 140);
-            groupBox18.TabIndex = 18;
-            groupBox18.TabStop = false;
-            groupBox18.Text = "Child Lock";
-            // 
-            // textBox16
-            // 
-            textBox16.BackColor = Color.White;
-            textBox16.BorderStyle = BorderStyle.FixedSingle;
-            textBox16.Location = new Point(566, 110);
-            textBox16.Name = "textBox16";
-            textBox16.RightToLeft = RightToLeft.No;
-            textBox16.Size = new Size(100, 25);
-            textBox16.TabIndex = 56;
-            // 
-            // label108
-            // 
-            label108.AutoSize = true;
-            label108.Location = new Point(20, 110);
-            label108.Name = "label108";
-            label108.Size = new Size(174, 17);
-            label108.TabIndex = 11;
-            label108.Text = "Child Unlock - Travel (MM)";
-            // 
-            // textBox17
-            // 
-            textBox17.BackColor = Color.White;
-            textBox17.BorderStyle = BorderStyle.FixedSingle;
-            textBox17.Location = new Point(440, 110);
-            textBox17.Name = "textBox17";
-            textBox17.RightToLeft = RightToLeft.No;
-            textBox17.Size = new Size(100, 25);
-            textBox17.TabIndex = 55;
-            // 
-            // label109
-            // 
-            label109.AutoSize = true;
-            label109.Location = new Point(20, 56);
-            label109.Name = "label109";
-            label109.Size = new Size(160, 17);
-            label109.TabIndex = 10;
-            label109.Text = "Child Lock - Travel (MM)";
-            // 
-            // textBox18
-            // 
-            textBox18.BackColor = Color.White;
-            textBox18.BorderStyle = BorderStyle.FixedSingle;
-            textBox18.Location = new Point(308, 110);
-            textBox18.Name = "textBox18";
-            textBox18.RightToLeft = RightToLeft.No;
-            textBox18.Size = new Size(100, 25);
-            textBox18.TabIndex = 54;
-            // 
-            // label110
-            // 
-            label110.AutoSize = true;
-            label110.Location = new Point(20, 82);
-            label110.Name = "label110";
-            label110.Size = new Size(158, 17);
-            label110.TabIndex = 8;
-            label110.Text = "Child Unlock - Effort (N)";
-            // 
-            // textBox19
-            // 
-            textBox19.BackColor = Color.White;
-            textBox19.BorderStyle = BorderStyle.FixedSingle;
-            textBox19.Location = new Point(566, 79);
-            textBox19.Name = "textBox19";
-            textBox19.RightToLeft = RightToLeft.No;
-            textBox19.Size = new Size(100, 25);
-            textBox19.TabIndex = 53;
-            // 
-            // textBox20
-            // 
-            textBox20.BackColor = Color.White;
-            textBox20.BorderStyle = BorderStyle.FixedSingle;
-            textBox20.Location = new Point(440, 79);
-            textBox20.Name = "textBox20";
-            textBox20.RightToLeft = RightToLeft.No;
-            textBox20.Size = new Size(100, 25);
-            textBox20.TabIndex = 52;
-            // 
-            // label111
-            // 
-            label111.AutoSize = true;
-            label111.Location = new Point(20, 29);
-            label111.Name = "label111";
-            label111.Size = new Size(144, 17);
-            label111.TabIndex = 6;
-            label111.Text = "Child Lock - Effort (N)";
-            // 
-            // textBox21
-            // 
-            textBox21.BackColor = Color.White;
-            textBox21.BorderStyle = BorderStyle.FixedSingle;
-            textBox21.Location = new Point(308, 79);
-            textBox21.Name = "textBox21";
-            textBox21.RightToLeft = RightToLeft.No;
-            textBox21.Size = new Size(100, 25);
-            textBox21.TabIndex = 51;
-            // 
-            // textBox22
-            // 
-            textBox22.BackColor = Color.White;
-            textBox22.BorderStyle = BorderStyle.FixedSingle;
-            textBox22.Location = new Point(308, 16);
-            textBox22.Name = "textBox22";
-            textBox22.RightToLeft = RightToLeft.No;
-            textBox22.Size = new Size(100, 25);
-            textBox22.TabIndex = 45;
-            // 
-            // textBox23
-            // 
-            textBox23.BackColor = Color.White;
-            textBox23.BorderStyle = BorderStyle.FixedSingle;
-            textBox23.Location = new Point(566, 47);
-            textBox23.Name = "textBox23";
-            textBox23.RightToLeft = RightToLeft.No;
-            textBox23.Size = new Size(100, 25);
-            textBox23.TabIndex = 50;
-            // 
-            // textBox24
-            // 
-            textBox24.BackColor = Color.White;
-            textBox24.BorderStyle = BorderStyle.FixedSingle;
-            textBox24.Location = new Point(440, 16);
-            textBox24.Name = "textBox24";
-            textBox24.RightToLeft = RightToLeft.No;
-            textBox24.Size = new Size(100, 25);
-            textBox24.TabIndex = 46;
-            // 
-            // textBox25
-            // 
-            textBox25.BackColor = Color.White;
-            textBox25.BorderStyle = BorderStyle.FixedSingle;
-            textBox25.Location = new Point(440, 47);
-            textBox25.Name = "textBox25";
-            textBox25.RightToLeft = RightToLeft.No;
-            textBox25.Size = new Size(100, 25);
-            textBox25.TabIndex = 49;
-            // 
-            // textBox26
-            // 
-            textBox26.BackColor = Color.White;
-            textBox26.BorderStyle = BorderStyle.FixedSingle;
-            textBox26.Location = new Point(566, 16);
-            textBox26.Name = "textBox26";
-            textBox26.RightToLeft = RightToLeft.No;
-            textBox26.Size = new Size(100, 25);
-            textBox26.TabIndex = 47;
-            // 
-            // textBox27
-            // 
-            textBox27.BackColor = Color.White;
-            textBox27.BorderStyle = BorderStyle.FixedSingle;
-            textBox27.Location = new Point(308, 47);
-            textBox27.Name = "textBox27";
-            textBox27.RightToLeft = RightToLeft.No;
-            textBox27.Size = new Size(100, 25);
-            textBox27.TabIndex = 48;
-            // 
-            // groupBox19
-            // 
-            groupBox19.Controls.Add(textBox28);
-            groupBox19.Controls.Add(textBox29);
-            groupBox19.Controls.Add(textBox30);
-            groupBox19.Controls.Add(textBox31);
-            groupBox19.Controls.Add(textBox32);
-            groupBox19.Controls.Add(textBox33);
-            groupBox19.Controls.Add(textBox34);
-            groupBox19.Controls.Add(textBox35);
-            groupBox19.Controls.Add(textBox36);
-            groupBox19.Controls.Add(textBox37);
-            groupBox19.Controls.Add(textBox38);
-            groupBox19.Controls.Add(textBox39);
-            groupBox19.Controls.Add(textBox40);
-            groupBox19.Controls.Add(textBox41);
-            groupBox19.Controls.Add(textBox42);
-            groupBox19.Controls.Add(textBox43);
-            groupBox19.Controls.Add(textBox44);
-            groupBox19.Controls.Add(textBox45);
-            groupBox19.Controls.Add(textBox46);
-            groupBox19.Controls.Add(textBox47);
-            groupBox19.Controls.Add(textBox48);
-            groupBox19.Controls.Add(textBox49);
-            groupBox19.Controls.Add(textBox50);
-            groupBox19.Controls.Add(textBox51);
-            groupBox19.Controls.Add(label112);
-            groupBox19.Controls.Add(label113);
-            groupBox19.Controls.Add(label114);
-            groupBox19.Controls.Add(label115);
-            groupBox19.Controls.Add(label116);
-            groupBox19.Controls.Add(label117);
-            groupBox19.Controls.Add(label118);
-            groupBox19.Controls.Add(label119);
-            groupBox19.Location = new Point(44, 254);
-            groupBox19.Name = "groupBox19";
-            groupBox19.Size = new Size(716, 266);
-            groupBox19.TabIndex = 19;
-            groupBox19.TabStop = false;
-            groupBox19.Text = "Key Lock";
-            // 
-            // textBox28
-            // 
-            textBox28.BackColor = Color.White;
-            textBox28.BorderStyle = BorderStyle.FixedSingle;
-            textBox28.Location = new Point(566, 231);
-            textBox28.Name = "textBox28";
-            textBox28.RightToLeft = RightToLeft.No;
-            textBox28.Size = new Size(100, 25);
-            textBox28.TabIndex = 44;
-            // 
-            // textBox29
-            // 
-            textBox29.BackColor = Color.White;
-            textBox29.BorderStyle = BorderStyle.FixedSingle;
-            textBox29.Location = new Point(440, 231);
-            textBox29.Name = "textBox29";
-            textBox29.RightToLeft = RightToLeft.No;
-            textBox29.Size = new Size(100, 25);
-            textBox29.TabIndex = 43;
-            // 
-            // textBox30
-            // 
-            textBox30.BackColor = Color.White;
-            textBox30.BorderStyle = BorderStyle.FixedSingle;
-            textBox30.Location = new Point(308, 231);
-            textBox30.Name = "textBox30";
-            textBox30.RightToLeft = RightToLeft.No;
-            textBox30.Size = new Size(100, 25);
-            textBox30.TabIndex = 42;
-            // 
-            // textBox31
-            // 
-            textBox31.BackColor = Color.White;
-            textBox31.BorderStyle = BorderStyle.FixedSingle;
-            textBox31.Location = new Point(566, 202);
-            textBox31.Name = "textBox31";
-            textBox31.RightToLeft = RightToLeft.No;
-            textBox31.Size = new Size(100, 25);
-            textBox31.TabIndex = 41;
-            // 
-            // textBox32
-            // 
-            textBox32.BackColor = Color.White;
-            textBox32.BorderStyle = BorderStyle.FixedSingle;
-            textBox32.Location = new Point(440, 202);
-            textBox32.Name = "textBox32";
-            textBox32.RightToLeft = RightToLeft.No;
-            textBox32.Size = new Size(100, 25);
-            textBox32.TabIndex = 40;
-            // 
-            // textBox33
-            // 
-            textBox33.BackColor = Color.White;
-            textBox33.BorderStyle = BorderStyle.FixedSingle;
-            textBox33.Location = new Point(308, 202);
-            textBox33.Name = "textBox33";
-            textBox33.RightToLeft = RightToLeft.No;
-            textBox33.Size = new Size(100, 25);
-            textBox33.TabIndex = 39;
-            // 
-            // textBox34
-            // 
-            textBox34.BackColor = Color.White;
-            textBox34.BorderStyle = BorderStyle.FixedSingle;
-            textBox34.Location = new Point(566, 173);
-            textBox34.Name = "textBox34";
-            textBox34.RightToLeft = RightToLeft.No;
-            textBox34.Size = new Size(100, 25);
-            textBox34.TabIndex = 38;
-            // 
-            // textBox35
-            // 
-            textBox35.BackColor = Color.White;
-            textBox35.BorderStyle = BorderStyle.FixedSingle;
-            textBox35.Location = new Point(440, 173);
-            textBox35.Name = "textBox35";
-            textBox35.RightToLeft = RightToLeft.No;
-            textBox35.Size = new Size(100, 25);
-            textBox35.TabIndex = 37;
-            // 
-            // textBox36
-            // 
-            textBox36.BackColor = Color.White;
-            textBox36.BorderStyle = BorderStyle.FixedSingle;
-            textBox36.Location = new Point(308, 173);
-            textBox36.Name = "textBox36";
-            textBox36.RightToLeft = RightToLeft.No;
-            textBox36.Size = new Size(100, 25);
-            textBox36.TabIndex = 36;
-            // 
-            // textBox37
-            // 
-            textBox37.BackColor = Color.White;
-            textBox37.BorderStyle = BorderStyle.FixedSingle;
-            textBox37.Location = new Point(566, 142);
-            textBox37.Name = "textBox37";
-            textBox37.RightToLeft = RightToLeft.No;
-            textBox37.Size = new Size(100, 25);
-            textBox37.TabIndex = 35;
-            // 
-            // textBox38
-            // 
-            textBox38.BackColor = Color.White;
-            textBox38.BorderStyle = BorderStyle.FixedSingle;
-            textBox38.Location = new Point(440, 142);
-            textBox38.Name = "textBox38";
-            textBox38.RightToLeft = RightToLeft.No;
-            textBox38.Size = new Size(100, 25);
-            textBox38.TabIndex = 34;
-            // 
-            // textBox39
-            // 
-            textBox39.BackColor = Color.White;
-            textBox39.BorderStyle = BorderStyle.FixedSingle;
-            textBox39.Location = new Point(308, 142);
-            textBox39.Name = "textBox39";
-            textBox39.RightToLeft = RightToLeft.No;
-            textBox39.Size = new Size(100, 25);
-            textBox39.TabIndex = 33;
-            // 
-            // textBox40
-            // 
-            textBox40.BackColor = Color.White;
-            textBox40.BorderStyle = BorderStyle.FixedSingle;
-            textBox40.Location = new Point(566, 112);
-            textBox40.Name = "textBox40";
-            textBox40.RightToLeft = RightToLeft.No;
-            textBox40.Size = new Size(100, 25);
-            textBox40.TabIndex = 32;
-            // 
-            // textBox41
-            // 
-            textBox41.BackColor = Color.White;
-            textBox41.BorderStyle = BorderStyle.FixedSingle;
-            textBox41.Location = new Point(440, 112);
-            textBox41.Name = "textBox41";
-            textBox41.RightToLeft = RightToLeft.No;
-            textBox41.Size = new Size(100, 25);
-            textBox41.TabIndex = 31;
-            // 
-            // textBox42
-            // 
-            textBox42.BackColor = Color.White;
-            textBox42.BorderStyle = BorderStyle.FixedSingle;
-            textBox42.Location = new Point(308, 112);
-            textBox42.Name = "textBox42";
-            textBox42.RightToLeft = RightToLeft.No;
-            textBox42.Size = new Size(100, 25);
-            textBox42.TabIndex = 30;
-            // 
-            // textBox43
-            // 
-            textBox43.BackColor = Color.White;
-            textBox43.BorderStyle = BorderStyle.FixedSingle;
-            textBox43.Location = new Point(566, 81);
-            textBox43.Name = "textBox43";
-            textBox43.RightToLeft = RightToLeft.No;
-            textBox43.Size = new Size(100, 25);
-            textBox43.TabIndex = 29;
-            // 
-            // textBox44
-            // 
-            textBox44.BackColor = Color.White;
-            textBox44.BorderStyle = BorderStyle.FixedSingle;
-            textBox44.Location = new Point(440, 81);
-            textBox44.Name = "textBox44";
-            textBox44.RightToLeft = RightToLeft.No;
-            textBox44.Size = new Size(100, 25);
-            textBox44.TabIndex = 28;
-            // 
-            // textBox45
-            // 
-            textBox45.BackColor = Color.White;
-            textBox45.BorderStyle = BorderStyle.FixedSingle;
-            textBox45.Location = new Point(308, 81);
-            textBox45.Name = "textBox45";
-            textBox45.RightToLeft = RightToLeft.No;
-            textBox45.Size = new Size(100, 25);
-            textBox45.TabIndex = 27;
-            // 
-            // textBox46
-            // 
-            textBox46.BackColor = Color.White;
-            textBox46.BorderStyle = BorderStyle.FixedSingle;
-            textBox46.Location = new Point(566, 49);
-            textBox46.Name = "textBox46";
-            textBox46.RightToLeft = RightToLeft.No;
-            textBox46.Size = new Size(100, 25);
-            textBox46.TabIndex = 26;
-            // 
-            // textBox47
-            // 
-            textBox47.BackColor = Color.White;
-            textBox47.BorderStyle = BorderStyle.FixedSingle;
-            textBox47.Location = new Point(440, 49);
-            textBox47.Name = "textBox47";
-            textBox47.RightToLeft = RightToLeft.No;
-            textBox47.Size = new Size(100, 25);
-            textBox47.TabIndex = 25;
-            // 
-            // textBox48
-            // 
-            textBox48.BackColor = Color.White;
-            textBox48.BorderStyle = BorderStyle.FixedSingle;
-            textBox48.Location = new Point(308, 49);
-            textBox48.Name = "textBox48";
-            textBox48.RightToLeft = RightToLeft.No;
-            textBox48.Size = new Size(100, 25);
-            textBox48.TabIndex = 24;
-            // 
-            // textBox49
-            // 
-            textBox49.BackColor = Color.White;
-            textBox49.BorderStyle = BorderStyle.FixedSingle;
-            textBox49.Location = new Point(566, 18);
-            textBox49.Name = "textBox49";
-            textBox49.RightToLeft = RightToLeft.No;
-            textBox49.Size = new Size(100, 25);
-            textBox49.TabIndex = 23;
-            // 
-            // textBox50
-            // 
-            textBox50.BackColor = Color.White;
-            textBox50.BorderStyle = BorderStyle.FixedSingle;
-            textBox50.Location = new Point(440, 18);
-            textBox50.Name = "textBox50";
-            textBox50.RightToLeft = RightToLeft.No;
-            textBox50.Size = new Size(100, 25);
-            textBox50.TabIndex = 22;
-            // 
-            // textBox51
-            // 
-            textBox51.BackColor = Color.White;
-            textBox51.BorderStyle = BorderStyle.FixedSingle;
-            textBox51.Location = new Point(308, 18);
-            textBox51.Name = "textBox51";
-            textBox51.RightToLeft = RightToLeft.No;
-            textBox51.Size = new Size(100, 25);
-            textBox51.TabIndex = 21;
-            // 
-            // label112
-            // 
-            label112.AutoSize = true;
-            label112.Location = new Point(20, 229);
-            label112.Name = "label112";
-            label112.Size = new Size(190, 17);
-            label112.TabIndex = 13;
-            label112.Text = "Key UnLock - full travel (MM)";
-            // 
-            // label113
-            // 
-            label113.AutoSize = true;
-            label113.Location = new Point(20, 203);
-            label113.Name = "label113";
-            label113.Size = new Size(194, 17);
-            label113.TabIndex = 12;
-            label113.Text = "Key UnLock - lock travel (MM)";
-            // 
-            // label114
-            // 
-            label114.AutoSize = true;
-            label114.Location = new Point(20, 173);
-            label114.Name = "label114";
-            label114.Size = new Size(189, 17);
-            label114.TabIndex = 11;
-            label114.Text = "Key UnLock - pre travel (MM)";
-            // 
-            // label115
-            // 
-            label115.AutoSize = true;
-            label115.Location = new Point(20, 145);
-            label115.Name = "label115";
-            label115.Size = new Size(151, 17);
-            label115.TabIndex = 10;
-            label115.Text = "Key UnLock - Effort (N)";
-            // 
-            // label116
-            // 
-            label116.AutoSize = true;
-            label116.Location = new Point(20, 115);
-            label116.Name = "label116";
-            label116.Size = new Size(173, 17);
-            label116.TabIndex = 9;
-            label116.Text = "Key Lock - full travel (MM)";
-            // 
-            // label117
-            // 
-            label117.AutoSize = true;
-            label117.Location = new Point(20, 87);
-            label117.Name = "label117";
-            label117.Size = new Size(177, 17);
-            label117.TabIndex = 8;
-            label117.Text = "Key Lock - lock travel (MM)";
-            // 
-            // label118
-            // 
-            label118.AutoSize = true;
-            label118.Location = new Point(20, 58);
-            label118.Name = "label118";
-            label118.Size = new Size(174, 17);
-            label118.TabIndex = 7;
-            label118.Text = "Key Lock - Pre Travel (MM)";
-            // 
-            // label119
-            // 
-            label119.AutoSize = true;
-            label119.Location = new Point(20, 29);
-            label119.Name = "label119";
-            label119.Size = new Size(134, 17);
-            label119.TabIndex = 6;
-            label119.Text = "Key Lock - Effort (N)";
-            // 
-            // groupBox20
-            // 
-            groupBox20.Controls.Add(textBox52);
-            groupBox20.Controls.Add(textBox53);
-            groupBox20.Controls.Add(textBox54);
-            groupBox20.Controls.Add(textBox55);
-            groupBox20.Controls.Add(label120);
-            groupBox20.Controls.Add(textBox56);
-            groupBox20.Controls.Add(textBox57);
-            groupBox20.Controls.Add(label121);
-            groupBox20.Location = new Point(44, 141);
-            groupBox20.Name = "groupBox20";
-            groupBox20.Size = new Size(716, 98);
-            groupBox20.TabIndex = 16;
-            groupBox20.TabStop = false;
-            groupBox20.Text = "Motor Current";
-            // 
-            // textBox52
-            // 
-            textBox52.BackColor = Color.White;
-            textBox52.BorderStyle = BorderStyle.FixedSingle;
-            textBox52.Location = new Point(566, 54);
-            textBox52.Name = "textBox52";
-            textBox52.RightToLeft = RightToLeft.No;
-            textBox52.Size = new Size(100, 25);
-            textBox52.TabIndex = 20;
-            // 
-            // textBox53
-            // 
-            textBox53.BackColor = Color.White;
-            textBox53.BorderStyle = BorderStyle.FixedSingle;
-            textBox53.Location = new Point(440, 54);
-            textBox53.Name = "textBox53";
-            textBox53.RightToLeft = RightToLeft.No;
-            textBox53.Size = new Size(100, 25);
-            textBox53.TabIndex = 19;
-            // 
-            // textBox54
-            // 
-            textBox54.BackColor = Color.White;
-            textBox54.BorderStyle = BorderStyle.FixedSingle;
-            textBox54.Location = new Point(308, 54);
-            textBox54.Name = "textBox54";
-            textBox54.RightToLeft = RightToLeft.No;
-            textBox54.Size = new Size(100, 25);
-            textBox54.TabIndex = 18;
-            // 
-            // textBox55
-            // 
-            textBox55.BackColor = Color.White;
-            textBox55.BorderStyle = BorderStyle.FixedSingle;
-            textBox55.Location = new Point(566, 23);
-            textBox55.Name = "textBox55";
-            textBox55.RightToLeft = RightToLeft.No;
-            textBox55.Size = new Size(100, 25);
-            textBox55.TabIndex = 17;
-            // 
-            // label120
-            // 
-            label120.AutoSize = true;
-            label120.Location = new Point(20, 60);
-            label120.Name = "label120";
-            label120.Size = new Size(193, 17);
-            label120.TabIndex = 7;
-            label120.Text = "Power Unlock Current (Amph)";
-            // 
-            // textBox56
-            // 
-            textBox56.BackColor = Color.White;
-            textBox56.BorderStyle = BorderStyle.FixedSingle;
-            textBox56.Location = new Point(440, 23);
-            textBox56.Name = "textBox56";
-            textBox56.RightToLeft = RightToLeft.No;
-            textBox56.Size = new Size(100, 25);
-            textBox56.TabIndex = 16;
-            // 
-            // textBox57
-            // 
-            textBox57.BackColor = Color.White;
-            textBox57.BorderStyle = BorderStyle.FixedSingle;
-            textBox57.Location = new Point(308, 23);
-            textBox57.Name = "textBox57";
-            textBox57.RightToLeft = RightToLeft.No;
-            textBox57.Size = new Size(100, 25);
-            textBox57.TabIndex = 15;
-            // 
-            // label121
-            // 
-            label121.AutoSize = true;
-            label121.Location = new Point(20, 29);
-            label121.Name = "label121";
-            label121.Size = new Size(179, 17);
-            label121.TabIndex = 6;
-            label121.Text = "Power Lock Current (Amph)";
-            // 
-            // label122
-            // 
-            label122.AutoSize = true;
-            label122.Location = new Point(64, 107);
-            label122.Name = "label122";
-            label122.Size = new Size(91, 17);
-            label122.TabIndex = 15;
-            label122.Text = "Seal Load (N)";
-            // 
-            // groupBox21
-            // 
-            groupBox21.Controls.Add(textBox4);
-            groupBox21.Controls.Add(label3);
-            groupBox21.Controls.Add(textBox5);
-            groupBox21.Controls.Add(label4);
-            groupBox21.Controls.Add(textBox6);
-            groupBox21.Controls.Add(label5);
-            groupBox21.Controls.Add(textBox58);
-            groupBox21.Controls.Add(textBox59);
-            groupBox21.Controls.Add(label123);
-            groupBox21.Controls.Add(textBox60);
-            groupBox21.Controls.Add(textBox61);
-            groupBox21.Controls.Add(textBox62);
-            groupBox21.Controls.Add(textBox63);
-            groupBox21.Controls.Add(textBox64);
-            groupBox21.Controls.Add(textBox65);
-            groupBox21.Controls.Add(textBox66);
-            groupBox21.Location = new Point(21, 427);
-            groupBox21.Name = "groupBox21";
-            groupBox21.Size = new Size(716, 140);
-            groupBox21.TabIndex = 65;
-            groupBox21.TabStop = false;
-            groupBox21.Text = "Outside Release";
-            // 
-            // textBox4
-            // 
-            textBox4.BackColor = Color.White;
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.Location = new Point(566, 110);
-            textBox4.Name = "textBox4";
-            textBox4.RightToLeft = RightToLeft.No;
-            textBox4.Size = new Size(100, 25);
-            textBox4.TabIndex = 56;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(20, 110);
-            label3.Name = "label3";
-            label3.Size = new Size(216, 17);
-            label3.TabIndex = 11;
-            label3.Text = "Outside release - Full travel (MM)";
-            // 
-            // textBox5
-            // 
-            textBox5.BackColor = Color.White;
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Location = new Point(440, 110);
-            textBox5.Name = "textBox5";
-            textBox5.RightToLeft = RightToLeft.No;
-            textBox5.Size = new Size(100, 25);
-            textBox5.TabIndex = 55;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(20, 56);
-            label4.Name = "label4";
-            label4.Size = new Size(213, 17);
-            label4.TabIndex = 10;
-            label4.Text = "Outside release - Pre travel (MM)";
-            // 
-            // textBox6
-            // 
-            textBox6.BackColor = Color.White;
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Location = new Point(308, 110);
-            textBox6.Name = "textBox6";
-            textBox6.RightToLeft = RightToLeft.No;
-            textBox6.Size = new Size(100, 25);
-            textBox6.TabIndex = 54;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(20, 83);
-            label5.Name = "label5";
-            label5.Size = new Size(239, 17);
-            label5.TabIndex = 8;
-            label5.Text = "Outside release - Release travel (MM)";
-            // 
-            // textBox58
-            // 
-            textBox58.BackColor = Color.White;
-            textBox58.BorderStyle = BorderStyle.FixedSingle;
-            textBox58.Location = new Point(566, 79);
-            textBox58.Name = "textBox58";
-            textBox58.RightToLeft = RightToLeft.No;
-            textBox58.Size = new Size(100, 25);
-            textBox58.TabIndex = 53;
-            // 
-            // textBox59
-            // 
-            textBox59.BackColor = Color.White;
-            textBox59.BorderStyle = BorderStyle.FixedSingle;
-            textBox59.Location = new Point(440, 79);
-            textBox59.Name = "textBox59";
-            textBox59.RightToLeft = RightToLeft.No;
-            textBox59.Size = new Size(100, 25);
-            textBox59.TabIndex = 52;
-            // 
-            // label123
-            // 
-            label123.AutoSize = true;
-            label123.Location = new Point(20, 29);
-            label123.Name = "label123";
-            label123.Size = new Size(175, 17);
-            label123.TabIndex = 6;
-            label123.Text = "Outside release - Effort (N)";
-            // 
-            // textBox60
-            // 
-            textBox60.BackColor = Color.White;
-            textBox60.BorderStyle = BorderStyle.FixedSingle;
-            textBox60.Location = new Point(308, 79);
-            textBox60.Name = "textBox60";
-            textBox60.RightToLeft = RightToLeft.No;
-            textBox60.Size = new Size(100, 25);
-            textBox60.TabIndex = 51;
-            // 
-            // textBox61
-            // 
-            textBox61.BackColor = Color.White;
-            textBox61.BorderStyle = BorderStyle.FixedSingle;
-            textBox61.Location = new Point(308, 16);
-            textBox61.Name = "textBox61";
-            textBox61.RightToLeft = RightToLeft.No;
-            textBox61.Size = new Size(100, 25);
-            textBox61.TabIndex = 45;
-            // 
-            // textBox62
-            // 
-            textBox62.BackColor = Color.White;
-            textBox62.BorderStyle = BorderStyle.FixedSingle;
-            textBox62.Location = new Point(566, 47);
-            textBox62.Name = "textBox62";
-            textBox62.RightToLeft = RightToLeft.No;
-            textBox62.Size = new Size(100, 25);
-            textBox62.TabIndex = 50;
-            // 
-            // textBox63
-            // 
-            textBox63.BackColor = Color.White;
-            textBox63.BorderStyle = BorderStyle.FixedSingle;
-            textBox63.Location = new Point(440, 16);
-            textBox63.Name = "textBox63";
-            textBox63.RightToLeft = RightToLeft.No;
-            textBox63.Size = new Size(100, 25);
-            textBox63.TabIndex = 46;
-            // 
-            // textBox64
-            // 
-            textBox64.BackColor = Color.White;
-            textBox64.BorderStyle = BorderStyle.FixedSingle;
-            textBox64.Location = new Point(440, 47);
-            textBox64.Name = "textBox64";
-            textBox64.RightToLeft = RightToLeft.No;
-            textBox64.Size = new Size(100, 25);
-            textBox64.TabIndex = 49;
-            // 
-            // textBox65
-            // 
-            textBox65.BackColor = Color.White;
-            textBox65.BorderStyle = BorderStyle.FixedSingle;
-            textBox65.Location = new Point(566, 16);
-            textBox65.Name = "textBox65";
-            textBox65.RightToLeft = RightToLeft.No;
-            textBox65.Size = new Size(100, 25);
-            textBox65.TabIndex = 47;
-            // 
-            // textBox66
-            // 
-            textBox66.BackColor = Color.White;
-            textBox66.BorderStyle = BorderStyle.FixedSingle;
-            textBox66.Location = new Point(308, 47);
-            textBox66.Name = "textBox66";
-            textBox66.RightToLeft = RightToLeft.No;
-            textBox66.Size = new Size(100, 25);
-            textBox66.TabIndex = 48;
-            // 
-            // groupBox22
-            // 
-            groupBox22.Controls.Add(textBox67);
-            groupBox22.Controls.Add(label124);
-            groupBox22.Controls.Add(textBox68);
-            groupBox22.Controls.Add(label125);
-            groupBox22.Controls.Add(textBox69);
-            groupBox22.Controls.Add(label126);
-            groupBox22.Controls.Add(textBox70);
-            groupBox22.Controls.Add(textBox71);
-            groupBox22.Controls.Add(label127);
-            groupBox22.Controls.Add(textBox72);
-            groupBox22.Controls.Add(textBox73);
-            groupBox22.Controls.Add(textBox74);
-            groupBox22.Controls.Add(textBox75);
-            groupBox22.Controls.Add(textBox76);
-            groupBox22.Controls.Add(textBox77);
-            groupBox22.Controls.Add(textBox78);
-            groupBox22.Location = new Point(21, 263);
-            groupBox22.Name = "groupBox22";
-            groupBox22.Size = new Size(716, 140);
-            groupBox22.TabIndex = 64;
-            groupBox22.TabStop = false;
-            groupBox22.Text = "Inside Release";
-            // 
-            // textBox67
-            // 
-            textBox67.BackColor = Color.White;
-            textBox67.BorderStyle = BorderStyle.FixedSingle;
-            textBox67.Location = new Point(566, 110);
-            textBox67.Name = "textBox67";
-            textBox67.RightToLeft = RightToLeft.No;
-            textBox67.Size = new Size(100, 25);
-            textBox67.TabIndex = 56;
-            // 
-            // label124
-            // 
-            label124.AutoSize = true;
-            label124.Location = new Point(20, 110);
-            label124.Name = "label124";
-            label124.Size = new Size(205, 17);
-            label124.TabIndex = 11;
-            label124.Text = "Inside release - Full travel (MM)";
-            // 
-            // textBox68
-            // 
-            textBox68.BackColor = Color.White;
-            textBox68.BorderStyle = BorderStyle.FixedSingle;
-            textBox68.Location = new Point(440, 110);
-            textBox68.Name = "textBox68";
-            textBox68.RightToLeft = RightToLeft.No;
-            textBox68.Size = new Size(100, 25);
-            textBox68.TabIndex = 55;
-            // 
-            // label125
-            // 
-            label125.AutoSize = true;
-            label125.Location = new Point(20, 56);
-            label125.Name = "label125";
-            label125.Size = new Size(202, 17);
-            label125.TabIndex = 10;
-            label125.Text = "Inside release - Pre travel (MM)";
-            // 
-            // textBox69
-            // 
-            textBox69.BackColor = Color.White;
-            textBox69.BorderStyle = BorderStyle.FixedSingle;
-            textBox69.Location = new Point(308, 110);
-            textBox69.Name = "textBox69";
-            textBox69.RightToLeft = RightToLeft.No;
-            textBox69.Size = new Size(100, 25);
-            textBox69.TabIndex = 54;
-            // 
-            // label126
-            // 
-            label126.AutoSize = true;
-            label126.Location = new Point(20, 83);
-            label126.Name = "label126";
-            label126.Size = new Size(228, 17);
-            label126.TabIndex = 8;
-            label126.Text = "Inside release - Release travel (MM)";
-            // 
-            // textBox70
-            // 
-            textBox70.BackColor = Color.White;
-            textBox70.BorderStyle = BorderStyle.FixedSingle;
-            textBox70.Location = new Point(566, 79);
-            textBox70.Name = "textBox70";
-            textBox70.RightToLeft = RightToLeft.No;
-            textBox70.Size = new Size(100, 25);
-            textBox70.TabIndex = 53;
-            // 
-            // textBox71
-            // 
-            textBox71.BackColor = Color.White;
-            textBox71.BorderStyle = BorderStyle.FixedSingle;
-            textBox71.Location = new Point(440, 79);
-            textBox71.Name = "textBox71";
-            textBox71.RightToLeft = RightToLeft.No;
-            textBox71.Size = new Size(100, 25);
-            textBox71.TabIndex = 52;
-            // 
-            // label127
-            // 
-            label127.AutoSize = true;
-            label127.Location = new Point(20, 29);
-            label127.Name = "label127";
-            label127.Size = new Size(164, 17);
-            label127.TabIndex = 6;
-            label127.Text = "Inside release - Effort (N)";
-            // 
-            // textBox72
-            // 
-            textBox72.BackColor = Color.White;
-            textBox72.BorderStyle = BorderStyle.FixedSingle;
-            textBox72.Location = new Point(308, 79);
-            textBox72.Name = "textBox72";
-            textBox72.RightToLeft = RightToLeft.No;
-            textBox72.Size = new Size(100, 25);
-            textBox72.TabIndex = 51;
-            // 
-            // textBox73
-            // 
-            textBox73.BackColor = Color.White;
-            textBox73.BorderStyle = BorderStyle.FixedSingle;
-            textBox73.Location = new Point(308, 16);
-            textBox73.Name = "textBox73";
-            textBox73.RightToLeft = RightToLeft.No;
-            textBox73.Size = new Size(100, 25);
-            textBox73.TabIndex = 45;
-            // 
-            // textBox74
-            // 
-            textBox74.BackColor = Color.White;
-            textBox74.BorderStyle = BorderStyle.FixedSingle;
-            textBox74.Location = new Point(566, 47);
-            textBox74.Name = "textBox74";
-            textBox74.RightToLeft = RightToLeft.No;
-            textBox74.Size = new Size(100, 25);
-            textBox74.TabIndex = 50;
-            // 
-            // textBox75
-            // 
-            textBox75.BackColor = Color.White;
-            textBox75.BorderStyle = BorderStyle.FixedSingle;
-            textBox75.Location = new Point(440, 16);
-            textBox75.Name = "textBox75";
-            textBox75.RightToLeft = RightToLeft.No;
-            textBox75.Size = new Size(100, 25);
-            textBox75.TabIndex = 46;
-            // 
-            // textBox76
-            // 
-            textBox76.BackColor = Color.White;
-            textBox76.BorderStyle = BorderStyle.FixedSingle;
-            textBox76.Location = new Point(440, 47);
-            textBox76.Name = "textBox76";
-            textBox76.RightToLeft = RightToLeft.No;
-            textBox76.Size = new Size(100, 25);
-            textBox76.TabIndex = 49;
-            // 
-            // textBox77
-            // 
-            textBox77.BackColor = Color.White;
-            textBox77.BorderStyle = BorderStyle.FixedSingle;
-            textBox77.Location = new Point(566, 16);
-            textBox77.Name = "textBox77";
-            textBox77.RightToLeft = RightToLeft.No;
-            textBox77.Size = new Size(100, 25);
-            textBox77.TabIndex = 47;
-            // 
-            // textBox78
-            // 
-            textBox78.BackColor = Color.White;
-            textBox78.BorderStyle = BorderStyle.FixedSingle;
-            textBox78.Location = new Point(308, 47);
-            textBox78.Name = "textBox78";
-            textBox78.RightToLeft = RightToLeft.No;
-            textBox78.Size = new Size(100, 25);
-            textBox78.TabIndex = 48;
-            // 
-            // label128
-            // 
-            label128.AutoSize = true;
-            label128.Location = new Point(611, 79);
-            label128.Name = "label128";
-            label128.Size = new Size(47, 17);
-            label128.TabIndex = 62;
-            label128.Text = "Actual";
-            // 
-            // groupBox23
-            // 
-            groupBox23.Controls.Add(textBox79);
-            groupBox23.Controls.Add(label129);
-            groupBox23.Controls.Add(textBox80);
-            groupBox23.Controls.Add(label130);
-            groupBox23.Controls.Add(textBox81);
-            groupBox23.Controls.Add(label131);
-            groupBox23.Controls.Add(textBox82);
-            groupBox23.Controls.Add(textBox83);
-            groupBox23.Controls.Add(label132);
-            groupBox23.Controls.Add(textBox84);
-            groupBox23.Controls.Add(textBox85);
-            groupBox23.Controls.Add(textBox86);
-            groupBox23.Controls.Add(textBox87);
-            groupBox23.Controls.Add(textBox88);
-            groupBox23.Controls.Add(textBox89);
-            groupBox23.Controls.Add(textBox90);
-            groupBox23.Location = new Point(21, 104);
-            groupBox23.Name = "groupBox23";
-            groupBox23.Size = new Size(716, 140);
-            groupBox23.TabIndex = 63;
-            groupBox23.TabStop = false;
-            groupBox23.Text = "Inside Lock";
-            // 
-            // textBox79
-            // 
-            textBox79.BackColor = Color.White;
-            textBox79.BorderStyle = BorderStyle.FixedSingle;
-            textBox79.Location = new Point(566, 110);
-            textBox79.Name = "textBox79";
-            textBox79.RightToLeft = RightToLeft.No;
-            textBox79.Size = new Size(100, 25);
-            textBox79.TabIndex = 56;
-            // 
-            // label129
-            // 
-            label129.AutoSize = true;
-            label129.Location = new Point(20, 110);
-            label129.Name = "label129";
-            label129.Size = new Size(179, 17);
-            label129.TabIndex = 11;
-            label129.Text = "Inside Unlock - Travel (MM)";
-            // 
-            // textBox80
-            // 
-            textBox80.BackColor = Color.White;
-            textBox80.BorderStyle = BorderStyle.FixedSingle;
-            textBox80.Location = new Point(440, 110);
-            textBox80.Name = "textBox80";
-            textBox80.RightToLeft = RightToLeft.No;
-            textBox80.Size = new Size(100, 25);
-            textBox80.TabIndex = 55;
-            // 
-            // label130
-            // 
-            label130.AutoSize = true;
-            label130.Location = new Point(20, 56);
-            label130.Name = "label130";
-            label130.Size = new Size(165, 17);
-            label130.TabIndex = 10;
-            label130.Text = "Inside Lock - Travel (MM)";
-            // 
-            // textBox81
-            // 
-            textBox81.BackColor = Color.White;
-            textBox81.BorderStyle = BorderStyle.FixedSingle;
-            textBox81.Location = new Point(308, 110);
-            textBox81.Name = "textBox81";
-            textBox81.RightToLeft = RightToLeft.No;
-            textBox81.Size = new Size(100, 25);
-            textBox81.TabIndex = 54;
-            // 
-            // label131
-            // 
-            label131.AutoSize = true;
-            label131.Location = new Point(20, 82);
-            label131.Name = "label131";
-            label131.Size = new Size(163, 17);
-            label131.TabIndex = 8;
-            label131.Text = "Inside Unlock - Effort (N)";
-            // 
-            // textBox82
-            // 
-            textBox82.BackColor = Color.White;
-            textBox82.BorderStyle = BorderStyle.FixedSingle;
-            textBox82.Location = new Point(566, 79);
-            textBox82.Name = "textBox82";
-            textBox82.RightToLeft = RightToLeft.No;
-            textBox82.Size = new Size(100, 25);
-            textBox82.TabIndex = 53;
-            // 
-            // textBox83
-            // 
-            textBox83.BackColor = Color.White;
-            textBox83.BorderStyle = BorderStyle.FixedSingle;
-            textBox83.Location = new Point(440, 79);
-            textBox83.Name = "textBox83";
-            textBox83.RightToLeft = RightToLeft.No;
-            textBox83.Size = new Size(100, 25);
-            textBox83.TabIndex = 52;
-            // 
-            // label132
-            // 
-            label132.AutoSize = true;
-            label132.Location = new Point(20, 29);
-            label132.Name = "label132";
-            label132.Size = new Size(149, 17);
-            label132.TabIndex = 6;
-            label132.Text = "Inside Lock - Effort (N)";
-            // 
-            // textBox84
-            // 
-            textBox84.BackColor = Color.White;
-            textBox84.BorderStyle = BorderStyle.FixedSingle;
-            textBox84.Location = new Point(308, 79);
-            textBox84.Name = "textBox84";
-            textBox84.RightToLeft = RightToLeft.No;
-            textBox84.Size = new Size(100, 25);
-            textBox84.TabIndex = 51;
-            // 
-            // textBox85
-            // 
-            textBox85.BackColor = Color.White;
-            textBox85.BorderStyle = BorderStyle.FixedSingle;
-            textBox85.Location = new Point(308, 16);
-            textBox85.Name = "textBox85";
-            textBox85.RightToLeft = RightToLeft.No;
-            textBox85.Size = new Size(100, 25);
-            textBox85.TabIndex = 45;
-            // 
-            // textBox86
-            // 
-            textBox86.BackColor = Color.White;
-            textBox86.BorderStyle = BorderStyle.FixedSingle;
-            textBox86.Location = new Point(566, 47);
-            textBox86.Name = "textBox86";
-            textBox86.RightToLeft = RightToLeft.No;
-            textBox86.Size = new Size(100, 25);
-            textBox86.TabIndex = 50;
-            // 
-            // textBox87
-            // 
-            textBox87.BackColor = Color.White;
-            textBox87.BorderStyle = BorderStyle.FixedSingle;
-            textBox87.Location = new Point(440, 16);
-            textBox87.Name = "textBox87";
-            textBox87.RightToLeft = RightToLeft.No;
-            textBox87.Size = new Size(100, 25);
-            textBox87.TabIndex = 46;
-            // 
-            // textBox88
-            // 
-            textBox88.BackColor = Color.White;
-            textBox88.BorderStyle = BorderStyle.FixedSingle;
-            textBox88.Location = new Point(440, 47);
-            textBox88.Name = "textBox88";
-            textBox88.RightToLeft = RightToLeft.No;
-            textBox88.Size = new Size(100, 25);
-            textBox88.TabIndex = 49;
-            // 
-            // textBox89
-            // 
-            textBox89.BackColor = Color.White;
-            textBox89.BorderStyle = BorderStyle.FixedSingle;
-            textBox89.Location = new Point(566, 16);
-            textBox89.Name = "textBox89";
-            textBox89.RightToLeft = RightToLeft.No;
-            textBox89.Size = new Size(100, 25);
-            textBox89.TabIndex = 47;
-            // 
-            // textBox90
-            // 
-            textBox90.BackColor = Color.White;
-            textBox90.BorderStyle = BorderStyle.FixedSingle;
-            textBox90.Location = new Point(308, 47);
-            textBox90.Name = "textBox90";
-            textBox90.RightToLeft = RightToLeft.No;
-            textBox90.Size = new Size(100, 25);
-            textBox90.TabIndex = 48;
-            // 
-            // label133
-            // 
-            label133.AutoSize = true;
-            label133.Location = new Point(478, 79);
-            label133.Name = "label133";
-            label133.Size = new Size(70, 17);
-            label133.TabIndex = 61;
-            label133.Text = "Maximum";
-            // 
-            // label134
-            // 
-            label134.AutoSize = true;
-            label134.Location = new Point(345, 79);
-            label134.Name = "label134";
-            label134.Size = new Size(68, 17);
-            label134.TabIndex = 60;
-            label134.Text = "Minimum";
-            // 
-            // button1
-            // 
-            button1.Location = new Point(605, 36);
-            button1.Name = "button1";
-            button1.Size = new Size(84, 31);
-            button1.TabIndex = 72;
-            button1.Text = "Enter";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox91
-            // 
-            textBox91.BorderStyle = BorderStyle.FixedSingle;
-            textBox91.Location = new Point(489, 41);
-            textBox91.Name = "textBox91";
-            textBox91.Size = new Size(100, 25);
-            textBox91.TabIndex = 70;
-            // 
-            // label135
-            // 
-            label135.AutoSize = true;
-            label135.Location = new Point(427, 43);
-            label135.Name = "label135";
-            label135.Size = new Size(46, 17);
-            label135.TabIndex = 71;
-            label135.Text = "Result";
-            // 
-            // textBox92
-            // 
-            textBox92.BorderStyle = BorderStyle.FixedSingle;
-            textBox92.Location = new Point(300, 41);
-            textBox92.Name = "textBox92";
-            textBox92.Size = new Size(100, 25);
-            textBox92.TabIndex = 68;
-            // 
-            // label136
-            // 
-            label136.AutoSize = true;
-            label136.Location = new Point(237, 43);
-            label136.Name = "label136";
-            label136.Size = new Size(52, 17);
-            label136.TabIndex = 69;
-            label136.Text = "Varient";
-            // 
-            // textBox93
-            // 
-            textBox93.BorderStyle = BorderStyle.FixedSingle;
-            textBox93.Location = new Point(122, 41);
-            textBox93.Name = "textBox93";
-            textBox93.Size = new Size(100, 25);
-            textBox93.TabIndex = 66;
-            // 
-            // label137
-            // 
-            label137.AutoSize = true;
-            label137.Location = new Point(66, 43);
-            label137.Name = "label137";
-            label137.Size = new Size(37, 17);
-            label137.TabIndex = 67;
-            label137.Text = "Shift";
-            // 
             // Magna
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -7155,8 +7157,22 @@
             panel4.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            groupBox21.ResumeLayout(false);
+            groupBox21.PerformLayout();
+            groupBox22.ResumeLayout(false);
+            groupBox22.PerformLayout();
+            groupBox23.ResumeLayout(false);
+            groupBox23.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox17.ResumeLayout(false);
+            groupBox17.PerformLayout();
+            groupBox18.ResumeLayout(false);
+            groupBox18.PerformLayout();
+            groupBox19.ResumeLayout(false);
+            groupBox19.PerformLayout();
+            groupBox20.ResumeLayout(false);
+            groupBox20.PerformLayout();
             tabPage4.ResumeLayout(false);
             panel11.ResumeLayout(false);
             panel11.PerformLayout();
@@ -7178,20 +7194,6 @@
             groupBox15.PerformLayout();
             groupBox16.ResumeLayout(false);
             groupBox16.PerformLayout();
-            groupBox17.ResumeLayout(false);
-            groupBox17.PerformLayout();
-            groupBox18.ResumeLayout(false);
-            groupBox18.PerformLayout();
-            groupBox19.ResumeLayout(false);
-            groupBox19.PerformLayout();
-            groupBox20.ResumeLayout(false);
-            groupBox20.PerformLayout();
-            groupBox21.ResumeLayout(false);
-            groupBox21.PerformLayout();
-            groupBox22.ResumeLayout(false);
-            groupBox22.PerformLayout();
-            groupBox23.ResumeLayout(false);
-            groupBox23.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
