@@ -288,7 +288,7 @@ namespace Magna_TestApplication
             {
                 var log = new FunctionalTestLogRecord
                 {
-                    SNo = GetNextTetSNo(),
+                    SNo = GetNextFtSNo(),
                     LoggedAt = DateTime.Now,
 
                 };
@@ -303,6 +303,15 @@ namespace Magna_TestApplication
             {
                 Console.WriteLine("SaveFtSnapshot Error: " + ex.Message);
             }
+        }
+
+        private int GetNextFtSNo()
+        {
+            var logs = _jsonLogService.GetFtLogs(
+                DateTime.Today,
+                DateTime.Today.AddDays(1).AddSeconds(-1));
+
+            return logs.Count + 1;
         }
 
         private int GetNextTetSNo()
@@ -1667,6 +1676,305 @@ namespace Magna_TestApplication
                 MessageBox.Show("Reload failed:\n" + ex.Message,
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void MANUAL_FT_ENTER_BTN_Click(object sender, EventArgs e)
+        {
+            SaveManualFunctionalTest();
+        }
+
+        private void SaveManualFunctionalTest()
+        {
+            try
+            {
+                // ---------------------------------------------
+                // 1. Validate basic information
+                // ---------------------------------------------
+
+                string shift = MANUAL_FT_SHIFT_TXT.Text.Trim();
+                string variant = MANUAL_FT_VARIANT_TXT.Text.Trim();
+                string result = MANUAL_FT_RESULT_TXT.Text.Trim().ToUpper();
+
+                if (string.IsNullOrWhiteSpace(shift))
+                {
+                    MessageBox.Show("Please enter Shift.");
+                    MANUAL_FT_SHIFT_TXT.Focus();
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(variant))
+                {
+                    MessageBox.Show("Please enter Variant.");
+                    MANUAL_FT_VARIANT_TXT.Focus();
+                    return;
+                }
+
+                if (result != "PASS" && result != "FAIL")
+                {
+                    MessageBox.Show("Result must be PASS or FAIL.");
+                    MANUAL_FT_RESULT_TXT.Focus();
+                    return;
+                }
+
+                // ---------------------------------------------
+                // 2. Create FT record
+                // ---------------------------------------------
+
+                var log = new FunctionalTestLogRecord
+                {
+                    SNo = GetNextFtSNo(),
+                    LoggedAt = DateTime.Now,
+                    Shift = shift,
+                    Variant = variant,
+                    Result = result
+                };
+
+                // ---------------------------------------------
+                // 3. Read measurements
+                // ---------------------------------------------
+
+                log.SealLoad_Min =
+                    ReadManualDouble(MANUAL_FT_SEALLOAD_MIN_TXT);
+
+                log.SealLoad_Max =
+                    ReadManualDouble(MANUAL_FT_SEALLOAD_MAX_TXT);
+
+                log.SealLoad_Actual =
+                    ReadManualDouble(MANUAL_FT_SEALLOAD_ACTUAL_TXT);
+
+
+                log.PowerLockCurrent_Min =
+                    ReadManualDouble(MANUAL_FT_POWERLOCKCURRENT_MIN_TXT);
+
+                log.PowerLockCurrent_Max =
+                    ReadManualDouble(MANUAL_FT_POWERLOCKCURRENT_MAX_TXT);
+
+                log.PowerLockCurrent_Actual =
+                    ReadManualDouble(MANUAL_FT_POWERLOCKCURRENT_ACTUAL_TXT);
+
+
+                log.PowerUnlockCurrent_Min =
+                    ReadManualDouble(MANUAL_FT_POWERUNLOCKCURRENT_MIN_TXT);
+
+                log.PowerUnlockCurrent_Max =
+                    ReadManualDouble(MANUAL_FT_POWERUNLOCKCURRENT_MAX_TXT);
+
+                log.PowerUnlockCurrent_Actual =
+                    ReadManualDouble(MANUAL_FT_POWERUNLOCKCURRENT_ACTUAL_TXT);
+
+
+                // ---------------------------------------------
+                // Key Lock
+                // ---------------------------------------------
+
+                log.KeyLockEffort_Min =
+                    ReadManualDouble(MANUAL_FT_KEYLOCKEFFORT_MIN_TXT);
+
+                log.KeyLockEffort_Max =
+                    ReadManualDouble(MANUAL_FT_KEYLOCKEFFORT_MAX_TXT);
+
+                log.KeyLockEffort_Actual =
+                    ReadManualDouble(MANUAL_FT_KEYLOCKEFFORT_ACTUAL_TXT);
+
+
+                log.KeyLockPreTravel_Min =
+                    ReadManualDouble(MANUAL_FT_KEYLOCKPRETRAVEL_MIN_TXT);
+
+                log.KeyLockPreTravel_Max =
+                    ReadManualDouble(MANUAL_FT_KEYLOCKPRETRAVEL_MAX_TXT);
+
+                log.KeyLockPreTravel_Actual =
+                    ReadManualDouble(MANUAL_FT_KEYLOCKPRETRAVEL_ACTUAL_TXT);
+
+
+                log.KeyLockLockTravel_Min =
+                    ReadManualDouble(MANUAL_FT_KEYLOCKLOCKTRAVEL_MIN_TXT);
+
+                log.KeyLockLockTravel_Max =
+                    ReadManualDouble(MANUAL_FT_KEYLOCKLOCKTRAVEL_MAX_TXT);
+
+                log.KeyLockLockTravel_Actual =
+                    ReadManualDouble(MANUAL_FT_KEYLOCKLOCKTRAVEL_ACTUAL_TXT);
+
+
+                log.KeyLockFullTravel_Min =
+                    ReadManualDouble(MANUAL_FT_KEYLOCKFULLTRAVEL_MIN_TXT);
+
+                log.KeyLockFullTravel_Max =
+                    ReadManualDouble(MANUAL_FT_KEYLOCKFULLTRAVEL_MAX_TXT);
+
+                log.KeyLockFullTravel_Actual =
+                    ReadManualDouble(MANUAL_FT_KEYLOCKFULLTRAVEL_ACTUAL_TXT);
+
+
+                // ---------------------------------------------
+                // Key Unlock
+                // ---------------------------------------------
+
+                log.KeyUnlockEffort_Min =
+                    ReadManualDouble(MANUAL_FT_KEYUNLOCKEFFORT_MIN_TXT);
+
+                log.KeyUnlockEffort_Max =
+                    ReadManualDouble(MANUAL_FT_KEYUNLOCKEFFORT_MAX_TXT);
+
+                log.KeyUnlockEffort_Actual =
+                    ReadManualDouble(MANUAL_FT_KEYUNLOCKEFFORT_ACTUAL_TXT);
+
+
+                log.KeyUnlockPreTravel_Min =
+                    ReadManualDouble(MANUAL_FT_KEYUNLOCKPRETRAVEL_MIN_TXT);
+
+                log.KeyUnlockPreTravel_Max =
+                    ReadManualDouble(MANUAL_FT_KEYUNLOCKPRETRAVEL_MAX_TXT);
+
+                log.KeyUnlockPreTravel_Actual =
+                    ReadManualDouble(MANUAL_FT_KEYUNLOCKPRETRAVEL_ACTUAL_TXT);
+
+
+                log.KeyUnlockLockTravel_Min =
+                    ReadManualDouble(MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MIN_TXT);
+
+                log.KeyUnlockLockTravel_Max =
+                    ReadManualDouble(MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MAX_TXT);
+
+                log.KeyUnlockLockTravel_Actual =
+                    ReadManualDouble(MANUAL_FT_KEYUNLOCKLOCKTRAVEL_ACTUAL_TXT);
+
+
+                log.KeyUnlockFullTravel_Min =
+                    ReadManualDouble(MANUAL_FT_KEYUNLOCKFULLTRAVEL_MIN_TXT);
+
+                log.KeyUnlockFullTravel_Max =
+                    ReadManualDouble(MANUAL_FT_KEYUNLOCKFULLTRAVEL_MAX_TXT);
+
+                log.KeyUnlockFullTravel_Actual =
+                    ReadManualDouble(MANUAL_FT_KEYUNLOCKFULLTRAVEL_ACTUAL_TXT);
+
+
+                // ---------------------------------------------
+                // Child Lock
+                // ---------------------------------------------
+
+                log.ChildLockEffort_Min =
+                    ReadManualDouble(MANUAL_FT_CHILDLOCKEFFORT_MIN_TXT);
+
+                log.ChildLockEffort_Max =
+                    ReadManualDouble(MANUAL_FT_CHILDLOCKEFFORT_MAX_TXT);
+
+                log.ChildLockEffort_Actual =
+                    ReadManualDouble(MANUAL_FT_CHILDLOCKEFFORT_ACTUAL_TXT);
+
+
+                log.ChildLockTravel_Min =
+                    ReadManualDouble(MANUAL_FT_CHILDLOCKTRAVEL_MIN_TXT);
+
+                log.ChildLockTravel_Max =
+                    ReadManualDouble(MANUAL_FT_CHILDLOCKTRAVEL_MAX_TXT);
+
+                log.ChildLockTravel_Actual =
+                    ReadManualDouble(MANUAL_FT_CHILDLOCKTRAVEL_ACTUAL_TXT);
+
+
+                log.ChildUnlockEffort_Min =
+                    ReadManualDouble(MANUAL_FT_CHILDUNLOCKEFFORT_MIN_TXT);
+
+                log.ChildUnlockEffort_Max =
+                    ReadManualDouble(MANUAL_FT_CHILDUNLOCKEFFORT_MAX_TXT);
+
+                log.ChildUnlockEffort_Actual =
+                    ReadManualDouble(MANUAL_FT_CHILDUNLOCKEFFORT_ACTUAL_TXT);
+
+
+                log.ChildUnlockTravel_Min =
+                    ReadManualDouble(MANUAL_FT_CHILDUNLOCKTRAVEL_MIN_TXT);
+
+                log.ChildUnlockTravel_Max =
+                    ReadManualDouble(MANUAL_FT_CHILDUNLOCKTRAVEL_MAX_TXT);
+
+                log.ChildUnlockTravel_Actual =
+                    ReadManualDouble(MANUAL_FT_CHILDUNLOCKTRAVEL_ACTUAL_TXT);
+
+
+                // ---------------------------------------------
+                // EMG Lock
+                // ---------------------------------------------
+
+                log.EmgLockTorque_Min =
+                    ReadManualDouble(MANUAL_FT_EMGLOCKTORQUE_MIN_TXT);
+
+                log.EmgLockTorque_Max =
+                    ReadManualDouble(MANUAL_FT_EMGLOCKTORQUE_MAX_TXT);
+
+                log.EmgLockTorque_Actual =
+                    ReadManualDouble(MANUAL_FT_EMGLOCKTORQUE_ACTUAL_TXT);
+
+
+                log.EmgLockAngle_Min =
+                    ReadManualDouble(MANUAL_FT_EMGLOCKANGLE_MIN_TXT);
+
+                log.EmgLockAngle_Max =
+                    ReadManualDouble(MANUAL_FT_EMGLOCKANGLE_MAX_TXT);
+
+                log.EmgLockAngle_Actual =
+                    ReadManualDouble(MANUAL_FT_EMGLOCKANGLE_ACTUAL_TXT);
+
+
+                // ---------------------------------------------
+                // 4. Save to JSON
+                // ---------------------------------------------
+
+                _jsonLogService.AppendFtLog(log);
+
+                // ---------------------------------------------
+                // 5. Refresh Report
+                // ---------------------------------------------
+
+                ApplyFunctionalTestFilter();
+
+                // ---------------------------------------------
+                // 6. Update Home Page
+                // ---------------------------------------------
+
+                PushFtToHomePage(log);
+
+                // ---------------------------------------------
+                // 7. Update Quantity
+                // ---------------------------------------------
+
+                QTY_LBL.Text = log.SNo.ToString();
+
+                MessageBox.Show(
+                    $"Functional Test saved successfully.\n\nS.No: {log.SNo}",
+                    "Manual FT",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                    "Manual Functional Test save failed:\n" + ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        private double ReadManualDouble(TextBox textBox)
+        {
+            if (textBox == null)
+                return 0;
+
+            string text = textBox.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(text))
+                return 0;
+
+            if (double.TryParse(text, out double value))
+                return value;
+
+            throw new Exception(
+                $"Invalid numeric value in '{textBox.Name}'.");
         }
     }
 }

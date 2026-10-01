@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Magna));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
             panel1 = new Panel();
             DB_Lbl = new Label();
             QR_LBL = new Label();
@@ -267,7 +267,7 @@
             tabPage3 = new TabPage();
             panel4 = new Panel();
             groupBox2 = new GroupBox();
-            button1 = new Button();
+            MANUAL_TET_ENTER_BTN = new Button();
             textBox91 = new TextBox();
             label135 = new Label();
             textBox92 = new TextBox();
@@ -329,64 +329,64 @@
             label133 = new Label();
             label134 = new Label();
             groupBox1 = new GroupBox();
-            button2 = new Button();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
+            MANUAL_FT_ENTER_BTN = new Button();
+            MANUAL_FT_SEALLOAD_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_SEALLOAD_MAX_TXT = new TextBox();
+            MANUAL_FT_SEALLOAD_MIN_TXT = new TextBox();
             label103 = new Label();
             label104 = new Label();
             label105 = new Label();
             groupBox17 = new GroupBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
+            MANUAL_FT_EMGLOCKANGLE_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_EMGLOCKANGLE_MAX_TXT = new TextBox();
             label106 = new Label();
-            textBox12 = new TextBox();
+            MANUAL_FT_EMGLOCKANGLE_MIN_TXT = new TextBox();
             label107 = new Label();
-            textBox13 = new TextBox();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
+            MANUAL_FT_EMGLOCKTORQUE_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_EMGLOCKTORQUE_MIN_TXT = new TextBox();
+            MANUAL_FT_EMGLOCKTORQUE_MAX_TXT = new TextBox();
             groupBox18 = new GroupBox();
-            textBox16 = new TextBox();
+            MANUAL_FT_CHILDUNLOCKTRAVEL_ACTUAL_TXT = new TextBox();
             label108 = new Label();
-            textBox17 = new TextBox();
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MAX_TXT = new TextBox();
             label109 = new Label();
-            textBox18 = new TextBox();
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MIN_TXT = new TextBox();
             label110 = new Label();
-            textBox19 = new TextBox();
-            textBox20 = new TextBox();
+            MANUAL_FT_CHILDUNLOCKEFFORT_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_CHILDUNLOCKEFFORT_MAX_TXT = new TextBox();
             label111 = new Label();
-            textBox21 = new TextBox();
-            textBox22 = new TextBox();
-            textBox23 = new TextBox();
-            textBox24 = new TextBox();
-            textBox25 = new TextBox();
-            textBox26 = new TextBox();
-            textBox27 = new TextBox();
+            MANUAL_FT_CHILDUNLOCKEFFORT_MIN_TXT = new TextBox();
+            MANUAL_FT_CHILDLOCKEFFORT_MIN_TXT = new TextBox();
+            MANUAL_FT_CHILDLOCKTRAVEL_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_CHILDLOCKEFFORT_MAX_TXT = new TextBox();
+            MANUAL_FT_CHILDLOCKTRAVEL_MAX_TXT = new TextBox();
+            MANUAL_FT_CHILDLOCKEFFORT_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_CHILDLOCKTRAVEL_MIN_TXT = new TextBox();
             groupBox19 = new GroupBox();
-            textBox28 = new TextBox();
-            textBox29 = new TextBox();
-            textBox30 = new TextBox();
-            textBox31 = new TextBox();
-            textBox32 = new TextBox();
-            textBox33 = new TextBox();
-            textBox34 = new TextBox();
-            textBox35 = new TextBox();
-            textBox36 = new TextBox();
-            textBox37 = new TextBox();
-            textBox38 = new TextBox();
-            textBox39 = new TextBox();
-            textBox40 = new TextBox();
-            textBox41 = new TextBox();
-            textBox42 = new TextBox();
-            textBox43 = new TextBox();
-            textBox44 = new TextBox();
-            textBox45 = new TextBox();
-            textBox46 = new TextBox();
-            textBox47 = new TextBox();
-            textBox48 = new TextBox();
-            textBox49 = new TextBox();
-            textBox50 = new TextBox();
-            textBox51 = new TextBox();
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MAX_TXT = new TextBox();
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MIN_TXT = new TextBox();
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MAX_TXT = new TextBox();
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MIN_TXT = new TextBox();
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MAX_TXT = new TextBox();
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MIN_TXT = new TextBox();
+            MANUAL_FT_KEYUNLOCKEFFORT_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_KEYUNLOCKEFFORT_MAX_TXT = new TextBox();
+            MANUAL_FT_KEYUNLOCKEFFORT_MIN_TXT = new TextBox();
+            MANUAL_FT_KEYLOCKFULLTRAVEL_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MAX_TXT = new TextBox();
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MIN_TXT = new TextBox();
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MAX_TXT = new TextBox();
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MIN_TXT = new TextBox();
+            MANUAL_FT_KEYLOCKPRETRAVEL_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_KEYLOCKPRETRAVEL_MAX_TXT = new TextBox();
+            MANUAL_FT_KEYLOCKPRETRAVEL_MIN_TXT = new TextBox();
+            MANUAL_FT_KEYLOCKEFFORT_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_KEYLOCKEFFORT_MAX_TXT = new TextBox();
+            MANUAL_FT_KEYLOCKEFFORT_MIN_TXT = new TextBox();
             label112 = new Label();
             label113 = new Label();
             label114 = new Label();
@@ -396,20 +396,20 @@
             label118 = new Label();
             label119 = new Label();
             groupBox20 = new GroupBox();
-            textBox52 = new TextBox();
-            textBox53 = new TextBox();
-            textBox54 = new TextBox();
-            textBox55 = new TextBox();
+            MANUAL_FT_POWERUNLOCKCURRENT_ACTUAL_TXT = new TextBox();
+            MANUAL_FT_POWERUNLOCKCURRENT_MAX_TXT = new TextBox();
+            MANUAL_FT_POWERUNLOCKCURRENT_MIN_TXT = new TextBox();
+            MANUAL_FT_POWERLOCKCURRENT_ACTUAL_TXT = new TextBox();
             label120 = new Label();
-            textBox56 = new TextBox();
-            textBox57 = new TextBox();
+            MANUAL_FT_POWERLOCKCURRENT_MAX_TXT = new TextBox();
+            MANUAL_FT_POWERLOCKCURRENT_MIN_TXT = new TextBox();
             label121 = new Label();
             label122 = new Label();
-            textBox3 = new TextBox();
+            MANUAL_FT_RESULT_TXT = new TextBox();
             Result = new Label();
-            textBox2 = new TextBox();
+            MANUAL_FT_VARIANT_TXT = new TextBox();
             Varient = new Label();
-            textBox1 = new TextBox();
+            MANUAL_FT_SHIFT_TXT = new TextBox();
             Shift = new Label();
             tabPage4 = new TabPage();
             panel11 = new Panel();
@@ -1155,36 +1155,36 @@
             TET_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             TET_DGV.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             TET_DGV.BackgroundColor = Color.LightSkyBlue;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = Color.White;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = SystemColors.InfoText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            TET_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle7.BackColor = Color.White;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle7.ForeColor = SystemColors.InfoText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            TET_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             TET_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             TET_DGV.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, inside_lock_effort, inside_lock_travel, inside_unlock_effort, inside_unlock_travel, inside_release_effort, inside_release_pretravel, inside_release_releasetravel, inside_release_full_travel, outside_release_effort, outside_release_pretravel, outside_release_release_travel, outside_release_full_travel });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            TET_DGV.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.White;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            TET_DGV.DefaultCellStyle = dataGridViewCellStyle8;
             TET_DGV.Location = new Point(12, 497);
             TET_DGV.MultiSelect = false;
             TET_DGV.Name = "TET_DGV";
             TET_DGV.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            TET_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            TET_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             TET_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             TET_DGV.Size = new Size(1561, 303);
             TET_DGV.TabIndex = 6;
@@ -1309,36 +1309,36 @@
             FT_DGV.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             FT_DGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             FT_DGV.BackgroundColor = Color.LightSkyBlue;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = SystemColors.InfoText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            FT_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle10.BackColor = Color.White;
+            dataGridViewCellStyle10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle10.ForeColor = SystemColors.InfoText;
+            dataGridViewCellStyle10.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
+            FT_DGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             FT_DGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             FT_DGV.Columns.AddRange(new DataGridViewColumn[] { FT_SNo, FT_Date, FT_Time, FT_Shift, FT_Variant, FT_Result, seal_load, power_lock_current, power_unlock_current, key_lock_effort, key_lock_pretravel, key_lock_locktravel, key_lock_full_travel, key_unlock_effort, key_unlock_pretravel, key_unlock_locktravel, key_unlock_full_travel, child_lock_effort, child_lock_travel, child_unlock_effort, child_unlock_travel, emg_lock_torque, emg_lock_angle });
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.White;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            FT_DGV.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = Color.White;
+            dataGridViewCellStyle11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
+            FT_DGV.DefaultCellStyle = dataGridViewCellStyle11;
             FT_DGV.Location = new Point(17, 103);
             FT_DGV.MultiSelect = false;
             FT_DGV.Name = "FT_DGV";
             FT_DGV.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.ButtonHighlight;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            FT_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = SystemColors.ButtonHighlight;
+            dataGridViewCellStyle12.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
+            FT_DGV.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             FT_DGV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             FT_DGV.Size = new Size(1561, 303);
             FT_DGV.TabIndex = 4;
@@ -3152,7 +3152,7 @@
             // 
             groupBox2.Anchor = AnchorStyles.None;
             groupBox2.BackColor = Color.Transparent;
-            groupBox2.Controls.Add(button1);
+            groupBox2.Controls.Add(MANUAL_TET_ENTER_BTN);
             groupBox2.Controls.Add(textBox91);
             groupBox2.Controls.Add(label135);
             groupBox2.Controls.Add(textBox92);
@@ -3172,14 +3172,14 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Travel and Endurance Test";
             // 
-            // button1
+            // MANUAL_TET_ENTER_BTN
             // 
-            button1.Location = new Point(605, 36);
-            button1.Name = "button1";
-            button1.Size = new Size(84, 31);
-            button1.TabIndex = 72;
-            button1.Text = "Enter";
-            button1.UseVisualStyleBackColor = true;
+            MANUAL_TET_ENTER_BTN.Location = new Point(605, 36);
+            MANUAL_TET_ENTER_BTN.Name = "MANUAL_TET_ENTER_BTN";
+            MANUAL_TET_ENTER_BTN.Size = new Size(84, 31);
+            MANUAL_TET_ENTER_BTN.TabIndex = 72;
+            MANUAL_TET_ENTER_BTN.Text = "Enter";
+            MANUAL_TET_ENTER_BTN.UseVisualStyleBackColor = true;
             // 
             // textBox91
             // 
@@ -3806,10 +3806,10 @@
             // 
             groupBox1.Anchor = AnchorStyles.None;
             groupBox1.BackColor = Color.Transparent;
-            groupBox1.Controls.Add(button2);
-            groupBox1.Controls.Add(textBox7);
-            groupBox1.Controls.Add(textBox8);
-            groupBox1.Controls.Add(textBox9);
+            groupBox1.Controls.Add(MANUAL_FT_ENTER_BTN);
+            groupBox1.Controls.Add(MANUAL_FT_SEALLOAD_ACTUAL_TXT);
+            groupBox1.Controls.Add(MANUAL_FT_SEALLOAD_MAX_TXT);
+            groupBox1.Controls.Add(MANUAL_FT_SEALLOAD_MIN_TXT);
             groupBox1.Controls.Add(label103);
             groupBox1.Controls.Add(label104);
             groupBox1.Controls.Add(label105);
@@ -3818,11 +3818,11 @@
             groupBox1.Controls.Add(groupBox19);
             groupBox1.Controls.Add(groupBox20);
             groupBox1.Controls.Add(label122);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(MANUAL_FT_RESULT_TXT);
             groupBox1.Controls.Add(Result);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(MANUAL_FT_VARIANT_TXT);
             groupBox1.Controls.Add(Varient);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(MANUAL_FT_SHIFT_TXT);
             groupBox1.Controls.Add(Shift);
             groupBox1.Location = new Point(21, 20);
             groupBox1.Name = "groupBox1";
@@ -3831,44 +3831,45 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Functional Test";
             // 
-            // button2
+            // MANUAL_FT_ENTER_BTN
             // 
-            button2.Location = new Point(626, 36);
-            button2.Name = "button2";
-            button2.Size = new Size(84, 31);
-            button2.TabIndex = 6;
-            button2.Text = "Enter";
-            button2.UseVisualStyleBackColor = true;
+            MANUAL_FT_ENTER_BTN.Location = new Point(626, 36);
+            MANUAL_FT_ENTER_BTN.Name = "MANUAL_FT_ENTER_BTN";
+            MANUAL_FT_ENTER_BTN.Size = new Size(84, 31);
+            MANUAL_FT_ENTER_BTN.TabIndex = 6;
+            MANUAL_FT_ENTER_BTN.Text = "Enter";
+            MANUAL_FT_ENTER_BTN.UseVisualStyleBackColor = true;
+            MANUAL_FT_ENTER_BTN.Click += MANUAL_FT_ENTER_BTN_Click;
             // 
-            // textBox7
+            // MANUAL_FT_SEALLOAD_ACTUAL_TXT
             // 
-            textBox7.BackColor = Color.White;
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Location = new Point(610, 104);
-            textBox7.Name = "textBox7";
-            textBox7.RightToLeft = RightToLeft.No;
-            textBox7.Size = new Size(100, 25);
-            textBox7.TabIndex = 25;
+            MANUAL_FT_SEALLOAD_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_SEALLOAD_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_SEALLOAD_ACTUAL_TXT.Location = new Point(610, 104);
+            MANUAL_FT_SEALLOAD_ACTUAL_TXT.Name = "MANUAL_FT_SEALLOAD_ACTUAL_TXT";
+            MANUAL_FT_SEALLOAD_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_SEALLOAD_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_SEALLOAD_ACTUAL_TXT.TabIndex = 25;
             // 
-            // textBox8
+            // MANUAL_FT_SEALLOAD_MAX_TXT
             // 
-            textBox8.BackColor = Color.White;
-            textBox8.BorderStyle = BorderStyle.FixedSingle;
-            textBox8.Location = new Point(484, 104);
-            textBox8.Name = "textBox8";
-            textBox8.RightToLeft = RightToLeft.No;
-            textBox8.Size = new Size(100, 25);
-            textBox8.TabIndex = 24;
+            MANUAL_FT_SEALLOAD_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_SEALLOAD_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_SEALLOAD_MAX_TXT.Location = new Point(484, 104);
+            MANUAL_FT_SEALLOAD_MAX_TXT.Name = "MANUAL_FT_SEALLOAD_MAX_TXT";
+            MANUAL_FT_SEALLOAD_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_SEALLOAD_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_SEALLOAD_MAX_TXT.TabIndex = 24;
             // 
-            // textBox9
+            // MANUAL_FT_SEALLOAD_MIN_TXT
             // 
-            textBox9.BackColor = Color.White;
-            textBox9.BorderStyle = BorderStyle.FixedSingle;
-            textBox9.Location = new Point(352, 104);
-            textBox9.Name = "textBox9";
-            textBox9.RightToLeft = RightToLeft.No;
-            textBox9.Size = new Size(100, 25);
-            textBox9.TabIndex = 23;
+            MANUAL_FT_SEALLOAD_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_SEALLOAD_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_SEALLOAD_MIN_TXT.Location = new Point(352, 104);
+            MANUAL_FT_SEALLOAD_MIN_TXT.Name = "MANUAL_FT_SEALLOAD_MIN_TXT";
+            MANUAL_FT_SEALLOAD_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_SEALLOAD_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_SEALLOAD_MIN_TXT.TabIndex = 23;
             // 
             // label103
             // 
@@ -3899,14 +3900,14 @@
             // 
             // groupBox17
             // 
-            groupBox17.Controls.Add(textBox10);
-            groupBox17.Controls.Add(textBox11);
+            groupBox17.Controls.Add(MANUAL_FT_EMGLOCKANGLE_ACTUAL_TXT);
+            groupBox17.Controls.Add(MANUAL_FT_EMGLOCKANGLE_MAX_TXT);
             groupBox17.Controls.Add(label106);
-            groupBox17.Controls.Add(textBox12);
+            groupBox17.Controls.Add(MANUAL_FT_EMGLOCKANGLE_MIN_TXT);
             groupBox17.Controls.Add(label107);
-            groupBox17.Controls.Add(textBox13);
-            groupBox17.Controls.Add(textBox14);
-            groupBox17.Controls.Add(textBox15);
+            groupBox17.Controls.Add(MANUAL_FT_EMGLOCKTORQUE_ACTUAL_TXT);
+            groupBox17.Controls.Add(MANUAL_FT_EMGLOCKTORQUE_MIN_TXT);
+            groupBox17.Controls.Add(MANUAL_FT_EMGLOCKTORQUE_MAX_TXT);
             groupBox17.Location = new Point(44, 672);
             groupBox17.Name = "groupBox17";
             groupBox17.Size = new Size(716, 100);
@@ -3914,25 +3915,25 @@
             groupBox17.TabStop = false;
             groupBox17.Text = "Emergency Lock";
             // 
-            // textBox10
+            // MANUAL_FT_EMGLOCKANGLE_ACTUAL_TXT
             // 
-            textBox10.BackColor = Color.White;
-            textBox10.BorderStyle = BorderStyle.FixedSingle;
-            textBox10.Location = new Point(566, 55);
-            textBox10.Name = "textBox10";
-            textBox10.RightToLeft = RightToLeft.No;
-            textBox10.Size = new Size(100, 25);
-            textBox10.TabIndex = 26;
+            MANUAL_FT_EMGLOCKANGLE_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_EMGLOCKANGLE_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_EMGLOCKANGLE_ACTUAL_TXT.Location = new Point(566, 55);
+            MANUAL_FT_EMGLOCKANGLE_ACTUAL_TXT.Name = "MANUAL_FT_EMGLOCKANGLE_ACTUAL_TXT";
+            MANUAL_FT_EMGLOCKANGLE_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_EMGLOCKANGLE_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_EMGLOCKANGLE_ACTUAL_TXT.TabIndex = 26;
             // 
-            // textBox11
+            // MANUAL_FT_EMGLOCKANGLE_MAX_TXT
             // 
-            textBox11.BackColor = Color.White;
-            textBox11.BorderStyle = BorderStyle.FixedSingle;
-            textBox11.Location = new Point(440, 55);
-            textBox11.Name = "textBox11";
-            textBox11.RightToLeft = RightToLeft.No;
-            textBox11.Size = new Size(100, 25);
-            textBox11.TabIndex = 25;
+            MANUAL_FT_EMGLOCKANGLE_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_EMGLOCKANGLE_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_EMGLOCKANGLE_MAX_TXT.Location = new Point(440, 55);
+            MANUAL_FT_EMGLOCKANGLE_MAX_TXT.Name = "MANUAL_FT_EMGLOCKANGLE_MAX_TXT";
+            MANUAL_FT_EMGLOCKANGLE_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_EMGLOCKANGLE_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_EMGLOCKANGLE_MAX_TXT.TabIndex = 25;
             // 
             // label106
             // 
@@ -3943,15 +3944,15 @@
             label106.TabIndex = 7;
             label106.Text = "EMG Lock - Angle (Deg)";
             // 
-            // textBox12
+            // MANUAL_FT_EMGLOCKANGLE_MIN_TXT
             // 
-            textBox12.BackColor = Color.White;
-            textBox12.BorderStyle = BorderStyle.FixedSingle;
-            textBox12.Location = new Point(308, 55);
-            textBox12.Name = "textBox12";
-            textBox12.RightToLeft = RightToLeft.No;
-            textBox12.Size = new Size(100, 25);
-            textBox12.TabIndex = 24;
+            MANUAL_FT_EMGLOCKANGLE_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_EMGLOCKANGLE_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_EMGLOCKANGLE_MIN_TXT.Location = new Point(308, 55);
+            MANUAL_FT_EMGLOCKANGLE_MIN_TXT.Name = "MANUAL_FT_EMGLOCKANGLE_MIN_TXT";
+            MANUAL_FT_EMGLOCKANGLE_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_EMGLOCKANGLE_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_EMGLOCKANGLE_MIN_TXT.TabIndex = 24;
             // 
             // label107
             // 
@@ -3962,54 +3963,54 @@
             label107.TabIndex = 6;
             label107.Text = "EMG Lock - Torque (Nm)";
             // 
-            // textBox13
+            // MANUAL_FT_EMGLOCKTORQUE_ACTUAL_TXT
             // 
-            textBox13.BackColor = Color.White;
-            textBox13.BorderStyle = BorderStyle.FixedSingle;
-            textBox13.Location = new Point(566, 24);
-            textBox13.Name = "textBox13";
-            textBox13.RightToLeft = RightToLeft.No;
-            textBox13.Size = new Size(100, 25);
-            textBox13.TabIndex = 23;
+            MANUAL_FT_EMGLOCKTORQUE_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_EMGLOCKTORQUE_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_EMGLOCKTORQUE_ACTUAL_TXT.Location = new Point(566, 24);
+            MANUAL_FT_EMGLOCKTORQUE_ACTUAL_TXT.Name = "MANUAL_FT_EMGLOCKTORQUE_ACTUAL_TXT";
+            MANUAL_FT_EMGLOCKTORQUE_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_EMGLOCKTORQUE_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_EMGLOCKTORQUE_ACTUAL_TXT.TabIndex = 23;
             // 
-            // textBox14
+            // MANUAL_FT_EMGLOCKTORQUE_MIN_TXT
             // 
-            textBox14.BackColor = Color.White;
-            textBox14.BorderStyle = BorderStyle.FixedSingle;
-            textBox14.Location = new Point(308, 24);
-            textBox14.Name = "textBox14";
-            textBox14.RightToLeft = RightToLeft.No;
-            textBox14.Size = new Size(100, 25);
-            textBox14.TabIndex = 21;
+            MANUAL_FT_EMGLOCKTORQUE_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_EMGLOCKTORQUE_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_EMGLOCKTORQUE_MIN_TXT.Location = new Point(308, 24);
+            MANUAL_FT_EMGLOCKTORQUE_MIN_TXT.Name = "MANUAL_FT_EMGLOCKTORQUE_MIN_TXT";
+            MANUAL_FT_EMGLOCKTORQUE_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_EMGLOCKTORQUE_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_EMGLOCKTORQUE_MIN_TXT.TabIndex = 21;
             // 
-            // textBox15
+            // MANUAL_FT_EMGLOCKTORQUE_MAX_TXT
             // 
-            textBox15.BackColor = Color.White;
-            textBox15.BorderStyle = BorderStyle.FixedSingle;
-            textBox15.Location = new Point(440, 24);
-            textBox15.Name = "textBox15";
-            textBox15.RightToLeft = RightToLeft.No;
-            textBox15.Size = new Size(100, 25);
-            textBox15.TabIndex = 22;
+            MANUAL_FT_EMGLOCKTORQUE_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_EMGLOCKTORQUE_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_EMGLOCKTORQUE_MAX_TXT.Location = new Point(440, 24);
+            MANUAL_FT_EMGLOCKTORQUE_MAX_TXT.Name = "MANUAL_FT_EMGLOCKTORQUE_MAX_TXT";
+            MANUAL_FT_EMGLOCKTORQUE_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_EMGLOCKTORQUE_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_EMGLOCKTORQUE_MAX_TXT.TabIndex = 22;
             // 
             // groupBox18
             // 
-            groupBox18.Controls.Add(textBox16);
+            groupBox18.Controls.Add(MANUAL_FT_CHILDUNLOCKTRAVEL_ACTUAL_TXT);
             groupBox18.Controls.Add(label108);
-            groupBox18.Controls.Add(textBox17);
+            groupBox18.Controls.Add(MANUAL_FT_CHILDUNLOCKTRAVEL_MAX_TXT);
             groupBox18.Controls.Add(label109);
-            groupBox18.Controls.Add(textBox18);
+            groupBox18.Controls.Add(MANUAL_FT_CHILDUNLOCKTRAVEL_MIN_TXT);
             groupBox18.Controls.Add(label110);
-            groupBox18.Controls.Add(textBox19);
-            groupBox18.Controls.Add(textBox20);
+            groupBox18.Controls.Add(MANUAL_FT_CHILDUNLOCKEFFORT_ACTUAL_TXT);
+            groupBox18.Controls.Add(MANUAL_FT_CHILDUNLOCKEFFORT_MAX_TXT);
             groupBox18.Controls.Add(label111);
-            groupBox18.Controls.Add(textBox21);
-            groupBox18.Controls.Add(textBox22);
-            groupBox18.Controls.Add(textBox23);
-            groupBox18.Controls.Add(textBox24);
-            groupBox18.Controls.Add(textBox25);
-            groupBox18.Controls.Add(textBox26);
-            groupBox18.Controls.Add(textBox27);
+            groupBox18.Controls.Add(MANUAL_FT_CHILDUNLOCKEFFORT_MIN_TXT);
+            groupBox18.Controls.Add(MANUAL_FT_CHILDLOCKEFFORT_MIN_TXT);
+            groupBox18.Controls.Add(MANUAL_FT_CHILDLOCKTRAVEL_ACTUAL_TXT);
+            groupBox18.Controls.Add(MANUAL_FT_CHILDLOCKEFFORT_MAX_TXT);
+            groupBox18.Controls.Add(MANUAL_FT_CHILDLOCKTRAVEL_MAX_TXT);
+            groupBox18.Controls.Add(MANUAL_FT_CHILDLOCKEFFORT_ACTUAL_TXT);
+            groupBox18.Controls.Add(MANUAL_FT_CHILDLOCKTRAVEL_MIN_TXT);
             groupBox18.Location = new Point(44, 526);
             groupBox18.Name = "groupBox18";
             groupBox18.Size = new Size(716, 140);
@@ -4017,15 +4018,15 @@
             groupBox18.TabStop = false;
             groupBox18.Text = "Child Lock";
             // 
-            // textBox16
+            // MANUAL_FT_CHILDUNLOCKTRAVEL_ACTUAL_TXT
             // 
-            textBox16.BackColor = Color.White;
-            textBox16.BorderStyle = BorderStyle.FixedSingle;
-            textBox16.Location = new Point(566, 110);
-            textBox16.Name = "textBox16";
-            textBox16.RightToLeft = RightToLeft.No;
-            textBox16.Size = new Size(100, 25);
-            textBox16.TabIndex = 56;
+            MANUAL_FT_CHILDUNLOCKTRAVEL_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_CHILDUNLOCKTRAVEL_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_CHILDUNLOCKTRAVEL_ACTUAL_TXT.Location = new Point(566, 110);
+            MANUAL_FT_CHILDUNLOCKTRAVEL_ACTUAL_TXT.Name = "MANUAL_FT_CHILDUNLOCKTRAVEL_ACTUAL_TXT";
+            MANUAL_FT_CHILDUNLOCKTRAVEL_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_CHILDUNLOCKTRAVEL_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_CHILDUNLOCKTRAVEL_ACTUAL_TXT.TabIndex = 56;
             // 
             // label108
             // 
@@ -4036,15 +4037,15 @@
             label108.TabIndex = 11;
             label108.Text = "Child Unlock - Travel (MM)";
             // 
-            // textBox17
+            // MANUAL_FT_CHILDUNLOCKTRAVEL_MAX_TXT
             // 
-            textBox17.BackColor = Color.White;
-            textBox17.BorderStyle = BorderStyle.FixedSingle;
-            textBox17.Location = new Point(440, 110);
-            textBox17.Name = "textBox17";
-            textBox17.RightToLeft = RightToLeft.No;
-            textBox17.Size = new Size(100, 25);
-            textBox17.TabIndex = 55;
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MAX_TXT.Location = new Point(440, 110);
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MAX_TXT.Name = "MANUAL_FT_CHILDUNLOCKTRAVEL_MAX_TXT";
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MAX_TXT.TabIndex = 55;
             // 
             // label109
             // 
@@ -4055,15 +4056,15 @@
             label109.TabIndex = 10;
             label109.Text = "Child Lock - Travel (MM)";
             // 
-            // textBox18
+            // MANUAL_FT_CHILDUNLOCKTRAVEL_MIN_TXT
             // 
-            textBox18.BackColor = Color.White;
-            textBox18.BorderStyle = BorderStyle.FixedSingle;
-            textBox18.Location = new Point(308, 110);
-            textBox18.Name = "textBox18";
-            textBox18.RightToLeft = RightToLeft.No;
-            textBox18.Size = new Size(100, 25);
-            textBox18.TabIndex = 54;
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MIN_TXT.Location = new Point(308, 110);
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MIN_TXT.Name = "MANUAL_FT_CHILDUNLOCKTRAVEL_MIN_TXT";
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_CHILDUNLOCKTRAVEL_MIN_TXT.TabIndex = 54;
             // 
             // label110
             // 
@@ -4074,25 +4075,25 @@
             label110.TabIndex = 8;
             label110.Text = "Child Unlock - Effort (N)";
             // 
-            // textBox19
+            // MANUAL_FT_CHILDUNLOCKEFFORT_ACTUAL_TXT
             // 
-            textBox19.BackColor = Color.White;
-            textBox19.BorderStyle = BorderStyle.FixedSingle;
-            textBox19.Location = new Point(566, 79);
-            textBox19.Name = "textBox19";
-            textBox19.RightToLeft = RightToLeft.No;
-            textBox19.Size = new Size(100, 25);
-            textBox19.TabIndex = 53;
+            MANUAL_FT_CHILDUNLOCKEFFORT_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_CHILDUNLOCKEFFORT_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_CHILDUNLOCKEFFORT_ACTUAL_TXT.Location = new Point(566, 79);
+            MANUAL_FT_CHILDUNLOCKEFFORT_ACTUAL_TXT.Name = "MANUAL_FT_CHILDUNLOCKEFFORT_ACTUAL_TXT";
+            MANUAL_FT_CHILDUNLOCKEFFORT_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_CHILDUNLOCKEFFORT_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_CHILDUNLOCKEFFORT_ACTUAL_TXT.TabIndex = 53;
             // 
-            // textBox20
+            // MANUAL_FT_CHILDUNLOCKEFFORT_MAX_TXT
             // 
-            textBox20.BackColor = Color.White;
-            textBox20.BorderStyle = BorderStyle.FixedSingle;
-            textBox20.Location = new Point(440, 79);
-            textBox20.Name = "textBox20";
-            textBox20.RightToLeft = RightToLeft.No;
-            textBox20.Size = new Size(100, 25);
-            textBox20.TabIndex = 52;
+            MANUAL_FT_CHILDUNLOCKEFFORT_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_CHILDUNLOCKEFFORT_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_CHILDUNLOCKEFFORT_MAX_TXT.Location = new Point(440, 79);
+            MANUAL_FT_CHILDUNLOCKEFFORT_MAX_TXT.Name = "MANUAL_FT_CHILDUNLOCKEFFORT_MAX_TXT";
+            MANUAL_FT_CHILDUNLOCKEFFORT_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_CHILDUNLOCKEFFORT_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_CHILDUNLOCKEFFORT_MAX_TXT.TabIndex = 52;
             // 
             // label111
             // 
@@ -4103,102 +4104,102 @@
             label111.TabIndex = 6;
             label111.Text = "Child Lock - Effort (N)";
             // 
-            // textBox21
+            // MANUAL_FT_CHILDUNLOCKEFFORT_MIN_TXT
             // 
-            textBox21.BackColor = Color.White;
-            textBox21.BorderStyle = BorderStyle.FixedSingle;
-            textBox21.Location = new Point(308, 79);
-            textBox21.Name = "textBox21";
-            textBox21.RightToLeft = RightToLeft.No;
-            textBox21.Size = new Size(100, 25);
-            textBox21.TabIndex = 51;
+            MANUAL_FT_CHILDUNLOCKEFFORT_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_CHILDUNLOCKEFFORT_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_CHILDUNLOCKEFFORT_MIN_TXT.Location = new Point(308, 79);
+            MANUAL_FT_CHILDUNLOCKEFFORT_MIN_TXT.Name = "MANUAL_FT_CHILDUNLOCKEFFORT_MIN_TXT";
+            MANUAL_FT_CHILDUNLOCKEFFORT_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_CHILDUNLOCKEFFORT_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_CHILDUNLOCKEFFORT_MIN_TXT.TabIndex = 51;
             // 
-            // textBox22
+            // MANUAL_FT_CHILDLOCKEFFORT_MIN_TXT
             // 
-            textBox22.BackColor = Color.White;
-            textBox22.BorderStyle = BorderStyle.FixedSingle;
-            textBox22.Location = new Point(308, 16);
-            textBox22.Name = "textBox22";
-            textBox22.RightToLeft = RightToLeft.No;
-            textBox22.Size = new Size(100, 25);
-            textBox22.TabIndex = 45;
+            MANUAL_FT_CHILDLOCKEFFORT_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_CHILDLOCKEFFORT_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_CHILDLOCKEFFORT_MIN_TXT.Location = new Point(308, 16);
+            MANUAL_FT_CHILDLOCKEFFORT_MIN_TXT.Name = "MANUAL_FT_CHILDLOCKEFFORT_MIN_TXT";
+            MANUAL_FT_CHILDLOCKEFFORT_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_CHILDLOCKEFFORT_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_CHILDLOCKEFFORT_MIN_TXT.TabIndex = 45;
             // 
-            // textBox23
+            // MANUAL_FT_CHILDLOCKTRAVEL_ACTUAL_TXT
             // 
-            textBox23.BackColor = Color.White;
-            textBox23.BorderStyle = BorderStyle.FixedSingle;
-            textBox23.Location = new Point(566, 47);
-            textBox23.Name = "textBox23";
-            textBox23.RightToLeft = RightToLeft.No;
-            textBox23.Size = new Size(100, 25);
-            textBox23.TabIndex = 50;
+            MANUAL_FT_CHILDLOCKTRAVEL_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_CHILDLOCKTRAVEL_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_CHILDLOCKTRAVEL_ACTUAL_TXT.Location = new Point(566, 47);
+            MANUAL_FT_CHILDLOCKTRAVEL_ACTUAL_TXT.Name = "MANUAL_FT_CHILDLOCKTRAVEL_ACTUAL_TXT";
+            MANUAL_FT_CHILDLOCKTRAVEL_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_CHILDLOCKTRAVEL_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_CHILDLOCKTRAVEL_ACTUAL_TXT.TabIndex = 50;
             // 
-            // textBox24
+            // MANUAL_FT_CHILDLOCKEFFORT_MAX_TXT
             // 
-            textBox24.BackColor = Color.White;
-            textBox24.BorderStyle = BorderStyle.FixedSingle;
-            textBox24.Location = new Point(440, 16);
-            textBox24.Name = "textBox24";
-            textBox24.RightToLeft = RightToLeft.No;
-            textBox24.Size = new Size(100, 25);
-            textBox24.TabIndex = 46;
+            MANUAL_FT_CHILDLOCKEFFORT_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_CHILDLOCKEFFORT_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_CHILDLOCKEFFORT_MAX_TXT.Location = new Point(440, 16);
+            MANUAL_FT_CHILDLOCKEFFORT_MAX_TXT.Name = "MANUAL_FT_CHILDLOCKEFFORT_MAX_TXT";
+            MANUAL_FT_CHILDLOCKEFFORT_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_CHILDLOCKEFFORT_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_CHILDLOCKEFFORT_MAX_TXT.TabIndex = 46;
             // 
-            // textBox25
+            // MANUAL_FT_CHILDLOCKTRAVEL_MAX_TXT
             // 
-            textBox25.BackColor = Color.White;
-            textBox25.BorderStyle = BorderStyle.FixedSingle;
-            textBox25.Location = new Point(440, 47);
-            textBox25.Name = "textBox25";
-            textBox25.RightToLeft = RightToLeft.No;
-            textBox25.Size = new Size(100, 25);
-            textBox25.TabIndex = 49;
+            MANUAL_FT_CHILDLOCKTRAVEL_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_CHILDLOCKTRAVEL_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_CHILDLOCKTRAVEL_MAX_TXT.Location = new Point(440, 47);
+            MANUAL_FT_CHILDLOCKTRAVEL_MAX_TXT.Name = "MANUAL_FT_CHILDLOCKTRAVEL_MAX_TXT";
+            MANUAL_FT_CHILDLOCKTRAVEL_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_CHILDLOCKTRAVEL_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_CHILDLOCKTRAVEL_MAX_TXT.TabIndex = 49;
             // 
-            // textBox26
+            // MANUAL_FT_CHILDLOCKEFFORT_ACTUAL_TXT
             // 
-            textBox26.BackColor = Color.White;
-            textBox26.BorderStyle = BorderStyle.FixedSingle;
-            textBox26.Location = new Point(566, 16);
-            textBox26.Name = "textBox26";
-            textBox26.RightToLeft = RightToLeft.No;
-            textBox26.Size = new Size(100, 25);
-            textBox26.TabIndex = 47;
+            MANUAL_FT_CHILDLOCKEFFORT_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_CHILDLOCKEFFORT_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_CHILDLOCKEFFORT_ACTUAL_TXT.Location = new Point(566, 16);
+            MANUAL_FT_CHILDLOCKEFFORT_ACTUAL_TXT.Name = "MANUAL_FT_CHILDLOCKEFFORT_ACTUAL_TXT";
+            MANUAL_FT_CHILDLOCKEFFORT_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_CHILDLOCKEFFORT_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_CHILDLOCKEFFORT_ACTUAL_TXT.TabIndex = 47;
             // 
-            // textBox27
+            // MANUAL_FT_CHILDLOCKTRAVEL_MIN_TXT
             // 
-            textBox27.BackColor = Color.White;
-            textBox27.BorderStyle = BorderStyle.FixedSingle;
-            textBox27.Location = new Point(308, 47);
-            textBox27.Name = "textBox27";
-            textBox27.RightToLeft = RightToLeft.No;
-            textBox27.Size = new Size(100, 25);
-            textBox27.TabIndex = 48;
+            MANUAL_FT_CHILDLOCKTRAVEL_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_CHILDLOCKTRAVEL_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_CHILDLOCKTRAVEL_MIN_TXT.Location = new Point(308, 47);
+            MANUAL_FT_CHILDLOCKTRAVEL_MIN_TXT.Name = "MANUAL_FT_CHILDLOCKTRAVEL_MIN_TXT";
+            MANUAL_FT_CHILDLOCKTRAVEL_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_CHILDLOCKTRAVEL_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_CHILDLOCKTRAVEL_MIN_TXT.TabIndex = 48;
             // 
             // groupBox19
             // 
-            groupBox19.Controls.Add(textBox28);
-            groupBox19.Controls.Add(textBox29);
-            groupBox19.Controls.Add(textBox30);
-            groupBox19.Controls.Add(textBox31);
-            groupBox19.Controls.Add(textBox32);
-            groupBox19.Controls.Add(textBox33);
-            groupBox19.Controls.Add(textBox34);
-            groupBox19.Controls.Add(textBox35);
-            groupBox19.Controls.Add(textBox36);
-            groupBox19.Controls.Add(textBox37);
-            groupBox19.Controls.Add(textBox38);
-            groupBox19.Controls.Add(textBox39);
-            groupBox19.Controls.Add(textBox40);
-            groupBox19.Controls.Add(textBox41);
-            groupBox19.Controls.Add(textBox42);
-            groupBox19.Controls.Add(textBox43);
-            groupBox19.Controls.Add(textBox44);
-            groupBox19.Controls.Add(textBox45);
-            groupBox19.Controls.Add(textBox46);
-            groupBox19.Controls.Add(textBox47);
-            groupBox19.Controls.Add(textBox48);
-            groupBox19.Controls.Add(textBox49);
-            groupBox19.Controls.Add(textBox50);
-            groupBox19.Controls.Add(textBox51);
+            groupBox19.Controls.Add(MANUAL_FT_KEYUNLOCKFULLTRAVEL_ACTUAL_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYUNLOCKFULLTRAVEL_MAX_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYUNLOCKFULLTRAVEL_MIN_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYUNLOCKLOCKTRAVEL_ACTUAL_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MAX_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MIN_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYUNLOCKPRETRAVEL_ACTUAL_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYUNLOCKPRETRAVEL_MAX_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYUNLOCKPRETRAVEL_MIN_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYUNLOCKEFFORT_ACTUAL_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYUNLOCKEFFORT_MAX_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYUNLOCKEFFORT_MIN_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYLOCKFULLTRAVEL_ACTUAL_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYLOCKFULLTRAVEL_MAX_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYLOCKFULLTRAVEL_MIN_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYLOCKLOCKTRAVEL_ACTUAL_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYLOCKLOCKTRAVEL_MAX_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYLOCKLOCKTRAVEL_MIN_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYLOCKPRETRAVEL_ACTUAL_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYLOCKPRETRAVEL_MAX_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYLOCKPRETRAVEL_MIN_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYLOCKEFFORT_ACTUAL_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYLOCKEFFORT_MAX_TXT);
+            groupBox19.Controls.Add(MANUAL_FT_KEYLOCKEFFORT_MIN_TXT);
             groupBox19.Controls.Add(label112);
             groupBox19.Controls.Add(label113);
             groupBox19.Controls.Add(label114);
@@ -4214,245 +4215,245 @@
             groupBox19.TabStop = false;
             groupBox19.Text = "Key Lock";
             // 
-            // textBox28
+            // MANUAL_FT_KEYUNLOCKFULLTRAVEL_ACTUAL_TXT
             // 
-            textBox28.BackColor = Color.White;
-            textBox28.BorderStyle = BorderStyle.FixedSingle;
-            textBox28.Location = new Point(566, 231);
-            textBox28.Name = "textBox28";
-            textBox28.RightToLeft = RightToLeft.No;
-            textBox28.Size = new Size(100, 25);
-            textBox28.TabIndex = 44;
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_ACTUAL_TXT.Location = new Point(566, 231);
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_ACTUAL_TXT.Name = "MANUAL_FT_KEYUNLOCKFULLTRAVEL_ACTUAL_TXT";
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_ACTUAL_TXT.TabIndex = 44;
             // 
-            // textBox29
+            // MANUAL_FT_KEYUNLOCKFULLTRAVEL_MAX_TXT
             // 
-            textBox29.BackColor = Color.White;
-            textBox29.BorderStyle = BorderStyle.FixedSingle;
-            textBox29.Location = new Point(440, 231);
-            textBox29.Name = "textBox29";
-            textBox29.RightToLeft = RightToLeft.No;
-            textBox29.Size = new Size(100, 25);
-            textBox29.TabIndex = 43;
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MAX_TXT.Location = new Point(440, 231);
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MAX_TXT.Name = "MANUAL_FT_KEYUNLOCKFULLTRAVEL_MAX_TXT";
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MAX_TXT.TabIndex = 43;
             // 
-            // textBox30
+            // MANUAL_FT_KEYUNLOCKFULLTRAVEL_MIN_TXT
             // 
-            textBox30.BackColor = Color.White;
-            textBox30.BorderStyle = BorderStyle.FixedSingle;
-            textBox30.Location = new Point(308, 231);
-            textBox30.Name = "textBox30";
-            textBox30.RightToLeft = RightToLeft.No;
-            textBox30.Size = new Size(100, 25);
-            textBox30.TabIndex = 42;
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MIN_TXT.Location = new Point(308, 231);
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MIN_TXT.Name = "MANUAL_FT_KEYUNLOCKFULLTRAVEL_MIN_TXT";
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYUNLOCKFULLTRAVEL_MIN_TXT.TabIndex = 42;
             // 
-            // textBox31
+            // MANUAL_FT_KEYUNLOCKLOCKTRAVEL_ACTUAL_TXT
             // 
-            textBox31.BackColor = Color.White;
-            textBox31.BorderStyle = BorderStyle.FixedSingle;
-            textBox31.Location = new Point(566, 202);
-            textBox31.Name = "textBox31";
-            textBox31.RightToLeft = RightToLeft.No;
-            textBox31.Size = new Size(100, 25);
-            textBox31.TabIndex = 41;
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_ACTUAL_TXT.Location = new Point(566, 202);
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_ACTUAL_TXT.Name = "MANUAL_FT_KEYUNLOCKLOCKTRAVEL_ACTUAL_TXT";
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_ACTUAL_TXT.TabIndex = 41;
             // 
-            // textBox32
+            // MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MAX_TXT
             // 
-            textBox32.BackColor = Color.White;
-            textBox32.BorderStyle = BorderStyle.FixedSingle;
-            textBox32.Location = new Point(440, 202);
-            textBox32.Name = "textBox32";
-            textBox32.RightToLeft = RightToLeft.No;
-            textBox32.Size = new Size(100, 25);
-            textBox32.TabIndex = 40;
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MAX_TXT.Location = new Point(440, 202);
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MAX_TXT.Name = "MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MAX_TXT";
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MAX_TXT.TabIndex = 40;
             // 
-            // textBox33
+            // MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MIN_TXT
             // 
-            textBox33.BackColor = Color.White;
-            textBox33.BorderStyle = BorderStyle.FixedSingle;
-            textBox33.Location = new Point(308, 202);
-            textBox33.Name = "textBox33";
-            textBox33.RightToLeft = RightToLeft.No;
-            textBox33.Size = new Size(100, 25);
-            textBox33.TabIndex = 39;
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MIN_TXT.Location = new Point(308, 202);
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MIN_TXT.Name = "MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MIN_TXT";
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MIN_TXT.TabIndex = 39;
             // 
-            // textBox34
+            // MANUAL_FT_KEYUNLOCKPRETRAVEL_ACTUAL_TXT
             // 
-            textBox34.BackColor = Color.White;
-            textBox34.BorderStyle = BorderStyle.FixedSingle;
-            textBox34.Location = new Point(566, 173);
-            textBox34.Name = "textBox34";
-            textBox34.RightToLeft = RightToLeft.No;
-            textBox34.Size = new Size(100, 25);
-            textBox34.TabIndex = 38;
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_ACTUAL_TXT.Location = new Point(566, 173);
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_ACTUAL_TXT.Name = "MANUAL_FT_KEYUNLOCKPRETRAVEL_ACTUAL_TXT";
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_ACTUAL_TXT.TabIndex = 38;
             // 
-            // textBox35
+            // MANUAL_FT_KEYUNLOCKPRETRAVEL_MAX_TXT
             // 
-            textBox35.BackColor = Color.White;
-            textBox35.BorderStyle = BorderStyle.FixedSingle;
-            textBox35.Location = new Point(440, 173);
-            textBox35.Name = "textBox35";
-            textBox35.RightToLeft = RightToLeft.No;
-            textBox35.Size = new Size(100, 25);
-            textBox35.TabIndex = 37;
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MAX_TXT.Location = new Point(440, 173);
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MAX_TXT.Name = "MANUAL_FT_KEYUNLOCKPRETRAVEL_MAX_TXT";
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MAX_TXT.TabIndex = 37;
             // 
-            // textBox36
+            // MANUAL_FT_KEYUNLOCKPRETRAVEL_MIN_TXT
             // 
-            textBox36.BackColor = Color.White;
-            textBox36.BorderStyle = BorderStyle.FixedSingle;
-            textBox36.Location = new Point(308, 173);
-            textBox36.Name = "textBox36";
-            textBox36.RightToLeft = RightToLeft.No;
-            textBox36.Size = new Size(100, 25);
-            textBox36.TabIndex = 36;
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MIN_TXT.Location = new Point(308, 173);
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MIN_TXT.Name = "MANUAL_FT_KEYUNLOCKPRETRAVEL_MIN_TXT";
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYUNLOCKPRETRAVEL_MIN_TXT.TabIndex = 36;
             // 
-            // textBox37
+            // MANUAL_FT_KEYUNLOCKEFFORT_ACTUAL_TXT
             // 
-            textBox37.BackColor = Color.White;
-            textBox37.BorderStyle = BorderStyle.FixedSingle;
-            textBox37.Location = new Point(566, 142);
-            textBox37.Name = "textBox37";
-            textBox37.RightToLeft = RightToLeft.No;
-            textBox37.Size = new Size(100, 25);
-            textBox37.TabIndex = 35;
+            MANUAL_FT_KEYUNLOCKEFFORT_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYUNLOCKEFFORT_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYUNLOCKEFFORT_ACTUAL_TXT.Location = new Point(566, 142);
+            MANUAL_FT_KEYUNLOCKEFFORT_ACTUAL_TXT.Name = "MANUAL_FT_KEYUNLOCKEFFORT_ACTUAL_TXT";
+            MANUAL_FT_KEYUNLOCKEFFORT_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYUNLOCKEFFORT_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYUNLOCKEFFORT_ACTUAL_TXT.TabIndex = 35;
             // 
-            // textBox38
+            // MANUAL_FT_KEYUNLOCKEFFORT_MAX_TXT
             // 
-            textBox38.BackColor = Color.White;
-            textBox38.BorderStyle = BorderStyle.FixedSingle;
-            textBox38.Location = new Point(440, 142);
-            textBox38.Name = "textBox38";
-            textBox38.RightToLeft = RightToLeft.No;
-            textBox38.Size = new Size(100, 25);
-            textBox38.TabIndex = 34;
+            MANUAL_FT_KEYUNLOCKEFFORT_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYUNLOCKEFFORT_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYUNLOCKEFFORT_MAX_TXT.Location = new Point(440, 142);
+            MANUAL_FT_KEYUNLOCKEFFORT_MAX_TXT.Name = "MANUAL_FT_KEYUNLOCKEFFORT_MAX_TXT";
+            MANUAL_FT_KEYUNLOCKEFFORT_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYUNLOCKEFFORT_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYUNLOCKEFFORT_MAX_TXT.TabIndex = 34;
             // 
-            // textBox39
+            // MANUAL_FT_KEYUNLOCKEFFORT_MIN_TXT
             // 
-            textBox39.BackColor = Color.White;
-            textBox39.BorderStyle = BorderStyle.FixedSingle;
-            textBox39.Location = new Point(308, 142);
-            textBox39.Name = "textBox39";
-            textBox39.RightToLeft = RightToLeft.No;
-            textBox39.Size = new Size(100, 25);
-            textBox39.TabIndex = 33;
+            MANUAL_FT_KEYUNLOCKEFFORT_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYUNLOCKEFFORT_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYUNLOCKEFFORT_MIN_TXT.Location = new Point(308, 142);
+            MANUAL_FT_KEYUNLOCKEFFORT_MIN_TXT.Name = "MANUAL_FT_KEYUNLOCKEFFORT_MIN_TXT";
+            MANUAL_FT_KEYUNLOCKEFFORT_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYUNLOCKEFFORT_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYUNLOCKEFFORT_MIN_TXT.TabIndex = 33;
             // 
-            // textBox40
+            // MANUAL_FT_KEYLOCKFULLTRAVEL_ACTUAL_TXT
             // 
-            textBox40.BackColor = Color.White;
-            textBox40.BorderStyle = BorderStyle.FixedSingle;
-            textBox40.Location = new Point(566, 112);
-            textBox40.Name = "textBox40";
-            textBox40.RightToLeft = RightToLeft.No;
-            textBox40.Size = new Size(100, 25);
-            textBox40.TabIndex = 32;
+            MANUAL_FT_KEYLOCKFULLTRAVEL_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYLOCKFULLTRAVEL_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYLOCKFULLTRAVEL_ACTUAL_TXT.Location = new Point(566, 112);
+            MANUAL_FT_KEYLOCKFULLTRAVEL_ACTUAL_TXT.Name = "MANUAL_FT_KEYLOCKFULLTRAVEL_ACTUAL_TXT";
+            MANUAL_FT_KEYLOCKFULLTRAVEL_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYLOCKFULLTRAVEL_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYLOCKFULLTRAVEL_ACTUAL_TXT.TabIndex = 32;
             // 
-            // textBox41
+            // MANUAL_FT_KEYLOCKFULLTRAVEL_MAX_TXT
             // 
-            textBox41.BackColor = Color.White;
-            textBox41.BorderStyle = BorderStyle.FixedSingle;
-            textBox41.Location = new Point(440, 112);
-            textBox41.Name = "textBox41";
-            textBox41.RightToLeft = RightToLeft.No;
-            textBox41.Size = new Size(100, 25);
-            textBox41.TabIndex = 31;
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MAX_TXT.Location = new Point(440, 112);
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MAX_TXT.Name = "MANUAL_FT_KEYLOCKFULLTRAVEL_MAX_TXT";
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MAX_TXT.TabIndex = 31;
             // 
-            // textBox42
+            // MANUAL_FT_KEYLOCKFULLTRAVEL_MIN_TXT
             // 
-            textBox42.BackColor = Color.White;
-            textBox42.BorderStyle = BorderStyle.FixedSingle;
-            textBox42.Location = new Point(308, 112);
-            textBox42.Name = "textBox42";
-            textBox42.RightToLeft = RightToLeft.No;
-            textBox42.Size = new Size(100, 25);
-            textBox42.TabIndex = 30;
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MIN_TXT.Location = new Point(308, 112);
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MIN_TXT.Name = "MANUAL_FT_KEYLOCKFULLTRAVEL_MIN_TXT";
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYLOCKFULLTRAVEL_MIN_TXT.TabIndex = 30;
             // 
-            // textBox43
+            // MANUAL_FT_KEYLOCKLOCKTRAVEL_ACTUAL_TXT
             // 
-            textBox43.BackColor = Color.White;
-            textBox43.BorderStyle = BorderStyle.FixedSingle;
-            textBox43.Location = new Point(566, 81);
-            textBox43.Name = "textBox43";
-            textBox43.RightToLeft = RightToLeft.No;
-            textBox43.Size = new Size(100, 25);
-            textBox43.TabIndex = 29;
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_ACTUAL_TXT.Location = new Point(566, 81);
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_ACTUAL_TXT.Name = "MANUAL_FT_KEYLOCKLOCKTRAVEL_ACTUAL_TXT";
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_ACTUAL_TXT.TabIndex = 29;
             // 
-            // textBox44
+            // MANUAL_FT_KEYLOCKLOCKTRAVEL_MAX_TXT
             // 
-            textBox44.BackColor = Color.White;
-            textBox44.BorderStyle = BorderStyle.FixedSingle;
-            textBox44.Location = new Point(440, 81);
-            textBox44.Name = "textBox44";
-            textBox44.RightToLeft = RightToLeft.No;
-            textBox44.Size = new Size(100, 25);
-            textBox44.TabIndex = 28;
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MAX_TXT.Location = new Point(440, 81);
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MAX_TXT.Name = "MANUAL_FT_KEYLOCKLOCKTRAVEL_MAX_TXT";
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MAX_TXT.TabIndex = 28;
             // 
-            // textBox45
+            // MANUAL_FT_KEYLOCKLOCKTRAVEL_MIN_TXT
             // 
-            textBox45.BackColor = Color.White;
-            textBox45.BorderStyle = BorderStyle.FixedSingle;
-            textBox45.Location = new Point(308, 81);
-            textBox45.Name = "textBox45";
-            textBox45.RightToLeft = RightToLeft.No;
-            textBox45.Size = new Size(100, 25);
-            textBox45.TabIndex = 27;
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MIN_TXT.Location = new Point(308, 81);
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MIN_TXT.Name = "MANUAL_FT_KEYLOCKLOCKTRAVEL_MIN_TXT";
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYLOCKLOCKTRAVEL_MIN_TXT.TabIndex = 27;
             // 
-            // textBox46
+            // MANUAL_FT_KEYLOCKPRETRAVEL_ACTUAL_TXT
             // 
-            textBox46.BackColor = Color.White;
-            textBox46.BorderStyle = BorderStyle.FixedSingle;
-            textBox46.Location = new Point(566, 49);
-            textBox46.Name = "textBox46";
-            textBox46.RightToLeft = RightToLeft.No;
-            textBox46.Size = new Size(100, 25);
-            textBox46.TabIndex = 26;
+            MANUAL_FT_KEYLOCKPRETRAVEL_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYLOCKPRETRAVEL_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYLOCKPRETRAVEL_ACTUAL_TXT.Location = new Point(566, 49);
+            MANUAL_FT_KEYLOCKPRETRAVEL_ACTUAL_TXT.Name = "MANUAL_FT_KEYLOCKPRETRAVEL_ACTUAL_TXT";
+            MANUAL_FT_KEYLOCKPRETRAVEL_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYLOCKPRETRAVEL_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYLOCKPRETRAVEL_ACTUAL_TXT.TabIndex = 26;
             // 
-            // textBox47
+            // MANUAL_FT_KEYLOCKPRETRAVEL_MAX_TXT
             // 
-            textBox47.BackColor = Color.White;
-            textBox47.BorderStyle = BorderStyle.FixedSingle;
-            textBox47.Location = new Point(440, 49);
-            textBox47.Name = "textBox47";
-            textBox47.RightToLeft = RightToLeft.No;
-            textBox47.Size = new Size(100, 25);
-            textBox47.TabIndex = 25;
+            MANUAL_FT_KEYLOCKPRETRAVEL_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYLOCKPRETRAVEL_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYLOCKPRETRAVEL_MAX_TXT.Location = new Point(440, 49);
+            MANUAL_FT_KEYLOCKPRETRAVEL_MAX_TXT.Name = "MANUAL_FT_KEYLOCKPRETRAVEL_MAX_TXT";
+            MANUAL_FT_KEYLOCKPRETRAVEL_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYLOCKPRETRAVEL_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYLOCKPRETRAVEL_MAX_TXT.TabIndex = 25;
             // 
-            // textBox48
+            // MANUAL_FT_KEYLOCKPRETRAVEL_MIN_TXT
             // 
-            textBox48.BackColor = Color.White;
-            textBox48.BorderStyle = BorderStyle.FixedSingle;
-            textBox48.Location = new Point(308, 49);
-            textBox48.Name = "textBox48";
-            textBox48.RightToLeft = RightToLeft.No;
-            textBox48.Size = new Size(100, 25);
-            textBox48.TabIndex = 24;
+            MANUAL_FT_KEYLOCKPRETRAVEL_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYLOCKPRETRAVEL_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYLOCKPRETRAVEL_MIN_TXT.Location = new Point(308, 49);
+            MANUAL_FT_KEYLOCKPRETRAVEL_MIN_TXT.Name = "MANUAL_FT_KEYLOCKPRETRAVEL_MIN_TXT";
+            MANUAL_FT_KEYLOCKPRETRAVEL_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYLOCKPRETRAVEL_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYLOCKPRETRAVEL_MIN_TXT.TabIndex = 24;
             // 
-            // textBox49
+            // MANUAL_FT_KEYLOCKEFFORT_ACTUAL_TXT
             // 
-            textBox49.BackColor = Color.White;
-            textBox49.BorderStyle = BorderStyle.FixedSingle;
-            textBox49.Location = new Point(566, 18);
-            textBox49.Name = "textBox49";
-            textBox49.RightToLeft = RightToLeft.No;
-            textBox49.Size = new Size(100, 25);
-            textBox49.TabIndex = 23;
+            MANUAL_FT_KEYLOCKEFFORT_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYLOCKEFFORT_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYLOCKEFFORT_ACTUAL_TXT.Location = new Point(566, 18);
+            MANUAL_FT_KEYLOCKEFFORT_ACTUAL_TXT.Name = "MANUAL_FT_KEYLOCKEFFORT_ACTUAL_TXT";
+            MANUAL_FT_KEYLOCKEFFORT_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYLOCKEFFORT_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYLOCKEFFORT_ACTUAL_TXT.TabIndex = 23;
             // 
-            // textBox50
+            // MANUAL_FT_KEYLOCKEFFORT_MAX_TXT
             // 
-            textBox50.BackColor = Color.White;
-            textBox50.BorderStyle = BorderStyle.FixedSingle;
-            textBox50.Location = new Point(440, 18);
-            textBox50.Name = "textBox50";
-            textBox50.RightToLeft = RightToLeft.No;
-            textBox50.Size = new Size(100, 25);
-            textBox50.TabIndex = 22;
+            MANUAL_FT_KEYLOCKEFFORT_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYLOCKEFFORT_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYLOCKEFFORT_MAX_TXT.Location = new Point(440, 18);
+            MANUAL_FT_KEYLOCKEFFORT_MAX_TXT.Name = "MANUAL_FT_KEYLOCKEFFORT_MAX_TXT";
+            MANUAL_FT_KEYLOCKEFFORT_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYLOCKEFFORT_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYLOCKEFFORT_MAX_TXT.TabIndex = 22;
             // 
-            // textBox51
+            // MANUAL_FT_KEYLOCKEFFORT_MIN_TXT
             // 
-            textBox51.BackColor = Color.White;
-            textBox51.BorderStyle = BorderStyle.FixedSingle;
-            textBox51.Location = new Point(308, 18);
-            textBox51.Name = "textBox51";
-            textBox51.RightToLeft = RightToLeft.No;
-            textBox51.Size = new Size(100, 25);
-            textBox51.TabIndex = 21;
+            MANUAL_FT_KEYLOCKEFFORT_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_KEYLOCKEFFORT_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_KEYLOCKEFFORT_MIN_TXT.Location = new Point(308, 18);
+            MANUAL_FT_KEYLOCKEFFORT_MIN_TXT.Name = "MANUAL_FT_KEYLOCKEFFORT_MIN_TXT";
+            MANUAL_FT_KEYLOCKEFFORT_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_KEYLOCKEFFORT_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_KEYLOCKEFFORT_MIN_TXT.TabIndex = 21;
             // 
             // label112
             // 
@@ -4528,13 +4529,13 @@
             // 
             // groupBox20
             // 
-            groupBox20.Controls.Add(textBox52);
-            groupBox20.Controls.Add(textBox53);
-            groupBox20.Controls.Add(textBox54);
-            groupBox20.Controls.Add(textBox55);
+            groupBox20.Controls.Add(MANUAL_FT_POWERUNLOCKCURRENT_ACTUAL_TXT);
+            groupBox20.Controls.Add(MANUAL_FT_POWERUNLOCKCURRENT_MAX_TXT);
+            groupBox20.Controls.Add(MANUAL_FT_POWERUNLOCKCURRENT_MIN_TXT);
+            groupBox20.Controls.Add(MANUAL_FT_POWERLOCKCURRENT_ACTUAL_TXT);
             groupBox20.Controls.Add(label120);
-            groupBox20.Controls.Add(textBox56);
-            groupBox20.Controls.Add(textBox57);
+            groupBox20.Controls.Add(MANUAL_FT_POWERLOCKCURRENT_MAX_TXT);
+            groupBox20.Controls.Add(MANUAL_FT_POWERLOCKCURRENT_MIN_TXT);
             groupBox20.Controls.Add(label121);
             groupBox20.Location = new Point(44, 141);
             groupBox20.Name = "groupBox20";
@@ -4543,45 +4544,45 @@
             groupBox20.TabStop = false;
             groupBox20.Text = "Motor Current";
             // 
-            // textBox52
+            // MANUAL_FT_POWERUNLOCKCURRENT_ACTUAL_TXT
             // 
-            textBox52.BackColor = Color.White;
-            textBox52.BorderStyle = BorderStyle.FixedSingle;
-            textBox52.Location = new Point(566, 54);
-            textBox52.Name = "textBox52";
-            textBox52.RightToLeft = RightToLeft.No;
-            textBox52.Size = new Size(100, 25);
-            textBox52.TabIndex = 20;
+            MANUAL_FT_POWERUNLOCKCURRENT_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_POWERUNLOCKCURRENT_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_POWERUNLOCKCURRENT_ACTUAL_TXT.Location = new Point(566, 54);
+            MANUAL_FT_POWERUNLOCKCURRENT_ACTUAL_TXT.Name = "MANUAL_FT_POWERUNLOCKCURRENT_ACTUAL_TXT";
+            MANUAL_FT_POWERUNLOCKCURRENT_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_POWERUNLOCKCURRENT_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_POWERUNLOCKCURRENT_ACTUAL_TXT.TabIndex = 20;
             // 
-            // textBox53
+            // MANUAL_FT_POWERUNLOCKCURRENT_MAX_TXT
             // 
-            textBox53.BackColor = Color.White;
-            textBox53.BorderStyle = BorderStyle.FixedSingle;
-            textBox53.Location = new Point(440, 54);
-            textBox53.Name = "textBox53";
-            textBox53.RightToLeft = RightToLeft.No;
-            textBox53.Size = new Size(100, 25);
-            textBox53.TabIndex = 19;
+            MANUAL_FT_POWERUNLOCKCURRENT_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_POWERUNLOCKCURRENT_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_POWERUNLOCKCURRENT_MAX_TXT.Location = new Point(440, 54);
+            MANUAL_FT_POWERUNLOCKCURRENT_MAX_TXT.Name = "MANUAL_FT_POWERUNLOCKCURRENT_MAX_TXT";
+            MANUAL_FT_POWERUNLOCKCURRENT_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_POWERUNLOCKCURRENT_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_POWERUNLOCKCURRENT_MAX_TXT.TabIndex = 19;
             // 
-            // textBox54
+            // MANUAL_FT_POWERUNLOCKCURRENT_MIN_TXT
             // 
-            textBox54.BackColor = Color.White;
-            textBox54.BorderStyle = BorderStyle.FixedSingle;
-            textBox54.Location = new Point(308, 54);
-            textBox54.Name = "textBox54";
-            textBox54.RightToLeft = RightToLeft.No;
-            textBox54.Size = new Size(100, 25);
-            textBox54.TabIndex = 18;
+            MANUAL_FT_POWERUNLOCKCURRENT_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_POWERUNLOCKCURRENT_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_POWERUNLOCKCURRENT_MIN_TXT.Location = new Point(308, 54);
+            MANUAL_FT_POWERUNLOCKCURRENT_MIN_TXT.Name = "MANUAL_FT_POWERUNLOCKCURRENT_MIN_TXT";
+            MANUAL_FT_POWERUNLOCKCURRENT_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_POWERUNLOCKCURRENT_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_POWERUNLOCKCURRENT_MIN_TXT.TabIndex = 18;
             // 
-            // textBox55
+            // MANUAL_FT_POWERLOCKCURRENT_ACTUAL_TXT
             // 
-            textBox55.BackColor = Color.White;
-            textBox55.BorderStyle = BorderStyle.FixedSingle;
-            textBox55.Location = new Point(566, 23);
-            textBox55.Name = "textBox55";
-            textBox55.RightToLeft = RightToLeft.No;
-            textBox55.Size = new Size(100, 25);
-            textBox55.TabIndex = 17;
+            MANUAL_FT_POWERLOCKCURRENT_ACTUAL_TXT.BackColor = Color.White;
+            MANUAL_FT_POWERLOCKCURRENT_ACTUAL_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_POWERLOCKCURRENT_ACTUAL_TXT.Location = new Point(566, 23);
+            MANUAL_FT_POWERLOCKCURRENT_ACTUAL_TXT.Name = "MANUAL_FT_POWERLOCKCURRENT_ACTUAL_TXT";
+            MANUAL_FT_POWERLOCKCURRENT_ACTUAL_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_POWERLOCKCURRENT_ACTUAL_TXT.Size = new Size(100, 25);
+            MANUAL_FT_POWERLOCKCURRENT_ACTUAL_TXT.TabIndex = 17;
             // 
             // label120
             // 
@@ -4592,25 +4593,25 @@
             label120.TabIndex = 7;
             label120.Text = "Power Unlock Current (Amph)";
             // 
-            // textBox56
+            // MANUAL_FT_POWERLOCKCURRENT_MAX_TXT
             // 
-            textBox56.BackColor = Color.White;
-            textBox56.BorderStyle = BorderStyle.FixedSingle;
-            textBox56.Location = new Point(440, 23);
-            textBox56.Name = "textBox56";
-            textBox56.RightToLeft = RightToLeft.No;
-            textBox56.Size = new Size(100, 25);
-            textBox56.TabIndex = 16;
+            MANUAL_FT_POWERLOCKCURRENT_MAX_TXT.BackColor = Color.White;
+            MANUAL_FT_POWERLOCKCURRENT_MAX_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_POWERLOCKCURRENT_MAX_TXT.Location = new Point(440, 23);
+            MANUAL_FT_POWERLOCKCURRENT_MAX_TXT.Name = "MANUAL_FT_POWERLOCKCURRENT_MAX_TXT";
+            MANUAL_FT_POWERLOCKCURRENT_MAX_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_POWERLOCKCURRENT_MAX_TXT.Size = new Size(100, 25);
+            MANUAL_FT_POWERLOCKCURRENT_MAX_TXT.TabIndex = 16;
             // 
-            // textBox57
+            // MANUAL_FT_POWERLOCKCURRENT_MIN_TXT
             // 
-            textBox57.BackColor = Color.White;
-            textBox57.BorderStyle = BorderStyle.FixedSingle;
-            textBox57.Location = new Point(308, 23);
-            textBox57.Name = "textBox57";
-            textBox57.RightToLeft = RightToLeft.No;
-            textBox57.Size = new Size(100, 25);
-            textBox57.TabIndex = 15;
+            MANUAL_FT_POWERLOCKCURRENT_MIN_TXT.BackColor = Color.White;
+            MANUAL_FT_POWERLOCKCURRENT_MIN_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_POWERLOCKCURRENT_MIN_TXT.Location = new Point(308, 23);
+            MANUAL_FT_POWERLOCKCURRENT_MIN_TXT.Name = "MANUAL_FT_POWERLOCKCURRENT_MIN_TXT";
+            MANUAL_FT_POWERLOCKCURRENT_MIN_TXT.RightToLeft = RightToLeft.No;
+            MANUAL_FT_POWERLOCKCURRENT_MIN_TXT.Size = new Size(100, 25);
+            MANUAL_FT_POWERLOCKCURRENT_MIN_TXT.TabIndex = 15;
             // 
             // label121
             // 
@@ -4630,13 +4631,13 @@
             label122.TabIndex = 15;
             label122.Text = "Seal Load (N)";
             // 
-            // textBox3
+            // MANUAL_FT_RESULT_TXT
             // 
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(510, 41);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 25);
-            textBox3.TabIndex = 4;
+            MANUAL_FT_RESULT_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_RESULT_TXT.Location = new Point(510, 41);
+            MANUAL_FT_RESULT_TXT.Name = "MANUAL_FT_RESULT_TXT";
+            MANUAL_FT_RESULT_TXT.Size = new Size(100, 25);
+            MANUAL_FT_RESULT_TXT.TabIndex = 4;
             // 
             // Result
             // 
@@ -4647,13 +4648,13 @@
             Result.TabIndex = 5;
             Result.Text = "Result";
             // 
-            // textBox2
+            // MANUAL_FT_VARIANT_TXT
             // 
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(321, 41);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 25);
-            textBox2.TabIndex = 2;
+            MANUAL_FT_VARIANT_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_VARIANT_TXT.Location = new Point(321, 41);
+            MANUAL_FT_VARIANT_TXT.Name = "MANUAL_FT_VARIANT_TXT";
+            MANUAL_FT_VARIANT_TXT.Size = new Size(100, 25);
+            MANUAL_FT_VARIANT_TXT.TabIndex = 2;
             // 
             // Varient
             // 
@@ -4664,14 +4665,14 @@
             Varient.TabIndex = 3;
             Varient.Text = "Varient";
             // 
-            // textBox1
+            // MANUAL_FT_SHIFT_TXT
             // 
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(143, 41);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 25);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            MANUAL_FT_SHIFT_TXT.BorderStyle = BorderStyle.FixedSingle;
+            MANUAL_FT_SHIFT_TXT.Location = new Point(143, 41);
+            MANUAL_FT_SHIFT_TXT.Name = "MANUAL_FT_SHIFT_TXT";
+            MANUAL_FT_SHIFT_TXT.Size = new Size(100, 25);
+            MANUAL_FT_SHIFT_TXT.TabIndex = 0;
+            MANUAL_FT_SHIFT_TXT.TextChanged += textBox1_TextChanged;
             // 
             // Shift
             // 
@@ -7220,13 +7221,13 @@
         private Panel panel4;
         private GroupBox groupBox1;
         private Label Shift;
-        private TextBox textBox1;
-        private TextBox textBox3;
+        private TextBox MANUAL_FT_SHIFT_TXT;
+        private TextBox MANUAL_FT_RESULT_TXT;
         private Label Result;
-        private TextBox textBox2;
+        private TextBox MANUAL_FT_VARIANT_TXT;
         private Label Varient;
         private GroupBox groupBox2;
-        private Button button2;
+        private Button MANUAL_FT_ENTER_BTN;
         private DataGridView TET_DGV;
         private Panel panel3;
         private Panel panel6;
@@ -7690,63 +7691,63 @@
         private TextBox TXT_PowerUnlockCurrent_Max_2;
         private TextBox TXT_PowerLockCurrent_Actual_2;
         private TextBox TXT_PowerLockCurrent_Max_2;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
+        private TextBox MANUAL_FT_SEALLOAD_ACTUAL_TXT;
+        private TextBox MANUAL_FT_SEALLOAD_MAX_TXT;
+        private TextBox MANUAL_FT_SEALLOAD_MIN_TXT;
         private Label label103;
         private Label label104;
         private Label label105;
         private GroupBox groupBox17;
-        private TextBox textBox10;
-        private TextBox textBox11;
+        private TextBox MANUAL_FT_EMGLOCKANGLE_ACTUAL_TXT;
+        private TextBox MANUAL_FT_EMGLOCKANGLE_MAX_TXT;
         private Label label106;
-        private TextBox textBox12;
+        private TextBox MANUAL_FT_EMGLOCKANGLE_MIN_TXT;
         private Label label107;
-        private TextBox textBox13;
-        private TextBox textBox14;
-        private TextBox textBox15;
+        private TextBox MANUAL_FT_EMGLOCKTORQUE_ACTUAL_TXT;
+        private TextBox MANUAL_FT_EMGLOCKTORQUE_MIN_TXT;
+        private TextBox MANUAL_FT_EMGLOCKTORQUE_MAX_TXT;
         private GroupBox groupBox18;
-        private TextBox textBox16;
+        private TextBox MANUAL_FT_CHILDUNLOCKTRAVEL_ACTUAL_TXT;
         private Label label108;
-        private TextBox textBox17;
+        private TextBox MANUAL_FT_CHILDUNLOCKTRAVEL_MAX_TXT;
         private Label label109;
-        private TextBox textBox18;
+        private TextBox MANUAL_FT_CHILDUNLOCKTRAVEL_MIN_TXT;
         private Label label110;
-        private TextBox textBox19;
-        private TextBox textBox20;
+        private TextBox MANUAL_FT_CHILDUNLOCKEFFORT_ACTUAL_TXT;
+        private TextBox MANUAL_FT_CHILDUNLOCKEFFORT_MAX_TXT;
         private Label label111;
-        private TextBox textBox21;
-        private TextBox textBox22;
-        private TextBox textBox23;
-        private TextBox textBox24;
-        private TextBox textBox25;
-        private TextBox textBox26;
-        private TextBox textBox27;
+        private TextBox MANUAL_FT_CHILDUNLOCKEFFORT_MIN_TXT;
+        private TextBox MANUAL_FT_CHILDLOCKEFFORT_MIN_TXT;
+        private TextBox MANUAL_FT_CHILDLOCKTRAVEL_ACTUAL_TXT;
+        private TextBox MANUAL_FT_CHILDLOCKEFFORT_MAX_TXT;
+        private TextBox MANUAL_FT_CHILDLOCKTRAVEL_MAX_TXT;
+        private TextBox MANUAL_FT_CHILDLOCKEFFORT_ACTUAL_TXT;
+        private TextBox MANUAL_FT_CHILDLOCKTRAVEL_MIN_TXT;
         private GroupBox groupBox19;
-        private TextBox textBox28;
-        private TextBox textBox29;
-        private TextBox textBox30;
-        private TextBox textBox31;
-        private TextBox textBox32;
-        private TextBox textBox33;
-        private TextBox textBox34;
-        private TextBox textBox35;
-        private TextBox textBox36;
-        private TextBox textBox37;
-        private TextBox textBox38;
-        private TextBox textBox39;
-        private TextBox textBox40;
-        private TextBox textBox41;
-        private TextBox textBox42;
-        private TextBox textBox43;
-        private TextBox textBox44;
-        private TextBox textBox45;
-        private TextBox textBox46;
-        private TextBox textBox47;
-        private TextBox textBox48;
-        private TextBox textBox49;
-        private TextBox textBox50;
-        private TextBox textBox51;
+        private TextBox MANUAL_FT_KEYUNLOCKFULLTRAVEL_ACTUAL_TXT;
+        private TextBox MANUAL_FT_KEYUNLOCKFULLTRAVEL_MAX_TXT;
+        private TextBox MANUAL_FT_KEYUNLOCKFULLTRAVEL_MIN_TXT;
+        private TextBox MANUAL_FT_KEYUNLOCKLOCKTRAVEL_ACTUAL_TXT;
+        private TextBox MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MAX_TXT;
+        private TextBox MANUAL_FT_KEYUNLOCKLOCKTRAVEL_MIN_TXT;
+        private TextBox MANUAL_FT_KEYUNLOCKPRETRAVEL_ACTUAL_TXT;
+        private TextBox MANUAL_FT_KEYUNLOCKPRETRAVEL_MAX_TXT;
+        private TextBox MANUAL_FT_KEYUNLOCKPRETRAVEL_MIN_TXT;
+        private TextBox MANUAL_FT_KEYUNLOCKEFFORT_ACTUAL_TXT;
+        private TextBox MANUAL_FT_KEYUNLOCKEFFORT_MAX_TXT;
+        private TextBox MANUAL_FT_KEYUNLOCKEFFORT_MIN_TXT;
+        private TextBox MANUAL_FT_KEYLOCKFULLTRAVEL_ACTUAL_TXT;
+        private TextBox MANUAL_FT_KEYLOCKFULLTRAVEL_MAX_TXT;
+        private TextBox MANUAL_FT_KEYLOCKFULLTRAVEL_MIN_TXT;
+        private TextBox MANUAL_FT_KEYLOCKLOCKTRAVEL_ACTUAL_TXT;
+        private TextBox MANUAL_FT_KEYLOCKLOCKTRAVEL_MAX_TXT;
+        private TextBox MANUAL_FT_KEYLOCKLOCKTRAVEL_MIN_TXT;
+        private TextBox MANUAL_FT_KEYLOCKPRETRAVEL_ACTUAL_TXT;
+        private TextBox MANUAL_FT_KEYLOCKPRETRAVEL_MAX_TXT;
+        private TextBox MANUAL_FT_KEYLOCKPRETRAVEL_MIN_TXT;
+        private TextBox MANUAL_FT_KEYLOCKEFFORT_ACTUAL_TXT;
+        private TextBox MANUAL_FT_KEYLOCKEFFORT_MAX_TXT;
+        private TextBox MANUAL_FT_KEYLOCKEFFORT_MIN_TXT;
         private Label label112;
         private Label label113;
         private Label label114;
@@ -7756,16 +7757,16 @@
         private Label label118;
         private Label label119;
         private GroupBox groupBox20;
-        private TextBox textBox52;
-        private TextBox textBox53;
-        private TextBox textBox54;
-        private TextBox textBox55;
+        private TextBox MANUAL_FT_POWERUNLOCKCURRENT_ACTUAL_TXT;
+        private TextBox MANUAL_FT_POWERUNLOCKCURRENT_MAX_TXT;
+        private TextBox MANUAL_FT_POWERUNLOCKCURRENT_MIN_TXT;
+        private TextBox MANUAL_FT_POWERLOCKCURRENT_ACTUAL_TXT;
         private Label label120;
-        private TextBox textBox56;
-        private TextBox textBox57;
+        private TextBox MANUAL_FT_POWERLOCKCURRENT_MAX_TXT;
+        private TextBox MANUAL_FT_POWERLOCKCURRENT_MIN_TXT;
         private Label label121;
         private Label label122;
-        private Button button1;
+        private Button MANUAL_TET_ENTER_BTN;
         private TextBox textBox91;
         private Label label135;
         private TextBox textBox92;
