@@ -435,6 +435,24 @@
             new() { RegisterAddress = "D283", RegisterAddress2 = "D284", Category = "TET", ParameterName = "Outside Release - Full Travel",
                     ValueType = "Actual", DataType = "Float32", UiControlName = "txtOutsideReleaseFullTravelActual",
                     LogPropertyName = "OutsideReleaseFullTravel_Actual", LogGroup = "TET", ShowInReport = true },
+
+
+            // Part Engraving (new section)
+new() { RegisterAddress = "D301", Category = "Communication", ParameterName = "ENGRAVE_Sequence Start",
+        ValueType = "Status", DataType = "Int16", UiControlName = "",
+        LogPropertyName = null, LogGroup = null, ShowInReport = false },
+
+new() { RegisterAddress = "D302", Category = "Communication", ParameterName = "ENGRAVE_Sequence Start Acknowledgement",
+        ValueType = "Status", DataType = "Int16", UiControlName = "",
+        LogPropertyName = null, LogGroup = null, ShowInReport = false },
+
+new() { RegisterAddress = "D303", Category = "Communication", ParameterName = "TET_Barcode",
+        ValueType = "Status", DataType = "Int16", UiControlName = "",
+        LogPropertyName = null, LogGroup = null, ShowInReport = false },
+
+new() { RegisterAddress = "D305", Category = "Communication", ParameterName = "ENGRAVE_Barcode Out",
+        ValueType = "Status", DataType = "Int16", UiControlName = "",
+        LogPropertyName = null, LogGroup = null, ShowInReport = false },
         };
     }
 }
